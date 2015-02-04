@@ -1,0 +1,1860 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Form D</h:title>
+    <model>
+      <instance>
+        <Form_D id="Form_D">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <houseno/>
+          <roundNumber/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <consent/>
+          <intervieweeName/>
+          <intervieweeDob/>
+          <intervieweeInHouse/>
+          <main>
+            <relationWithInterviewee/>
+            <relationWithIntervieweeSpec/>
+            <pregwomen>
+              <fullname/>
+              <dob/>
+              <permId/>
+              <education/>
+              <maritalStatus/>
+              <unionType/>
+              <relationWithHousehead/>
+              <religion/>
+              <worksector/>
+              <ocupation/>
+              <husbandEducation/>
+              <husbandWorksector/>
+              <husbandOcupation/>
+              <hasParticipatedBefore/>
+            </pregwomen>
+            <gestagebr>
+              <hasEstimatedDob/>
+              <hasFichaPrenatal/>
+              <estimatedDob/>
+              <howPregDeterminated/>
+              <knowsLastPeriodDate/>
+              <lastPeriodDate/>
+              <isPlaningBirthHere/>
+              <expBirthLocalityAddress/>
+              <hasBirthPlace/>
+              <expBirthPlace/>
+              <hasLaborParticipator/>
+              <whoGivesPermission1/>
+              <hasPermissionToSeekCare/>
+              <hasEmergPermToSeekCare/>
+              <whoGivesPermission2/>
+              <needCompany/>
+              <isEmployed/>
+              <hasTransportPlan/>
+              <transport/>
+              <hasTranspCosts/>
+              <transportCost/>
+              <hasSavedMoney/>
+              <nearestHealthUnit/>
+              <nearestHealthUnitTime/>
+            </gestagebr>
+            <eclampsia>
+              <hasKnowlBleed/>
+              <hasKnowlTensAlta/>
+              <hasKnowlTensAltaDeath/>
+              <hasKnowlConvulsoes/>
+              <signalAlert/>
+            </eclampsia>
+            <mhistory>
+              <e_intro/>
+              <hasTensaoAlta/>
+              <hasPillsTensaAlta/>
+              <hwmanyPills/>
+              <e3>
+                <pillsName1/>
+                <pillsName2/>
+                <pillsName3/>
+                <medicationStartDate/>
+              </e3>
+              <pillsTotalCost/>
+              <pillsTimeMedication/>
+              <hasConvulsoes/>
+              <hasDiabetes/>
+              <hasMalaria/>
+              <hasMalariaTreat/>
+              <sleepsOnNet/>
+              <hadTuberculose/>
+              <hasAnemia/>
+              <hasParasitoses/>
+              <mealsPerDay/>
+              <needsHelp/>
+              <hiredSomeone/>
+            </mhistory>
+            <ohistory>
+              <nrOfPregnancies/>
+              <nrOfMiscarriages/>
+              <nrOfInducedAbortions/>
+              <nrOfStiilborn/>
+              <nrOfLivebirth/>
+              <nrOfStillalive/>
+              <hasDeathWithWeek/>
+              <nrOfDeathsWithWeek/>
+              <hasDeathWithMonth/>
+              <nrOfDeathsWithMonth/>
+              <hadTensaoAlta/>
+              <hadConvulsoes/>
+              <hadDiabetes/>
+              <searchedCare/>
+              <numberOfPrenatalCare/>
+              <lastBirthPlace/>
+              <laborParticipator/>
+              <hasMalaria/>
+              <hasAntitetano/>
+              <hasUsedContraceptives/>
+              <contraceptStartDate/>
+              <contraceptMethod/>
+            </ohistory>
+          </main>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </Form_D>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Form_D/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Form_D/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Form_D/end" type="dateTime"/>
+      <bind nodeset="/Form_D/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_D/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_D/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/Form_D/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Form_D/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_D/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2014-09-09'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Form_D/visitDate" required="true()" type="date"/>
+      <bind constraint=".=1" jr:constraintMsg="O consentimento não foi assinado, saia do formulario sem salvar." nodeset="/Form_D/consent" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/intervieweeName" required="true()" type="string"/>
+      <bind constraint="int((today() - .) div 365.24) &gt; 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/Form_D/intervieweeDob" required="true()" type="date"/>
+      <bind constraint=".=1" jr:constraintMsg="O respondente não vive neste agregado, não será possivel continuar com o formulário, saia do formulario sem salvar." nodeset="/Form_D/intervieweeInHouse" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main" relevant=" /Form_D/intervieweeInHouse =1"/>
+      <bind nodeset="/Form_D/main/relationWithInterviewee" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/relationWithIntervieweeSpec" relevant=" /Form_D/main/relationWithInterviewee =10" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/pregwomen/fullname" readonly="true()" required="true()" type="string"/>
+      <bind constraint="(int((today() - .) div 365.24) &gt;= 12) and (int((today() - .) div 365.24) &lt;= 49)" nodeset="/Form_D/main/pregwomen/dob" readonly="true()" required="true()" type="date"/>
+      <bind nodeset="/Form_D/main/pregwomen/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/pregwomen/education" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/maritalStatus" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/unionType" relevant=" /Form_D/main/pregwomen/maritalStatus =2" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/relationWithHousehead" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/religion" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/worksector" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/ocupation" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/husbandEducation" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/husbandWorksector" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/husbandOcupation" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/pregwomen/hasParticipatedBefore" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasEstimatedDob" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasFichaPrenatal" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/estimatedDob" relevant=" /Form_D/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
+      <bind nodeset="/Form_D/main/gestagebr/howPregDeterminated" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/knowsLastPeriodDate" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today()" nodeset="/Form_D/main/gestagebr/lastPeriodDate" relevant=" /Form_D/main/gestagebr/knowsLastPeriodDate =1" required="true()" type="date"/>
+      <bind nodeset="/Form_D/main/gestagebr/isPlaningBirthHere" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/expBirthLocalityAddress" relevant=" /Form_D/main/gestagebr/isPlaningBirthHere =2" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasBirthPlace" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/expBirthPlace" relevant=" /Form_D/main/gestagebr/hasBirthPlace =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasLaborParticipator" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/whoGivesPermission1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasPermissionToSeekCare" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasEmergPermToSeekCare" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/whoGivesPermission2" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/needCompany" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/isEmployed" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasTransportPlan" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/transport" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasTranspCosts" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/gestagebr/transportCost" relevant=" /Form_D/main/gestagebr/hasTranspCosts =1" required="true()" type="decimal"/>
+      <bind nodeset="/Form_D/main/gestagebr/hasSavedMoney" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/nearestHealthUnit" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Introduza o periodo de tempo correcto no formato HH:mm, onde HH são horas e mm minutos, se não souber coloque 99." nodeset="/Form_D/main/gestagebr/nearestHealthUnitTime" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/eclampsia/hasKnowlBleed" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAlta" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAltaDeath" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/eclampsia/hasKnowlConvulsoes" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/eclampsia/signalAlert" type="select"/>
+      <bind nodeset="/Form_D/main/mhistory/e_intro" readonly="true()" type="string"/>
+      <bind nodeset="/Form_D/main/mhistory/hasTensaoAlta" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hasPillsTensaAlta" relevant=" /Form_D/main/mhistory/hasTensaoAlta =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" nodeset="/Form_D/main/mhistory/hwmanyPills" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/mhistory/e3" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1"/>
+      <bind nodeset="/Form_D/main/mhistory/e3/pillsName1" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/mhistory/e3/pillsName2" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/mhistory/e3/pillsName3" required="true()" type="string"/>
+      <bind constraint=". &lt;= today()" nodeset="/Form_D/main/mhistory/e3/medicationStartDate" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="date"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/pillsTotalCost" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="decimal"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/pillsTimeMedication" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/mhistory/hasConvulsoes" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hasDiabetes" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hasMalaria" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hasMalariaTreat" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/sleepsOnNet" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hadTuberculose" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hasAnemia" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hasParasitoses" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/mealsPerDay" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/mhistory/needsHelp" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/mhistory/hiredSomeone" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/ohistory/nrOfPregnancies" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /Form_D/main/ohistory/nrOfPregnancies " jr:constraintMsg="O valor dever ser menor ou igual ao número de gravidezes" nodeset="/Form_D/main/ohistory/nrOfMiscarriages" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Form_D/main/ohistory/nrOfPregnancies - /Form_D/main/ohistory/nrOfMiscarriages )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes e aborto espontâneo" nodeset="/Form_D/main/ohistory/nrOfInducedAbortions" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Form_D/main/ohistory/nrOfPregnancies - /Form_D/main/ohistory/nrOfMiscarriages - /Form_D/main/ohistory/nrOfInducedAbortions )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo e aborto induzido" nodeset="/Form_D/main/ohistory/nrOfStiilborn" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Form_D/main/ohistory/nrOfPregnancies - /Form_D/main/ohistory/nrOfMiscarriages - /Form_D/main/ohistory/nrOfInducedAbortions - /Form_D/main/ohistory/nrOfStiilborn )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Form_D/main/ohistory/nrOfLivebirth" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn )" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /Form_D/main/ohistory/nrOfLivebirth " jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Form_D/main/ohistory/nrOfStillalive" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn )" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/ohistory/hasDeathWithWeek" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn )" required="true()" type="select1"/>
+      <bind constraint=". &lt;=  /Form_D/main/ohistory/nrOfLivebirth " jr:constraintMsg="O número de mortos não deve ser superior ao número dos nascidos vivos" nodeset="/Form_D/main/ohistory/nrOfDeathsWithWeek" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/hasDeathWithWeek =1 and  /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn )" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/ohistory/hasDeathWithMonth" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn )" required="true()" type="select1"/>
+      <bind constraint=".&lt;= ( /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn + /Form_D/main/ohistory/nrOfDeathsWithWeek ))" jr:constraintMsg="O número de mortos não deve ser superior ao número dos nascidos vivos" nodeset="/Form_D/main/ohistory/nrOfDeathsWithMonth" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/hasDeathWithMonth =1 and  /Form_D/main/ohistory/nrOfPregnancies &gt;( /Form_D/main/ohistory/nrOfMiscarriages + /Form_D/main/ohistory/nrOfInducedAbortions + /Form_D/main/ohistory/nrOfStiilborn + /Form_D/main/ohistory/nrOfDeathsWithWeek )" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/ohistory/hadTensaoAlta" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/hadConvulsoes" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/hadDiabetes" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/searchedCare" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/ohistory/numberOfPrenatalCare" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/searchedCare =1" required="true()" type="int"/>
+      <bind nodeset="/Form_D/main/ohistory/lastBirthPlace" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/laborParticipator" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/hasMalaria" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/hasAntitetano" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/hasUsedContraceptives" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today()" nodeset="/Form_D/main/ohistory/contraceptStartDate" relevant=" /Form_D/main/ohistory/hasUsedContraceptives =1" required="true()" type="date"/>
+      <bind nodeset="/Form_D/main/ohistory/contraceptMethod" relevant=" /Form_D/main/ohistory/hasUsedContraceptives =1" required="true()" type="select"/>
+      <bind nodeset="/Form_D/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Form_D/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;FormD-&quot;, /Form_D/main/pregwomen/permId )" nodeset="/Form_D/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Form_D/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/Form_D/houseno">
+      <label>Número da casa</label>
+    </input>
+    <input ref="/Form_D/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/Form_D/individualId">
+      <label>A0. ID do Individuo</label>
+    </input>
+    <input ref="/Form_D/locationId">
+      <label>A1. ID do Agregado</label>
+    </input>
+    <input ref="/Form_D/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <input ref="/Form_D/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <select1 ref="/Form_D/consent">
+      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/Form_D/intervieweeName">
+      <label>A5. Nome do/a respondente</label>
+    </input>
+    <input appearance="no-calendar" ref="/Form_D/intervieweeDob">
+      <label>A6. Data de nascimento do/a respondente</label>
+    </input>
+    <select1 ref="/Form_D/intervieweeInHouse">
+      <label>A7. O/a respondente vive neste Agregado?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <group ref="/Form_D/main">
+      <label>CLIP</label>
+      <select1 ref="/Form_D/main/relationWithInterviewee">
+        <label>A8. Qual é a relação de parentesco da mulher em relação ao respondente?</label>
+        <item>
+          <label>Própria mulher em idade reprodutiva</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Esposa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Filha</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Irmã</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mãe</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Neta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Enteada</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Prima</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sobrinha</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <input ref="/Form_D/main/relationWithIntervieweeSpec">
+        <label>A8.1. Especifique a relação de parentesco da mulher e o respondente</label>
+      </input>
+      <group ref="/Form_D/main/pregwomen">
+        <label>SECÇÃO B: INFORMAÇÃO DEMOGRÁFICA DA MULHER EM IDADE REPRODUTIVA</label>
+        <input ref="/Form_D/main/pregwomen/fullname">
+          <label>B1. Nome da mulher</label>
+        </input>
+        <input ref="/Form_D/main/pregwomen/dob">
+          <label>B2. Data de nascimento da Mulher</label>
+        </input>
+        <input ref="/Form_D/main/pregwomen/permId">
+          <label>B3. Perm_ID da Mulher</label>
+        </input>
+        <select1 ref="/Form_D/main/pregwomen/education">
+          <label>B4. Nível de Educação da mulher?</label>
+          <item>
+            <label>Alnalfabeto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>5ª Classe</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>7ª Classe</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>10ª Classe/ou Equivalente</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>12ª Classe/ou Equivalente</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Bacharel</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Licenciatura</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Pós-Graduação</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/maritalStatus">
+          <label>B5. Estado Civil da mulher?</label>
+          <item>
+            <label>Solteira</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Casada/União de facto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Divorciada</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Separada</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Viúva</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outra</label>
+            <value>6</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/unionType">
+          <label>B5.1. Tipo de união?</label>
+          <item>
+            <label>Monogâmica</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Poligâmica</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/relationWithHousehead">
+          <label>B6. Relação da mulher com o chefe do agregado?</label>
+          <item>
+            <label>Própria chefe do agregado</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Esposa</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Filha</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Irmã</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Mãe</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Neta</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Enteada</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Prima</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Sobrinha</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/religion">
+          <label>B7. Religião da mulher?</label>
+          <item>
+            <label>Católica</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Protestante/Anglicana</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Cristão indeterminada</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Islâmica</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Hindu</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Zione/Sião</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Animistas</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Ateu</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outra</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/worksector">
+          <label>B8. Principal Sector de Actividade:</label>
+          <item>
+            <label>Agricultura</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Educação</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Saúde</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Comercio, Banca/Finanças</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Transporte e Comunicação</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Restauração e Planificação</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Segurança</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Cultura</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Sector Industrial</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Outros Serviços públicos</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Sector informal</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Activistas, religiosos e praticantes de medicina tradicional</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Aposentado e incapacitados</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Outro sector de actividade</label>
+            <value>14</value>
+          </item>
+          <item>
+            <label>Doméstico</label>
+            <value>15</value>
+          </item>
+          <item>
+            <label>Desempregado</label>
+            <value>16</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>17</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>18</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/ocupation">
+          <label>B9. Ocupação da mulher?</label>
+          <item>
+            <label>Desempregado/a</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Empregado/a doméstico/a</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Agricultura</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Trabalho manual não qualificado</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Trabalho manual qualificado</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Comércio e serviços</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Religioso/a</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Profissional/técnica/gestora</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Estudante</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/husbandEducation">
+          <label>B10. Nível de educação do esposo/parceiro:</label>
+          <item>
+            <label>Alnalfabeto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>5ª Classe</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>7ª Classe</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>10ª Classe/ou Equivalente</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>12ª Classe/ou Equivalente</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Bacharel</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Licenciatura</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Pós-Graduação</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/husbandWorksector">
+          <label>B11. Principal Sector de Actividade do esposo/parceiro:</label>
+          <item>
+            <label>Agricultura</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Educação</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Saúde</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Comercio, Banca/Finanças</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Transporte e Comunicação</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Restauração e Planificação</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Segurança</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Cultura</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Sector Industrial</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Outros Serviços públicos</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Sector informal</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Activistas, religiosos e praticantes de medicina tradicional</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Aposentado e incapacitados</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Outro sector de actividade</label>
+            <value>14</value>
+          </item>
+          <item>
+            <label>Doméstico</label>
+            <value>15</value>
+          </item>
+          <item>
+            <label>Desempregado</label>
+            <value>16</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>17</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>18</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/husbandOcupation">
+          <label>B12. Ocupação do esposo/parceiro?</label>
+          <item>
+            <label>Desempregado/a</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Empregado/a doméstico/a</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Agricultura</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Trabalho manual não qualificado</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Trabalho manual qualificado</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Comércio e serviços</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Religioso/a</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Profissional/técnica/gestora</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Estudante</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/pregwomen/hasParticipatedBefore">
+          <label>B13. A mulher grávida participou no estudo anterior ao CLIP Trial?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_D/main/gestagebr">
+        <label>SECÇÃO C: AVALIAÇÃO DA IDADE GESTACIONAL E PREPARAÇÃO DO NASCIMENTO</label>
+        <select1 ref="/Form_D/main/gestagebr/hasEstimatedDob">
+          <label>C1. A mulher conhece a data estimada para o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/hasFichaPrenatal">
+          <label>C1.1. A mulher abriu a ficha pré-natal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/gestagebr/estimatedDob">
+          <label>C2. Data estimada do parto</label>
+          <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
+        </input>
+        <select1 ref="/Form_D/main/gestagebr/howPregDeterminated">
+          <label>C3. Como é que a gravidez foi determinada?</label>
+          <item>
+            <label>Ecografia (ultra-som)</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Data da última menstruação (DUM)</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Altura do fundo uterino (AFU)</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/knowsLastPeriodDate">
+          <label>C4. Conhece a data em que iniciou a sua última menstruação?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/gestagebr/lastPeriodDate">
+          <label>C5. Data do início da última menstruação</label>
+          <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
+        </input>
+        <select1 ref="/Form_D/main/gestagebr/isPlaningBirthHere">
+          <label>C6. A mulher tem plano de ter o parto nesta localidade?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/gestagebr/expBirthLocalityAddress">
+          <label>C7. Por favor indica o nome da localidade e o endereço do local onde pretende ter o parto?</label>
+        </input>
+        <select1 ref="/Form_D/main/gestagebr/hasBirthPlace">
+          <label>C8. A mulher já escolheu ou planeou onde vai querer ter o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/expBirthPlace">
+          <label>C9. Indique onde vai querer ter o parto?</label>
+          <item>
+            <label>Nesta Casa</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Numa outra casa (familiares/amigos/fornecedor informal)</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Unidade sanitária de nível primário Público</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária de nível superior pública</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Hospital Privado / Clínica</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outras instituições privadas</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/hasLaborParticipator">
+          <label>C10. A mulher tem planos de ter um parto assistido por alguém qualificado? (parteira, médico ou obstetra)</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/whoGivesPermission1">
+          <label>C11. Quem toma a decisão final pela mulher caso pretenda obter cuidados para controle médico ou problemas médicos de emergência durante a gravidez, no parto ou no pós parto?</label>
+          <item>
+            <label>Ela própria</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Marido /companheiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Ela própria e o marido/parceiro juntos</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>A mãe da Mulher</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>O pai da Mulher</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>A sogra</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>O sogro</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro membro da família da própria mulher</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro membro da família do marido/parceiro</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Amigo / vizinho</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/hasPermissionToSeekCare">
+          <label>C12. A pessoa que toma decisões dá-lhe ou tem lhe dado a permissão de fazer visitas regulares de cuidados pré-natais durante esta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/hasEmergPermToSeekCare">
+          <label>C13. A pessoa que toma decisões dá ou deu a permissão de procurar cuidados médicos no caso de uma emergência durante esta gravidez, parto ou após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/whoGivesPermission2">
+          <label>C14. Se a mulher tem um problema urgente ou de emergência durante a gravidez e a pessoa que toma decisões não estiver disponível, quem vai tomar a decisão para que a senhora procure cuidados médicos?</label>
+          <item>
+            <label>Ninguém</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Ela própria</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Esposo/Parceiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Ela própria e esposo / parceiro juntos</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>A Mãe da mulher</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>O Pai da mulher</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>A Sogra</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>O Sogro</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro membro da família da mulher</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro membro da família do esposo</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Parteira tradicional/ Trabalhador da saúde</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Amigo/Vizinho</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Não Sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/needCompany">
+          <label>C15. É necessário que a pessoa que toma as decisões pela mulher a acompanhe quando vai a procura de cuidados de saúde?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/isEmployed">
+          <label>C16. A principal pessoa que toma as decisões é assalariada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/hasTransportPlan">
+          <label>C17. A mulher tem um plano de transporte (transporte organizado) para a procura de cuidados de saúde tanto para complicações na gravidez como para o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/transport">
+          <label>C18. Se a mulher tivesse que procurar atendimento para problemas relacionados com a gravidez e o parto, como iria se deslocar?</label>
+          <item>
+            <label>A pé</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Txova</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Bicicleta</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Motorizada</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Veiculo automóvel</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Carroça</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Transporte público (Chapa/Txopela/Machibombo)</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/hasTranspCosts">
+          <label>C19. O transporte iria lhe custar algum dinheiro? (incluir todos custos possíveis)</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/gestagebr/transportCost">
+          <label>C20. Quanto dinheiro custaria em média o transporte? (incluindo todos os custos possíveis)</label>
+        </input>
+        <select1 ref="/Form_D/main/gestagebr/hasSavedMoney">
+          <label>C21. A mulher tem algum dinheiro guardado que pode usar em caso de qualquer emergência que ocorra durante a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/gestagebr/nearestHealthUnit">
+          <label>C22. Se a senhora tiver uma emergência obstretica, qual é a unidade sanitária mais próxima que iria recorrer?</label>
+          <item>
+            <label>Unidade Sanitária primária</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária secundária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária terciária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária quaternária</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Clínica privada</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Hospital privado</label>
+            <value>6</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/gestagebr/nearestHealthUnitTime">
+          <label>C22.1. Quanto tempo levaria (em horas e minutos) para chegar a unidade sanitária mais próxima?</label>
+          <hint>Horas:Minutos</hint>
+        </input>
+      </group>
+      <group ref="/Form_D/main/eclampsia">
+        <label>SECÇÃO D: CONHECIMENTO DE PRE-ECLAMPSIA</label>
+        <select1 ref="/Form_D/main/eclampsia/hasKnowlBleed">
+          <label>D1. A mulher sabe que as mulheres podem ter sangramento anormal após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/eclampsia/hasKnowlTensAlta">
+          <label>D2. A mulher sabe que as mulheres podem ter tensão alta durante a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/eclampsia/hasKnowlTensAltaDeath">
+          <label>D3. A mulher sabe que a tensão alta pode causar a morte em mulheres grávidas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/eclampsia/hasKnowlConvulsoes">
+          <label>D4. A mulher sabe que as mulheres podem ter convulsões durante a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select ref="/Form_D/main/eclampsia/signalAlert">
+          <label>D5. Seleccionar todas as opções de sintomas que a mulher for a mencionar e se caso ela não mencione nenhuma escolhe a opção Não Sabe</label>
+          <item>
+            <label>Dor de cabeça</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Perturbação Visual</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Dor no peito</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Falta de ar</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Náuseas e vómitos</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Dor abdominal</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Sangramento vaginal</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Perda de consciência</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Acidente vascular cerebral (trombose, paralisia/ fraqueza num lado do corpo, durante 2 dias ou mais, ou cegueira causado por tensão alta).</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Convulsões</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select>
+      </group>
+      <group ref="/Form_D/main/mhistory">
+        <label>SECÇÃO E: HISTÓRIA CLÍNICA</label>
+        <input ref="/Form_D/main/mhistory/e_intro">
+          <label>As informações abaixo devem ser colhidas para qualquer condição que ocorra independente da gravidez</label>
+        </input>
+        <select1 ref="/Form_D/main/mhistory/hasTensaoAlta">
+          <label>E1. A mulher foi informada que tinha tensão alta antes da gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hasPillsTensaAlta">
+          <label>E2. A mulher está a tomar em casa algum medicamento para tensão alta? (incluindo os comprados na farmácia ou outro local)</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/mhistory/hwmanyPills">
+          <label>E3. Quantos medicamentos a senhora esta a tomar para tensão alta?</label>
+        </input>
+        <group ref="/Form_D/main/mhistory/e3">
+          <label>E3.1.Listar os nomes dos medicamentos, que a mulher está a tomar para a tensão alta (três no máximo)</label>
+          <input ref="/Form_D/main/mhistory/e3/pillsName1">
+            <label>1. Nome do medicamento</label>
+          </input>
+          <input ref="/Form_D/main/mhistory/e3/pillsName2">
+            <label>2. Nome do medicamento</label>
+          </input>
+          <input ref="/Form_D/main/mhistory/e3/pillsName3">
+            <label>3. Nome do medicamento</label>
+          </input>
+          <input ref="/Form_D/main/mhistory/e3/medicationStartDate">
+            <label>E3.1. Desde quando a mulher está a tomar estes medicamentos</label>
+            <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
+          </input>
+        </group>
+        <input ref="/Form_D/main/mhistory/pillsTotalCost">
+          <label>E4. Quanto a mulher gastou por cada um dos medicamentos listados acima na última aquisição?</label>
+        </input>
+        <input ref="/Form_D/main/mhistory/pillsTimeMedication">
+          <label>E4.1. Por quanto tempo tomou os medicamentos de tensão alta desta última aquisição? (Número de Dias)</label>
+        </input>
+        <select1 ref="/Form_D/main/mhistory/hasConvulsoes">
+          <label>E5. A mulher teve convulsões antes desta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hasDiabetes">
+          <label>E6. A mulher alguma vez foi informada se tinha diabetes antes desta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hasMalaria">
+          <label>E7. A mulher teve malária antes desta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hasMalariaTreat">
+          <label>E7.1. A mulher tomou alguma medicação para tratar a malária durante o ano passado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/sleepsOnNet">
+          <label>E8. Com que frequência é que a mulher dorme de baixo de uma rede mosquiteira?</label>
+          <item>
+            <label>Sempre</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>De vez em quando</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nunca</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe / Não se aplica</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hadTuberculose">
+          <label>E9. A mulher já teve tuberculose?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hasAnemia">
+          <label>E10. A mulher alguma vez foi informada que sofre de anemia?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hasParasitoses">
+          <label>E11. A mulher já teve problemas de parasitoses intestinais?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/mhistory/mealsPerDay">
+          <label>E12. Quantas refeições (incluindo lanches) a mulher tem por dia?</label>
+        </input>
+        <select1 ref="/Form_D/main/mhistory/needsHelp">
+          <label>E13. A mulher precisou de cuidados de algum membro da sua família que seja assalariado que deixou de ir trabalhar para cuidar de si nesta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/mhistory/hiredSomeone">
+          <label>E14. A mulher contratou algum empregado para lhe cuidar ou cuidar das tarefas domésticas por alguma incapacidade resultante desta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_D/main/ohistory">
+        <label>SECÇÃO F: HISTÓRIA OBSTÉTRICA</label>
+        <input ref="/Form_D/main/ohistory/nrOfPregnancies">
+          <label>F1. Quantas vezes a mulher esteve grávida ao longo da sua vida (incluindo esta gravidez)?</label>
+        </input>
+        <input ref="/Form_D/main/ohistory/nrOfMiscarriages">
+          <label>F2. Quantas vezes a mulher teve alguma gravidez que resultou num aborto espontâneo?</label>
+          <hint>Aborto = menos de 20 semanas de gestação</hint>
+        </input>
+        <input ref="/Form_D/main/ohistory/nrOfInducedAbortions">
+          <label>F2.1. Quantas vezes a mulher teve alguma gravidez que resultou num aborto induzido?</label>
+        </input>
+        <input ref="/Form_D/main/ohistory/nrOfStiilborn">
+          <label>F3. Quantas vezes a gravidez resultou num nado morto?</label>
+          <hint>Nado morto = mais de 20 semanas de gestação</hint>
+        </input>
+        <input ref="/Form_D/main/ohistory/nrOfLivebirth">
+          <label>F4. Quantos filhos nascidos vivos a mulher já teve?</label>
+        </input>
+        <input ref="/Form_D/main/ohistory/nrOfStillalive">
+          <label>F5. Quantos filhos continuam vivos?</label>
+        </input>
+        <select1 ref="/Form_D/main/ohistory/hasDeathWithWeek">
+          <label>F6. Teve alguma criança que faleceu durante a primeira semana após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/ohistory/nrOfDeathsWithWeek">
+          <label>F7. Quantas crianças faleceram durante a primeira semana de vida?</label>
+        </input>
+        <select1 ref="/Form_D/main/ohistory/hasDeathWithMonth">
+          <label>F8. Teve alguma criança que morreu entre uma semana e um mês após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/ohistory/nrOfDeathsWithMonth">
+          <label>F9. Quantas crianças morreram entre uma semana e um mês após o parto?</label>
+        </input>
+        <select1 ref="/Form_D/main/ohistory/hadTensaoAlta">
+          <label>F10. A mulher teve tensão alta em alguma das gravidezes anteriores?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/hadConvulsoes">
+          <label>F11. A mulher teve convulsões em alguma das gravidezes anteriores?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/hadDiabetes">
+          <label>F12. A mulher alguma vez teve diabetes em alguma gravidez anterior?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/searchedCare">
+          <label>F13. Na última gravidez (não nesta), a mulher procurou cuidados pré-natais para a gravidez numa enfermeira, parteira ou médico qualificado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/ohistory/numberOfPrenatalCare">
+          <label>F14. Em relação a última gravidez, quantas vezes a mulher recebeu cuidados pré-natais duma enfermeira, parteira ou médico qualificado?</label>
+        </input>
+        <select1 ref="/Form_D/main/ohistory/lastBirthPlace">
+          <label>F15. Onde é que a mulher teve o parto na última gravidez?</label>
+          <item>
+            <label>Nesta Casa</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Numa outra casa (familiares/amigos/fornecedor informal)</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Unidade sanitária de nível primário Pública</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária de nível superior pública</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Hospital Privado / Clínica</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outras instituições privadas</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Á caminho da unidade sanitária</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/laborParticipator">
+          <label>F16. Quem lhe atendeu durante o parto?</label>
+          <item>
+            <label>Ela mesma</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Parente / amigo</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Médico geral</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Obstetra</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Enfermeira / Parteira</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Parteira tradicional</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Agente Polivalente Elementar (APE)</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/hasMalaria">
+          <label>F17. A mulher teve malária nesta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/hasAntitetano">
+          <label>F18. A mulher recebeu vacina antitetânica nesta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_D/main/ohistory/hasUsedContraceptives">
+          <label>F19. A mulher alguma vez usou contraceptivos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_D/main/ohistory/contraceptStartDate">
+          <label>F19.1. Quando começou a usar?</label>
+          <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
+        </input>
+        <select ref="/Form_D/main/ohistory/contraceptMethod">
+          <label>F19.2. Que método usou?</label>
+          <hint>Pode seleccionar mais de uma opção</hint>
+          <item>
+            <label>Pílula</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>DIU</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Injecção</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Implantes</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Preservativos</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outros</label>
+            <value>6</value>
+          </item>
+        </select>
+      </group>
+    </group>
+    <input ref="/Form_D/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

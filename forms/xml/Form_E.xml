@@ -1,0 +1,3041 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Form E</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/Form_E/main/seekcare/seekCareOnPHC:label">
+            <value form="image">jr://images/2</value>
+            <value>C3. A senhora procurou cuidados de saúde no Centro de Saúde Primário, por qualquer razão que não seja de rotina de cuidados pré-natais?</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <Form_E id="Form_E">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <houseno/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <consent/>
+          <intervieweeName/>
+          <intervieweeDob/>
+          <intervieweeInHouse/>
+          <main>
+            <relationWithInterviewee/>
+            <relationWithIntervieweeSpec/>
+            <women>
+              <permId/>
+              <fullname/>
+              <isAlive/>
+              <pregStatusNow/>
+              <wasPregnant/>
+              <pregStatusAtDeath/>
+              <nrVisitBeforeDelivery/>
+              <nrVisitAfterDelivery/>
+              <hasBeforeDeliveryVisit/>
+              <dateOfDelivery/>
+              <daysAfterBirth/>
+              <loadSection/>
+            </women>
+            <seekcare>
+              <searchdPreNatalCare/>
+              <nrConsultsPN>
+                <op1/>
+                <op2/>
+                <op3/>
+                <op4/>
+                <op5/>
+              </nrConsultsPN>
+              <seekCareOnPHC/>
+              <nrVisits/>
+              <searchdCareHigherCenter/>
+              <reasonsToSeekCare/>
+              <nrHHCVisited/>
+              <nrNightsOnHospital>
+                <op1/>
+                <op2/>
+              </nrNightsOnHospital>
+              <stayedHomeInPreg/>
+              <stayedHomeManyNights/>
+              <healthUnitType/>
+              <timeToReachHU/>
+              <nrPreNatalVisits>
+                <op1/>
+                <op2/>
+                <op3/>
+                <op4/>
+                <op5/>
+                <op6/>
+                <op7/>
+              </nrPreNatalVisits>
+              <nrWorkHours/>
+              <occupation/>
+              <nrPreNatalExams>
+                <op1/>
+                <op2/>
+                <op3/>
+                <op4/>
+                <op5/>
+                <op6/>
+              </nrPreNatalExams>
+              <hadTetanVacine/>
+              <hadTetanVacineQ/>
+              <hadAntiMalarics/>
+              <hadTIP/>
+              <hmDozens/>
+              <sleepsOnNet/>
+              <hivpositive/>
+              <hivpositiveSgnl/>
+            </seekcare>
+            <eclampsia>
+              <hasKnowlBleed/>
+              <hasKnowlTensAlta/>
+              <hasKnowlTensAltaDeath/>
+              <hasKnowlConvulsoes/>
+              <signalAlert/>
+            </eclampsia>
+            <brthprep>
+              <placeOfBirthPlan/>
+              <expectedBirthPlace/>
+              <hasBirthPlan/>
+              <hasTrasportPlan/>
+              <hasMoneySafe/>
+              <hasMoneyAvailable/>
+              <primaryDecisionToSeekcare/>
+              <hasPermitionsPreNatal/>
+              <hasPermitionsMedAssist/>
+              <secondaryDecisionToSeekcare/>
+            </brthprep>
+            <birthinfo>
+              <birthDate/>
+              <manyBabies/>
+              <babyGender>
+                <nrMen/>
+                <nrWoman/>
+              </babyGender>
+              <birthSamePlace/>
+              <expectedBirthplace/>
+              <laborParticipator/>
+              <howManyVisits/>
+              <timeToReachLabPlace/>
+              <laborParticipatorInhome/>
+              <totalHourInLabor/>
+              <childBirthType/>
+              <haveMeasureTensArt/>
+              <howManyVisitsTensArt/>
+              <hadInformed/>
+              <areMedicating/>
+              <listofPills>
+                <op1/>
+                <op2/>
+                <op3/>
+              </listofPills>
+              <howMuchSpent/>
+              <howLongTakenPills/>
+              <howManyTimesCares/>
+              <occupation/>
+              <hadvisitedtradMedic/>
+            </birthinfo>
+            <fincapacity>
+              <succToCareNewBorn/>
+              <succToWash/>
+              <succToPrepFood/>
+              <succToCleanHouse/>
+              <succToBringWater/>
+              <succToWorkFild/>
+              <succToGoMarket/>
+              <succToBackToWork/>
+            </fincapacity>
+            <perinatals>
+              <h_text jr:template="">
+                <pregResult/>
+                <isStillAlive/>
+                <deathFirstWeek/>
+                <deathAfterWeek/>
+                <bodyLesion/>
+                <geneticAnomalie/>
+                <anomalies/>
+                <suckNormally/>
+                <deixarDesuckNormally/>
+                <openMouth/>
+                <breatheDifficulty/>
+                <breatheAcelerated/>
+                <chestRetraction/>
+                <hadSnore/>
+                <hadSpasms/>
+                <hadFever/>
+                <hadCold/>
+                <wasLetargic/>
+                <becameUnconscious/>
+                <hadSalienceFontanela/>
+                <pusInCord/>
+                <hadRedcord/>
+                <hadBubbles/>
+                <hadUlcer/>
+                <areasRed/>
+                <areasBecomeBlack/>
+                <hadBleeding/>
+                <hadSoftStools/>
+                <vomitedAll/>
+                <hadYellowSkin/>
+                <hadYellowEyes/>
+              </h_text>
+            </perinatals>
+            <costDetails>
+              <takeHospital/>
+              <consultsWithDoctors>
+                <op1/>
+                <op2/>
+                <op3/>
+                <op4/>
+                <op5/>
+                <op6/>
+              </consultsWithDoctors>
+              <seekCare/>
+              <healthUnitType/>
+              <howManyhealthUnit/>
+              <nightsInHospital>
+                <op1/>
+                <op2/>
+              </nightsInHospital>
+              <helthUnit/>
+              <helthUnitTime/>
+              <extConsults/>
+              <laborHours/>
+              <eachExamsQuantity>
+                <op1/>
+                <op2/>
+                <op3/>
+                <op4/>
+                <op5/>
+              </eachExamsQuantity>
+            </costDetails>
+            <mresponses>
+              <text/>
+              <hadRessurection/>
+              <ressurectionLocal/>
+              <helpBreathing/>
+              <removeToxins/>
+              <lossOfUrine/>
+              <receivedBlood/>
+              <receivedBloodBleeding/>
+              <hadSpontaneousBleeding/>
+              <hadVaginalBleeding/>
+              <hadSurgery/>
+              <hadHysterectomy/>
+              <lostVision/>
+              <hadConvulsion/>
+              <hadLesion/>
+              <becameUnconscious/>
+              <hadWeeknessSide/>
+              <hadFeverm/>
+              <simptoms/>
+              <hadDifficulty2MoveNeck/>
+              <hadCough/>
+              <hadAbdomenPain/>
+              <hadPainfulUrination/>
+              <hadDischarge/>
+            </mresponses>
+            <medicinefect>
+              <hadMgso4/>
+              <mgso4Administration/>
+              <mgso4AdministrationLocal/>
+              <mgso4ResultInfeccion/>
+              <mgso4DevelopHematoma/>
+            </medicinefect>
+          </main>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </Form_E>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Form_E/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Form_E/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Form_E/end" type="dateTime"/>
+      <bind nodeset="/Form_E/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/Form_E/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2014-06-05'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Form_E/visitDate" required="true()" type="date"/>
+      <bind constraint=".=1" jr:constraintMsg="O consentimento não foi assinado, saia do formulario sem salvar." nodeset="/Form_E/consent" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/intervieweeName" required="true()" type="string"/>
+      <bind constraint="int((today() - .) div 365.24) &gt;= 18" jr:constraintMsg="Os respondentes devem ser maiores ou com idade de 18 (dezoito) anos." nodeset="/Form_E/intervieweeDob" required="true()" type="date"/>
+      <bind constraint=".=1" jr:constraintMsg="O respondente não vive neste agregado, não será possivel continuar com o formulário, saia do formulario sem salvar." nodeset="/Form_E/intervieweeInHouse" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main" relevant=" /Form_E/intervieweeInHouse  = 1"/>
+      <bind nodeset="/Form_E/main/relationWithInterviewee" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/relationWithIntervieweeSpec" relevant=" /Form_E/main/relationWithInterviewee =10" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/women/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/women/fullname" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/women/isAlive" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/women/pregStatusNow" relevant=" /Form_E/main/women/isAlive =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/women/wasPregnant" relevant=" /Form_E/main/women/isAlive =2" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/women/pregStatusAtDeath" relevant=" /Form_E/main/women/wasPregnant =1" required="true()" type="select1"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="Introduza numeros maiores que zero" nodeset="/Form_E/main/women/nrVisitBeforeDelivery" relevant=" /Form_E/main/women/pregStatusNow =1" required="true()" type="int"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="Introduza numeros maiores que zero" nodeset="/Form_E/main/women/nrVisitAfterDelivery" relevant=" /Form_E/main/women/pregStatusNow =2" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/women/hasBeforeDeliveryVisit" relevant=" /Form_E/main/women/pregStatusNow =2 and  /Form_E/main/women/nrVisitAfterDelivery =1" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A data de parto não pode ser maior do que a data de hoje" nodeset="/Form_E/main/women/dateOfDelivery" relevant=" /Form_E/main/women/pregStatusNow =2" required="true()" type="date"/>
+      <bind calculate="int(today() -  /Form_E/main/women/dateOfDelivery +0.25)" nodeset="/Form_E/main/women/daysAfterBirth" required="true()" type="string"/>
+      <bind calculate="if( /Form_E/main/women/nrVisitBeforeDelivery =1, 1, if( /Form_E/main/women/nrVisitBeforeDelivery &gt;=2, 2, if( /Form_E/main/women/nrVisitAfterDelivery =1 and  /Form_E/main/women/daysAfterBirth &lt;=42, 5, if( /Form_E/main/women/nrVisitAfterDelivery =1 and  /Form_E/main/women/hasBeforeDeliveryVisit =1, 3, if( /Form_E/main/women/nrVisitAfterDelivery =1 and  /Form_E/main/women/hasBeforeDeliveryVisit =2, 4, 0)))))" nodeset="/Form_E/main/women/loadSection" type="string"/>
+      <bind nodeset="/Form_E/main/seekcare" relevant=" /Form_E/main/women/wasPregnant !=2 and  /Form_E/main/women/wasPregnant !=99"/>
+      <bind nodeset="/Form_E/main/seekcare/searchdPreNatalCare" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/seekcare/nrConsultsPN" relevant=" /Form_E/main/seekcare/searchdPreNatalCare =1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrConsultsPN/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrConsultsPN/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrConsultsPN/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrConsultsPN/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrConsultsPN/op5" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/seekCareOnPHC" required="true()" type="select1"/>
+      <bind jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrVisits" relevant=" /Form_E/main/seekcare/seekCareOnPHC =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/searchdCareHigherCenter" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/seekcare/reasonsToSeekCare" relevant=" /Form_E/main/seekcare/searchdCareHigherCenter =1" required="true()" type="select"/>
+      <bind jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrHHCVisited" relevant=" /Form_E/main/seekcare/searchdCareHigherCenter =1" required="true()" type="int"/>
+      <bind jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrNightsOnHospital/op1" required="true()" type="int"/>
+      <bind jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrNightsOnHospital/op2" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/stayedHomeInPreg" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/seekcare/stayedHomeManyNights" relevant=" /Form_E/main/seekcare/stayedHomeInPreg =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/healthUnitType" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/seekcare/timeToReachHU" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op5" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op6" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalVisits/op7" required="true()" type="int"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/seekcare/nrWorkHours" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/seekcare/occupation" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalExams/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalExams/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalExams/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalExams/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalExams/op5" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/nrPreNatalExams/op6" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/hadTetanVacine" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/hadTetanVacineQ" relevant=" /Form_E/main/seekcare/hadTetanVacine =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/hadAntiMalarics" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/seekcare/hadTIP" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/seekcare/hmDozens" relevant=" /Form_E/main/seekcare/hadTIP =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/seekcare/sleepsOnNet" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/seekcare/hivpositive" type="select1"/>
+      <bind nodeset="/Form_E/main/seekcare/hivpositiveSgnl" relevant=" /Form_E/main/seekcare/hivpositive =1" type="select1"/>
+      <bind nodeset="/Form_E/main/eclampsia" relevant=" /Form_E/main/women/loadSection =4 or ( /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusNow =1))"/>
+      <bind nodeset="/Form_E/main/eclampsia/hasKnowlBleed" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/eclampsia/hasKnowlTensAlta" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/eclampsia/hasKnowlTensAltaDeath" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/eclampsia/hasKnowlConvulsoes" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/eclampsia/signalAlert" type="select"/>
+      <bind nodeset="/Form_E/main/brthprep" relevant=" /Form_E/main/women/loadSection =4 or ( /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusNow =1))"/>
+      <bind nodeset="/Form_E/main/brthprep/placeOfBirthPlan" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/expectedBirthPlace" relevant=" /Form_E/main/brthprep/placeOfBirthPlan =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/hasBirthPlan" relevant=" /Form_E/main/brthprep/placeOfBirthPlan !=1 or ( /Form_E/main/brthprep/expectedBirthPlace  = 1 or  /Form_E/main/brthprep/expectedBirthPlace  = 2)" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/hasTrasportPlan" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/hasMoneySafe" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/hasMoneyAvailable" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/primaryDecisionToSeekcare" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/hasPermitionsPreNatal" relevant=" /Form_E/main/brthprep/primaryDecisionToSeekcare !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/hasPermitionsMedAssist" relevant=" /Form_E/main/brthprep/primaryDecisionToSeekcare !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/brthprep/secondaryDecisionToSeekcare" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =2)"/>
+      <bind calculate="date-time( /Form_E/main/women/dateOfDelivery )" nodeset="/Form_E/main/birthinfo/birthDate" required="true()" type="date"/>
+      <bind nodeset="/Form_E/main/birthinfo/manyBabies" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/babyGender" relevant=" /Form_E/main/birthinfo/manyBabies !=99"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrMen" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrWoman" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/birthinfo/birthSamePlace" relevant=" /Form_E/main/birthinfo/manyBabies =99" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/expectedBirthplace" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/laborParticipator" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisits" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="int"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/birthinfo/timeToReachLabPlace" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/laborParticipatorInhome" relevant=" /Form_E/main/birthinfo/expectedBirthplace =1 or  /Form_E/main/birthinfo/expectedBirthplace =2 or  /Form_E/main/birthinfo/expectedBirthplace =99" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/birthinfo/totalHourInLabor" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/childBirthType" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/haveMeasureTensArt" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=1) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a um (1) ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisitsTensArt" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/birthinfo/hadInformed" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/areMedicating" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills/op1" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 or  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills/op2" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 or  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills/op3" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 or  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howMuchSpent" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howLongTakenPills" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyTimesCares" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/birthinfo/occupation" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadInformed =1" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/hadvisitedtradMedic" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadInformed =1" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusAtDeath =2 or  /Form_E/main/women/pregStatusNow =2)"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToCareNewBorn" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToWash" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToPrepFood" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToCleanHouse" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToBringWater" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToWorkFild" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToGoMarket" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity/succToBackToWork" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2)"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/pregResult" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/isStillAlive" relevant=" /Form_E/main/perinatals/h_text/pregResult =5" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/deathFirstWeek" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/isStillAlive =2" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/deathAfterWeek" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek =2" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/bodyLesion" relevant=" /Form_E/main/perinatals/h_text/pregResult =5 and ( /Form_E/main/perinatals/h_text/deathAfterWeek =1 or  /Form_E/main/perinatals/h_text/deathAfterWeek =2 or  /Form_E/main/perinatals/h_text/deathAfterWeek =99) or ( /Form_E/main/perinatals/h_text/isStillAlive =1 or  /Form_E/main/perinatals/h_text/isStillAlive =99) or ( /Form_E/main/perinatals/h_text/deathFirstWeek =99 and  /Form_E/main/perinatals/h_text/deathFirstWeek =1)" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/geneticAnomalie" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/anomalies" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/geneticAnomalie =1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/suckNormally" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/geneticAnomalie !=1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/deixarDesuckNormally" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/suckNormally =2 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/openMouth" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/suckNormally =2 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/breatheDifficulty" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/suckNormally !=2 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/breatheAcelerated" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/breatheDifficulty !=0 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/chestRetraction" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/costDetails/takeHospital =1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadSnore" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/costDetails/takeHospital !=1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadSpasms" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/breatheDifficulty =0 or  /Form_E/main/costDetails/seekCare =1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadFever" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadCold" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/wasLetargic" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/becameUnconscious" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/costDetails/seekCare !=1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadSalienceFontanela" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/pusInCord" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadRedcord" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadBubbles" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadUlcer" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/areasRed" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/areasBecomeBlack" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadBleeding" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadSoftStools" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/vomitedAll" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadYellowSkin" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/h_text/hadYellowEyes" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/costDetails" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
+      <bind nodeset="/Form_E/main/costDetails/takeHospital" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/costDetails/consultsWithDoctors" relevant=" /Form_E/main/costDetails/takeHospital =1" required="true()"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op5" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op6" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/costDetails/seekCare" relevant=" /Form_E/main/costDetails/takeHospital !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/costDetails/healthUnitType" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/howManyhealthUnit" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/costDetails/nightsInHospital" relevant=" /Form_E/main/costDetails/seekCare =1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/nightsInHospital/op1" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/nightsInHospital/op2" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/costDetails/helthUnit" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/costDetails/helthUnitTime" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/extConsults" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/costDetails/laborHours" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op5" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/mresponses" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
+      <bind nodeset="/Form_E/main/mresponses/text" readonly="true()" type="string"/>
+      <bind nodeset="/Form_E/main/mresponses/hadRessurection" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/ressurectionLocal" relevant=" /Form_E/main/mresponses/hadRessurection =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/helpBreathing" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/removeToxins" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/lossOfUrine" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/receivedBlood" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/receivedBloodBleeding" relevant=" /Form_E/main/mresponses/receivedBlood =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadSpontaneousBleeding" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadVaginalBleeding" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadSurgery" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadHysterectomy" relevant=" /Form_E/main/mresponses/hadSurgery =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/lostVision" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadConvulsion" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadLesion" relevant=" /Form_E/main/mresponses/hadConvulsion =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/becameUnconscious" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadWeeknessSide" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadFeverm" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/simptoms" readonly="true()" relevant=" /Form_E/main/mresponses/hadFeverm =1" type="string"/>
+      <bind nodeset="/Form_E/main/mresponses/hadDifficulty2MoveNeck" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadCough" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadAbdomenPain" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadPainfulUrination" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/mresponses/hadDischarge" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/medicinefect" relevant=" /Form_E/main/women/loadSection !=2 and (( /Form_E/main/women/isAlive =1 and  /Form_E/main/women/pregStatusNow !=1) or ( /Form_E/main/women/isAlive =2 and  /Form_E/main/women/wasPregnant !=2))"/>
+      <bind nodeset="/Form_E/main/medicinefect/hadMgso4" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/medicinefect/mgso4Administration" relevant=" /Form_E/main/medicinefect/hadMgso4 =1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/medicinefect/mgso4AdministrationLocal" relevant="( /Form_E/main/medicinefect/mgso4Administration =1 or  /Form_E/main/medicinefect/mgso4Administration =3)" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/medicinefect/mgso4ResultInfeccion" relevant="( /Form_E/main/medicinefect/mgso4Administration =1 or  /Form_E/main/medicinefect/mgso4Administration =3)" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/medicinefect/mgso4DevelopHematoma" relevant="( /Form_E/main/medicinefect/mgso4Administration =1 or  /Form_E/main/medicinefect/mgso4Administration =3)" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Form_E/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;FormE-&quot;, /Form_E/main/women/permId )" nodeset="/Form_E/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Form_E/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/Form_E/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/Form_E/houseno">
+      <label>Número da casa</label>
+    </input>
+    <input ref="/Form_E/individualId">
+      <label>A0. ID do Individuo</label>
+    </input>
+    <input ref="/Form_E/locationId">
+      <label>A1. ID do Agregado</label>
+    </input>
+    <input ref="/Form_E/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <input ref="/Form_E/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <select1 ref="/Form_E/consent">
+      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/Form_E/intervieweeName">
+      <label>A5. Nome do/a respondente</label>
+    </input>
+    <input appearance="no-calendar" ref="/Form_E/intervieweeDob">
+      <label>A6. Data de nascimento do/a respondente</label>
+    </input>
+    <select1 ref="/Form_E/intervieweeInHouse">
+      <label>A7. O/a respondente vive neste Agregado?</label>
+      <hint>Se o respondente não vive na casa NÃO CONTINUE A VISITA e programe outra visita</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <group ref="/Form_E/main">
+      <label>CLIP</label>
+      <select1 ref="/Form_E/main/relationWithInterviewee">
+        <label>A8. Qual é a relação de parentesco do respondente e a mulher em idade reprodutiva?</label>
+        <item>
+          <label>Própria mulher</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Esposa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Filha</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Irmã</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mãe</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Neta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Enteada</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Prima</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sobrinha</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <input ref="/Form_E/main/relationWithIntervieweeSpec">
+        <label>A8.1. Especifique o grau de parentesco</label>
+      </input>
+      <group ref="/Form_E/main/women">
+        <label>SECÇÃO B: INFORMAÇÃO DEMOGRÁFICA</label>
+        <input ref="/Form_E/main/women/permId">
+          <label>B1. Perm_ID da Mulher</label>
+        </input>
+        <input ref="/Form_E/main/women/fullname">
+          <label>Nome da mulher</label>
+        </input>
+        <select1 ref="/Form_E/main/women/isAlive">
+          <label>B2. A mulher está viva?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/women/pregStatusNow">
+          <label>B3. Estado da gravidez no momento da entrevista</label>
+          <item>
+            <label>Está actualmente grávida</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Já deu Parto</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/women/wasPregnant">
+          <label>B4. Ela se encontrava grávida ou no pós-parto no momento da morte</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/women/pregStatusAtDeath">
+          <label>B5. Estado da gravidez no momento da morte</label>
+          <item>
+            <label>Estava grávida</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Já havia dado Parto</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/women/nrVisitBeforeDelivery">
+          <label>Número da Visita de Ante Parto?</label>
+          <hint>Defina o numero correspondente ao numero de visitas de ante parto já realizadas contando com a corrente</hint>
+        </input>
+        <input ref="/Form_E/main/women/nrVisitAfterDelivery">
+          <label>Número da Visita de Pós Parto?</label>
+          <hint>Defina o numero correspondente ao numero de visitas de pós parto já realizadas contando com a corrente</hint>
+        </input>
+        <select1 ref="/Form_E/main/women/hasBeforeDeliveryVisit">
+          <label>A mulher já teve uma visita de Ante parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/women/dateOfDelivery">
+          <label>Data do Parto</label>
+          <hint>Data em que a mulher deu parto</hint>
+        </input>
+      </group>
+      <group ref="/Form_E/main/seekcare">
+        <label>SECÇÃO C: CUIDADOS EM BUSCA DE COMPORTAMENTO</label>
+        <select1 ref="/Form_E/main/seekcare/searchdPreNatalCare">
+          <label>C1. A senhora procurou qualquer cuidado pré-natal para a gravidez a um médico qualificado, enfermeira, parteira ou médico tradicional?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <group ref="/Form_E/main/seekcare/nrConsultsPN">
+          <label>C2. Quantas consultas de cuidados pré-natais a senhora teve na sua comunidade (em casa, Centro de Saúde) providenciado pelos seguintes provedores?</label>
+          <input ref="/Form_E/main/seekcare/nrConsultsPN/op1">
+            <label>1. Médico</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrConsultsPN/op2">
+            <label>2. Enfermeira de SMI / parteira</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrConsultsPN/op3">
+            <label>3. Matrona</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrConsultsPN/op4">
+            <label>4. Praticante de medicina tradiconal</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrConsultsPN/op5">
+            <label>5. Agente Polivalente Elementar (APE)</label>
+          </input>
+        </group>
+        <select1 ref="/Form_E/main/seekcare/seekCareOnPHC">
+          <label ref="jr:itext('/Form_E/main/seekcare/seekCareOnPHC:label')"/>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/seekcare/nrVisits">
+          <label>C4. Número de visitas feitas ao Centro de Saúde Primário por qualquer razão que não seja de cuidados pré-natais de rotina?</label>
+        </input>
+        <select1 ref="/Form_E/main/seekcare/searchdCareHigherCenter">
+          <label>C5.	A senhora procurou cuidados de saúde em alguma unidade sanitária de nível superior (outro que não seja Centro de saúde Primário) por qualquer razão que não seja cuidados pré-natais de rotina?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select ref="/Form_E/main/seekcare/reasonsToSeekCare">
+          <label>C6. Quais foram as razões que levaram a senhora a procurar cuidados se saúde na unidade sanitária de nível superior?</label>
+          <item>
+            <label>O parto normal</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Trabalho de parto prolongado</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Ruptura das membranas</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Dor de cabeça</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Perturbação Visual</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Dor no peito</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Falta de ar</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Dor abdominal</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Sangramento vaginal</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Convulsões</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Eclampsia</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Coma</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Acidente vascular cerebral</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Coagulação Intravascular disseminada</label>
+            <value>14</value>
+          </item>
+          <item>
+            <label>Sepse Obstétrica</label>
+            <value>15</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select>
+        <input ref="/Form_E/main/seekcare/nrHHCVisited">
+          <label>C7.	Número de Unidades Sanitárias de nível superior visitada?</label>
+        </input>
+        <group ref="/Form_E/main/seekcare/nrNightsOnHospital">
+          <label>C8. Número de noites passadas no hospital (dormidas no hospital) incluindo o internamento para o parto) 	Fornecer o número de noites em cada um das seguintes enfermarias:</label>
+          <input ref="/Form_E/main/seekcare/nrNightsOnHospital/op1">
+            <label>1. Unidade de cuidados intensivos</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrNightsOnHospital/op2">
+            <label>3. Enfermaria geral</label>
+          </input>
+        </group>
+        <select1 ref="/Form_E/main/seekcare/stayedHomeInPreg">
+          <label>C8.1. A mulher esteve na casa da mãe espera durante esta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/seekcare/stayedHomeManyNights">
+          <label>C8.2. Quantas noites passou?</label>
+        </input>
+        <select1 ref="/Form_E/main/seekcare/healthUnitType">
+          <label>C9. Qual foi o tipo de unidade sanitária de nível superior visitado durante o internamento mais recente?</label>
+          <item>
+            <label>Sector público</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Hospital / Clínica privada</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/seekcare/timeToReachHU">
+          <label>C10. Tempo total para chegar a unidade Sanitária de nível superior?</label>
+          <hint>Horas:Minutos (99 se não sabe)</hint>
+        </input>
+        <group ref="/Form_E/main/seekcare/nrPreNatalVisits">
+          <label>C11. Quantas visitas de cuidados pré-natais ou visitas às unidades sanitárias necessitaram de transporte?</label>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op1">
+            <label>1. Nível primário</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op2">
+            <label>2. Nível superior de atenção</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op3">
+            <label>3. Médico</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op4">
+            <label>4. Enfermeira de SMI/parteira</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op5">
+            <label>5. Matrona / Parteira tradicional</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op6">
+            <label>6. Praticante de medicina tradicional</label>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalVisits/op7">
+            <label>7. Agente Polivalente Elementar (APE)</label>
+          </input>
+        </group>
+        <input ref="/Form_E/main/seekcare/nrWorkHours">
+          <label>C12. Quantas horas de trabalho no total que um familiar ou amigo da senhora faltou ao trabalho, a fim de lhe acompanhar as consultas de pré-natal ou as consultas normais na unidade de sanitária?</label>
+          <hint>Horas:Minutos (99 se não sabe)</hint>
+        </input>
+        <select1 ref="/Form_E/main/seekcare/occupation">
+          <label>C13. Qual é a ocupação do/a acompanhante da mulher?</label>
+          <item>
+            <label>Desempregado</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Empregado doméstico</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Agricultura</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Trabalho manual não qualificado</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Trabalho manual qualificado</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Comércio e serviços</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Religioso</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Profissional/técnico/gestor</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Estudante</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não aplicavel</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <group ref="/Form_E/main/seekcare/nrPreNatalExams">
+          <label>C14. Por favor, especifique o número de vezes que cada dos exames listados foram realizados em qualquer visita pré-natal ou visita normal a unidade de saúde.</label>
+          <input ref="/Form_E/main/seekcare/nrPreNatalExams/op1">
+            <label>1. Ecografia</label>
+            <hint>Digite 0 se não há testes e -99 se não sabe</hint>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalExams/op2">
+            <label>2. Exame de sangue</label>
+            <hint>Digite 0 se não há testes e -99 se não sabe</hint>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalExams/op3">
+            <label>3. Teste de urina</label>
+            <hint>Digite 0 se não há testes e -99 se não sabe</hint>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalExams/op4">
+            <label>4. Raio-X do tórax</label>
+            <hint>Digite 0 se não há testes e -99 se não sabe</hint>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalExams/op5">
+            <label>5. TAC (Tomografia Computadorizada da Cabeça)</label>
+            <hint>Digite 0 se não há testes e -99 se não sabe</hint>
+          </input>
+          <input ref="/Form_E/main/seekcare/nrPreNatalExams/op6">
+            <label>6. Outros diagnósticos não listados acima</label>
+            <hint>Digite 0 se não há testes e -99 se não sabe</hint>
+          </input>
+        </group>
+        <select1 ref="/Form_E/main/seekcare/hadTetanVacine">
+          <label>C15. A senhora recebeu a vacina contra tétano durante a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/seekcare/hadTetanVacineQ">
+          <label>C15.1. Quantas doses da vacina contra tétano a mulher recebeu durante a gravidez?</label>
+          <hint>Digite -99 se não sabe</hint>
+        </input>
+        <select1 ref="/Form_E/main/seekcare/hadAntiMalarics">
+          <label>C16. A senhora tomou anti maláricos em algum momento nesta gravidez? (Excluindo o Tratamento Intermitente Preventivo _TIP)</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/seekcare/hadTIP">
+          <label>C16.1. A Senhora tomou TIP em algum momento nesta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/seekcare/hmDozens">
+          <label>C16.2. Quantas doses?</label>
+          <hint>Digite -99 se não sabe</hint>
+        </input>
+        <select1 ref="/Form_E/main/seekcare/sleepsOnNet">
+          <label>C17. Em relação a esta gravidez, com que frequência a mulher dorme de baixo de uma rede mosquiteira?</label>
+          <item>
+            <label>Sempre</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>De vez em quando</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nunca</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/seekcare/hivpositive">
+          <label>C18. Alguém lhe disse que é HIV positiva? (Pedir o cartão do Hospital)</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/seekcare/hivpositiveSgnl">
+          <label>C 18.1. A senhora esta em TARV?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_E/main/eclampsia">
+        <label>SECÇÃO D: CONHECIMENTOS EM RELAÇÃO A PRE-ECLAMPSIA</label>
+        <select1 ref="/Form_E/main/eclampsia/hasKnowlBleed">
+          <label>D1. A mulher sabe que as mulheres podem ter sangramento anormal após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/eclampsia/hasKnowlTensAlta">
+          <label>D2. A mulher sabe que as mulheres podem ter tensão alta durante a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/eclampsia/hasKnowlTensAltaDeath">
+          <label>D3. A mulher sabe que a tensão alta pode causar a morte nas mulheres grávidas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/eclampsia/hasKnowlConvulsoes">
+          <label>D4. A mulher sabe que as mulheres podem ter convulsões durante a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select ref="/Form_E/main/eclampsia/signalAlert">
+          <label>Na sua opinião quais seriam os sintomas de alerta de tensão alta na gravidez?</label>
+          <item>
+            <label>Dor de cabeça</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Perturbação Visual</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Dor no peito</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Falta de ar</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Náuseas e vómitos</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Dor abdominal</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Sangramento vaginal</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Perda de consciência</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Acidente vascular cerebral (trombose, paralisia/ fraqueza num lado do corpo, durante 2 dias ou mais, ou cegueira causado por tensão alta).</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Convulsões</label>
+            <value>10</value>
+          </item>
+        </select>
+      </group>
+      <group ref="/Form_E/main/brthprep">
+        <label>SECÇÃO E: PREPARAÇÃO DO NASCIMENTO</label>
+        <select1 ref="/Form_E/main/brthprep/placeOfBirthPlan">
+          <label>E1. A Senhora já escolheu ou planeou onde vai querer ter o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/expectedBirthPlace">
+          <label>E2. Indique o local onde vai querer ter o parto?</label>
+          <item>
+            <label>Nesta casa</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Numa outra casa (de familiares / amigos / fornecedor informal)</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Unidade sanitária de nível primário Público</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária de nível superior pública</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Hospital Privado / Clínica</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outras instituições privadas</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/hasBirthPlan">
+          <label>E3. A Senhora tem planos de ter um parto assistido por alguém qualificado? (parteira, médico ou obstetra)</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/hasTrasportPlan">
+          <label>E4. A Senhora tem um plano de transporte (transporte organizado) para a procura de cuidados de saúde tanto para complicações na gravidez como para o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/hasMoneySafe">
+          <label>E5. A Senhora tem algum dinheiro guardado para usar em casos de emergências que podem ocorrer durante a gravidez ou no parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/hasMoneyAvailable">
+          <label>E6. Existe algum fundo comunitário disponível nesta comunidade que uma Senhora pode ter acesso caso haja uma emergência médica?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/primaryDecisionToSeekcare">
+          <label>E7. Quem toma a decisão final em relação a Senhora caso pretenda obter cuidados para controle médico ou problemas médicos de emergência durante a gravidez, no parto ou no pós parto?</label>
+          <item>
+            <label>Ela Própria</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Marido /companheiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Mulher e marido juntos</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>A Mãe da Mulher</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>O Pai da mulher</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>O Sogro</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>A Sogra</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro membro da família da mulher</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro membro da família do marido</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Amigo / vizinho</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Não sei</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/hasPermitionsPreNatal">
+          <label>E8. A pessoa que toma decisões dá-lhe ou tem lhe dado a permissão de fazer visitas regulares de cuidados pré-natais durante esta gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/hasPermitionsMedAssist">
+          <label>E9. A pessoa que toma decisões dá ou deu a permissão de procurar cuidados médicos no caso de uma emergência durante esta gravidez, parto ou após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/brthprep/secondaryDecisionToSeekcare">
+          <label>E10. Se a Senhora tem um problema urgente ou de emergência durante a gravidez e a pessoa que toma decisões não estiver disponível, quem vai tomar a decisão para que a Senhora procure cuidados médicos?</label>
+          <item>
+            <label>Ninguém</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Ela própria</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Esposo/Parceiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Ela própria e Esposo juntos</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Mãe da mulher</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Pai da mulher</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Sogra</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Sogro</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro membro da família da mulher</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro membro da família do esposo</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Parteira tradicional/ Trabalhador da saúde</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Amigo/Vizinho</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Não Sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_E/main/birthinfo">
+        <label>SECÇÃO F: INFORMAÇÃO SOBRE O PARTO</label>
+        <input ref="/Form_E/main/birthinfo/birthDate">
+          <label>F1. Data do parto</label>
+        </input>
+        <select1 ref="/Form_E/main/birthinfo/manyBabies">
+          <label>F2. A Senhora teve mais do que um bebé (gémeos)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <group ref="/Form_E/main/birthinfo/babyGender">
+          <label>F3. Sexo dos bebés?</label>
+          <input ref="/Form_E/main/birthinfo/babyGender/nrMen">
+            <label>F3.1. Numero de Homens</label>
+          </input>
+          <input ref="/Form_E/main/birthinfo/babyGender/nrWoman">
+            <label>F3.2. Numero de Mulheres</label>
+          </input>
+        </group>
+        <select1 ref="/Form_E/main/birthinfo/birthSamePlace">
+          <label>F4. O trabalho de parto e/ou parto foram no mesmo lugar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/birthinfo/expectedBirthplace">
+          <label>F5. Onde é que a Senhora teve o trabalho de parto e/ou parto? (indicar todos locais que se aplicam)</label>
+          <item>
+            <label>Nesta casa</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Numa outra casa (de familiares / amigos / fornecedor informal)</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Unidade sanitária de nível primário Público</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Unidade Sanitária de nível superior pública</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Hospital Privado / Clínica</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outras instituições privadas</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/birthinfo/laborParticipator">
+          <label>F6. Quem atendeu a Senhora durante o trabalho de parto e/ou parto na unidade sanitária?</label>
+          <item>
+            <label>Ela própria</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Parente/ amigo</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Médico geral</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Obstetra</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Enfermeira/parteira</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Parteira Auxiliar</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Parteira tradicional</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Agente Polivalente Elementar (APE)</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/birthinfo/howManyVisits">
+          <label>F7. Quantas visitas à unidade sanitária para o trabalho de parto e/ou parto necessitaram de transporte (incluindo a visita inicial)?</label>
+        </input>
+        <input ref="/Form_E/main/birthinfo/timeToReachLabPlace">
+          <label>F8. Qual foi o tempo total necessário para chegar aos locais onde o trabalho de parto e/ou parto ocorreu (incluindo o tempo de transporte entre as unidades sanitárias)?</label>
+          <hint>Horas:Minutos (99 se não sabe)</hint>
+        </input>
+        <select1 ref="/Form_E/main/birthinfo/laborParticipatorInhome">
+          <label>F9. Se o trabalho de parto e/ou parto ocorreu em casa, quem atendeu a Senhora? (Seleccione todas pessoas que participaram)</label>
+          <item>
+            <label>Própria mulher</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Parente / amigo</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Médico Geral</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Obstetra</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Enfermeira / parteira</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Parteira tradicional</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Agente Polivalente Elementar (APE)</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/birthinfo/totalHourInLabor">
+          <label>F10. Indica o número total de horas de trabalho que os membros assalariados da família perderam para estar presentes durante o trabalho de parto e no parto? (Insira 0 se não há horas perdidas.)</label>
+          <hint>Horas:Minutos (99 se não sabe)</hint>
+        </input>
+        <select1 ref="/Form_E/main/birthinfo/childBirthType">
+          <label>F11. Que tipo de parto a Senhora teve?</label>
+          <item>
+            <label>Parto vaginal espontâneo</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Parto vaginal assistido</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Cesariana</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/birthinfo/haveMeasureTensArt">
+          <label>F12. Durante esta gravidez, alguma vez mediu a sua tensão arterial através dum profissional de saúde (médico, enfermeira, parteira, APE)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/birthinfo/howManyVisitsTensArt">
+          <label>F13. Em quantas visitas a um profissional de saúde a Senhora mediu a tensão arterial nesta gravidez?</label>
+        </input>
+        <select1 ref="/Form_E/main/birthinfo/hadInformed">
+          <label>F14. O profissional de saúde terá informado a Senhora que tinha tensão alta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/birthinfo/areMedicating">
+          <label>F15. A Senhora actualmente está a tomar em casa algum medicamento (mesmo comprado numa farmácia) para tratar da tensão alta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <group ref="/Form_E/main/birthinfo/listofPills">
+          <label>F16. Listar nomes de pelo menos três medicamentos, que ela está a tomar para a tensão alta?</label>
+          <input ref="/Form_E/main/birthinfo/listofPills/op1">
+            <label>1</label>
+          </input>
+          <input ref="/Form_E/main/birthinfo/listofPills/op2">
+            <label>2</label>
+          </input>
+          <input ref="/Form_E/main/birthinfo/listofPills/op3">
+            <label>3</label>
+          </input>
+        </group>
+        <input ref="/Form_E/main/birthinfo/howMuchSpent">
+          <label>F17. Quanto a Senhora gastou por cada um dos medicamentos listados acima na última aquisição?</label>
+        </input>
+        <input ref="/Form_E/main/birthinfo/howLongTakenPills">
+          <label>F17.1. Quanto tempo (dias) tomou cada medicamento de tensão alta desta última aquisição?</label>
+        </input>
+        <input ref="/Form_E/main/birthinfo/howManyTimesCares">
+          <label>F18. Indique o número de dias durante o mês que algum membro assalariado ficou em casa a cuidar de si como resultado de tensão alta na gravidez?</label>
+        </input>
+        <select1 ref="/Form_E/main/birthinfo/occupation">
+          <label>F19. Qual é a ocupação do/a acompanhante da mulher?</label>
+          <item>
+            <label>Desempregado</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Empregado doméstico</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Agricultura</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Trabalho manual não qualificado</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Trabalho manual qualificado</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Comércio e serviços</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Religioso</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Profissional/técnico/gestor</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Estudante</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Não aplicavel</label>
+            <value>11</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/birthinfo/hadvisitedtradMedic">
+          <label>F20. A senhora visitou um médico tradicional para obter tratamento relacionado com a tensão alta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_E/main/fincapacity">
+        <label>SECÇÃO G: INCAPACIDADE FUNCIONAL</label>
+        <select1 ref="/Form_E/main/fincapacity/succToCareNewBorn">
+          <label>G1. A Senhora conseguiu cuidar do recém-nascido (dar de comer e limpar/lavar a criança)?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToWash">
+          <label>G2. A Senhora conseguiu lavar a roupa do bebé?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToPrepFood">
+          <label>G3. A Senhora conseguiu preparar as refeições?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToCleanHouse">
+          <label>G4. A Senhora conseguiu limpar a casa?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToBringWater">
+          <label>G5. A Senhora conseguiu cartar água?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToWorkFild">
+          <label>G6. A Senhora conseguiu trabalhar no campo/machamba?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToGoMarket">
+          <label>G7. A Senhora conseguiu ir ao mercado?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/fincapacity/succToBackToWork">
+          <label>G8. A Senhora conseguiu voltar ao trabalho/ emprego remunerado?</label>
+          <item>
+            <label>Nos três primeiros dias depois do parto</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 4 a 7 dias depois do parto</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Entre 8 a 14 dias depois do parto</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas depois do parto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Entre 4 a 6 semanas depois do parto</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Entre 6 semanas e 3 meses depois do parto</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_E/main/perinatals">
+        <label>SECÇÃO H: RESULTADOS PERI-NATAIS</label>
+        <group ref="/Form_E/main/perinatals/h_text">
+          <label>Esta secção deve ser completada para as mulheres que estão vivas e tiveram o parto de pelo menos um bebé desde que a casa foi visitada. Também devem ser recolhida a informação das mulheres que estavam grávidas ou tiveram o parto no momento da morte</label>
+          <repeat nodeset="/Form_E/main/perinatals/h_text">
+            <select1 ref="/Form_E/main/perinatals/h_text/pregResult">
+              <label>H1. Qual foi o resultado da gravidez?</label>
+              <item>
+                <label>Aborto Espontâneo</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Aborto por interrupção electiva da gravidez</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Gravidez Ectópica</label>
+                <value>3</value>
+              </item>
+              <item>
+                <label>Nado morto</label>
+                <value>4</value>
+              </item>
+              <item>
+                <label>Nado vivo</label>
+                <value>5</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/isStillAlive">
+              <label>H2. O bebé ainda está vivo?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/deathFirstWeek">
+              <label>H3. O bebé faleceu dentro da primeira semana de vida?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/deathAfterWeek">
+              <label>H4. O bebé faleceu entre a primeira semana de vida e um mês (28 dias) de idade?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/bodyLesion">
+              <label>H5. Houve contusões ou sinais de lesão no corpo do bebé durante o nascimento?</label>
+              <hint>As perguntas a seguir (5-31) aplicam-se apenas a bebés com idade entre 0 e 28 dias. MARQUE SIM se qualquer um dos sintomas ou sinais estavam presentes desde o nascimento até 28 dias de idade. Se o bebé faleceu, o inquérito pode ser preenchido no momento da autópsia verbal e social perinatal.</hint>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/geneticAnomalie">
+              <label>H6. O bebé apresentou qualquer anomalia congénita no momento do parto?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select ref="/Form_E/main/perinatals/h_text/anomalies">
+              <label>H7. Quais eram as anomalias?</label>
+              <item>
+                <label>Tamanho da cabeça muito pequena no momento do nascimento</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Tamanho da cabeça muito grande no momento do nascimento</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Defeito da face</label>
+                <value>3</value>
+              </item>
+              <item>
+                <label>Massa defeituosa na parte de trás da cabeça ou na coluna vertebral</label>
+                <value>4</value>
+              </item>
+              <item>
+                <label>Anomalia de abdómen e tórax.</label>
+                <value>5</value>
+              </item>
+              <item>
+                <label>Anormalidade de membros superiores e membros inferiores</label>
+                <value>6</value>
+              </item>
+              <item>
+                <label>Outras anomalias</label>
+                <value>98</value>
+              </item>
+            </select>
+            <select1 ref="/Form_E/main/perinatals/h_text/suckNormally">
+              <label>H8.O bebé foi capaz de mamar normalmente durante o primeiro dia de vida?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/deixarDesuckNormally">
+              <label>H9.O bebé deixou de ser capaz de mamar normalmente?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/openMouth">
+              <label>H10.O bebé era capaz de abrir a boca no momento em que parou de mamar?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/breatheDifficulty">
+              <label>H11.O bebé teve dificuldade para respirar?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/breatheAcelerated">
+              <label>H12.O bebé teve respiração acelerada?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/chestRetraction">
+              <label>H13.O bebé teve retração intercostal (retração do peito)?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadSnore">
+              <label>H14.O bebé teve roncos?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadSpasms">
+              <label>H15.O bebé teve espasmos ou convulsões?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadFever">
+              <label>H16.O bebé teve febre?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadCold">
+              <label>H17.Quando tocava no bebe este estava frio?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/wasLetargic">
+              <label>H18.O bebe ficou letárgico / sonolento, após um período de actividade normal?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/becameUnconscious">
+              <label>H19.O bebé ficou sem se mexer ou inconsciente</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadSalienceFontanela">
+              <label>H20.O bebé teve saliência da fontanela (fontanela abaulada)?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/pusInCord">
+              <label>H21.O bebé teve pus no cordão umbilical?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadRedcord">
+              <label>H22.O bebé teve o cordão umbilical avermelhado?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadBubbles">
+              <label>H23.O bebé teve borbulhas com pus ou uma área grande com pus?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadUlcer">
+              <label>H24.O bebé teve úlcera (feridas) na pele?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/areasRed">
+              <label>H25.O bebé teve alguma (s) área (s) da pele com cor vermelha ou inchaço?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/areasBecomeBlack">
+              <label>H26.O bebé teve áreas da pele que se tornaram negras?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadBleeding">
+              <label>H27.O bebe teve algum sangramento?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadSoftStools">
+              <label>H28.O bebé teve fezes moles ou líquidas mais frequentes do que o habitual?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/vomitedAll">
+              <label>H29.O bebé vomitava tudo?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadYellowSkin">
+              <label>H30.O bebe teve pele amarela?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/h_text/hadYellowEyes">
+              <label>H31.O bebe teve olhos amarelados?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+          </repeat>
+        </group>
+      </group>
+      <group ref="/Form_E/main/costDetails">
+        <label>SECÇÃO I: Custo de intervenções / internamentos / re-internamentos após o nascimento da criança desde a última vez que a casa foi visitada</label>
+        <select1 ref="/Form_E/main/costDetails/takeHospital">
+          <label>I1. A Senhora (mãe) levou o recém-nascido a unidade sanitária por causa de alguma doença ou complicação de saúde?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <group ref="/Form_E/main/costDetails/consultsWithDoctors">
+          <label>I2. Quantas consultas externas é que o recém-nascido teve na comunidade (casa, unidade de nível primário), de acordo com cada um dos seguintes provedores de cuidados?</label>
+          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op1">
+            <label>1. Médico geral</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op2">
+            <label>2. Enfermeira/parteira</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op3">
+            <label>3. Parteira tradicional</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op4">
+            <label>4. Praticante de medicina tradicional</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op5">
+            <label>5. Agente Polivalente Elementar (APE)</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op6">
+            <label>6. Outro</label>
+          </input>
+        </group>
+        <select1 ref="/Form_E/main/costDetails/seekCare">
+          <label>I3. A mãe procurou atendimento em alguma unidade sanitária de nível superior para tratar alguma doença do recém-nascido?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/costDetails/healthUnitType">
+          <label>I3.1. Em que unidade sanitária de nível superior a mãe levou a criança?</label>
+          <item>
+            <label>Sector público</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Hospital / Clínica privada</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/costDetails/howManyhealthUnit">
+          <label>I4. Quantas unidades sanitárias de nível superior foram visitadas por doenças do recém-nascido.</label>
+        </input>
+        <group ref="/Form_E/main/costDetails/nightsInHospital">
+          <label>I5. Quantas noites o recém-nascido passou (dormiu) no hospital.</label>
+          <input ref="/Form_E/main/costDetails/nightsInHospital/op1">
+            <label>5.1. Quantas noites o recém-nascido passou (dormiu) na unidade de cuidados intensivos para neonatos</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/nightsInHospital/op2">
+            <label>5.2. Quantas noites o recém-nascido passou (dormiu) no Berçário / Enfermaria geral</label>
+          </input>
+        </group>
+        <select1 ref="/Form_E/main/costDetails/helthUnit">
+          <label>I6. Qual foi o tipo de unidade sanitária de nível superior que visitou mais recentemente?</label>
+          <item>
+            <label>Sector público</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Hospital / Clínica privada</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/costDetails/helthUnitTime">
+          <label>I7. Quanto tempo no total levou para chegar a unidade Sanitária de nível superior? (independentemente do meio de transporte usado)</label>
+          <hint>Horas:Minutos</hint>
+        </input>
+        <input ref="/Form_E/main/costDetails/extConsults">
+          <label>I8.Quantas consultas externas ou visitas a unidades de sanitárias de nível superior necessitou de transporte?</label>
+          <hint>(99 se não sabe)</hint>
+        </input>
+        <input ref="/Form_E/main/costDetails/laborHours">
+          <label>I9. Quantas horas de trabalho no total um familiar ou amigo da mulher perdeu a fim de acompanhar o recém-nascido para a visita a unidade sanitária para qualquer um dos itens a seguir?</label>
+          <hint>Horas:Minutos</hint>
+        </input>
+        <group ref="/Form_E/main/costDetails/eachExamsQuantity">
+          <label>I10. Por favor, especifique o número de vezes que cada um dos exames e serviços listados foi realizado em qualquer consulta externa na unidade sanitária (Coloque 0, se não foram realizados nenhuns testes, Coloque 99 se não sabe).</label>
+          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op1">
+            <label>1. Consultas com especialistas</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op2">
+            <label>2. Imagem Fetal (ultra-som / raio-x)</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op3">
+            <label>3. Exames de sangue</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op4">
+            <label>4. Fototerapia</label>
+          </input>
+          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op5">
+            <label>5. Refeição para mãe e para a criança</label>
+          </input>
+        </group>
+      </group>
+      <group ref="/Form_E/main/mresponses">
+        <label>SECÇÃO J: CONDIÇÕES E INTERVENÇÕES MATERNA. (Esta secção deve ser preenchida para as mulheres que estão vivas e tiveram o parto de pelo menos um bebé desde que a casa foi visitada pela última vez)</label>
+        <input ref="/Form_E/main/mresponses/text">
+          <label>DURANTE A GRAVIDEZ MAIS RECENTE:</label>
+        </input>
+        <select1 ref="/Form_E/main/mresponses/hadRessurection">
+          <label>J1. Alguém fez massagem cardíaca para manter a mulher viva (ressuscitação cardiopulmonar)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/ressurectionLocal">
+          <label>J2. Seleccione local onde a massagem cardíaca foi feita?</label>
+          <item>
+            <label>Na comunidade / Centro de Saude Primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A Caminho ao Centro de Saude Primário</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Na unidade sanitária de nível superior ou a chegar a esta unidade.</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não Sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/helpBreathing">
+          <label>J3. A Senhora precisou de ajuda de algum aparelho para respirar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/removeToxins">
+          <label>J4. A Senhora chegou a remover do seu sangue toxinas ou venenos porque os rins não estavam funcionando (hemodialise)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/lossOfUrine">
+          <label>J5. A Senhora teve /tem perda contínua de urina e / ou fezes que surgiu depois do parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/receivedBlood">
+          <label>J6. A Senhora recebeu sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/receivedBloodBleeding">
+          <label>J7. A transfusão de sangue foi dada porque a mulher teve hemorragia vaginal intensa após o nascimento?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadSpontaneousBleeding">
+          <label>J8. A Senhora teve hemorragia espontânea/ repentina na boca ou ouvidos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadVaginalBleeding">
+          <label>J9. A Senhora teve sangramento vaginal de pelo menos uma colher de sopa antes do trabalho do parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadSurgery">
+          <label>J10. A Senhora teve alguma cirurgia/operação para estancar sangramento intenso após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadHysterectomy">
+          <label>J11. A Senhora fez uma histerectomia (Extracção de útero)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/lostVision">
+          <label>J12. A Senhora perdeu a capacidade de ver, por pelo menos 2 dias?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadConvulsion">
+          <label>J13. A Senhora teve convulsão (s)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadLesion">
+          <label>J14. No momento da convulsão a Senhora teve alguma lesão (morder língua, bater com a cabeça)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/becameUnconscious">
+          <label>J15. A Senhora ficou inconsciente por pelo menos 12 horas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadWeeknessSide">
+          <label>J16. A Senhora teve fraqueza em apenas um lado do corpo por pelo menos 2 dias?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadFeverm">
+          <label>J17. A Senhora teve febre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/mresponses/simptoms">
+          <label>Seleccione todos os sintomas associados que se aplicam</label>
+        </input>
+        <select1 ref="/Form_E/main/mresponses/hadDifficulty2MoveNeck">
+          <label>J18. A Senhora teve rigidez ou dificuldade de mexer o pescoço?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadCough">
+          <label>J19. A Senhora teve tosse acompanhada de falta de ar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadAbdomenPain">
+          <label>J20. A Senhora teve dor ao palpar no baixo-ventre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadPainfulUrination">
+          <label>J21. A Senhora teve dor ao urinar ou dor no flanco?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/mresponses/hadDischarge">
+          <label>J22. A Senhora teve corrimento vaginal malcheiroso?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Form_E/main/medicinefect">
+        <label>SECÇÃO K: MEDICAMENTOS E EFEITOS ADVERSOS</label>
+        <select1 ref="/Form_E/main/medicinefect/hadMgso4">
+          <label>K1. A Senhora recebeu tratamento de sulfato de magnésio (MgSO4) durante esta gravidez para controlar as convulsões?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/medicinefect/mgso4Administration">
+          <label>K2. Como foi administrado o sulfato de magnésio?</label>
+          <item>
+            <label>Injecção intramuscular</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Infusão intravenosa</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Combinado injeção intramuscular e infusão intravenosa.</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/medicinefect/mgso4AdministrationLocal">
+          <label>K3. Em que local recebeu a injecção de sulfato de magnésio?</label>
+          <item>
+            <label>No Centro de Saúde primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Numa unidade sanitária de nível superior ao Centro de Saúde primário.</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/medicinefect/mgso4ResultInfeccion">
+          <label>K4. Após a injecção de sulfato de magnésio a Senhora desenvolveu alguma infecção no local da injecção (vermelho, quente, macio)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/medicinefect/mgso4DevelopHematoma">
+          <label>K5. Após a injecção de sulfato de magnésio, a Senhora desenvolveu um hematoma (acumulação de sangue) no local da injecção?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <input ref="/Form_E/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

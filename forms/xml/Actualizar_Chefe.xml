@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Actualizar Chefe de Agregado</h:title>
+    <model>
+      <instance>
+        <Actualizar_Chefe id="Actualizar_Chefe">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <houseno/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <headPermId/>
+          <headName/>
+          <headGender/>
+          <headDob/>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </Actualizar_Chefe>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Actualizar_Chefe/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Actualizar_Chefe/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Actualizar_Chefe/end" type="dateTime"/>
+      <bind nodeset="/Actualizar_Chefe/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/Actualizar_Chefe/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/visitDate" required="true()" type="date"/>
+      <bind nodeset="/Actualizar_Chefe/headPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/headName" required="true()" type="string"/>
+      <bind nodeset="/Actualizar_Chefe/headGender" required="true()" type="select1"/>
+      <bind nodeset="/Actualizar_Chefe/headDob" required="true()" type="date"/>
+      <bind nodeset="/Actualizar_Chefe/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Actualizar_Chefe/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Actualizar_Chefe-&quot;, /Actualizar_Chefe/headPermId )" nodeset="/Actualizar_Chefe/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Actualizar_Chefe/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/Actualizar_Chefe/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/Actualizar_Chefe/houseno">
+      <label>Número da casa</label>
+    </input>
+    <input ref="/Actualizar_Chefe/individualId">
+      <label>A0. ID do Individuo</label>
+    </input>
+    <input ref="/Actualizar_Chefe/locationId">
+      <label>A1. ID do Agregado</label>
+    </input>
+    <input ref="/Actualizar_Chefe/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <input ref="/Actualizar_Chefe/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <input ref="/Actualizar_Chefe/headPermId">
+      <label>A4. Perm_ID do Chefe do Agregado</label>
+    </input>
+    <input ref="/Actualizar_Chefe/headName">
+      <label>A5. Nome do Chefe do Agregado</label>
+    </input>
+    <select1 ref="/Actualizar_Chefe/headGender">
+      <label>A6. Sexo do Chefe do Agregado</label>
+      <item>
+        <label>Masculino</label>
+        <value>M</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>F</value>
+      </item>
+    </select1>
+    <input ref="/Actualizar_Chefe/headDob">
+      <label>A7. Data de nascimento do Chefe do Agregado</label>
+    </input>
+    <input ref="/Actualizar_Chefe/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

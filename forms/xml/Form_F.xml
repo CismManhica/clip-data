@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Form F</h:title>
+    <model>
+      <instance>
+        <Form_F id="Form_F">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <houseno/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <headPermId/>
+          <headName/>
+          <headGender/>
+          <consent/>
+          <consentedgrp>
+            <RESILIENCIA>
+              <neighbors/>
+              <helpType/>
+              <ongCommunity/>
+              <helpTypeOng/>
+              <resil_p3/>
+              <resil_p4/>
+              <resil_p5/>
+              <resil_p6/>
+              <resil_p7/>
+              <resil_p8/>
+            </RESILIENCIA>
+          </consentedgrp>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </Form_F>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Form_F/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Form_F/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Form_F/end" type="dateTime"/>
+      <bind nodeset="/Form_F/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_F/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/Form_F/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_F/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Form_F/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_F/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_F/visitDate" required="true()" type="date"/>
+      <bind nodeset="/Form_F/headPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_F/headName" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_F/headGender" readonly="true()" required="true()" type="select1"/>
+      <bind constraint=".=1" jr:constraintMsg="O consentimento não foi assinado, saia do formulario sem salvar." nodeset="/Form_F/consent" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp" relevant=" /Form_F/consent  = 1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/neighbors" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/helpType" relevant=" /Form_F/consentedgrp/RESILIENCIA/neighbors  = 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/ongCommunity" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/helpTypeOng" relevant=" /Form_F/consentedgrp/RESILIENCIA/ongCommunity  = 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/resil_p3" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/resil_p4" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/resil_p5" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/resil_p6" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/resil_p7" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/consentedgrp/RESILIENCIA/resil_p8" required="true()" type="select1"/>
+      <bind nodeset="/Form_F/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Form_F/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;FormF-&quot;, /Form_F/headPermId )" nodeset="/Form_F/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Form_F/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/Form_F/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/Form_F/houseno">
+      <label>Número da casa</label>
+    </input>
+    <input ref="/Form_F/individualId">
+      <label>A0. ID do Individuo</label>
+    </input>
+    <input ref="/Form_F/locationId">
+      <label>A1. ID do Agregado</label>
+    </input>
+    <input ref="/Form_F/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <input ref="/Form_F/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <input ref="/Form_F/headPermId">
+      <label>A4. Perm_ID do Chefe do Agregado</label>
+    </input>
+    <input ref="/Form_F/headName">
+      <label>A5. Nome do Chefe do Agregado</label>
+    </input>
+    <select1 ref="/Form_F/headGender">
+      <label>A6. Sexo do Chefe do Agregado</label>
+      <item>
+        <label>Masculino</label>
+        <value>M</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>F</value>
+      </item>
+    </select1>
+    <select1 ref="/Form_F/consent">
+      <label>A7. O respondente assinou o consentimento informado?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Nao</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <group ref="/Form_F/consentedgrp">
+      <label>CLIP</label>
+      <group ref="/Form_F/consentedgrp/RESILIENCIA">
+        <label>MODULO DE RESILIENCIA MATERNA</label>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/neighbors">
+          <label>B1. Há vizinhos ou outras famílias de sua comunidade que podem ajudar a sua família em caso de problemas relacionados com a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/helpType">
+          <label>B1.1. Se sim, qual seria a ajuda que a sua família necessitaria?</label>
+          <item>
+            <label>Transporte</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Apoio Financeiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Apio moral/Emocional</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Nao Sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/ongCommunity">
+          <label>B2. Existe algum grupo ou Organização Comunitária (formal ou informal) que da apoio ou prestam ajuda a mulheres gravidas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/helpTypeOng">
+          <label>B2.1 Se sim, qual seria a ajuda que a sua família necessitaria?</label>
+          <item>
+            <label>Transporte</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Apoio Financeiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Apio moral/Emocional</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Nao Sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/resil_p3">
+          <label>B3. No caso de existir ou ter existido uma mulher grávida neste agregado. Ela tem beneficiada de algum apoio de uma organização no caso dela ter problemas relacionadas com a saúde?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/resil_p4">
+          <label>B4. Tem conhecimento de alguma estratégia implementada por outras comunidades para apoiar ou assistir as mulheres para terem gestação saudável?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/resil_p5">
+          <label>B5. Existe uma mulher nesta família que participa activamente (nas reuniões, contribue financiamente, activista) numa organização da comunidade que ajuda as mulheres grávidas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/resil_p6">
+          <label>B6. Quem toma as decisões acerca de dinheiro neste agregado?</label>
+          <item>
+            <label>Esposo</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Parceiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Propria Mulher em Idade reprodutiva</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Pai</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Padrasto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Mae</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Madrasta</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Irmao</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Cunhado</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Irma</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Cunhada</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Filho (a)</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Outros</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/resil_p7">
+          <label>B7. Se existe uma ou mais mulheres gravidas no agregado presentemente, Quem toma as decisoes financeiras relacionadas com cuidados da gravidez?</label>
+          <item>
+            <label>Esposo</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Parceiro</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Propria Mulher em Idade reprodutiva</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Pai</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Padrasto</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Mae</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Madrasta</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Irmao</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Cunhado</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Irma</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Cunhada</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Filho (a)</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Outros</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_F/consentedgrp/RESILIENCIA/resil_p8">
+          <label>B8. A mulher gravida tem acesso a dinheiro que lhe permita arranjar transporte ou fundos suficientes para garantir transporte para se deslocar ao hospital mais proximo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <input ref="/Form_F/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

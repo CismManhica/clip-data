@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Dados de Novo Agregado (CLIP)</h:title>
+    <model>
+      <instance>
+        <form_novo_agregado id="form_novo_agregado">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <houseno/>
+          <headPermId/>
+          <headDob/>
+          <headName/>
+          <headGender/>
+          <headEducation/>
+          <headInhouse/>
+          <FORM_B>
+            <nperson/>
+            <floor/>
+            <wall/>
+            <latrine/>
+            <light/>
+            <iron/>
+            <watch/>
+            <radio/>
+            <transport/>
+            <beds/>
+            <rooms/>
+            <tv/>
+            <phone/>
+            <waterlocation/>
+            <watersource/>
+            <kitchen/>
+            <fuel/>
+          </FORM_B>
+          <FORM_F>
+            <vizinhos/>
+            <tipoajuda/>
+            <ongcomunitaria/>
+            <tipoajudaong/>
+            <resil_p7/>
+            <resil_p8/>
+            <resil_p9/>
+            <resil_p10/>
+            <resil_p11/>
+            <resil_p12/>
+          </FORM_F>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </form_novo_agregado>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/form_novo_agregado/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/form_novo_agregado/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/form_novo_agregado/end" type="dateTime"/>
+      <bind nodeset="/form_novo_agregado/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/form_novo_agregado/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/form_novo_agregado/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/form_novo_agregado/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2014-09-09'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/form_novo_agregado/visitDate" required="true()" type="date"/>
+      <bind constraint="(regex(., '^((0[1-9])|(1[0-2]))-[0-9]{4}-[0-9]{3}$'))" jr:constraintMsg="Formato de region XX-XXXX-XXX" nodeset="/form_novo_agregado/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/form_novo_agregado/headPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/form_novo_agregado/headDob" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/form_novo_agregado/headName" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/form_novo_agregado/headGender" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/headEducation" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/headInhouse" required="true()" type="select1"/>
+      <bind constraint="(. &gt;= 1 and . &lt;= 30)" jr:constraintMsg="Entre 1 e 30" nodeset="/form_novo_agregado/FORM_B/nperson" required="true()" type="int"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/floor" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/wall" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/latrine" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/light" required="true()" type="select1"/>
+      <bind constraint="not((selected(., '1') or selected(., '4') or selected(., '99')) and count-selected(.) &gt; 1)" nodeset="/form_novo_agregado/FORM_B/iron" required="true()" type="select"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/watch" required="true()" type="select1"/>
+      <bind constraint="not((selected(., '1') or selected(., '6') or selected(., '99')) and count-selected(.) &gt; 1)" nodeset="/form_novo_agregado/FORM_B/radio" required="true()" type="select"/>
+      <bind constraint="not((selected(., '1') or selected(., '10') or selected(., '99')) and count-selected(.) &gt; 1)" nodeset="/form_novo_agregado/FORM_B/transport" required="true()" type="select"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/beds" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/rooms" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/tv" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/phone" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/waterlocation" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/watersource" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/kitchen" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_B/fuel" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/vizinhos" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/tipoajuda" relevant=" /form_novo_agregado/FORM_F/vizinhos  = 1" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/ongcomunitaria" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/tipoajudaong" relevant=" /form_novo_agregado/FORM_F/ongcomunitaria  = 1" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/resil_p7" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/resil_p8" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/resil_p9" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/resil_p10" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/resil_p11" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/FORM_F/resil_p12" required="true()" type="select1"/>
+      <bind nodeset="/form_novo_agregado/processedByMirth" readonly="true()" relevant="1=2" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/form_novo_agregado/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;agregado_dados-&quot;,  /form_novo_agregado/houseno )" nodeset="/form_novo_agregado/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/form_novo_agregado/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/form_novo_agregado/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/form_novo_agregado/locationId">
+      <label>A1. ID da Localização da Casa</label>
+    </input>
+    <input ref="/form_novo_agregado/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <input ref="/form_novo_agregado/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <input appearance="numbers" ref="/form_novo_agregado/houseno">
+      <label>A8. Número de agregado</label>
+    </input>
+    <input ref="/form_novo_agregado/headPermId">
+      <label>A13. Perm Id do chefe do Agregado</label>
+    </input>
+    <input ref="/form_novo_agregado/headDob">
+      <label>A14. Data de Nascimento do Chefe de Agregado</label>
+    </input>
+    <input ref="/form_novo_agregado/headName">
+      <label>A15. Nome do chefe do agregado</label>
+    </input>
+    <select1 ref="/form_novo_agregado/headGender">
+      <label>A15.1 Sexo do chefe de agregado</label>
+      <item>
+        <label>Masculino</label>
+        <value>M</value>
+      </item>
+      <item>
+        <label>Femenino</label>
+        <value>F</value>
+      </item>
+    </select1>
+    <select1 ref="/form_novo_agregado/headEducation">
+      <label>A16. Qual e o nivel de educacao do chefe do agregado?</label>
+      <item>
+        <label>Nunca estudou</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Primario</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Secundario</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Nivel Superior</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Nao sabe</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/form_novo_agregado/headInhouse">
+      <label>A17. O chefe do agregado vive nesta casa?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Nao</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <group ref="/form_novo_agregado/FORM_B">
+      <label>FORM B: INFORMAÇÃO DO AGREGADO</label>
+      <input ref="/form_novo_agregado/FORM_B/nperson">
+        <label>B2.1. Quantas pessoas vivem neste agregado?</label>
+      </input>
+      <select1 ref="/form_novo_agregado/FORM_B/floor">
+        <label>B2.2. Qual e o principal material usado para o chao da casa?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Terra abatida</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Madeira ou parquet</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Cimento ou mosaico</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/wall">
+        <label>B2.3. Qual e o principal material usado para a construcao das paredes da casa?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Canico, Bambu, Palha ou Madeira</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Plastico, Sacos vazios, Cartoes e Cartolinas</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Chapas de zinco</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Blocos de argila</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Blocos de cimento ou tijolos queimados</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/latrine">
+        <label>B2.4. Que tipo de latrina existe nesta casa?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Latrina tradicional nao melhorada</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Latrina tradicional melhorada</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Latrina convencional</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Retrete ligada a uma fossa septica</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Sem latrina</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/light">
+        <label>B2.5. Qual e a principal fonte de energia usada para a iluminacao nesta casa?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Lenha</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Baterias</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Lampada de petroleo ou velas</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Energia electrica publica</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Geradores ou painel solar particular</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Outras</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select ref="/form_novo_agregado/FORM_B/iron">
+        <label>B2.6. O agregado tem um ferro de engomar?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Ferro nao electrico</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Ferro electrico</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sem ferro</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select>
+      <select1 ref="/form_novo_agregado/FORM_B/watch">
+        <label>B2.7. O agregado tem um relogio?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao tem</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>3 ou mais</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select ref="/form_novo_agregado/FORM_B/radio">
+        <label>B2.8. Este agregado tem radio?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Radio</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Radio cassete</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Radio do celular</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Sem radio</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select>
+      <select ref="/form_novo_agregado/FORM_B/transport">
+        <label>B2.9. Qual o tipo de transporte que o agregado tem?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao tem</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Bicicleta</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Motorizada</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Barco</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Carro</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select>
+      <select1 ref="/form_novo_agregado/FORM_B/beds">
+        <label>B2.10. Quantas camas o agregado possui?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>2 ou mais</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Nenhuma</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/rooms">
+        <label>B2.11. Quantos quartos o agregado tem?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nenhuma divisao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>3 ou mais</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/tv">
+        <label>B2.12. O agregado tem televisor?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Sim</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/phone">
+        <label>B2.13. O agregado tem telefone?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Telefone fixo</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Telefone celular</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Ambos</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Nenhum</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/waterlocation">
+        <label>B2.14. A fonte de agua para beber, esta localizado dentro do quintal do agregado?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Sim</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/watersource">
+        <label>B2.15. Qual e a principal fonte de agua para beber usado pelo agregado?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Agua potavel melhorada</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Agua nao melhorada</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/kitchen">
+        <label>B2.16. O agregado tem uma cozinha protegida (coberta e paredes)?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao tem cozinha</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_B/fuel">
+        <label>B2.17. Qual e o principal combustivel usado para cozinhar?</label>
+        <item>
+          <label>Nao sabe</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Lenha</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Carvao</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Petroleo ou gas</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Electricidade</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/form_novo_agregado/FORM_F">
+      <label>FORM F: MODULO DE RESILIENCIA MATERNA</label>
+      <select1 ref="/form_novo_agregado/FORM_F/vizinhos">
+        <label>5. Ha vizinhos ou outras familias de sua comunidade que podem ajudar a sua familia em caso de problemas relacionados com a gravidez?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/tipoajuda">
+        <label>5.1 Se sim, qual seria a ajuda que a sua familia necessitaria ?</label>
+        <item>
+          <label>Transporte</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Apoio Financeiro</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Apio moral/Emocional</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Nao Sabe</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/ongcomunitaria">
+        <label>6. Existe algum grupo ou Organizacao Comunitaria (formal ou informal) que da apoio ou prestam ajuda a mulheres gravidas?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/tipoajudaong">
+        <label>6.1 Se sim, qual seria a ajuda que a sua familia necessitaria ?</label>
+        <item>
+          <label>Transporte</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Apoio Financeiro</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Apio moral/Emocional</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Nao Sabe</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/resil_p7">
+        <label>7. No caso de existir ou ter existido uma mulher gravida neste agregado. Ela tem beneficiada de algum apoio de uma organizacao no caso dela ter problemas relacionadas com a saude?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/resil_p8">
+        <label>8. Tem conhecimento de alguma estrategia implementada por outras comunidades para apoiar ou assistir as mulheres para terem gestacao saudavel?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/resil_p9">
+        <label>9. Existe uma mulher nesta familia que participa activamente (nas reunioes, contribue financiamente, activista) numa organizacao da comunidade que ajuda as mulheres gravidas?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/resil_p10">
+        <label>10. Quem toma as decisoes acerca de dinheiro neste agregado?</label>
+        <item>
+          <label>Esposo</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Parceiro</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Propria</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Pai</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Padrasto</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mae</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Madrasta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Irmao</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Cunhado</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Irma</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Cunhada</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Filho (a)</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Outros</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/resil_p11">
+        <label>11. Se existe uma ou mais mulheres gravidas no agregado presentemente, Quem toma as decisoes financeiras relacionadas com cuidados da gravidez?</label>
+        <item>
+          <label>Esposo</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Parceiro</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Propria</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Pai</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Padrasto</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mae</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Madrasta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Irmao</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Cunhado</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Irma</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Cunhada</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Filho (a)</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Outros</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/form_novo_agregado/FORM_F/resil_p12">
+        <label>12. A mulher gravida tem acesso a dinheiro que lhe permita arranjar transporte ou fundos suficientes para garantir transporte para se deslocar ao hospital mais proximo?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/form_novo_agregado/processedByMirth">
+      <label>processed</label>
+    </input>
+  </h:body>
+</h:html>

@@ -1,0 +1,764 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Actualizacao</h:title>
+    <model>
+      <instance>
+        <Actualizacao id="Actualizacao">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <houseno/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <rounds>
+            <visitDate/>
+            <relationWithResponderSpec/>
+            <relationWithResponder/>
+            <permId/>
+            <fullname/>
+            <dob/>
+            <educationLevel/>
+            <maritalStatus/>
+            <unionType/>
+            <relationWithHousehead/>
+            <religion/>
+            <workSector/>
+            <ocupation/>
+          </rounds>
+          <fertility>
+            <nrOfPregnancies/>
+            <nrOfMiscarriages/>
+            <nrOfInducedAbortions/>
+            <nrOfStiilborn/>
+            <nrOfLivebirth/>
+            <nrOfStillalive/>
+            <dthWeek/>
+            <nDthWeek/>
+            <dthWeekMth/>
+            <nDthWeekMth/>
+          </fertility>
+          <multiplepreg>
+            <nTwins/>
+            <bornDthTwins/>
+            <abortionTwins/>
+            <aliveTwins/>
+          </multiplepreg>
+          <preeclamp>
+            <blood/>
+            <tension/>
+            <tensiondth/>
+            <convulsions/>
+          </preeclamp>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </Actualizacao>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Actualizacao/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Actualizacao/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Actualizacao/end" type="dateTime"/>
+      <bind nodeset="/Actualizacao/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/rounds" required="true()"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2014-09-09'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Actualizacao/rounds/visitDate" required="true()" type="date"/>
+      <bind nodeset="/Actualizacao/rounds/relationWithResponderSpec" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/relationWithResponder" relevant=" /Actualizacao/rounds/relationWithResponderSpec =10" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/rounds/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Actualizacao/rounds/fullname" required="true()" type="string"/>
+      <bind jr:constraintMsg="Esta mulher não possui os requisitos para o estudo. Somente pode-se coletar dados para mulheres entre 12 à 49 anos de idade." nodeset="/Actualizacao/rounds/dob" required="true()" type="date"/>
+      <bind nodeset="/Actualizacao/rounds/educationLevel" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/maritalStatus" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/unionType" relevant=" /Actualizacao/rounds/maritalStatus =2" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/relationWithHousehead" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/religion" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/workSector" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/rounds/ocupation" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Actualizacao/fertility/nrOfPregnancies" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /Actualizacao/fertility/nrOfPregnancies " jr:constraintMsg="O valor dever ser menor ou igual ao número de gravidezes" nodeset="/Actualizacao/fertility/nrOfMiscarriages" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Actualizacao/fertility/nrOfPregnancies - /Actualizacao/fertility/nrOfMiscarriages )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes e aborto espontâneo" nodeset="/Actualizacao/fertility/nrOfInducedAbortions" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Actualizacao/fertility/nrOfPregnancies - /Actualizacao/fertility/nrOfMiscarriages - /Actualizacao/fertility/nrOfInducedAbortions )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo e aborto induzido" nodeset="/Actualizacao/fertility/nrOfStiilborn" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Actualizacao/fertility/nrOfPregnancies - /Actualizacao/fertility/nrOfMiscarriages - /Actualizacao/fertility/nrOfInducedAbortions - /Actualizacao/fertility/nrOfStiilborn )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Actualizacao/fertility/nrOfLivebirth" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind constraint=". &lt;= ( /Actualizacao/fertility/nrOfPregnancies - /Actualizacao/fertility/nrOfMiscarriages - /Actualizacao/fertility/nrOfInducedAbortions - /Actualizacao/fertility/nrOfStiilborn )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Actualizacao/fertility/nrOfStillalive" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/fertility/dthWeek" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/fertility/nDthWeek" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0 and  /Actualizacao/fertility/dthWeek =1" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/fertility/dthWeekMth" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/fertility/nDthWeekMth" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0 and  /Actualizacao/fertility/dthWeekMth =1" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/multiplepreg/nTwins" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/multiplepreg/bornDthTwins" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0 and  /Actualizacao/multiplepreg/nTwins !=0" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/multiplepreg/abortionTwins" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0 and  /Actualizacao/multiplepreg/nTwins !=0" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/multiplepreg/aliveTwins" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0 and  /Actualizacao/multiplepreg/nTwins !=0" required="true()" type="int"/>
+      <bind nodeset="/Actualizacao/preeclamp/blood" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/preeclamp/tension" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/preeclamp/tensiondth" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/preeclamp/convulsions" required="true()" type="select1"/>
+      <bind nodeset="/Actualizacao/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Actualizacao/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Actualizacao/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/Actualizacao/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/Actualizacao/houseno">
+      <label>Número da casa</label>
+    </input>
+    <input ref="/Actualizacao/individualId">
+      <label>A0. ID do Individuo</label>
+    </input>
+    <input ref="/Actualizacao/locationId">
+      <label>A1. ID do Agregado</label>
+    </input>
+    <input ref="/Actualizacao/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <group ref="/Actualizacao/rounds">
+      <label>SECÇÃO A: INFORMAÇÃO DEMOGRÁFICA DA PARTICIPANTE</label>
+      <input ref="/Actualizacao/rounds/visitDate">
+        <label>1. Data de Entrevista</label>
+      </input>
+      <select1 ref="/Actualizacao/rounds/relationWithResponderSpec">
+        <label>2. Qual é a relação de parentesco da mulher em relação ao respondente?</label>
+        <item>
+          <label>Própria</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Esposa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Filha</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Irmã</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mãe</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Neta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Enteada</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Prima</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sobrinha</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <input ref="/Actualizacao/rounds/relationWithResponder">
+        <label>2.1. Especifique</label>
+      </input>
+      <input ref="/Actualizacao/rounds/permId">
+        <label>2.2. Perm_ID da Mulher</label>
+      </input>
+      <input ref="/Actualizacao/rounds/fullname">
+        <label>3. Nome da mulher</label>
+      </input>
+      <input ref="/Actualizacao/rounds/dob">
+        <label>4. Data de nascimento da mulher</label>
+      </input>
+      <select1 ref="/Actualizacao/rounds/educationLevel">
+        <label>5. Nível de Educação da mulher</label>
+        <item>
+          <label>Alnalfabeto</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>5ª Classe</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>7ª Classe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>10ª Classe/ou Equivalente</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>12ª Classe/ou Equivalente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Bacharel</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Licenciatura</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Pós-Graduação</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/rounds/maritalStatus">
+        <label>6. Estado Civil</label>
+        <item>
+          <label>Solteira</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Casada/União de facto</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Divorciada</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Separada</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Viúva</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Outra</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/rounds/unionType">
+        <label>6.1. Tipo de união?</label>
+        <item>
+          <label>Monogâmica</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Poligâmica</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/rounds/relationWithHousehead">
+        <label>7. Relação da Senhora com o chefe do agregado?</label>
+        <item>
+          <label>Própria chefe do agregado</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Esposa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Filha</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Irmã</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mãe</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Neta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Enteada</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Prima</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sobrinha</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/rounds/religion">
+        <label>8. Religião</label>
+        <item>
+          <label>Católica</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Protestante/Anglicana</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Cristão indeterminada</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Islâmica</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Hindus</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Zione/Sião</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Animistas</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Ateus</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outra</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/rounds/workSector">
+        <label>9. Principal Sector de Actividade</label>
+        <item>
+          <label>Agricultura</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Educação</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Cultura</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Comercio, Banca/Finanças</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Transporte e Comunicação</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Restauração e Planificação</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Segurança</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Outros Serviços públicos</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sector informal</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Sector de Saude</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Sector Industrial</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Activistas, Religiosos e praticantes de medicina tradicional</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Aposentado e incapacitados</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Outro sector de actividade</label>
+          <value>14</value>
+        </item>
+        <item>
+          <label>Não Trabalha</label>
+          <value>88</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/rounds/ocupation">
+        <label>10. Ocupação</label>
+        <item>
+          <label>Camponês/agricultor</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Pecuária</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Pesca</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Caçador</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Lenhadores/carvoeiros</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Outra área da agricultura</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Estudante</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Professor</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outro profissional da Educação</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Artes e ofício</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Musicas/dança</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Letras/escritores</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Outro sector da cultura</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Empregado/Escriturário</label>
+          <value>14</value>
+        </item>
+        <item>
+          <label>Comerciante</label>
+          <value>15</value>
+        </item>
+        <item>
+          <label>Outro profissional do sector do Comercio/Banca/Finanças</label>
+          <value>16</value>
+        </item>
+        <item>
+          <label>Motoristas/cobradores/fiscais</label>
+          <value>17</value>
+        </item>
+        <item>
+          <label>Trabalhadores de rádio e televisão</label>
+          <value>18</value>
+        </item>
+        <item>
+          <label>Mecânicos e auxiliares de mecânicos</label>
+          <value>19</value>
+        </item>
+        <item>
+          <label>Técnicos de comunicação</label>
+          <value>20</value>
+        </item>
+        <item>
+          <label>Outro profissional do sector de transporte e comunicação</label>
+          <value>21</value>
+        </item>
+        <item>
+          <label>Cozinheiros/pasteleiros/padeiros</label>
+          <value>22</value>
+        </item>
+        <item>
+          <label>Outro profissional do sector de restauração</label>
+          <value>23</value>
+        </item>
+        <item>
+          <label>Soldados</label>
+          <value>24</value>
+        </item>
+        <item>
+          <label>Policias</label>
+          <value>25</value>
+        </item>
+        <item>
+          <label>Seguranças</label>
+          <value>26</value>
+        </item>
+        <item>
+          <label>Outro profissional do sector de Segurança</label>
+          <value>27</value>
+        </item>
+        <item>
+          <label>Escriturários</label>
+          <value>28</value>
+        </item>
+        <item>
+          <label>Técnicos</label>
+          <value>29</value>
+        </item>
+        <item>
+          <label>Auxiliares</label>
+          <value>30</value>
+        </item>
+        <item>
+          <label>Gestores</label>
+          <value>31</value>
+        </item>
+        <item>
+          <label>Outro profissional dos Serviços públicos</label>
+          <value>32</value>
+        </item>
+        <item>
+          <label>Vendedores</label>
+          <value>33</value>
+        </item>
+        <item>
+          <label>Comerciantes</label>
+          <value>34</value>
+        </item>
+        <item>
+          <label>Empregado doméstico</label>
+          <value>35</value>
+        </item>
+        <item>
+          <label>Cabeleireiros e barbeiros</label>
+          <value>36</value>
+        </item>
+        <item>
+          <label>Outro elemento do sector informal</label>
+          <value>37</value>
+        </item>
+        <item>
+          <label>Auxiliar</label>
+          <value>38</value>
+        </item>
+        <item>
+          <label>Serventes</label>
+          <value>39</value>
+        </item>
+        <item>
+          <label>Técnicos</label>
+          <value>40</value>
+        </item>
+        <item>
+          <label>Médicos</label>
+          <value>41</value>
+        </item>
+        <item>
+          <label>Outro profissional do sector da Saúde</label>
+          <value>42</value>
+        </item>
+        <item>
+          <label>Mineiro</label>
+          <value>43</value>
+        </item>
+        <item>
+          <label>Operários</label>
+          <value>44</value>
+        </item>
+        <item>
+          <label>Técnicos</label>
+          <value>45</value>
+        </item>
+        <item>
+          <label>Outro profissional do sector da Industria</label>
+          <value>46</value>
+        </item>
+        <item>
+          <label>Médicos tradicionais/curandeiros</label>
+          <value>47</value>
+        </item>
+        <item>
+          <label>Pastores/padres/Bispos/Sacerdotes/Clérigos</label>
+          <value>48</value>
+        </item>
+        <item>
+          <label>Activistas e voluntários</label>
+          <value>49</value>
+        </item>
+        <item>
+          <label>Outro elemento deste sector</label>
+          <value>50</value>
+        </item>
+        <item>
+          <label>Aposentado/reformado</label>
+          <value>51</value>
+        </item>
+        <item>
+          <label>Incapacitado/deficiente</label>
+          <value>52</value>
+        </item>
+        <item>
+          <label>Outro elemento desta categoria</label>
+          <value>53</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>54</value>
+        </item>
+        <item>
+          <label>Não Trabalha</label>
+          <value>88</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/Actualizacao/fertility">
+      <label>SECCÃO: FECUNDIDADE</label>
+      <input ref="/Actualizacao/fertility/nrOfPregnancies">
+        <label>11. Quantas vezes a mulher esteve grávida ao longo da sua vida?</label>
+      </input>
+      <input ref="/Actualizacao/fertility/nrOfMiscarriages">
+        <label>12. Quantas vezes a mulher teve alguma gravidez que resultou num aborto espontâneo? (Aborto = menos de 20 semanas de gestação)</label>
+      </input>
+      <input ref="/Actualizacao/fertility/nrOfInducedAbortions">
+        <label>13. Quantas vezes a mulher teve alguma gravidez que resultou num aborto induzido? (Aborto = menos de 20 semanas de gestação)</label>
+      </input>
+      <input ref="/Actualizacao/fertility/nrOfStiilborn">
+        <label>14. Quantas vezes a gravidez resultou num nado morto? (Nado morto = mais de 20 semanas de gestação)</label>
+      </input>
+      <input ref="/Actualizacao/fertility/nrOfLivebirth">
+        <label>15. Quantos filhos nascidos vivos a mulher já teve?</label>
+      </input>
+      <input ref="/Actualizacao/fertility/nrOfStillalive">
+        <label>16. Quantos filhos continuam vivos?</label>
+      </input>
+      <select1 ref="/Actualizacao/fertility/dthWeek">
+        <label>17. Teve alguma criança que faleceu durante a primeira semana após o parto?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <input ref="/Actualizacao/fertility/nDthWeek">
+        <label>18. Quantas crianças faleceram durante a primeira semana de vida?</label>
+      </input>
+      <select1 ref="/Actualizacao/fertility/dthWeekMth">
+        <label>19. Teve alguma criança que morreu entre uma semana e um mês após o parto?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <input ref="/Actualizacao/fertility/nDthWeekMth">
+        <label>20. Quantas crianças faleceram entre uma semana e um mês após o parto?</label>
+      </input>
+    </group>
+    <group ref="/Actualizacao/multiplepreg">
+      <label>SECCÃO: GRAVIDEZES E NASCIMENTOS MULTIPLOS</label>
+      <input ref="/Actualizacao/multiplepreg/nTwins">
+        <label>21. Quantas vezes a senhora teve gravidezes de gemeos?</label>
+      </input>
+      <input ref="/Actualizacao/multiplepreg/bornDthTwins">
+        <label>22. Quantos nados mortos teve nas gravidezes de gemeos?</label>
+      </input>
+      <input ref="/Actualizacao/multiplepreg/abortionTwins">
+        <label>23. Teve algum aborto duma gravidez de gemeos?</label>
+      </input>
+      <input ref="/Actualizacao/multiplepreg/aliveTwins">
+        <label>24. Quantos nascimentos vivos teve nas gravidezes de gemeos?</label>
+      </input>
+    </group>
+    <group ref="/Actualizacao/preeclamp">
+      <label>SECÇÃO D: CONHECIMENTO DE PRÉ-ECLAMPSIA</label>
+      <select1 ref="/Actualizacao/preeclamp/blood">
+        <label>25. A Senhora sabe que as mulheres podem ter sangramento anormal após o parto?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/preeclamp/tension">
+        <label>26. A Senhora sabe que as mulheres podem ter tensão alta durante a gravidez?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/preeclamp/tensiondth">
+        <label>27. A Senhora sabe que a tensão alta pode causar a morte em mulheres grávidas?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/Actualizacao/preeclamp/convulsions">
+        <label>28. A Senhora sabe que as mulheres podem ter convulsões durante a gravidez?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/Actualizacao/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

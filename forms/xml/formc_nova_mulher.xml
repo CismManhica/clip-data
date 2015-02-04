@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Formulário C: Censo de novas mulheres</h:title>
+    <model>
+      <instance>
+        <formc_nova_mulher id="formc_nova_mulher">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <houseno/>
+          <FORM_C>
+            <individualId/>
+            <permId/>
+            <fullname/>
+            <dob/>
+            <respond_relation/>
+            <women_education/>
+            <women_ecivil/>
+            <women_relation/>
+            <women_religion/>
+            <women_sector/>
+            <women_occupation/>
+            <women_npreg/>
+            <hadpreg>
+              <women_abortion/>
+              <women_nadomorto/>
+              <women_birth/>
+              <women_alive/>
+              <women_neonatdeath/>
+              <women_npreg12/>
+              <women_hta12/>
+              <women_convul/>
+              <women_mfiu/>
+              <women_npregnadomorto/>
+              <women_alive12/>
+              <women_earlyneonatdeath/>
+              <women_neonatdeath12/>
+            </hadpreg>
+          </FORM_C>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </formc_nova_mulher>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/formc_nova_mulher/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/formc_nova_mulher/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/formc_nova_mulher/end" type="dateTime"/>
+      <bind nodeset="/formc_nova_mulher/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/formc_nova_mulher/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/formc_nova_mulher/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/formc_nova_mulher/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2014-09-09'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/formc_nova_mulher/visitDate" required="true()" type="date"/>
+      <bind constraint="(regex(., '^((0[1-9])|(1[0-2]))-[0-9]{4}-[0-9]{3}$'))" jr:constraintMsg="Formato de region XX-XXXX-XXX" nodeset="/formc_nova_mulher/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/fullname" readonly="true()" required="true()" type="string"/>
+      <bind constraint="(int((today() - .) div 365.24) &gt;= 12) and (int((today() - .) div 365.24) &lt;= 49)" jr:constraintMsg="Esta mulher não possui os requisitos para o estudo. Somente pode-se coletar dados para mulheres entre 12 à 49 anos de idade." nodeset="/formc_nova_mulher/FORM_C/dob" readonly="true()" required="true()" type="date"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/respond_relation" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/women_education" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/women_ecivil" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/women_relation" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/women_religion" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/women_sector" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/women_occupation" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Entre 0 a 20." nodeset="/formc_nova_mulher/FORM_C/women_npreg" required="true()" type="int"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/hadpreg" relevant=" /formc_nova_mulher/FORM_C/women_npreg  &gt; 0"/>
+      <bind constraint=" /formc_nova_mulher/FORM_C/hadpreg/women_abortion  &lt;=  /formc_nova_mulher/FORM_C/women_npreg " jr:constraintMsg="Entre 0 a 20 e menor ou igual que o numero de gravidezes." nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_abortion" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/women_npreg *2 and . &gt;= 0 and . &lt;= 20" jr:constraintMsg="Tem que ser menor ou igual que o numero de gravidezes." nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_nadomorto" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_birth" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/hadpreg/women_birth  and . &gt;= 0 and . &lt;= 20" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_alive" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/hadpreg/women_birth *2 and . &gt;= 0 and . &lt;= 20" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_neonatdeath" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/women_npreg  and . &gt;= 0 and . &lt;= 20" jr:constraintMsg="Entre 0 a 20 mas menor que o total de gravidezes" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_npreg12" required="true()" type="int"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_hta12" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_convul" required="true()" type="select1"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/women_npreg  and . &gt;= 0 and . &lt;= 20" jr:constraintMsg="Entre 0 a 20 mas menor que o total de gravidezes" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_mfiu" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/women_npreg  and . &gt;= 0 and . &lt;= 20" jr:constraintMsg="Entre 0 a 20 mas menor que o total de gravidezes" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_npregnadomorto" required="true()" type="int"/>
+      <bind constraint=". &lt;=  /formc_nova_mulher/FORM_C/women_npreg  and . &gt;= 0 and . &lt;= 20" jr:constraintMsg="Entre 0 a 20 mas menor que o total de gravidezes" nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_alive12" required="true()" type="int"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_earlyneonatdeath" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/FORM_C/hadpreg/women_neonatdeath12" required="true()" type="select1"/>
+      <bind nodeset="/formc_nova_mulher/processedByMirth" readonly="true()" relevant="1=2" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/formc_nova_mulher/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;FormC-&quot;,  /formc_nova_mulher/FORM_C/permId )" nodeset="/formc_nova_mulher/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/formc_nova_mulher/visitId">
+      <label>Id da Visita</label>
+    </input>
+    <input ref="/formc_nova_mulher/roundNumber">
+      <label>Número da ronda</label>
+    </input>
+    <input ref="/formc_nova_mulher/locationId">
+      <label>A1. ID do Agregado</label>
+    </input>
+    <input ref="/formc_nova_mulher/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+    </input>
+    <input ref="/formc_nova_mulher/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <input appearance="numbers" ref="/formc_nova_mulher/houseno">
+      <label>A8. Número de agregado</label>
+    </input>
+    <group ref="/formc_nova_mulher/FORM_C">
+      <label>FORM C: QUESTIONARIO DO CENSO PARA MULHERES EM IDADE REPRODUTIVA (12-49 ANOS)</label>
+      <input ref="/formc_nova_mulher/FORM_C/individualId">
+        <label>Id do Individuo</label>
+      </input>
+      <input ref="/formc_nova_mulher/FORM_C/permId">
+        <label>Perm Id da mulher</label>
+      </input>
+      <input ref="/formc_nova_mulher/FORM_C/fullname">
+        <label>B1. Nome da mulher</label>
+      </input>
+      <input ref="/formc_nova_mulher/FORM_C/dob">
+        <label>B2. Data de nascimento da mulher</label>
+      </input>
+      <select1 ref="/formc_nova_mulher/FORM_C/respond_relation">
+        <label>A8. Relacao da mulher com o respondente</label>
+        <item>
+          <label>Propria</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Esposa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Filha</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Irma</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mae</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Neta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Enteada</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Prima</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sobrinha</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outra</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/formc_nova_mulher/FORM_C/women_education">
+        <label>B4. Nivel de educacao</label>
+        <item>
+          <label>Analfabeto</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>5 Classe</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>7 Classe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>10 Classe ou Equivalente</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>12 Classe ou Equivalente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Bacharel</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Licenciatura</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Pos-Graduacao</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Nao aplicavel</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/formc_nova_mulher/FORM_C/women_ecivil">
+        <label>B5. Estado civil</label>
+        <item>
+          <label>Solteira</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Casada</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Uniao monogamica</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Uniao poligamica</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Divorciada</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Separada</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Viuva</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/formc_nova_mulher/FORM_C/women_relation">
+        <label>B6. Relacao com o chefe do agregado</label>
+        <item>
+          <label>Propria</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Esposa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Filha</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Irma</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Mae</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Neta</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Enteada</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Prima</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sobrinha</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outra</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/formc_nova_mulher/FORM_C/women_religion">
+        <label>B7. Religiao</label>
+        <item>
+          <label>Catolica</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Protestante/Anglicana</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Cristao</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Islamica</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Hindu</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Zione</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Animista</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Ateu</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Nenhuma</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Outra</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/formc_nova_mulher/FORM_C/women_sector">
+        <label>B9. Principal sector de actividade</label>
+        <item>
+          <label>Agricultura</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Educacao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Cultura</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Banca e financas</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Comunicacao e transportes</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Turismo, Hotelaria e Restaurantes</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Seguranca</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Outros servicos publicos</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sector Informal</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Industria</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Nao trabalha</label>
+          <value>88</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/formc_nova_mulher/FORM_C/women_occupation">
+        <label>B8. Ocupacao</label>
+        <item>
+          <label>Machamba</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Sivicultura</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Sector agrario</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Pesca</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Florestas</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Outro funcionario da Agricultura</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Estudante</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Professor</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outros funcionario da Educacao</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Artes e oficio</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Musicas/ danca</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Letras/escritores</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Outro sector da cultura</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Comercio Formal</label>
+          <value>14</value>
+        </item>
+        <item>
+          <label>Comercio informal</label>
+          <value>15</value>
+        </item>
+        <item>
+          <label>Negociante</label>
+          <value>16</value>
+        </item>
+        <item>
+          <label>Comerciante</label>
+          <value>17</value>
+        </item>
+        <item>
+          <label>Vendedor</label>
+          <value>18</value>
+        </item>
+        <item>
+          <label>Motoristas/cobradores/fiscais</label>
+          <value>19</value>
+        </item>
+        <item>
+          <label>Trabalhadores de radio e televisao</label>
+          <value>20</value>
+        </item>
+        <item>
+          <label>Mecanicos e auxiliares de mecanicos</label>
+          <value>21</value>
+        </item>
+        <item>
+          <label>Tecnicos de comunicacao</label>
+          <value>22</value>
+        </item>
+        <item>
+          <label>Cozinheiros/pasteleiros/ serventes</label>
+          <value>23</value>
+        </item>
+        <item>
+          <label>Soldado</label>
+          <value>24</value>
+        </item>
+        <item>
+          <label>Policia</label>
+          <value>25</value>
+        </item>
+        <item>
+          <label>Seguranca</label>
+          <value>26</value>
+        </item>
+        <item>
+          <label>Outro sector de Seguranca</label>
+          <value>27</value>
+        </item>
+        <item>
+          <label>Escriturarios</label>
+          <value>28</value>
+        </item>
+        <item>
+          <label>Tecnicos</label>
+          <value>29</value>
+        </item>
+        <item>
+          <label>Auxiliares</label>
+          <value>30</value>
+        </item>
+        <item>
+          <label>Gestores</label>
+          <value>31</value>
+        </item>
+        <item>
+          <label>Outro funcionario dos Servicos publicos</label>
+          <value>32</value>
+        </item>
+        <item>
+          <label>Vendedores</label>
+          <value>33</value>
+        </item>
+        <item>
+          <label>Comerciantes</label>
+          <value>34</value>
+        </item>
+        <item>
+          <label>Cabelereiros e barbeiros</label>
+          <value>35</value>
+        </item>
+        <item>
+          <label>Auxiliar</label>
+          <value>36</value>
+        </item>
+        <item>
+          <label>serventes</label>
+          <value>37</value>
+        </item>
+        <item>
+          <label>Tecnicos</label>
+          <value>38</value>
+        </item>
+        <item>
+          <label>Medicos</label>
+          <value>39</value>
+        </item>
+        <item>
+          <label>outros funcionarios</label>
+          <value>40</value>
+        </item>
+        <item>
+          <label>Mineiro</label>
+          <value>41</value>
+        </item>
+        <item>
+          <label>Operarios</label>
+          <value>42</value>
+        </item>
+        <item>
+          <label>Tecnicos</label>
+          <value>43</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>14</value>
+        </item>
+        <item>
+          <label>Nao trabalha</label>
+          <value>88</value>
+        </item>
+        <item>
+          <label>Sem Informacao</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <input ref="/formc_nova_mulher/FORM_C/women_npreg">
+        <label>C1. Quantas vezes esteve gravida durante a vida?</label>
+      </input>
+      <group ref="/formc_nova_mulher/FORM_C/hadpreg">
+        <label>Teve gravidez</label>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_abortion">
+          <label>C2. Quantos abortos teve durante a vida?</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_nadomorto">
+          <label>C3. Quantos nados mortos ja teve durante a vidade?</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_birth">
+          <label>C4. Quantos nados vivos teve durante a vida?</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_alive">
+          <label>C5. Quantos filhos continuam vivos?</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_neonatdeath">
+          <label>C6. Quantas filhos teus morreram durante o primeiro mes de vida? (dentro de 28 dias)</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_npreg12">
+          <label>D1. Quantas vezes esteve gravida nos ultimos 12 meses?</label>
+        </input>
+        <select1 ref="/formc_nova_mulher/FORM_C/hadpreg/women_hta12">
+          <label>D2. Mulher teve pressao arterial alta durante alguma gravidez nos ultimos 12 meses?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/formc_nova_mulher/FORM_C/hadpreg/women_convul">
+          <label>D3. A mulher chegou a ter convulsoes em alguma gravidez nos ultimos 12 meses?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_mfiu">
+          <label>D4. Quantas vezes teve mortes intra-uterina nos ultimos 12 meses?</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_npregnadomorto">
+          <label>D5. Quantas vezes teve gravida e que resultou em nado morto nos ultimos 12 meses?</label>
+        </input>
+        <input ref="/formc_nova_mulher/FORM_C/hadpreg/women_alive12">
+          <label>D6. Quantos nados vivos teve nos ultimos 12 meses?</label>
+        </input>
+        <select1 ref="/formc_nova_mulher/FORM_C/hadpreg/women_earlyneonatdeath">
+          <label>D7. Teve alguma crianca que nasceu nos ultimos 12 meses e que esta faleceu na primeira semana de vida?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/formc_nova_mulher/FORM_C/hadpreg/women_neonatdeath12">
+          <label>D8. Nos ultimos 12 meses a Sra/ela teve uma crianca que morreu dentro de um mes (28 dias) apos o nascimento?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nao sabe</label>
+            <value>3</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <input ref="/formc_nova_mulher/processedByMirth">
+      <label>processed</label>
+    </input>
+  </h:body>
+</h:html>

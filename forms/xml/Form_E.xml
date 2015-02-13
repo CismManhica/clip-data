@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Form E</h:title>
     <model>
@@ -423,7 +423,7 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op4" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op5" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op6" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/costDetails/seekCare" relevant=" /Form_E/main/costDetails/takeHospital !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/costDetails/seekCare" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/costDetails/healthUnitType" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="select1"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/howManyhealthUnit" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/costDetails/nightsInHospital" relevant=" /Form_E/main/costDetails/seekCare =1"/>
@@ -431,7 +431,7 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/nightsInHospital/op2" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/costDetails/helthUnit" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="select1"/>
       <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/costDetails/helthUnitTime" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="string"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/extConsults" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/extConsults" required="true()" type="int"/>
       <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/costDetails/laborHours" required="true()" type="string"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op1" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op2" required="true()" type="int"/>

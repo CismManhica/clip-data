@@ -56,6 +56,7 @@
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </Actualizacao>
       </instance>
@@ -86,8 +87,8 @@
       <bind constraint=". &lt;=  /Actualizacao/fertility/nrOfPregnancies " jr:constraintMsg="O valor dever ser menor ou igual ao número de gravidezes" nodeset="/Actualizacao/fertility/nrOfMiscarriages" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
       <bind constraint=". &lt;= ( /Actualizacao/fertility/nrOfPregnancies - /Actualizacao/fertility/nrOfMiscarriages )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes e aborto espontâneo" nodeset="/Actualizacao/fertility/nrOfInducedAbortions" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
       <bind constraint=". &lt;= ( /Actualizacao/fertility/nrOfPregnancies - /Actualizacao/fertility/nrOfMiscarriages - /Actualizacao/fertility/nrOfInducedAbortions )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo e aborto induzido" nodeset="/Actualizacao/fertility/nrOfStiilborn" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
-      <bind constraint=". &gt;=0" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Actualizacao/fertility/nrOfLivebirth" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
-      <bind constraint=". &gt;=0" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Actualizacao/fertility/nrOfStillalive" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Actualizacao/fertility/nrOfLivebirth" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo, aborto induzido e nado morto" nodeset="/Actualizacao/fertility/nrOfStillalive" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="int"/>
       <bind nodeset="/Actualizacao/fertility/dthWeek" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="select1"/>
       <bind nodeset="/Actualizacao/fertility/nDthWeek" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0 and  /Actualizacao/fertility/dthWeek =1" required="true()" type="int"/>
       <bind nodeset="/Actualizacao/fertility/dthWeekMth" relevant=" /Actualizacao/fertility/nrOfPregnancies !=0" required="true()" type="select1"/>
@@ -102,6 +103,7 @@
       <bind nodeset="/Actualizacao/preeclamp/convulsions" required="true()" type="select1"/>
       <bind nodeset="/Actualizacao/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/Actualizacao/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Actualizacao-&quot;, /Actualizacao/rounds/permId )" nodeset="/Actualizacao/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -424,224 +426,44 @@
       <select1 ref="/Actualizacao/rounds/ocupation">
         <label>10. Ocupação</label>
         <item>
-          <label>Camponês/agricultor</label>
+          <label>Desempregado/a</label>
           <value>1</value>
         </item>
         <item>
-          <label>Pecuária</label>
+          <label>Empregado/a doméstico/a</label>
           <value>2</value>
         </item>
         <item>
-          <label>Pesca</label>
+          <label>Agricultura</label>
           <value>3</value>
         </item>
         <item>
-          <label>Caçador</label>
+          <label>Trabalho manual não qualificado</label>
           <value>4</value>
         </item>
         <item>
-          <label>Lenhadores/carvoeiros</label>
+          <label>Trabalho manual qualificado</label>
           <value>5</value>
         </item>
         <item>
-          <label>Outra área da agricultura</label>
+          <label>Comércio e serviços</label>
           <value>6</value>
         </item>
         <item>
-          <label>Estudante</label>
+          <label>Religioso/a</label>
           <value>7</value>
         </item>
         <item>
-          <label>Professor</label>
+          <label>Profissional/técnica/gestora</label>
           <value>8</value>
         </item>
         <item>
-          <label>Outro profissional da Educação</label>
+          <label>Estudante</label>
           <value>9</value>
         </item>
         <item>
-          <label>Artes e ofício</label>
+          <label>Não sabe</label>
           <value>10</value>
-        </item>
-        <item>
-          <label>Musicas/dança</label>
-          <value>11</value>
-        </item>
-        <item>
-          <label>Letras/escritores</label>
-          <value>12</value>
-        </item>
-        <item>
-          <label>Outro sector da cultura</label>
-          <value>13</value>
-        </item>
-        <item>
-          <label>Empregado/Escriturário</label>
-          <value>14</value>
-        </item>
-        <item>
-          <label>Comerciante</label>
-          <value>15</value>
-        </item>
-        <item>
-          <label>Outro profissional do sector do Comercio/Banca/Finanças</label>
-          <value>16</value>
-        </item>
-        <item>
-          <label>Motoristas/cobradores/fiscais</label>
-          <value>17</value>
-        </item>
-        <item>
-          <label>Trabalhadores de rádio e televisão</label>
-          <value>18</value>
-        </item>
-        <item>
-          <label>Mecânicos e auxiliares de mecânicos</label>
-          <value>19</value>
-        </item>
-        <item>
-          <label>Técnicos de comunicação</label>
-          <value>20</value>
-        </item>
-        <item>
-          <label>Outro profissional do sector de transporte e comunicação</label>
-          <value>21</value>
-        </item>
-        <item>
-          <label>Cozinheiros/pasteleiros/padeiros</label>
-          <value>22</value>
-        </item>
-        <item>
-          <label>Outro profissional do sector de restauração</label>
-          <value>23</value>
-        </item>
-        <item>
-          <label>Soldados</label>
-          <value>24</value>
-        </item>
-        <item>
-          <label>Policias</label>
-          <value>25</value>
-        </item>
-        <item>
-          <label>Seguranças</label>
-          <value>26</value>
-        </item>
-        <item>
-          <label>Outro profissional do sector de Segurança</label>
-          <value>27</value>
-        </item>
-        <item>
-          <label>Escriturários</label>
-          <value>28</value>
-        </item>
-        <item>
-          <label>Técnicos</label>
-          <value>29</value>
-        </item>
-        <item>
-          <label>Auxiliares</label>
-          <value>30</value>
-        </item>
-        <item>
-          <label>Gestores</label>
-          <value>31</value>
-        </item>
-        <item>
-          <label>Outro profissional dos Serviços públicos</label>
-          <value>32</value>
-        </item>
-        <item>
-          <label>Vendedores</label>
-          <value>33</value>
-        </item>
-        <item>
-          <label>Comerciantes</label>
-          <value>34</value>
-        </item>
-        <item>
-          <label>Empregado doméstico</label>
-          <value>35</value>
-        </item>
-        <item>
-          <label>Cabeleireiros e barbeiros</label>
-          <value>36</value>
-        </item>
-        <item>
-          <label>Outro elemento do sector informal</label>
-          <value>37</value>
-        </item>
-        <item>
-          <label>Auxiliar</label>
-          <value>38</value>
-        </item>
-        <item>
-          <label>Serventes</label>
-          <value>39</value>
-        </item>
-        <item>
-          <label>Técnicos</label>
-          <value>40</value>
-        </item>
-        <item>
-          <label>Médicos</label>
-          <value>41</value>
-        </item>
-        <item>
-          <label>Outro profissional do sector da Saúde</label>
-          <value>42</value>
-        </item>
-        <item>
-          <label>Mineiro</label>
-          <value>43</value>
-        </item>
-        <item>
-          <label>Operários</label>
-          <value>44</value>
-        </item>
-        <item>
-          <label>Técnicos</label>
-          <value>45</value>
-        </item>
-        <item>
-          <label>Outro profissional do sector da Industria</label>
-          <value>46</value>
-        </item>
-        <item>
-          <label>Médicos tradicionais/curandeiros</label>
-          <value>47</value>
-        </item>
-        <item>
-          <label>Pastores/padres/Bispos/Sacerdotes/Clérigos</label>
-          <value>48</value>
-        </item>
-        <item>
-          <label>Activistas e voluntários</label>
-          <value>49</value>
-        </item>
-        <item>
-          <label>Outro elemento deste sector</label>
-          <value>50</value>
-        </item>
-        <item>
-          <label>Aposentado/reformado</label>
-          <value>51</value>
-        </item>
-        <item>
-          <label>Incapacitado/deficiente</label>
-          <value>52</value>
-        </item>
-        <item>
-          <label>Outro elemento desta categoria</label>
-          <value>53</value>
-        </item>
-        <item>
-          <label>Outro</label>
-          <value>54</value>
-        </item>
-        <item>
-          <label>Não Trabalha</label>
-          <value>88</value>
         </item>
       </select1>
     </group>

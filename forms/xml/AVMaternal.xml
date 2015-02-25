@@ -1,0 +1,3574 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>AV Materna</h:title>
+    <model>
+      <instance>
+        <AVMaternal id="AVMaternal">
+          <deviceid/>
+          <start/>
+          <end/>
+          <houseno/>
+          <roundNumber/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <consent/>
+          <main>
+            <intervieweeName/>
+            <intervieweeDob/>
+            <intervieweeInHouse/>
+            <education/>
+            <relationWithInterviewee/>
+            <relationWithIntervieweeSpec/>
+            <deceasedData>
+              <permId/>
+              <name/>
+              <dob/>
+              <dthCircunstacies/>
+            </deceasedData>
+            <dthDetails>
+              <dthDate/>
+              <dthLocation/>
+              <wasMarried/>
+              <dthBefore42d/>
+            </dthDetails>
+            <historyContext>
+              <txt/>
+              <hadTb/>
+              <hadHIV/>
+              <hadPosetiveMalaria/>
+              <hadNegativeMalaria/>
+              <hadMeasles/>
+              <hadHighTension/>
+              <hadHeartDesease/>
+              <hadDiabetes/>
+              <hadAsthma/>
+              <hadEpilepsy/>
+              <hadCancer/>
+              <hadDPOC/>
+              <hadDementia/>
+              <hadDepression/>
+              <hadAVC/>
+              <hadCellDisease/>
+              <hadKidneyDisease/>
+              <hadLiverDisease/>
+              <dthRainySeason/>
+              <dthDrySeason/>
+              <sickPeriod/>
+              <diedSuddenly/>
+            </historyContext>
+            <lesionHistory>
+              <hadAccident/>
+              <carCrash/>
+              <footCrash/>
+              <carCrashIn/>
+              <carCrashInHeavy/>
+              <motorcycleCrash/>
+              <knewAboutAccident/>
+              <counterpartReached/>
+              <wasPedestrian/>
+              <wasObject/>
+              <wasCar/>
+              <wasAutoCar/>
+              <wasMotorcycle/>
+              <wasBicycle/>
+              <wasOther/>
+              <injuredAcident/>
+              <injuredFalling/>
+              <drowning/>
+              <burns/>
+              <bite/>
+              <dog/>
+              <snake/>
+              <insect/>
+              <forceOfNature/>
+              <intoxication/>
+              <aggression/>
+              <intentionally/>
+              <firearm/>
+              <knife/>
+              <machines/>
+              <animarOrObject/>
+              <committedSuicide/>
+            </lesionHistory>
+            <symptoms>
+              <swellingBreast/>
+              <hadVaginalBleeding/>
+            </symptoms>
+            <lesoesHistory>
+              <death6WeeksAfter/>
+              <wasPregnant/>
+              <death6Weeks/>
+              <death24hLabour/>
+              <deathInLabour/>
+              <wasBreastfeeding/>
+              <was1stPregnancy/>
+              <hmanyBirths/>
+              <hadCesarian/>
+              <deathAfterMultiplePreg/>
+              <highTension/>
+              <hadVaginalDischarge/>
+              <suffedConvultions/>
+              <suffedTurveVision/>
+              <gaveBirthLive/>
+              <vaginalBleeding/>
+              <vaginalBleeding6Months/>
+              <vaginalBleeding3Months/>
+              <vaginalBleedingLabour/>
+              <vaginalBleedingAfterLabor/>
+              <placenta/>
+              <misplacedBaby/>
+              <longLabor/>
+              <triedTerminatePregnancy/>
+              <pregnancyAbortion/>
+              <birthHospital/>
+              <birthHome/>
+              <birthOther/>
+              <professionalAssistance/>
+              <surgeryRemoveUterus/>
+              <hadNoemalLabour/>
+              <assistedDelivery/>
+              <cesarianLabour/>
+              <bornMonthMore/>
+            </lesoesHistory>
+            <lastSymptoms>
+              <hadFever/>
+              <hadFeverPeriod/>
+              <nightSweats/>
+              <cough/>
+              <coughPeriod/>
+              <coughProductive/>
+              <coughBlood/>
+              <breathProblems/>
+              <kwickBreath/>
+              <kwickBreathPeriod/>
+              <missAir/>
+              <missAirPeriod/>
+              <unableCarryActivity/>
+              <missAirSleeping/>
+              <breathNoise/>
+              <chestPain/>
+              <diarrhea/>
+              <diarrheaPeriod/>
+              <bloodFezes/>
+              <vomit/>
+              <vomitCoffee/>
+              <abdominalIssue/>
+              <abdominalSeriousIssue/>
+              <abdominalSeriousIssuePeriod/>
+              <abdomenProtuberant/>
+              <abdomenProtuberantPeriod/>
+              <noduleAbdomen/>
+              <noduleAbdomenPeriod/>
+              <severeHeadache/>
+              <painNeck/>
+              <painNeckPeriod/>
+              <hadMentalDisorder/>
+              <hadMentalDisorderPeriod/>
+              <wasInconcious24h/>
+              <wasInconciousQuickly/>
+              <convultions/>
+              <convultionsPeriod/>
+              <wasInconciousImediately/>
+              <urinaryProblem/>
+              <urinaryNothing/>
+              <urinaryOften/>
+              <urineWithBlood/>
+              <skinProblem/>
+              <ulceraExcep/>
+              <ulceraOther/>
+              <skinRash/>
+              <skinRashPeriod/>
+              <erupcaoSarampo/>
+              <herpesZoster/>
+              <bleedMouth/>
+              <weightLoss/>
+              <wasSlim/>
+              <mouthSores/>
+              <unableOpenMouth/>
+              <swellingFace/>
+              <swellingBothFeet/>
+              <nodes/>
+              <nodesOrLesions/>
+              <nodesNeck/>
+              <nodesArmpit/>
+              <nodesGroin/>
+              <paralysisOneside/>
+              <painSwallowingLiquids/>
+              <yellowEyes/>
+              <hairColorChanges/>
+              <wasPale/>
+              <encovedEyes/>
+              <drinkMoreWater/>
+            </lastSymptoms>
+            <treatments>
+              <vacinated/>
+              <hadtreatments/>
+              <reidratation/>
+              <fuidosIntravenosos/>
+              <bloodTransfusion/>
+              <tuboNariz/>
+              <antiBioticos/>
+              <operation/>
+              <operation1Mth/>
+              <dischargedSick/>
+            </treatments>
+            <riskFactors>
+              <drankAlcohol/>
+              <drankAlcoholPeriod/>
+              <smokedTobacco/>
+              <tobaccoQuantity/>
+            </riskFactors>
+            <socialAutopsy>
+              <locationChild/>
+              <action/>
+              <actionComander/>
+              <timeDecision/>
+              <problemsToHospital/>
+              <healthCare/>
+              <hadDecided/>
+              <timePassed/>
+              <cost/>
+              <gainMoney/>
+              <distancy/>
+              <vehicle/>
+            </socialAutopsy>
+          </main>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </AVMaternal>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/AVMaternal/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/AVMaternal/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/AVMaternal/end" type="dateTime"/>
+      <bind nodeset="/AVMaternal/houseno" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/roundNumber" required="true()" type="int"/>
+      <bind nodeset="/AVMaternal/individualId" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/locationId" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/fieldWorkerId" required="true()" type="string"/>
+      <bind constraint=". &lt;= today()" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
+      <bind nodeset="/AVMaternal/consent" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main" relevant=" /AVMaternal/consent  = 1"/>
+      <bind nodeset="/AVMaternal/main/intervieweeName" required="true()" type="string"/>
+      <bind constraint="int((today() - .) div 365.24) &gt; 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/AVMaternal/main/intervieweeDob" required="true()" type="date"/>
+      <bind nodeset="/AVMaternal/main/intervieweeInHouse" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/education" relevant=" /AVMaternal/main/intervieweeInHouse =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/relationWithInterviewee" relevant=" /AVMaternal/main/intervieweeInHouse =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/relationWithIntervieweeSpec" relevant=" /AVMaternal/main/relationWithInterviewee =11" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/deceasedData" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/permId" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/name" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/dob" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/dthDetails" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
+      <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/dthDetails/wasMarried" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/dthDetails/dthBefore42d" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/txt" readonly="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadTb" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadHIV" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadPosetiveMalaria" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadNegativeMalaria" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadMeasles" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadHighTension" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadHeartDesease" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadDiabetes" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadAsthma" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadEpilepsy" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadCancer" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadDPOC" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadDementia" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadDepression" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadAVC" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadCellDisease" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadKidneyDisease" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadLiverDisease" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/dthRainySeason" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/dthDrySeason" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/sickPeriod" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/diedSuddenly" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/hadAccident" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrash" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/footCrash" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashIn" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashInHeavy" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/motorcycleCrash" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knewAboutAccident" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/counterpartReached" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasPedestrian" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasObject" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasCar" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasAutoCar" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasMotorcycle" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasBicycle" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasOther" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredFalling" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/drowning" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/burns" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/bite" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/dog" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/snake" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/insect" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/forceOfNature" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intoxication" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knife" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/machines" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/symptoms" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/symptoms/swellingBreast" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/symptoms/hadVaginalBleeding" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/death6WeeksAfter" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/wasPregnant" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/death6Weeks" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/death24hLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/deathInLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/wasBreastfeeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/was1stPregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hmanyBirths" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hadCesarian" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/deathAfterMultiplePreg" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/highTension" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hadVaginalDischarge" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/suffedConvultions" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/suffedTurveVision" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/gaveBirthLive" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding6Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding3Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingAfterLabor" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/placenta" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/misplacedBaby" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/longLabor" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/triedTerminatePregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/pregnancyAbortion" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthHospital" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthHome" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/professionalAssistance" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/surgeryRemoveUterus" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hadNoemalLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/assistedDelivery" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/cesarianLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/bornMonthMore" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/hadFever" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/hadFeverPeriod" relevant=" /AVMaternal/main/lastSymptoms/hadFever =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/nightSweats" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/cough" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/coughPeriod" relevant=" /AVMaternal/main/lastSymptoms/cough =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/coughProductive" relevant=" /AVMaternal/main/lastSymptoms/cough =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/coughBlood" relevant=" /AVMaternal/main/lastSymptoms/cough =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/breathProblems" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/kwickBreath" relevant=" /AVMaternal/main/lastSymptoms/breathProblems =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/kwickBreathPeriod" relevant=" /AVMaternal/main/lastSymptoms/breathProblems =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/missAir" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/missAirPeriod" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/unableCarryActivity" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/missAirSleeping" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/breathNoise" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/chestPain" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/diarrhea" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/diarrheaPeriod" relevant=" /AVMaternal/main/lastSymptoms/diarrhea =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/bloodFezes" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/vomit" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/vomitCoffee" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalIssue" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssue" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssuePeriod" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdomenProtuberant" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdomenProtuberantPeriod" relevant=" /AVMaternal/main/lastSymptoms/abdomenProtuberant =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/noduleAbdomen" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/noduleAbdomenPeriod" relevant=" /AVMaternal/main/lastSymptoms/noduleAbdomen =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/severeHeadache" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/painNeck" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/painNeckPeriod" relevant=" /AVMaternal/main/lastSymptoms/painNeck =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/hadMentalDisorder" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/hadMentalDisorderPeriod" relevant=" /AVMaternal/main/lastSymptoms/hadMentalDisorder =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/wasInconcious24h" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/wasInconciousQuickly" relevant=" /AVMaternal/main/lastSymptoms/wasInconcious24h =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/convultions" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/convultionsPeriod" relevant=" /AVMaternal/main/lastSymptoms/convultions =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/wasInconciousImediately" relevant=" /AVMaternal/main/lastSymptoms/convultions =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/urinaryProblem" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/urinaryNothing" relevant=" /AVMaternal/main/lastSymptoms/urinaryProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/urinaryOften" relevant=" /AVMaternal/main/lastSymptoms/urinaryProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/urineWithBlood" relevant=" /AVMaternal/main/lastSymptoms/urinaryProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/skinProblem" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/ulceraExcep" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/ulceraOther" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/skinRash" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/skinRashPeriod" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/erupcaoSarampo" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/herpesZoster" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/bleedMouth" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/weightLoss" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/wasSlim" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/mouthSores" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/unableOpenMouth" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/swellingFace" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/swellingBothFeet" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/nodes" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/nodesOrLesions" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/nodesNeck" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/nodesArmpit" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/nodesGroin" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/paralysisOneside" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/painSwallowingLiquids" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/yellowEyes" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/hairColorChanges" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/wasPale" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/encovedEyes" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/drinkMoreWater" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/treatments/vacinated" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/hadtreatments" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/reidratation" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/fuidosIntravenosos" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/bloodTransfusion" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/tuboNariz" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/antiBioticos" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/operation" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/operation1Mth" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/dischargedSick" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/riskFactors" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/riskFactors/drankAlcohol" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/riskFactors/drankAlcoholPeriod" relevant=" /AVMaternal/main/riskFactors/drankAlcohol =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/riskFactors/smokedTobacco" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/riskFactors/tobaccoQuantity" relevant=" /AVMaternal/main/riskFactors/smokedTobacco =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/locationChild" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/action" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/actionComander" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVMaternal/main/socialAutopsy/timeDecision" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/problemsToHospital" required="true()" type="select"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/healthCare" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/hadDecided" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVMaternal/main/socialAutopsy/timePassed" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/cost" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/gainMoney" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/distancy" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/vehicle" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
+      <bind nodeset="/AVMaternal/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/AVMaternal/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;AVMaternal-&quot;, /AVMaternal/main/deceasedData/permId )" nodeset="/AVMaternal/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/AVMaternal/houseno">
+      <label>Número da casa</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVMaternal/roundNumber">
+      <label>Número da ronda</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVMaternal/individualId">
+      <label>A0. ID do Individuo</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVMaternal/locationId">
+      <label>A1. ID do Agregado</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVMaternal/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVMaternal/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <select1 ref="/AVMaternal/consent">
+      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <group ref="/AVMaternal/main">
+      <label>CLIP</label>
+      <input ref="/AVMaternal/main/intervieweeName">
+        <label>A5. Nome do/a respondente</label>
+      </input>
+      <input appearance="no-calendar" ref="/AVMaternal/main/intervieweeDob">
+        <label>A6. Data de nascimento do/a respondente</label>
+      </input>
+      <select1 ref="/AVMaternal/main/intervieweeInHouse">
+        <label>A7. O/a respondente vive neste Agregado?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/AVMaternal/main/education">
+        <label>A8. Nível de Educação dpo respondente?</label>
+        <item>
+          <label>Alnalfabeto</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>5ª Classe</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>7ª Classe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>10ª Classe/ou Equivalente</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>12ª Classe/ou Equivalente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Bacharel</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Licenciatura</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Pós-Graduação</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não aplicável</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <select1 ref="/AVMaternal/main/relationWithInterviewee">
+        <label>A9.Relação de parentesco do respondente com a falecida?</label>
+        <item>
+          <label>Marido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Pai</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Mãe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sogro/a</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Irmã/o</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Cunhado/a</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Tio/a</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Avô</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Filho/a</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Genro/Nora</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <input ref="/AVMaternal/main/relationWithIntervieweeSpec">
+        <label>A9.1. Especifique a relação de parentesco do/a respondente com a felecida</label>
+      </input>
+      <group ref="/AVMaternal/main/deceasedData">
+        <label>SECCÃO A: INICIO DOS DADOS DA FALECIDA</label>
+        <input ref="/AVMaternal/main/deceasedData/permId">
+          <label>A10. Perm_ID da falecida</label>
+        </input>
+        <input ref="/AVMaternal/main/deceasedData/name">
+          <label>A11. Nome da falecida</label>
+        </input>
+        <input ref="/AVMaternal/main/deceasedData/dob">
+          <label>A12. Data de nascimento da falecida</label>
+        </input>
+        <input ref="/AVMaternal/main/deceasedData/dthCircunstacies">
+          <label>A13. Pode dizer-me sobre a doença ou circunstância que levou a morte do neonato?
+Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</label>
+        </input>
+      </group>
+      <group ref="/AVMaternal/main/dthDetails">
+        <label>SECCÃO B: DETALHES DA MORTE</label>
+        <input ref="/AVMaternal/main/dthDetails/dthDate">
+          <label>B1. Quando é que ela faleceu?</label>
+        </input>
+        <select1 ref="/AVMaternal/main/dthDetails/dthLocation">
+          <label>B2. Onde é que a morte ocorreu?</label>
+          <item>
+            <label>Hospital</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No Centro de Saúde</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Em casa</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>A caminho/durante a transferência para a Unidade Sanitária.</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Outro lugar</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/dthDetails/wasMarried">
+          <label>B3. Ela era casada na altura da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/dthDetails/dthBefore42d">
+          <label>B4. Esta mulher morreu com mais de 42 dias, mas menos de um ano depois de estar grávida ou ter dado parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/historyContext">
+        <label>SECCÃO C:CONTEXTO HISTÓRICO DE CONDIÇÕES MÉDICAS PREVIAMENTE CONHECIDAS</label>
+        <input ref="/AVMaternal/main/historyContext/txt">
+          <label>Eu gostaria de lhe fazer algumas perguntas sobre o contexto e as condições médicas previamente conhecidas que a falecida tinha; lesões e acidentes que a falecida sofreu; e sinais e sintomas que a falecida tinha/mostravam quando ela estava doente. Algumas dessas perguntas podem não parecem estar directamente relacionadas com a morte dela. Por favor, tenha paciência comigo e responda a todas as perguntas. Elas vão nos ajudar a ter uma visão clara de todos os sintomas possíveis que a falecida tinha.</label>
+        </input>
+        <select1 ref="/AVMaternal/main/historyContext/hadTb">
+          <label>C1.Foi-lhe diagnosticada tuberculose alguma vez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadHIV">
+          <label>C2.Foi-lhe diagnosticada HIV/SIDA alguma vez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadPosetiveMalaria">
+          <label>C3.Ela teve um teste positivo de malária recentemente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadNegativeMalaria">
+          <label>C4.Ela teve um teste negativo de malária recentemente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadMeasles">
+          <label>C5.Foi-lhe diagnosticada sarampo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadHighTension">
+          <label>C6.Foi-lhe diagnosticada tensão alta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadHeartDesease">
+          <label>C7.Foi-lhe diagnosticada alguma doença de coração?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadDiabetes">
+          <label>C8.Foi-lhe diagnosticada diabetes?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadAsthma">
+          <label>C9.Foi-lhe diagnosticada asma?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadEpilepsy">
+          <label>C10.Foi-lhe diagnosticada epilepsia?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadCancer">
+          <label>C11.Foi-lhe diagnosticada cancro?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadDPOC">
+          <label>C12.Foi-lhe diagnosticada Doença Pulmonar Obstrutiva crónica (DPOC)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadDementia">
+          <label>C13.Foi-lhe diagnosticada demência?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadDepression">
+          <label>C14.Foi-lhe diagnosticada depressão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadAVC">
+          <label>C15.Foi-lhe diagnosticada Acidente Vascular Cerebral (AVC)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadCellDisease">
+          <label>C16.Foi-lhe diagnosticada doença das células falciformes?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadKidneyDisease">
+          <label>C17.Foi-lhe diagnosticada doença renal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/hadLiverDisease">
+          <label>C18.Foi-lhe diagnosticada doença do fígado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/dthRainySeason">
+          <label>C19.Ela faleceu durante a época chuvosa?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/dthDrySeason">
+          <label>C20.Ela faleceu durante a época seca?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/sickPeriod">
+          <label>C21.Por quanto tempo ela esteve doente antes de falecer?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/historyContext/diedSuddenly">
+          <label>C22.Ela faleceu de repente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/lesionHistory">
+        <label>SECCÃO D: HISTÓRIA DE LESÕES / ACIDENTES</label>
+        <select1 ref="/AVMaternal/main/lesionHistory/hadAccident">
+          <label>D1.Ela sofreu de alguma lesão ou acidente que levou à sua morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/carCrash">
+          <label>D2.+Ela sofreu de um acidente de viação?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/footCrash">
+          <label>D3.+ +Ela foi ferida como um pedestre/ caminhando?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/carCrashIn">
+          <label>D4.+ + Ela foi ferida como um ocupante de um veículo automóvel?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/carCrashInHeavy">
+          <label>D5.+ + Ela foi ferida como um ocupante de um autocarro /veículo de transporte pesado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/motorcycleCrash">
+          <label>D6.+ + Ela foi ferida como um condutor ou passageiro de uma moto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/knewAboutAccident">
+          <label>D7.+ + Ela foi ferida como um ciclista (andando de bicicleta)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/counterpartReached">
+          <label>D8.+ + Sabe alguma coisa sobre a contra-parte que foi atingido durante o acidente de trânsito?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasPedestrian">
+          <label>D9.+ + + Foi um pedestre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasObject">
+          <label>D10.+ + + Foi um objecto fixo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasCar">
+          <label>D11.+ + + Foi um veículo automóvel?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasAutoCar">
+          <label>D12.+ + + Foi um autocarro ou veículo de transporte pesado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasMotorcycle">
+          <label>D13.+ + + Foi uma motorizada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasBicycle">
+          <label>D14.+ + + Foi uma bicicleta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/wasOther">
+          <label>D15.+ + + Foi outra coisa?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/injuredAcident">
+          <label>D16.+ Ela foi ferida num acidente de transporte não rodoviário?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/injuredFalling">
+          <label>D17.+ + Ela foi ferida numa queda?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/drowning">
+          <label>D18.+ + Ela morreu de afogamento?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/burns">
+          <label>D19.+ + Ela sofreu de queimaduras?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/bite">
+          <label>D20.+ + Ela sofreu de qualquer mordida ou picada de planta/animal/insecto que levou à sua morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/dog">
+          <label>D21.+ + + Foi um cão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/snake">
+          <label>D22.+ + + Foi uma cobra?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/insect">
+          <label>D23.+ + + Foi um insecto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/forceOfNature">
+          <label>D24.+ + + Ela foi ferida por alguma força da natureza? Exemplo: (relâmpagos, terramoto, vento, cheias, etc.).</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/intoxication">
+          <label>D25.+ + Houve alguma intoxicação?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/aggression">
+          <label>D26.+ Ela foi vítima de violência ou agressão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/intentionally">
+          <label>D27.+ A lesão ou acidente foi infligido intencionalmente por alguém?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/firearm">
+          <label>D28.+ + Ela foi ferida por uma arma de fogo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/knife">
+          <label>D29.+ + Ela foi ferida por arma branca (faca, catana, etc) ou por um objecto cortante ou perfurante?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/machines">
+          <label>D30.+ + Ela foi ferida por máquinas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/animarOrObject">
+          <label>D31.+ + Ela foi atingida por um objecto ou atacada por um a animal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesionHistory/committedSuicide">
+          <label>D32.+ Acha que ela cometeu suicídio?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/symptoms">
+        <label>SECCÃO E: SINTOMAS E SINAIS ASSOCIADOS COM DOENÇAS DAS MULHERES</label>
+        <select1 ref="/AVMaternal/main/symptoms/swellingBreast">
+          <label>E1.Ela teve alguma úlcera ou inchaço na mama?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/symptoms/hadVaginalBleeding">
+          <label>E2.Ela teve algum sangramento vaginal excessivo entre os períodos menstruais?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/lesoesHistory">
+        <label>SECCÃO F: HISTÓRIA DE LESÕES / ACIDENTES</label>
+        <select1 ref="/AVMaternal/main/lesoesHistory/death6WeeksAfter">
+          <label>F1.A senhora estava gravida ou faleceu dentro de 6 semanas depois de dar parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/wasPregnant">
+          <label>F2.Ela estava grávida no momento da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/death6Weeks">
+          <label>F4.Ela faleceu dentro de 6 semanas de uma gravidez que durou menos de 6 meses?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/death24hLabour">
+          <label>F5.+ Ela faleceu dentro de 24 horas após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/deathInLabour">
+          <label>F6.+ Ela faleceu durante o parto antes de dar à luz?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/wasBreastfeeding">
+          <label>F7.+ Ela estava amamentando no momento da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/was1stPregnancy">
+          <label>F8.Esta era a primeira gravidez dela?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/hmanyBirths">
+          <label>F9.+ Quantos nascimentos, incluindo nados mortos, ela teve antes deste bebé?</label>
+          <item>
+            <label>Menos de quatro nascimentos</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Quatro ou mais nascimentos</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/hadCesarian">
+          <label>F10.+ Ela teve alguma cesariana previamente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/deathAfterMultiplePreg">
+          <label>F11.+ Ela morreu durante ou após uma gravidez múltipla?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/highTension">
+          <label>F12.+ Durante a gravidez, ela sofreu de tensão alta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/hadVaginalDischarge">
+          <label>F13.+ Ela teve corrimento vaginal com odor fedorento durante a gravidez ou após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/suffedConvultions">
+          <label>F14.Durante os últimos 3 meses de gravidez, ela sofreu de convulsões?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/suffedTurveVision">
+          <label>F15.+ Durante os últimos 3 meses de gravidez, ela sofreu de visão turva?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/gaveBirthLive">
+          <label>F16.+ Ela deu luz a um nado vivo, saudável dentro de 6 semanas antes da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/vaginalBleeding">
+          <label>F17.+ Teve algum sangramento vaginal durante a gravidez ou após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/vaginalBleeding6Months">
+          <label>F18.+ + Teve algum sangramento vaginal durante os primeiros 6 meses de gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/vaginalBleeding3Months">
+          <label>F19.+ + Teve algum sangramento vaginal durante os últimos 3 meses de gravidez mas antes de começar o trabalho de parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/vaginalBleedingLabour">
+          <label>F20.+ + Teve algum sangramento vaginal excessivo durante o trabalho de parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/vaginalBleedingAfterLabor">
+          <label>F21.+ + Teve algum sangramento vaginal excessivo após o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/placenta">
+          <label>F22.+ A placenta não saiu completamente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/misplacedBaby">
+          <label>F23.+ Ela deu ou tentou dar à luz a um bebé mal posicionado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/longLabor">
+          <label>F24.+ Ela esteve em trabalho de parto excepcionalmente longo (mais de 24 horas)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/triedTerminatePregnancy">
+          <label>F25.+ Ela tentou interromper a gravidez?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/pregnancyAbortion">
+          <label>F26.+ Ela teve recentemente alguma gravidez que terminou em aborto (espontâneo ou induzido)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/birthHospital">
+          <label>F27.+ Deu à luz numa unidade sanitária?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/birthHome">
+          <label>F28.+ Deu à luz em casa?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/birthOther">
+          <label>F29.+ Deu à luz num outro lugar, por exemplo, a caminho de uma unidade sanitária?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/professionalAssistance">
+          <label>F30.+ Ela recebeu assistência profissional para o parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/surgeryRemoveUterus">
+          <label>F31.+ Ela teve alguma cirurgia para remover o útero pouco antes da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/hadNoemalLabour">
+          <label>F32.+ Teve um parto normal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/assistedDelivery">
+          <label>F33.+ Ela teve um parto assistido com fórceps/aspiração ventosa?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/cesarianLabour">
+          <label>F34.+ Foi um parto cesariano?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/bornMonthMore">
+          <label>F35.+ O bebé nasceu com mais de um mês de antecedência?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/lastSymptoms">
+        <label>SECCÃO G: SINTOMAS CONSTATADOS DURANTE A ÚLTIMA DOENÇA</label>
+        <select1 ref="/AVMaternal/main/lastSymptoms/hadFever">
+          <label>G1.Ela teve alguma febre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/hadFeverPeriod">
+          <label>G2.+ Por quanto tempo ele/ela teve febre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/nightSweats">
+          <label>G3.+ Ela teve suores nocturnos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/cough">
+          <label>G4.Ela teve alguma tosse?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/coughPeriod">
+          <label>G5.+ Por quanto tempo ela teve tosse?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/coughProductive">
+          <label>G6.+ A tosse era produtiva com expectoração?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/coughBlood">
+          <label>G7.+ Ela tossia sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/breathProblems">
+          <label>G8.Ela teve algum problema de respiração?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/kwickBreath">
+          <label>G9.+ Ela teve alguma respiração rápida?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/kwickBreathPeriod">
+          <label>G10.+ + Por quanto tempo ele/ela teve respiração rápida?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/missAir">
+          <label>G11.+ Ela teve falta de ar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/missAirPeriod">
+          <label>G12.+ + Por quanto tempo ela teve falta de ar?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/unableCarryActivity">
+          <label>G13.+ + Ela foi incapaz de levar a cabo alguma actividade diária de rotina, devido à falta de ar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/missAirSleeping">
+          <label>G14.+ + Ela ficava sem folego (falta de ar) quando se deitava?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/breathNoise">
+          <label>G15.+ Ela teve alguma respiração ruidosa (roncos ou sibilos)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/chestPain">
+          <label>G16.Ela teve alguma dor intensa no peito?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/diarrhea">
+          <label>G17.Ela teve diarreia?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/diarrheaPeriod">
+          <label>G18.+ Por quanto tempo ela teve diarreia?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Mais do que 4 semanas</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/bloodFezes">
+          <label>G19.Em qualquer momento durante a última doença teve sangue nas fezes?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/vomit">
+          <label>G20.Ela vomitava?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/vomitCoffee">
+          <label>G21.+ Ela tinha vómitos com manchas de cor de café ou vermelho brilhante/sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/abdominalIssue">
+          <label>G22.Ela teve algum problema abdominal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/abdominalSeriousIssue">
+          <label>G23.+ Ela teve alguma dor abdominal grave?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/abdominalSeriousIssuePeriod">
+          <label>G24.+ + Por quanto tempo antes da morte, ela teve dor abdominal grave?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Mais do que 4 semanas</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/abdomenProtuberant">
+          <label>G25.+ Ela teve abdómen protuberante mais do que o habitual?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/abdomenProtuberantPeriod">
+          <label>G26.+ + Por quanto tempo ela teve um abdómen saliente mais do que o habitual?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 2 a 4 semanas</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Mais do que 4 semanas</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/noduleAbdomen">
+          <label>G27.+ Ela teve algum nódulo/caroço dentro do abdómen?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/noduleAbdomenPeriod">
+          <label>G28.+ + Por quanto tempo ela teve o nódulo/caroço dentro do abdómen?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/severeHeadache">
+          <label>G29.Ela teve uma forte dor de cabeça?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/painNeck">
+          <label>G30.Ela teve um torcicolo ou dor no pescoço?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/painNeckPeriod">
+          <label>G31.+ Por quanto tempo ele/ela teve um torcicolo ou dor no pescoço?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/hadMentalDisorder">
+          <label>G32.Ela teve perturbação mental?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/hadMentalDisorderPeriod">
+          <label>G33.+ Por quanto tempo ele/ela teve perturbação mental?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/wasInconcious24h">
+          <label>G34.Ela estava inconsciente por mais de 24 horas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/wasInconciousQuickly">
+          <label>G35.+ A inconsciência começou de repente e rapidamente (pelo menos dentro de um único dia)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/convultions">
+          <label>G36.Ela teve convulsões?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/convultionsPeriod">
+          <label>G37.+ Por quanto tempo ela teve convulsões?</label>
+          <item>
+            <label>Menos de 10 minutos</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>10 minutos ou mais</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/wasInconciousImediately">
+          <label>G38.+ Ela ficou inconsciente, imediatamente após a convulsão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/urinaryProblem">
+          <label>G39.Ela teve algum problema de urinário?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/urinaryNothing">
+          <label>G40.Ela não urinava nada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/urinaryOften">
+          <label>G41.+ Ela ia urinar mais frequentemente do que o habitual?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/urineWithBlood">
+          <label>G42.+ Durante a última doença, ela teve urina com sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/skinProblem">
+          <label>G43.Ela teve algum problema da pele?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/ulceraExcep">
+          <label>G44.+ Ela teve alguma úlcera, abcesso ou feridas em qualquer lugar excepto os pés?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/ulceraOther">
+          <label>G45.+ Ela teve alguma úlcera, abcesso ou feridas nos pés que não tinha também em outras partes do corpo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/skinRash">
+          <label>G46.+ Durante a doença que levou à morte, ela teve borbulhas na pele?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/skinRashPeriod">
+          <label>G47.+ + Por quanto tempo ela teve borbulhas na pele?</label>
+          <item>
+            <label>Menos de 2 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2 ou mais semanas</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/erupcaoSarampo">
+          <label>G48.+ + Ela teve erupção de sarampo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/herpesZoster">
+          <label>G49.+ + Ela alguma vez teve herpes zoster?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/bleedMouth">
+          <label>G50.Ela teve sangramento pelo nariz, boca ou ânus?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/weightLoss">
+          <label>G51.Ela teve perda de peso?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/wasSlim">
+          <label>G52.+ Ela estava severamente magra?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/mouthSores">
+          <label>G53.Ela teve feridas na boca ou manchas brancas na boca ou na língua?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/unableOpenMouth">
+          <label>G54.Ela teve rigidez de todo o corpo ou era incapaz de abrir a boca?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/swellingFace">
+          <label>G55.Ela teve inchaço da cara?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/swellingBothFeet">
+          <label>G56.Ela teve ambos os pés inchados?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/nodes">
+          <label>G57.Ela teve algum caroço/nódulos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/nodesOrLesions">
+          <label>G58.+ Ela teve alguns caroços/nódulos ou lesões na boca?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/nodesNeck">
+          <label>G59.+ Ela teve alguns caroços/nódulos no pescoço?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/nodesArmpit">
+          <label>G60.+ Ela teve alguns caroços/nódulos na axila?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/nodesGroin">
+          <label>G61.+ Ela teve alguns caroços na virilha?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/paralysisOneside">
+          <label>G62.Ela teve paralisia de um lado do corpo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/painSwallowingLiquids">
+          <label>G63.Ela teve dificuldade ou dor ao engolir líquidos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/yellowEyes">
+          <label>G64.Ela teve coloração amarela nos olhos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/hairColorChanges">
+          <label>G65.Ela teve mudança de cor do cabelo para avermelhado ou amarelado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/wasPale">
+          <label>G66.Ela estava pálido/a (emagrecendo/ falta de sangue) ou teve as palmas das mãos, os olhos ou os leitos ungueais pálidos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/encovedEyes">
+          <label>G67.Ela teve olhos encovados?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lastSymptoms/drinkMoreWater">
+          <label>G68.Ela bebia muito mais água do que o habitual?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/treatments">
+        <label>SECCÃO H: TRATAMENTO E USO DOS SERVIÇOS DE SAÚDE PARA A ÚLTIMA DOENÇA</label>
+        <select1 ref="/AVMaternal/main/treatments/vacinated">
+          <label>H1.Ela estava devidamente vacinada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/hadtreatments">
+          <label>H2.Ele/ela recebia qualquer tratamento para a doença que levou à morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/reidratation">
+          <label>H3.+ Ela recebeu sais de reidratação oral?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/fuidosIntravenosos">
+          <label>H4.+ Ela recebeu (ou precisava) tratamento de fluidos intravenosos (soro)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/bloodTransfusion">
+          <label>H5.+ Ela recebeu (ou precisava) de uma transfusão de sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/tuboNariz">
+          <label>H6.+ Ela recebeu (ou precisava) tratamento/alimentação através de um tubo que passava pelo nariz?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/antiBioticos">
+          <label>H7.+ Ela recebeu (ou precisava) antibióticos injectáveis (Intravenoso ou Intramuscular)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/operation">
+          <label>H8.+ Ela recebeu (ou precisava) alguma operação para a doença?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/operation1Mth">
+          <label>H9.+ + Teve alguma operação/cirurgia um mês antes da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/treatments/dischargedSick">
+          <label>H10.+ Ela recebeu alta do hospital muito doente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/riskFactors">
+        <label>SECCÃO I: FACTORES DE RISCO</label>
+        <select1 ref="/AVMaternal/main/riskFactors/drankAlcohol">
+          <label>I1.Ela bebia álcool?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/riskFactors/drankAlcoholPeriod">
+          <label>I2.Quantas vezes bebia álcool por semana?</label>
+          <item>
+            <label>1 a 3 dias por semana</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>3 a 5 dias por semana</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Todos os dias</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/riskFactors/smokedTobacco">
+          <label>I3.Ela fumava tabaco (cigarro, charuto, cachimbo, etc.)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/riskFactors/tobaccoQuantity">
+          <label>I4.Quantos cigarros, charutos ou cachimbos fumava por dia</label>
+          <item>
+            <label>1 a 5 cigarros por dia</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>5  a 10 cigarros por dia</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Mais de 10 cigarros por dia</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVMaternal/main/socialAutopsy">
+        <label>SECÇÃO J: AUTÓPSIA SOCIAL</label>
+        <select1 ref="/AVMaternal/main/socialAutopsy/locationChild">
+          <label>J1. Agora, por favor me diga, onde estava a mulher, quando a doença fatal dela começou?</label>
+          <item>
+            <label>Em casa (dele/parente/amigo/provedor informal)</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No hospital/outra unidade formal de saúde</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>No caminho para a unidade formal de saúde</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>No caminho para casa a partir de uma unidade de saúde</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/socialAutopsy/action">
+          <label>J2.Qual foi a primeira coisa que ela ou a família dela fez para a doença?</label>
+          <item>
+            <label>Deu assistência domiciliar</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Procuraram atendimento de um provedor informal(incluindo na sua própria casa)</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Procuraram cuidados de saúde formais</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Estava no provedor formal, quando a doença começou</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/socialAutopsy/actionComander">
+          <label>J3.Quem decidiu que esta foi a ação a ser tomada?</label>
+          <item>
+            <label>A mãe</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>O pai</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Avó materna</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Avó paterna</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Outro homem</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outra mulher</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVMaternal/main/socialAutopsy/timeDecision">
+          <label>J4.Quanto tempo após a doença começar, ele/a decidiu fazer isso?</label>
+        </input>
+        <select ref="/AVMaternal/main/socialAutopsy/problemsToHospital">
+          <label>J5.Será que eles tinham algum problema que impedia de procurar cuidados de saúde formais naquele momento? OU Será que eles teiveram que superar alguns problemas, a fim de procurar cuidados de saúde formais naquele momento?</label>
+          <item>
+            <label>1. Não acharam que o bebê estava doente o suficiente para precisar de cuidados de saúde</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>2. Não havia ninguém disponível para acompanhar o bebê</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>3. A mãe teve que atender a tarefas domésticas</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>4. Transporte não disponível</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>5. Não conseguiam pagar o transporte</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>6. Não conseguiam pagar o provedor/unidade de cuidados</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>7. Outros custos</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>8. Não satisfeitos com cuidados de saúde disponíveis</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>9. Problema(s)  do bebê exigem cuidados tradicionais</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>10. Pensaram que o bebê estava doente demais para viajar</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>11. Pensaram que o bebê iria morrer, de qualquer forma</label>
+            <value>11</value>
+          </item>
+          <item>
+            <label>12. Era tarde da noite</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>13. Não houve problema de procura de cuidados</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select>
+        <select1 ref="/AVMaternal/main/socialAutopsy/healthCare">
+          <label>J6.Eles procuraram cuidados de saúde formais a qualquer momento durante a doença fatal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/socialAutopsy/hadDecided">
+          <label>J7.Quem decidiu que o bebê precisava de procurar cuidados de saúde?</label>
+          <item>
+            <label>A mãe</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>O pai</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Avó materna</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Avó paterna</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Outro homem</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outra mulher</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVMaternal/main/socialAutopsy/timePassed">
+          <label>J8.Quanto tempo após a doença fatal começar, decidiram buscar esse cuidado?</label>
+        </input>
+        <input ref="/AVMaternal/main/socialAutopsy/cost">
+          <label>J9.Qual foi o custo de transporte?</label>
+        </input>
+        <select ref="/AVMaternal/main/socialAutopsy/gainMoney">
+          <label>J10.Como eles arranjaram esse dinheiro?</label>
+          <item>
+            <label>Tinham fundos disponíveis</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Emprestaram</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Venderam bens</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Fundo comunitário</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Esquema do Governo</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select>
+        <input ref="/AVMaternal/main/socialAutopsy/distancy">
+          <label>J11.Qual é a distância de casa (ponto de partida) para a unidade final?</label>
+        </input>
+        <select ref="/AVMaternal/main/socialAutopsy/vehicle">
+          <label>J12.Qual método de transporte foi utilizado para levar o bebê para lá?</label>
+          <item>
+            <label>Caminharam</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Txova/Bicicleta</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Autocarro/chapa</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Taxi/txopela</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Carro (da familia ou boleia)</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Ambulância</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+          <item>
+            <label>Não foi possível organizar</label>
+            <value>9</value>
+          </item>
+        </select>
+      </group>
+    </group>
+    <input ref="/AVMaternal/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

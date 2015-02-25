@@ -1,0 +1,2825 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>AV Children</h:title>
+    <model>
+      <instance>
+        <AVChildrens id="AVChildren">
+          <deviceid/>
+          <start/>
+          <end/>
+          <houseno/>
+          <roundNumber/>
+          <individualId/>
+          <locationId/>
+          <fieldWorkerId/>
+          <visitDate/>
+          <consent/>
+          <main>
+            <intervieweeName/>
+            <intervieweeDob/>
+            <intervieweeInHouse/>
+            <education/>
+            <relationWithInterviewee/>
+            <relationWithIntervieweeSpec/>
+            <motherName/>
+            <motherPermId/>
+            <motherId/>
+            <name/>
+            <dob/>
+            <dthDetails>
+              <dthDate/>
+              <dthLocation/>
+              <gender/>
+            </dthDetails>
+            <historyContext>
+              <txt/>
+              <hadTb/>
+              <hadHIV/>
+              <hadPosetiveMalaria/>
+              <hadNegativeMalaria/>
+              <hadMeasles/>
+              <hadHighTension/>
+              <hadHeartDesease/>
+              <hadDiabetes/>
+              <hadAsthma/>
+              <hadEpilepsy/>
+              <hadCancer/>
+              <hadDPOC/>
+              <hadDementia/>
+              <hadDepression/>
+              <hadAVC/>
+              <hadCellDisease/>
+              <hadKidneyDisease/>
+              <hadLiverDisease/>
+              <dthRainySeason/>
+              <dthDrySeason/>
+              <sickPeriod/>
+              <diedSuddenly/>
+            </historyContext>
+            <lesoesHistory>
+              <hadAccident/>
+              <carCrash/>
+              <footCrash/>
+              <carCrashIn/>
+              <carCrashInHeavy/>
+              <motorcycleCrash/>
+              <knewAboutAccident/>
+              <counterpartReached/>
+              <wasPedestrian/>
+              <wasObject/>
+              <wasCar/>
+              <wasAutoCar/>
+              <wasMotorcycle/>
+              <wasBicycle/>
+              <wasOther/>
+              <injuredAcident/>
+              <injuredFalling/>
+              <drowning/>
+              <burns/>
+              <bite/>
+              <dog/>
+              <snake/>
+              <insect/>
+              <forceOfNature/>
+              <intoxication/>
+              <aggression/>
+              <intentionally/>
+              <firearm/>
+              <knife/>
+              <machines/>
+              <animarOrObject/>
+              <committedSuicide/>
+              <txt/>
+              <load/>
+            </lesoesHistory>
+            <lastIllSymptoms>
+              <weight25/>
+              <pregAge/>
+              <fontAlbaulament/>
+              <fontAfundada/>
+            </lastIllSymptoms>
+            <lastSymptoms>
+              <badFomation/>
+              <backSwelling/>
+              <bigHead/>
+              <smallHead/>
+              <hadFever/>
+              <hadFeverPeriod/>
+              <nightSweats/>
+              <cough/>
+              <coughPeriod/>
+              <coughProductive/>
+              <coughBlood/>
+              <breathProblems/>
+              <kwickBreath/>
+              <kwickBreathPeriod/>
+              <missAir/>
+              <missAirPeriod/>
+              <unableCarryActivity/>
+              <missAirSleeping/>
+              <breathNoise/>
+              <chestPain/>
+              <diarrhea/>
+              <diarrheaPeriod/>
+              <bloodFezes/>
+              <vomit/>
+              <vomitCoffee/>
+              <abdominalIssue/>
+              <abdominalSeriousIssue/>
+              <abdominalSeriousIssuePeriod/>
+              <abdomenProtuberant/>
+              <abdomenProtuberantPeriod/>
+              <noduleAbdomen/>
+              <noduleAbdomenPeriod/>
+              <severeHeadache/>
+              <painNeck/>
+              <painNeckPeriod/>
+              <hadMentalDisorder/>
+              <hadMentalDisorderPeriod/>
+              <wasInconcious24h/>
+              <wasInconciousQuickly/>
+              <convultions/>
+              <convultionsPeriod/>
+              <wasInconciousImediately/>
+              <urinaryProblem/>
+              <urinaryNothing/>
+              <urinaryOften/>
+              <urineWithBlood/>
+              <skinProblem/>
+              <ulceraExcep/>
+              <ulceraOther/>
+              <skinRash/>
+              <skinRashPeriod/>
+              <erupcaoSarampo/>
+              <herpesZoster/>
+              <bleedMouth/>
+              <weightLoss/>
+              <wasSlim/>
+              <mouthSores/>
+              <unableOpenMouth/>
+              <swellingFace/>
+              <swellingBothFeet/>
+              <nodes/>
+              <nodesOrLesions/>
+              <nodesNeck/>
+              <nodesArmpit/>
+              <nodesGroin/>
+              <paralysisOneside/>
+              <painSwallowingLiquids/>
+              <yellowEyes/>
+              <hairColorChanges/>
+              <wasPale/>
+              <encovedEyes/>
+              <drinkMoreWater/>
+            </lastSymptoms>
+            <treatments>
+              <vacinated/>
+              <hadtreatments/>
+              <reidratation/>
+              <fuidosIntravenosos/>
+              <bloodTransfusion/>
+              <tuboNariz/>
+              <antiBioticos/>
+              <operation/>
+              <operation1Mth/>
+              <dischargedSick/>
+            </treatments>
+            <riskFactors>
+              <drankAlcohol/>
+              <smokedTobacco/>
+            </riskFactors>
+          </main>
+          <processedByMirth/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </AVChildrens>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/AVChildrens/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/AVChildrens/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/AVChildrens/end" type="dateTime"/>
+      <bind nodeset="/AVChildrens/houseno" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/roundNumber" required="true()" type="int"/>
+      <bind nodeset="/AVChildrens/individualId" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/locationId" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/fieldWorkerId" required="true()" type="string"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/AVChildrens/visitDate" required="true()" type="date"/>
+      <bind nodeset="/AVChildrens/consent" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main" relevant=" /AVChildrens/consent  = 1"/>
+      <bind nodeset="/AVChildrens/main/intervieweeName" required="true()" type="string"/>
+      <bind constraint="int((today() - .) div 365.24) &gt; 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/AVChildrens/main/intervieweeDob" required="true()" type="date"/>
+      <bind nodeset="/AVChildrens/main/intervieweeInHouse" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/education" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/relationWithInterviewee" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/relationWithIntervieweeSpec" relevant=" /AVChildrens/main/relationWithInterviewee =11" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/motherName" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/motherPermId" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/motherId" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" type="string"/>
+      <bind nodeset="/AVChildrens/main/name" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/dob" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="date"/>
+      <bind nodeset="/AVChildrens/main/dthDetails" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/dthDetails/dthDate" required="true()" type="date"/>
+      <bind nodeset="/AVChildrens/main/dthDetails/dthLocation" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/dthDetails/gender" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/txt" readonly="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadTb" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadHIV" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadPosetiveMalaria" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadNegativeMalaria" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadMeasles" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadHighTension" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadHeartDesease" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadDiabetes" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadAsthma" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadEpilepsy" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadCancer" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadDPOC" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadDementia" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadDepression" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadAVC" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadCellDisease" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadKidneyDisease" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/hadLiverDisease" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/dthRainySeason" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/historyContext/dthDrySeason" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/historyContext/sickPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/historyContext/diedSuddenly" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/hadAccident" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/carCrash" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/footCrash" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/carCrashIn" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/carCrashInHeavy" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/motorcycleCrash" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/knewAboutAccident" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/counterpartReached" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasPedestrian" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasObject" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasCar" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasAutoCar" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasMotorcycle" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasBicycle" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/wasOther" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/injuredAcident" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/injuredFalling" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/drowning" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/burns" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/bite" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/dog" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/snake" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/insect" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/forceOfNature" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/intoxication" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/aggression" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/intentionally" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/firearm" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/knife" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/machines" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/animarOrObject" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/committedSuicide" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lesoesHistory/txt" readonly="true()" type="string"/>
+      <bind calculate="(( /AVChildrens/main/dthDetails/dthDate  -  /AVChildrens/main/dob )div 365.24)" nodeset="/AVChildrens/main/lesoesHistory/load" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastIllSymptoms" relevant=" /AVChildrens/main/lesoesHistory/load &lt;1 and  /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/lastIllSymptoms/weight25" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastIllSymptoms/pregAge" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastIllSymptoms/fontAlbaulament" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastIllSymptoms/fontAfundada" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/badFomation" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/backSwelling" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/bigHead" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/smallHead" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/hadFever" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/hadFeverPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/nightSweats" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/cough" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/coughPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/coughProductive" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/coughBlood" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/breathProblems" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/kwickBreath" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/kwickBreathPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/missAir" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/missAirPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/unableCarryActivity" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/missAirSleeping" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/breathNoise" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/chestPain" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/diarrhea" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/diarrheaPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/bloodFezes" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/vomit" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/vomitCoffee" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/abdominalIssue" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/abdominalSeriousIssue" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/abdominalSeriousIssuePeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/abdomenProtuberant" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/abdomenProtuberantPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/noduleAbdomen" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/noduleAbdomenPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/severeHeadache" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/painNeck" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/painNeckPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/hadMentalDisorder" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/hadMentalDisorderPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/wasInconcious24h" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/wasInconciousQuickly" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/convultions" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/convultionsPeriod" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/wasInconciousImediately" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/urinaryProblem" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/urinaryNothing" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/urinaryOften" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/urineWithBlood" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/skinProblem" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/ulceraExcep" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/ulceraOther" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/skinRash" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVChildrens/main/lastSymptoms/skinRashPeriod" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/erupcaoSarampo" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/herpesZoster" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/bleedMouth" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/weightLoss" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/wasSlim" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/mouthSores" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/unableOpenMouth" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/swellingFace" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/swellingBothFeet" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/nodes" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/nodesOrLesions" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/nodesNeck" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/nodesArmpit" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/nodesGroin" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/paralysisOneside" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/painSwallowingLiquids" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/yellowEyes" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/hairColorChanges" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/wasPale" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/encovedEyes" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/lastSymptoms/drinkMoreWater" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/treatments/vacinated" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/hadtreatments" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/reidratation" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/fuidosIntravenosos" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/bloodTransfusion" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/tuboNariz" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/antiBioticos" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/operation" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/operation1Mth" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/treatments/dischargedSick" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/riskFactors" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
+      <bind nodeset="/AVChildrens/main/riskFactors/drankAlcohol" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/main/riskFactors/smokedTobacco" required="true()" type="select1"/>
+      <bind nodeset="/AVChildrens/processedByMirth" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/AVChildrens/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;AVChildren-&quot;, /AVChildrens/main/motherPermId )" nodeset="/AVChildrens/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/AVChildrens/houseno">
+      <label>Número da casa</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVChildrens/roundNumber">
+      <label>Número da ronda</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVChildrens/individualId">
+      <label>A0. ID do Individuo</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVChildrens/locationId">
+      <label>A1. ID do Agregado</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVChildrens/fieldWorkerId">
+      <label>A2. Código do Inquiridor</label>
+      <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
+    </input>
+    <input ref="/AVChildrens/visitDate">
+      <label>A3. Data de Entrevista</label>
+    </input>
+    <select1 ref="/AVChildrens/consent">
+      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <group ref="/AVChildrens/main">
+      <label>CLIP</label>
+      <input ref="/AVChildrens/main/intervieweeName">
+        <label>A5. Nome do/a respondente</label>
+      </input>
+      <input appearance="no-calendar" ref="/AVChildrens/main/intervieweeDob">
+        <label>A6. Data de nascimento do/a respondente</label>
+      </input>
+      <select1 ref="/AVChildrens/main/intervieweeInHouse">
+        <label>A7. O/a respondente vive neste Agregado?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/AVChildrens/main/education">
+        <label>A8. Nível de Educação dpo respondente?</label>
+        <item>
+          <label>Alnalfabeto</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>5ª Classe</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>7ª Classe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>10ª Classe/ou Equivalente</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>12ª Classe/ou Equivalente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Bacharel</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Licenciatura</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Pós-Graduação</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não aplicável</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <select1 ref="/AVChildrens/main/relationWithInterviewee">
+        <label>A9.Relação de parentesco do respondente com a falecida?</label>
+        <item>
+          <label>Marido</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Pai</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Mãe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sogro/a</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Irmã/o</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Cunhado/a</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Tio/a</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Avô</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Filho/a</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Genro/Nora</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <input ref="/AVChildrens/main/relationWithIntervieweeSpec">
+        <label>A9.1. Especifique a relação de parentesco do/a respondente com a felecida</label>
+      </input>
+      <input ref="/AVChildrens/main/motherName">
+        <label>A10. Nome da mãe da criança</label>
+      </input>
+      <input ref="/AVChildrens/main/motherPermId">
+        <label>A11. Perm_ID da mãe da criança</label>
+      </input>
+      <input ref="/AVChildrens/main/motherId">
+        <label>A11.1. Id da mãe da criança</label>
+      </input>
+      <input ref="/AVChildrens/main/name">
+        <label>A12. Nome da falecida</label>
+      </input>
+      <input ref="/AVChildrens/main/dob">
+        <label>A14. Data de nascimento da falecida</label>
+      </input>
+      <group ref="/AVChildrens/main/dthDetails">
+        <label>SECCÃO B: DETALHES DA MORTE</label>
+        <input ref="/AVChildrens/main/dthDetails/dthDate">
+          <label>B1. Quando ele/a morreu?</label>
+        </input>
+        <select1 ref="/AVChildrens/main/dthDetails/dthLocation">
+          <label>B2. Onde é que a morte ocorreu?</label>
+          <hint>Se nado morto, digite '0'</hint>
+          <item>
+            <label>Hospital</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Outra Unidade Sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Em casa</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>A Caminho</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>90</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/dthDetails/gender">
+          <label>B3. Sexo da Criança?</label>
+          <item>
+            <label>Masculino</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Feminino</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Desconhecido/indeterminado</label>
+            <value>3</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVChildrens/main/historyContext">
+        <label>SECCÃO C: CONTEXTO HISTÓRICO DE CONDIÇÕES MÉDICAS PREVIAMENTE CONHECIDAS</label>
+        <input ref="/AVChildrens/main/historyContext/txt">
+          <label>Eu gostaria de lhe fazer algumas perguntas sobre o contexto e as condições médicas previamente conhecidas que a falecida tinha; lesões e acidentes que a falecida sofreu; e sinais e sintomas que a falecida tinha/mostravam quando ela estava doente. Algumas dessas perguntas podem não estar directamente relacionadas com a morte dela. Por favor, tenha paciência comigo e responda a todas as perguntas. Elas vão nos ajudar a ter uma visão clara de todos os sintomas possíveis que a falecida tinha.</label>
+        </input>
+        <select1 ref="/AVChildrens/main/historyContext/hadTb">
+          <label>C1.Foi diagnosticado/a tuberculose?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadHIV">
+          <label>C2.Foi-lhe diagnosticada HIV/SIDA?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadPosetiveMalaria">
+          <label>C3.Ela/e teve um teste positivo de malária recentemente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadNegativeMalaria">
+          <label>C4.Ela/e teve um teste negativo de malária recentemente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadMeasles">
+          <label>C5.Foi diagnosticado/a sarampo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadHighTension">
+          <label>C6.Foi diagnosticado/a tensão alta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadHeartDesease">
+          <label>C7.Foi diagnosticado/a alguma doença de coração?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadDiabetes">
+          <label>C8.Foi diagnosticado/a Diabetes?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadAsthma">
+          <label>C9.Foi diagnosticado/a asma?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadEpilepsy">
+          <label>C10.Foi diagnosticado/a epilepsia?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadCancer">
+          <label>C11.Foi diagnosticado/a cancro?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadDPOC">
+          <label>C12.Foi diagnosticado/a Doença Pulmonar Obstrutiva crónica (DPOC)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadDementia">
+          <label>C13.Foi diagnosticado/a demência?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadDepression">
+          <label>C14.Foi diagnosticado/a depressão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadAVC">
+          <label>C15.Foi diagnosticado/a Acidente Vascular Cerebral (AVC)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadCellDisease">
+          <label>C16.Foi diagnosticado/a doença das células falciformes?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadKidneyDisease">
+          <label>C17.Foi diagnosticado/a doença renal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/hadLiverDisease">
+          <label>C18.Foi diagnosticada doença do fígado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/dthRainySeason">
+          <label>C19.Ele/a faleceu durante a época chuvosa?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/historyContext/dthDrySeason">
+          <label>C20.Ele/a faleceu durante a época seca?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/historyContext/sickPeriod">
+          <label>C21.Por quanto tempo ele/a esteve doente antes de falecer? (dias)</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/historyContext/diedSuddenly">
+          <label>C22.Ele/a faleceu de repente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVChildrens/main/lesoesHistory">
+        <label>SECCÃO D: HISTÓRIA DE LESÕES / ACIDENTES</label>
+        <select1 ref="/AVChildrens/main/lesoesHistory/hadAccident">
+          <label>D1.Ele/ela sofreu de alguma lesão ou acidente que levou à sua morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/carCrash">
+          <label>D2.Ele/ela sofreu de um acidente de viação?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/footCrash">
+          <label>D3.Ele/ela foi ferido/a como um pedestre/ caminhando?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/carCrashIn">
+          <label>D4.Ele/a foi ferida como um ocupante de um veículo automóvel?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/carCrashInHeavy">
+          <label>D5.Ele/a foi ferido/a como um ocupante de um autocarro /veículo de transporte pesado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/motorcycleCrash">
+          <label>D6.Ele/a foi ferido/a como um condutor ou passageiro de uma motorizada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/knewAboutAccident">
+          <label>D7.Ele/ela foi ferido/a como um ciclista (andando de bicicleta)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/counterpartReached">
+          <label>D8. Sabe alguma coisa sobre a contra-parte que foi atingido durante o acidente de trânsito?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasPedestrian">
+          <label>D9. Foi um pedestre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasObject">
+          <label>D10.Foi um objecto fixo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasCar">
+          <label>D11.Foi um veículo automóvel?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasAutoCar">
+          <label>D12.Foi um autocarro ou veículo de transporte pesado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasMotorcycle">
+          <label>D13.Foi uma motorizada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasBicycle">
+          <label>D14.Foi uma bicicleta?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/wasOther">
+          <label>D15.Foi outra coisa?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/injuredAcident">
+          <label>D16. Ele/a foi ferido/a num acidente de transporte não rodoviário?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/injuredFalling">
+          <label>D17.Ele/a foi ferida numa queda?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/drowning">
+          <label>D18. Ele/a morreu de afogamento?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/burns">
+          <label>D19. Ele/a sofreu de queimaduras?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/bite">
+          <label>D20.Ele/a sofreu de qualquer mordida ou picada de planta/animal/insecto que levou à sua morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/dog">
+          <label>D21.Foi um cão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/snake">
+          <label>D22.Foi uma cobra?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/insect">
+          <label>D23.Foi um insecto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/forceOfNature">
+          <label>D24.Ele/a foi ferido/a por alguma força da natureza? Exemplo: (relâmpagos, terramoto, vento, cheias, etc.).</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/intoxication">
+          <label>D25.Houve alguma intoxicação?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/aggression">
+          <label>D26.Ele/a foi vítima de violência ou agressão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/intentionally">
+          <label>D27.A lesão ou acidente foi infligido intencionalmente por alguém?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/firearm">
+          <label>D28.Ele/a foi ferido/a por uma arma de fogo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/knife">
+          <label>D29.Ele/a foi ferida por arma branca (faca, catana, etc) ou por um objecto cortante ou perfurante?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/machines">
+          <label>D30.Ele/a foi ferido/a por máquinas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/animarOrObject">
+          <label>D31.Ele/a foi atingido/a por um objecto ou atacada por um a animal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lesoesHistory/committedSuicide">
+          <label>D32.Acha que ele/a cometeu suicídio?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lesoesHistory/txt">
+          <label>VERIFIQUE A PERGUNTA A12 E B1 PARA IDADE DA MORTE: Se tinha menos de um ano continua sessão E. Se tinha um ano ou mais F</label>
+        </input>
+      </group>
+      <group ref="/AVChildrens/main/lastIllSymptoms">
+        <label>SECCÃO E: SINTOMAS E SINAIS VERIFICADOS NA ÚLTIMA DOENÇA DA CRIANÇA</label>
+        <select1 ref="/AVChildrens/main/lastIllSymptoms/weight25">
+          <label>E1.A criança nasceu com um peso menor que o normal, abaixo dos 2,5kg?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastIllSymptoms/pregAge">
+          <label>E2.Quantas semanas tinha de gravidez quando a criança nasceu?</label>
+          <item>
+            <label>Inferior a 34 semanas</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Entre 34-37 semanas</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Mais de 37 semanas</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastIllSymptoms/fontAlbaulament">
+          <label>E3.A criança tinha abaulamento da fontanela?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastIllSymptoms/fontAfundada">
+          <label>E4.A criança teve uma fontanela afundada</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVChildrens/main/lastSymptoms">
+        <label>SECCÃO F: SINTOMAS OBSERVADOS DURANTE A ÚLTIMA DOENÇA PARA TODAS AS CRIANÇAS</label>
+        <select1 ref="/AVChildrens/main/lastSymptoms/badFomation">
+          <label>F1.A criança teve alguma malformação perceptível?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/backSwelling">
+          <label>F2.A criança tinha um inchaço ou defeito na parte de trás?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/bigHead">
+          <label>F3.A criança tinha uma cabeça muito grande?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/smallHead">
+          <label>F4.A criança tinha uma cabeça muito pequena?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/hadFever">
+          <label>F5.Ele/a teve alguma febre?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/hadFeverPeriod">
+          <label>F6.Por quanto tempo Ele/a teve febre?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/nightSweats">
+          <label>F7.Ele/a teve suores nocturnos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/cough">
+          <label>F8.Ele/a teve alguma tosse?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/coughPeriod">
+          <label>F9.Por quanto tempo ela teve tosse?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/coughProductive">
+          <label>F10.A tosse era produtiva com expectoração?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/coughBlood">
+          <label>F11.Ele/a tossia sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/breathProblems">
+          <label>F12.Ele/a teve algum problema de respiração?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/kwickBreath">
+          <label>F13.Ele/a teve alguma respiração rápida?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/kwickBreathPeriod">
+          <label>F14.Por quanto tempo Ele/a teve respiração rápida?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/missAir">
+          <label>F15.Ele/a teve falta de ar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/missAirPeriod">
+          <label>F16.Por quanto tempo ela teve falta de ar?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/unableCarryActivity">
+          <label>F17.Ela foi incapaz de levar a cabo alguma actividade diária de rotina, devido à falta de ar?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/missAirSleeping">
+          <label>F18.Ele/a estava com falta de ar, enquanto deitada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/breathNoise">
+          <label>F19.Ele/a teve alguma respiração ruidosa (roncos ou sibilos)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/chestPain">
+          <label>F20.Ele/a teve alguma dor intensa no peito?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/diarrhea">
+          <label>F21.Ele/a teve diarreia?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/diarrheaPeriod">
+          <label>F22.Por quanto tempo Ele/a teve diarreia?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/bloodFezes">
+          <label>F23.Em qualquer momento durante a última doença teve sangue nas fezes?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/vomit">
+          <label>F24.Ele/a vomitava?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/vomitCoffee">
+          <label>F25.Ele/a tinha vómitos com manchas de cor de café ou vermelho brilhante/sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/abdominalIssue">
+          <label>F26.Ele/a teve algum problema abdominal?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/abdominalSeriousIssue">
+          <label>F27.Ele/a teve alguma dor abdominal grave?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/abdominalSeriousIssuePeriod">
+          <label>F28.Por quanto tempo antes da morte, ela teve dor abdominal grave?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/abdomenProtuberant">
+          <label>F29.Ele/a teve abdómen protuberante mais do que o habitual?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/abdomenProtuberantPeriod">
+          <label>F30.Por quanto tempo ela teve um abdómen protuberante mais do que o habitual?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/noduleAbdomen">
+          <label>F31.Ele/a teve algum nódulo dentro do abdómen?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/noduleAbdomenPeriod">
+          <label>F32.Por quanto tempo Ele/a teve o nódulo dentro do abdómen?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/severeHeadache">
+          <label>F33.Ele/a teve uma forte dor de cabeça?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/painNeck">
+          <label>F34.Ele/a teve um torcicolo ou dor no pescoço?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/painNeckPeriod">
+          <label>F35.Por quanto tempo Ele/a teve um torcicolo ou dor no pescoço?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/hadMentalDisorder">
+          <label>F36.Ele/a teve confusão mental?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/hadMentalDisorderPeriod">
+          <label>F37.Por quanto tempo Ele/a teve confusão mental?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/wasInconcious24h">
+          <label>F38.Ele/a estava inconsciente por mais de 24 horas?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/wasInconciousQuickly">
+          <label>F39.A inconsciência começou de repente e rapidamente (pelo menos dentro de um único dia)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/convultions">
+          <label>F40.Ele/a teve convulsões?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/convultionsPeriod">
+          <label>F41.Por quanto tempo Ele/a teve convulsões?</label>
+          <item>
+            <label>Menos de 10 minutos</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>10 minutos ou mais</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/wasInconciousImediately">
+          <label>F42.Ele/a ficou inconsciente, imediatamente após a convulsão?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/urinaryProblem">
+          <label>F43.Ele/a teve algum problema de urinário?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/urinaryNothing">
+          <label>F44.Ele/a não urinava nada?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/urinaryOften">
+          <label>F45.Ele/a ia urinar mais frequentemente do que o habitual?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/urineWithBlood">
+          <label>F46.Durante a última doença, Ele/a teve urina com sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/skinProblem">
+          <label>F47.Ele/a teve algum problema da pele?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/ulceraExcep">
+          <label>F48.Ele/a teve alguma úlcera, abcesso ou feridas em qualquer lugar excepto os pés?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/ulceraOther">
+          <label>F49.Ele/a teve alguma úlcera, abcesso ou feridas nos pés que não tinha também em outras partes do corpo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/skinRash">
+          <label>F50.Durante a doença que levou à morte, Ele/a teve borbulhas na pele?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/AVChildrens/main/lastSymptoms/skinRashPeriod">
+          <label>F51.Por quanto tempo Ele/a teve borbulhas na pele?</label>
+          <hint>Dias:Horas:Minutos</hint>
+        </input>
+        <select1 ref="/AVChildrens/main/lastSymptoms/erupcaoSarampo">
+          <label>F52.Ele/a teve erupção de sarampo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/herpesZoster">
+          <label>F53.Ele/a alguma vez teve herpes zoster?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/bleedMouth">
+          <label>F54.Ele/a teve sangramento pelo nariz, boca ou ânus?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/weightLoss">
+          <label>F55.Ele/a teve perda de peso?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/wasSlim">
+          <label>F56.Ele/a estava severamente magra?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/mouthSores">
+          <label>F57.Ele/a teve feridas na boca ou manchas brancas na boca ou na língua?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/unableOpenMouth">
+          <label>F58.Ele/a teve rigidez de todo o corpo ou era incapaz de abrir a boca?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/swellingFace">
+          <label>F59.Ele/a teve inchaço da cara?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/swellingBothFeet">
+          <label>F60.Ele/a teve ambos os pés inchados?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/nodes">
+          <label>F61.Ele/a teve algum caroço?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/nodesOrLesions">
+          <label>F62.Ele/a teve alguns caroços ou lesões na boca?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/nodesNeck">
+          <label>F63.Ele/a teve alguns caroços no pescoço?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/nodesArmpit">
+          <label>F64.Ele/a teve alguns caroços na axila?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/nodesGroin">
+          <label>F65.Ele/a teve alguns caroços na virilha?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/paralysisOneside">
+          <label>F66.Ele/a teve paralisia de um lado do corpo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/painSwallowingLiquids">
+          <label>F67.Ele/a teve dificuldade ou dor ao engolir líquidos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/yellowEyes">
+          <label>F68.Ele/a teve coloração amarela nos olhos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/hairColorChanges">
+          <label>F69.Ele/a teve mudança de cor do cabelo para avermelhado ou amarelado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/wasPale">
+          <label>F70.Ele/a estava pálida (emagrecendo/ falta de sangue) ou teve as palmas das mãos, os olhos ou os leitos ungueais pálidos?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/encovedEyes">
+          <label>F71.Ele/a teve olhos encovados?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/lastSymptoms/drinkMoreWater">
+          <label>F72.Ele/a bebia muito mais água do que o habitual?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVChildrens/main/treatments">
+        <label>SECCÃO G: TRATAMENTO E USO DOS SERVIÇOS DE SAÚDE PARA A ÚLTIMA DOENÇA</label>
+        <select1 ref="/AVChildrens/main/treatments/vacinated">
+          <label>G1.Ele/a estava adequadamente vacinado?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/hadtreatments">
+          <label>G2.Ele/a recebeu qualquer tratamento para a doença que levou à morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/reidratation">
+          <label>G3.+ Ele/a recebeu sais de reidratação oral?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/fuidosIntravenosos">
+          <label>G4.+ Ele/a recebeu (ou precisava) tratamento de fluidos intravenosos (soro)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/bloodTransfusion">
+          <label>G5.+ Ele/a recebeu (ou precisava) uma transfusão de sangue?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/tuboNariz">
+          <label>G6.+ Ele/a recebeu (ou precisava), tratamento/alimentação através de um tubo passava pelo nariz?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/antiBioticos">
+          <label>G7.+ Ele/a recebeu (ou precisava) os antibióticos injectáveis (IV ou IM)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/operation">
+          <label>G8.+ Ele/a teve (ou precisava) uma operação para a doença?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/operation1Mth">
+          <label>G9.+ + Ela teve alguma operação dentro de um mês antes da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/treatments/dischargedSick">
+          <label>G10.+ Ele/a recebeu alta do hospital muito doente?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/AVChildrens/main/riskFactors">
+        <label>SECCÃO H: FACTORES DE RISCO</label>
+        <select1 ref="/AVChildrens/main/riskFactors/drankAlcohol">
+          <label>H1.Ela bebia álcool?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVChildrens/main/riskFactors/smokedTobacco">
+          <label>H2.Ela fumava tabaco (cigarro, charuto, cachimbo, etc.)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <input ref="/AVChildrens/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

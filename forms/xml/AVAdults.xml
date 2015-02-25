@@ -26,6 +26,7 @@
             <motherPermId/>
             <motherId/>
             <name/>
+            <permId/>
             <dob/>
             <dthDetails>
               <dthDate/>
@@ -246,7 +247,8 @@
       <bind nodeset="/AVAdults/main/motherName" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVAdults/main/motherPermId" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVAdults/main/motherId" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" type="string"/>
-      <bind nodeset="/AVAdults/main/name" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVAdults/main/name" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVAdults/main/permId" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVAdults/main/dob" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="date"/>
       <bind nodeset="/AVAdults/main/dthDetails" relevant=" /AVAdults/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVAdults/main/dthDetails/dthDate" required="true()" type="date"/>
@@ -433,7 +435,7 @@
       <bind nodeset="/AVAdults/main/riskFactors/smokedTobacco" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVAdults/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;AVAdults-&quot;, /AVAdults/main/motherPermId )" nodeset="/AVAdults/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;AVAdults-&quot;, /AVAdults/main/permId )" nodeset="/AVAdults/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -599,8 +601,11 @@
       <input ref="/AVAdults/main/name">
         <label>A12. Nome da falecida</label>
       </input>
+      <input ref="/AVAdults/main/permId">
+        <label>A12.1.Perm ID da Felecida</label>
+      </input>
       <input ref="/AVAdults/main/dob">
-        <label>A14. Data de nascimento da falecida</label>
+        <label>A13. Data de nascimento da falecida</label>
       </input>
       <group ref="/AVAdults/main/dthDetails">
         <label>SECCÃO B: DETALHES DA MORTE</label>

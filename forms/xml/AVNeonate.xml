@@ -26,6 +26,7 @@
             <motherPermId/>
             <motherId/>
             <name/>
+            <permId/>
             <dob/>
             <dthCircunstacies/>
             <dthDetails>
@@ -197,8 +198,9 @@
       <bind nodeset="/AVNeonate/main/relationWithIntervieweeSpec" relevant=" /AVNeonate/main/relationWithInterviewee =11" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/motherName" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/motherPermId" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/main/motherId" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" type="string"/>
-      <bind nodeset="/AVNeonate/main/name" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/main/motherId" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/main/name" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/main/permId" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/dob" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/main/dthCircunstacies" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/dthDetails" relevant=" /AVNeonate/main/intervieweeInHouse =1"/>
@@ -337,7 +339,7 @@
       <bind nodeset="/AVNeonate/main/socialAutopsy/vehicle" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
       <bind nodeset="/AVNeonate/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVNeonate/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;AVNeonate-&quot;, /AVNeonate/main/motherPermId )" nodeset="/AVNeonate/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;AVNeonate-&quot;, /AVNeonate/main/permId )" nodeset="/AVNeonate/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -502,6 +504,9 @@
       </input>
       <input ref="/AVNeonate/main/name">
         <label>A12. Nome da falecida</label>
+      </input>
+      <input ref="/AVNeonate/main/permId">
+        <label>A12.1.Perm ID da Felecida</label>
       </input>
       <input ref="/AVNeonate/main/dob">
         <label>A14. Data de nascimento da falecida</label>

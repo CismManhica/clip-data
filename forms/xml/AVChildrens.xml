@@ -26,6 +26,7 @@
             <motherPermId/>
             <motherId/>
             <name/>
+            <permId/>
             <dob/>
             <dthDetails>
               <dthDate/>
@@ -217,7 +218,8 @@
       <bind nodeset="/AVChildrens/main/motherName" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVChildrens/main/motherPermId" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVChildrens/main/motherId" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" type="string"/>
-      <bind nodeset="/AVChildrens/main/name" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/name" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVChildrens/main/permId" readonly="true()" relevant=" /AVChildrens/main/intervieweeInHouse =1" type="string"/>
       <bind nodeset="/AVChildrens/main/dob" relevant=" /AVChildrens/main/intervieweeInHouse =1" required="true()" type="date"/>
       <bind nodeset="/AVChildrens/main/dthDetails" relevant=" /AVChildrens/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVChildrens/main/dthDetails/dthDate" required="true()" type="date"/>
@@ -376,7 +378,7 @@
       <bind nodeset="/AVChildrens/main/riskFactors/smokedTobacco" required="true()" type="select1"/>
       <bind nodeset="/AVChildrens/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVChildrens/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;AVChildren-&quot;, /AVChildrens/main/motherPermId )" nodeset="/AVChildrens/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;AVChildren-&quot;, /AVChildrens/main/permId )" nodeset="/AVChildrens/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -542,8 +544,11 @@
       <input ref="/AVChildrens/main/name">
         <label>A12. Nome da falecida</label>
       </input>
+      <input ref="/AVChildrens/main/permId">
+        <label>A12.1.Perm ID da Felecida</label>
+      </input>
       <input ref="/AVChildrens/main/dob">
-        <label>A14. Data de nascimento da falecida</label>
+        <label>A13. Data de nascimento da falecida</label>
       </input>
       <group ref="/AVChildrens/main/dthDetails">
         <label>SECCÃO B: DETALHES DA MORTE</label>

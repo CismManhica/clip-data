@@ -22,11 +22,11 @@
           </demogfafic_info>
           <visit_info>
             <arrival/>
-            <arrival_ape/>
-            <tranferred/>
+            <transferred/>
             <date_arrived/>
             <time_arrived/>
             <reason/>
+            <reason_spec/>
             <stat/>
           </visit_info>
           <arrive_alives>
@@ -41,6 +41,7 @@
               <baby_stat/>
               <systolic_bp/>
               <diastolic_bp/>
+              <ta_medition/>
               <maternal_bpm/>
               <maternal_rpm/>
               <maternal_ox_sat/>
@@ -49,106 +50,64 @@
             </clinical_arrival>
             <symp_arrival>
               <headache/>
-              <headache_dur/>
               <visual_disturbance/>
-              <visual_disturbance_dur/>
               <chest_pain/>
-              <chest_pain_dur/>
               <short_breath/>
-              <short_breath_dur/>
               <abd_pain/>
-              <abd_pain_dur/>
               <vag_bleeding/>
-              <vag_bleeding_dur/>
-              <lesions/>
-              <lesions_dur/>
-              <transp_accident/>
-              <transp_accident_dur/>
             </symp_arrival>
             <maternal_interv>
               <procedures4/>
-              <cpr4/>
-              <cpr4_dur/>
-              <cpr4_loc/>
-              <procedures41/>
-              <mech_vent/>
-              <mech_vent_dur/>
-              <dialysis/>
-              <dialysis_dur/>
-              <blood_trans/>
-              <blood_trans_dur/>
+              <mech_vent4/>
+              <mech_vent4_dur/>
+              <dialysis4/>
+              <dialysis4_dur/>
+              <blood_trans4/>
+              <blood_trans_type/>
+              <blood_trans4_dur/>
               <uterine_comp/>
               <uterine_comp_dur/>
               <anti_shk_garm/>
-              <anti_shk_garm_dur/>
               <brace/>
-              <brace_dur/>
               <iial/>
-              <iial_dur/>
               <hyst/>
-              <hyst_dur/>
               <other4/>
               <otherspec/>
               <other_dur/>
             </maternal_interv>
-            <maternal_complications5>
-              <mth_bleed4/>
-              <mth_bleed_loc/>
-              <hemm4/>
-              <hemm_loc/>
-              <hemm_after4/>
-              <hemm_after_loc/>
-              <fisticula4/>
-              <fisticula_loc/>
-              <avc4/>
-              <avc_loc/>
-              <blind4/>
-              <blind_loc/>
-              <eclampsia4/>
-              <eclampsia_loc/>
-              <coma4/>
-              <coma_loc/>
-              <fever5/>
-              <fever5_loc/>
-              <fever_symp/>
-              <malaria4/>
-              <malaria_loc/>
-              <malaria_test/>
-              <malaria_test_local/>
-              <malaria_pos4/>
-              <malaria_pos_local/>
-            </maternal_complications5>
             <exams>
-              <exams_realized/>
-              <tas_after_arr/>
-              <tas_after_arr_res/>
+              <blood_exam/>
+              <exam/>
+              <exam_qtd/>
+              <hematocrito/>
+              <hemoglobina/>
               <leuk_count_high/>
               <leuk_count_high_res/>
               <leuk_count_low/>
               <leuk_count_low_res/>
               <dipstick6/>
-              <dipstick_res/>
+              <dipstick_qtd/>
               <micros/>
-              <micros_res/>
+              <micros_qtd/>
               <preg_ecography/>
-              <preg_ecography_res/>
+              <preg_ecography_qtd/>
               <ctg/>
-              <ctg_res/>
+              <ctg_qtd/>
               <other6/>
               <other_spec/>
-              <other_res/>
+              <other_qtd/>
             </exams>
             <medications7>
               <methildopa7/>
               <methildopa_loc/>
               <antihypertensive7/>
               <antihypertensive_loc/>
-              <mgso47/>
-              <mgso47_loc/>
               <antibiotic4/>
               <antibiotic_loc/>
               <corticoides7/>
               <corticoides_loc/>
+              <mgso47/>
+              <mgso47_loc/>
             </medications7>
             <mgso4_effects>
               <mgso4_infec/>
@@ -156,62 +115,19 @@
               <other/>
               <other_spec/>
             </mgso4_effects>
-            <labor_and_results>
-              <labor_info/>
-              <deliv_prev9/>
-              <deliv_prev9_loc/>
-              <deliv_date/>
-              <deliv_mode/>
-              <num_bby/>
-              <bby_count/>
-              <bby jr:template="">
-                <weight/>
-                <birth_stat/>
-                <clipid/>
-                <perinatal_results9/>
-                <lesion9/>
-                <lesion_loc/>
-                <cog_abn9/>
-                <cog_abn_loc/>
-                <anomaly/>
-                <brthing_diff9/>
-                <brthing_diff_loc/>
-                <fding_diff9/>
-                <fding_diff_loc/>
-                <leth9/>
-                <leth_loc/>
-                <coma9/>
-                <coma_loc/>
-                <convultions9/>
-                <convultions_loc/>
-                <fever9/>
-                <fever_loc/>
-                <hyp9/>
-                <hyp_loc/>
-                <umb_infec9/>
-                <umb_loc/>
-                <skn_infec9/>
-                <skn_loc/>
-                <dhrr9/>
-                <dhrr_loc/>
-                <ictericia9/>
-                <ictericia_loc/>
-                <bleeding9/>
-                <bleeding_loc/>
-              </bby>
-            </labor_and_results>
             <hospital_info>
               <mummy/>
               <release_date/>
               <release_time/>
               <release_state/>
               <dth_state/>
-              <cause_of_death/>
+              <cause_of_dth/>
               <dth_authopsy/>
               <dth_date/>
               <release_destiny/>
               <release_motive/>
               <son/>
+              <num_bby/>
               <babies_count/>
               <babies jr:template="">
                 <birth_stat/>
@@ -219,19 +135,17 @@
             </hospital_info>
           </arrive_alives>
           <RESILIENCIA>
-            <pregnancy_status>
-              <cause_of_death/>
-              <autopsy/>
-              <status_death/>
-              <fetal_heart/>
-              <baby_stat/>
-            </pregnancy_status>
-            <maternal_interventions>
-              <procedures2/>
-              <cpr/>
-              <cpr_dur/>
-              <cpr_loc/>
-            </maternal_interventions>
+            <cause_of_death/>
+            <cause_of_death_spec/>
+            <autopsy/>
+            <status_death/>
+            <baby_stat/>
+          </RESILIENCIA>
+          <maternal_cond_interv>
+            <procedures2/>
+            <cpr/>
+            <cpr_dur/>
+            <cpr_loc/>
             <maternal_complications3>
               <mth_bleed/>
               <mth_bleed_loc/>
@@ -247,38 +161,32 @@
               <blind_loc/>
               <eclampsia/>
               <eclampsia_loc/>
+              <lesion/>
+              <lesion_loc/>
               <coma3/>
               <coma_loc/>
               <fever3/>
               <fever3_loc/>
               <fever_symp/>
+              <fever_symp_spec/>
               <malaria/>
               <malaria_loc/>
               <malaria_test3/>
               <malaria_test3_local/>
               <malaria_pos/>
               <malaria_pos_local/>
+              <hiv/>
+              <hiv_loc/>
+              <hiv_test/>
+              <hiv_test_loc/>
+              <was_positive/>
+              <has_threatment/>
+              <profilaxia/>
+              <tarv/>
+              <had_accident/>
             </maternal_complications3>
-            <medications4>
-              <methildopa/>
-              <methildopa_loc/>
-              <antihypertensive/>
-              <antihypertensive_loc/>
-              <mgso4/>
-              <mgso4_loc/>
-              <antibiotic/>
-              <antibiotic_loc/>
-              <corticoides/>
-              <corticoides_loc/>
-            </medications4>
-            <mgso4_adv_effects>
-              <mgso4Cond/>
-              <mgso4_infec/>
-              <mgso4_haematoma/>
-              <other5/>
-              <other_spec/>
-            </mgso4_adv_effects>
             <deliv_perinatalss_outcome>
+              <labour/>
               <deliv_prev/>
               <deliv_loc/>
               <deliv_date/>
@@ -288,10 +196,9 @@
               <babies2 jr:template="">
                 <weight/>
                 <birth_res/>
-                <clipid/>
                 <perinatal_results6/>
-                <lesion/>
-                <lesion_loc/>
+                <lesion6/>
+                <lesion6_loc/>
                 <cog_abn/>
                 <cog_abn_loc/>
                 <anomaly6/>
@@ -323,7 +230,7 @@
                 <birth_stat/>
               </babies2>
             </deliv_perinatalss_outcome>
-          </RESILIENCIA>
+          </maternal_cond_interv>
           <processedByMirth/>
           <meta>
             <instanceID/>
@@ -343,11 +250,11 @@
       <bind nodeset="/Facility/demogfafic_info/phone" required="true()" type="int"/>
       <bind nodeset="/Facility/demogfafic_info/clip_id" required="true()" type="string"/>
       <bind nodeset="/Facility/visit_info/arrival" required="true()" type="select1"/>
-      <bind nodeset="/Facility/visit_info/arrival_ape" required="true()" type="select1"/>
-      <bind nodeset="/Facility/visit_info/tranferred" required="true()" type="select1"/>
-      <bind nodeset="/Facility/visit_info/date_arrived" required="true()" type="date"/>
-      <bind nodeset="/Facility/visit_info/time_arrived" required="true()" type="time"/>
+      <bind nodeset="/Facility/visit_info/transferred" required="true()" type="select1"/>
+      <bind nodeset="/Facility/visit_info/date_arrived" relevant=" /Facility/visit_info/transferred =1" required="true()" type="date"/>
+      <bind nodeset="/Facility/visit_info/time_arrived" relevant=" /Facility/visit_info/transferred =1" required="true()" type="time"/>
       <bind nodeset="/Facility/visit_info/reason" required="true()" type="select"/>
+      <bind nodeset="/Facility/visit_info/reason_spec" relevant=" /Facility/visit_info/reason =90" type="string"/>
       <bind nodeset="/Facility/visit_info/stat" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives" relevant=" /Facility/visit_info/stat =1"/>
       <bind nodeset="/Facility/arrive_alives/admission_info/admit" required="true()" type="select1"/>
@@ -356,255 +263,174 @@
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/preg_stat" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/fetal_sounds" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/baby_stat" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =2" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/clinical_arrival/systolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3" required="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/clinical_arrival/diastolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3" required="true()" type="string"/>
+      <bind nodeset="/Facility/arrive_alives/clinical_arrival/systolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3 or  /Facility/arrive_alives/clinical_arrival/preg_stat =4" required="true()" type="string"/>
+      <bind nodeset="/Facility/arrive_alives/clinical_arrival/diastolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3 or  /Facility/arrive_alives/clinical_arrival/preg_stat =4" required="true()" type="string"/>
+      <bind nodeset="/Facility/arrive_alives/clinical_arrival/ta_medition" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/maternal_bpm" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/maternal_rpm" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/maternal_ox_sat" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/mat_temp_cel" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/dipstick" required="true()" type="select"/>
       <bind nodeset="/Facility/arrive_alives/symp_arrival/headache" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/headache_dur" relevant=" /Facility/arrive_alives/symp_arrival/headache =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/symp_arrival/visual_disturbance" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/visual_disturbance_dur" relevant=" /Facility/arrive_alives/symp_arrival/visual_disturbance =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/symp_arrival/chest_pain" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/chest_pain_dur" relevant=" /Facility/arrive_alives/symp_arrival/chest_pain =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/symp_arrival/short_breath" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/short_breath_dur" relevant=" /Facility/arrive_alives/symp_arrival/short_breath =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/symp_arrival/abd_pain" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/abd_pain_dur" relevant=" /Facility/arrive_alives/symp_arrival/abd_pain =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/symp_arrival/vag_bleeding" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/vag_bleeding_dur" relevant=" /Facility/arrive_alives/symp_arrival/vag_bleeding =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/symp_arrival/lesions" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/lesions_dur" relevant=" /Facility/arrive_alives/symp_arrival/lesions =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/symp_arrival/transp_accident" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/symp_arrival/transp_accident_dur" relevant=" /Facility/arrive_alives/symp_arrival/transp_accident =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/procedures4" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/cpr4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/cpr4_dur" relevant=" /Facility/arrive_alives/maternal_interv/cpr4 =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/cpr4_loc" relevant=" /Facility/arrive_alives/maternal_interv/cpr4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/procedures41" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/mech_vent" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/mech_vent_dur" relevant=" /Facility/arrive_alives/maternal_interv/mech_vent =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/dialysis" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/dialysis_dur" relevant=" /Facility/arrive_alives/maternal_interv/dialysis =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_interv/blood_trans" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/blood_trans_dur" relevant=" /Facility/arrive_alives/maternal_interv/blood_trans =1" required="true()" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/maternal_interv/mech_vent4" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/mech_vent4_dur" relevant=" /Facility/arrive_alives/maternal_interv/mech_vent4 =1" required="true()" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/maternal_interv/dialysis4" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/dialysis4_dur" relevant=" /Facility/arrive_alives/maternal_interv/dialysis4 =1" required="true()" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/maternal_interv/blood_trans4" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/maternal_interv/blood_trans_type" relevant=" /Facility/arrive_alives/maternal_interv/blood_trans4 =1" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/blood_trans4_dur" relevant=" /Facility/arrive_alives/maternal_interv/blood_trans4 =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/uterine_comp" required="true()" type="select1"/>
       <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/uterine_comp_dur" relevant=" /Facility/arrive_alives/maternal_interv/uterine_comp =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/anti_shk_garm" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/anti_shk_garm_dur" relevant=" /Facility/arrive_alives/maternal_interv/anti_shk_garm =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/brace" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/brace_dur" relevant=" /Facility/arrive_alives/maternal_interv/brace =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/iial" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/iial_dur" relevant=" /Facility/arrive_alives/maternal_interv/iial =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/hyst" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/hyst_dur" relevant=" /Facility/arrive_alives/maternal_interv/hyst =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/other4" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/maternal_interv/otherspec" relevant=" /Facility/arrive_alives/maternal_interv/other4 =1" required="true()" type="string"/>
       <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/other_dur" relevant=" /Facility/arrive_alives/maternal_interv/other4 =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/mth_bleed4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/mth_bleed_loc" relevant=" /Facility/arrive_alives/maternal_complications5/mth_bleed4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/hemm4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/hemm_loc" relevant=" /Facility/arrive_alives/maternal_complications5/hemm4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/hemm_after4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/hemm_after_loc" relevant=" /Facility/arrive_alives/maternal_complications5/hemm_after4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/fisticula4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/fisticula_loc" relevant=" /Facility/arrive_alives/maternal_complications5/fisticula4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/avc4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/avc_loc" relevant=" /Facility/arrive_alives/maternal_complications5/avc4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/blind4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/blind_loc" relevant=" /Facility/arrive_alives/maternal_complications5/blind4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/eclampsia4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/eclampsia_loc" relevant=" /Facility/arrive_alives/maternal_complications5/eclampsia4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/coma4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/coma_loc" relevant=" /Facility/arrive_alives/maternal_complications5/coma4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/fever5" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/fever5_loc" relevant=" /Facility/arrive_alives/maternal_complications5/fever5 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/fever_symp" relevant=" /Facility/arrive_alives/maternal_complications5/fever5 =1" required="true()" type="select"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/malaria4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/malaria_loc" relevant=" /Facility/arrive_alives/maternal_complications5/malaria4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/malaria_test" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/malaria_test_local" relevant=" /Facility/arrive_alives/maternal_complications5/malaria_test =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/malaria_pos4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/maternal_complications5/malaria_pos_local" relevant=" /Facility/arrive_alives/maternal_complications5/malaria_pos4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/exams_realized" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/exams/tas_after_arr" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/tas_after_arr_res" relevant=" /Facility/arrive_alives/exams/tas_after_arr =1" required="true()" type="string"/>
+      <bind nodeset="/Facility/arrive_alives/exams/blood_exam" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam" relevant=" /Facility/arrive_alives/exams/blood_exam =1" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam_qtd" relevant=" /Facility/arrive_alives/exams/blood_exam =1" required="true()" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/hematocrito" relevant=" /Facility/arrive_alives/exams/exam =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/hemoglobina" relevant=" /Facility/arrive_alives/exams/exam =1" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_high" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_high_res" relevant=" /Facility/arrive_alives/exams/leuk_count_high =1" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_low" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_low_res" relevant=" /Facility/arrive_alives/exams/leuk_count_low =1" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/exams/dipstick6" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/dipstick_res" relevant=" /Facility/arrive_alives/exams/dipstick6 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/dipstick_qtd" relevant=" /Facility/arrive_alives/exams/dipstick6 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/micros" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/micros_res" relevant=" /Facility/arrive_alives/exams/micros =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/micros_qtd" relevant=" /Facility/arrive_alives/exams/micros =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/preg_ecography" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/preg_ecography_res" relevant=" /Facility/arrive_alives/exams/preg_ecography =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/preg_ecography_qtd" relevant=" /Facility/arrive_alives/exams/preg_ecography =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/ctg" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/ctg_res" relevant=" /Facility/arrive_alives/exams/ctg =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/ctg_qtd" relevant=" /Facility/arrive_alives/exams/ctg =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/other6" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/other_spec" relevant=" /Facility/arrive_alives/exams/other6 =1" required="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/exams/other_res" relevant=" /Facility/arrive_alives/exams/other6 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/other_qtd" relevant=" /Facility/arrive_alives/exams/other6 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/medications7/methildopa7" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/medications7/methildopa_loc" relevant=" /Facility/arrive_alives/medications7/methildopa7 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/medications7/antihypertensive7" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/medications7/antihypertensive_loc" relevant=" /Facility/arrive_alives/medications7/antihypertensive7 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/medications7/antibiotic4" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/medications7/antibiotic_loc" relevant=" /Facility/arrive_alives/medications7/antibiotic4 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/medications7/corticoides7" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/medications7/corticoides_loc" relevant=" /Facility/arrive_alives/medications7/corticoides7 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/medications7/mgso47" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/medications7/mgso47_loc" relevant=" /Facility/arrive_alives/medications7/mgso47 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/medications7/antibiotic4" relevant=" /Facility/arrive_alives/medications7/mgso47 =99" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/medications7/antibiotic_loc" relevant=" /Facility/arrive_alives/medications7/antibiotic4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/medications7/corticoides7" relevant=" /Facility/arrive_alives/medications7/mgso47 =99" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/medications7/corticoides_loc" relevant=" /Facility/arrive_alives/medications7/corticoides7 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/mgso4_effects" relevant=" /Facility/arrive_alives/medications7/mgso47 =1 or  /Facility/arrive_alives/medications7/mgso47 =99"/>
+      <bind nodeset="/Facility/arrive_alives/mgso4_effects" relevant=" /Facility/arrive_alives/medications7/mgso47 =1"/>
       <bind nodeset="/Facility/arrive_alives/mgso4_effects/mgso4_infec" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/mgso4_effects/mgso4_haematoma" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/mgso4_effects/other" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/mgso4_effects/other_spec" required="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results" relevant=" /Facility/arrive_alives/medications7/mgso47 =0 or  /Facility/arrive_alives/medications7/mgso47 =99"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/labor_info" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/deliv_prev9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/deliv_prev9_loc" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/deliv_date" required="true()" type="date"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/deliv_mode" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" jr:constraintMsg="Indique o número de bebés" nodeset="/Facility/arrive_alives/labor_and_results/num_bby" required="true()" type="int"/>
-      <bind calculate=" /Facility/arrive_alives/labor_and_results/num_bby " nodeset="/Facility/arrive_alives/labor_and_results/bby_count" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/weight" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/birth_stat" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/clipid" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/perinatal_results9" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/lesion9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/lesion_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/lesion9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/cog_abn9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/cog_abn_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/cog_abn9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/anomaly" required="true()" type="select"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/brthing_diff9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/brthing_diff_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/brthing_diff9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/fding_diff9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/fding_diff_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/fding_diff9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/leth9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/leth_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/leth9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/coma9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/coma_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/coma9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/convultions9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/convultions_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/convultions9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/fever9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/fever_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/fever9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/hyp9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/hyp_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/hyp9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/umb_infec9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/umb_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/umb_infec9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/skn_infec9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/skn_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/skn_infec9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/dhrr9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/dhrr_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/dhrr9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/ictericia9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/ictericia_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/ictericia9 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/bleeding9" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/labor_and_results/bby/bleeding_loc" relevant=" /Facility/arrive_alives/labor_and_results/bby/bleeding9 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/mummy" readonly="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/release_date" required="true()" type="date"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/release_time" required="true()" type="time"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/release_state" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/dth_state" relevant=" /Facility/arrive_alives/hospital_info/release_state =2" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/hospital_info/cause_of_death" relevant=" /Facility/arrive_alives/hospital_info/release_state =2" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/hospital_info/cause_of_dth" relevant=" /Facility/arrive_alives/hospital_info/release_state =2" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/dth_authopsy" relevant=" /Facility/arrive_alives/hospital_info/release_state =2" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/dth_date" relevant=" /Facility/arrive_alives/hospital_info/release_state =2" required="true()" type="date"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/release_destiny" relevant=" /Facility/arrive_alives/hospital_info/release_state =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/release_motive" relevant=" /Facility/arrive_alives/hospital_info/release_state =1 and  /Facility/arrive_alives/hospital_info/release_destiny =2" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/son" readonly="true()" type="string"/>
-      <bind calculate=" /Facility/arrive_alives/labor_and_results/num_bby " nodeset="/Facility/arrive_alives/hospital_info/babies_count" readonly="true()" type="string"/>
+      <bind constraint=".&gt;0" jr:constraintMsg="Indique o número de bebés" nodeset="/Facility/arrive_alives/hospital_info/num_bby" required="true()" type="int"/>
+      <bind calculate=" /Facility/arrive_alives/hospital_info/num_bby " nodeset="/Facility/arrive_alives/hospital_info/babies_count" readonly="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/hospital_info/babies/birth_stat" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/pregnancy_status/cause_of_death" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/pregnancy_status/autopsy" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/pregnancy_status/status_death" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/pregnancy_status/fetal_heart" relevant=" /Facility/RESILIENCIA/pregnancy_status/status_death =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/pregnancy_status/baby_stat" relevant=" /Facility/RESILIENCIA/pregnancy_status/status_death =2 or  /Facility/RESILIENCIA/pregnancy_status/status_death =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_interventions/procedures2" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_interventions/cpr" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" nodeset="/Facility/RESILIENCIA/maternal_interventions/cpr_dur" relevant=" /Facility/RESILIENCIA/maternal_interventions/cpr =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_interventions/cpr_loc" relevant=" /Facility/RESILIENCIA/maternal_interventions/cpr =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/mth_bleed" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/mth_bleed_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/mth_bleed =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/hemm" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/hemm_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/hemm =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/hemm_after" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/hemm_after_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/hemm_after =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/fisticula" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/fisticula_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/fisticula =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/avc" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/avc_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/avc =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/blind" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/blind_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/blind =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/eclampsia" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/eclampsia_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/eclampsia =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/coma3" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/coma_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/coma3 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/fever3" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/fever3_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/fever3 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/fever_symp" required="true()" type="select"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/malaria" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/malaria_loc" relevant=" /Facility/RESILIENCIA/maternal_complications3/malaria =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/malaria_test3" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/malaria_test3_local" relevant=" /Facility/RESILIENCIA/maternal_complications3/malaria_test3 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/malaria_pos" relevant=" /Facility/RESILIENCIA/maternal_complications3/malaria_test3 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/maternal_complications3/malaria_pos_local" relevant=" /Facility/RESILIENCIA/maternal_complications3/malaria_pos =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/methildopa" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/methildopa_loc" relevant=" /Facility/RESILIENCIA/medications4/methildopa =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/antihypertensive" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/antihypertensive_loc" relevant=" /Facility/RESILIENCIA/medications4/antihypertensive =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/mgso4" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/mgso4_loc" relevant=" /Facility/RESILIENCIA/medications4/mgso4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/antibiotic" relevant=" /Facility/RESILIENCIA/medications4/mgso4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/antibiotic_loc" relevant=" /Facility/RESILIENCIA/medications4/antibiotic =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/corticoides" relevant=" /Facility/RESILIENCIA/medications4/mgso4 =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/medications4/corticoides_loc" relevant=" /Facility/RESILIENCIA/medications4/corticoides =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/mgso4_adv_effects/mgso4Cond" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/RESILIENCIA/mgso4_adv_effects/mgso4_infec" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/mgso4_adv_effects/mgso4_haematoma" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/mgso4_adv_effects/other5" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/mgso4_adv_effects/other_spec" relevant=" /Facility/RESILIENCIA/mgso4_adv_effects/other5 =1" required="true()" type="string"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_prev" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_prev =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_date" required="true()" type="date"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_mode" required="true()" type="select1"/>
-      <bind constraint=".&gt;0" jr:constraintMsg="Indique o número de bebés" nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/num_bby5" required="true()" type="int"/>
-      <bind calculate=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/num_bby5 " nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2_count" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/weight" required="true()" type="int"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/birth_res" required="true()" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/clipid" required="true()" type="int"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/perinatal_results6" readonly="true()" type="string"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/lesion" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/lesion_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/lesion =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/cog_abn" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/cog_abn_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/cog_abn =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/anomaly6" type="select"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/anomaly_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/anomaly6 =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/brthing_diff" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/brthing_diff_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/brthing_diff =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fding_diff" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fding_diff_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fding_diff =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/leth" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/leth_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/leth =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/coma" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/coma_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/coma =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/convultions" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/convultions_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/convultions =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fever" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fever_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fever =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/hyp" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/hyp_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/hyp =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/umb_infec" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/umb_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/umb_infec =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/skn_infec" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/skn_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/skn_infec =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/dhrr" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/dhrr_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/dhrr =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/ictericia" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/ictericia_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/ictericia =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/bleeding" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/bleeding_loc" relevant=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/bleeding =1" type="select1"/>
-      <bind nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/birth_stat" type="select1"/>
+      <bind nodeset="/Facility/RESILIENCIA" relevant=" /Facility/visit_info/stat =2"/>
+      <bind nodeset="/Facility/RESILIENCIA/cause_of_death" required="true()" type="select1"/>
+      <bind nodeset="/Facility/RESILIENCIA/cause_of_death_spec" relevant=" /Facility/RESILIENCIA/cause_of_death =90" type="string"/>
+      <bind nodeset="/Facility/RESILIENCIA/autopsy" required="true()" type="select1"/>
+      <bind nodeset="/Facility/RESILIENCIA/status_death" required="true()" type="select1"/>
+      <bind nodeset="/Facility/RESILIENCIA/baby_stat" relevant=" /Facility/RESILIENCIA/status_death =2" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/procedures2" readonly="true()" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/cpr" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/Facility/maternal_cond_interv/cpr_dur" relevant=" /Facility/maternal_cond_interv/cpr =1" required="true()" type="int"/>
+      <bind nodeset="/Facility/maternal_cond_interv/cpr_loc" relevant=" /Facility/maternal_cond_interv/cpr =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/mth_bleed" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/mth_bleed_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/mth_bleed =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hemm" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hemm_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hemm =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hemm_after" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hemm_after_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hemm_after =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fisticula" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fisticula_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/fisticula =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/avc" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/avc_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/avc =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/blind" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/blind_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/blind =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/eclampsia" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/eclampsia_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/eclampsia =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/lesion" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/lesion_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/lesion =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/coma3" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/coma_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/coma3 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fever3" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fever3_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/fever3 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fever_symp" relevant=" /Facility/maternal_cond_interv/maternal_complications3/fever3 =1" required="true()" type="select"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fever_symp_spec" relevant=" /Facility/maternal_cond_interv/maternal_complications3/fever_symp =90" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3_local" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria_test3 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_pos" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria_test3 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_pos_local" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria_pos =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_test" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_test_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_test =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/was_positive" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_test =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/has_threatment" relevant=" /Facility/maternal_cond_interv/maternal_complications3/was_positive =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/profilaxia" relevant=" /Facility/maternal_cond_interv/maternal_complications3/has_threatment =1" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/tarv" relevant=" /Facility/maternal_cond_interv/maternal_complications3/has_threatment =1" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/had_accident" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/labour" readonly="true()" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_date" required="true()" type="date"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_mode" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" jr:constraintMsg="Indique o número de bebés" nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/num_bby5" required="true()" type="int"/>
+      <bind calculate=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/num_bby5 " nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2_count" readonly="true()" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/weight" required="true()" type="int"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/birth_res" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/perinatal_results6" readonly="true()" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6 =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly6" type="select"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly6 =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fding_diff" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fding_diff_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fding_diff =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/leth" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/leth_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/leth =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/coma" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/coma_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/coma =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/convultions" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/convultions_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/convultions =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fever" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fever_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fever =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/hyp" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/hyp_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/hyp =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/umb_infec" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/umb_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/umb_infec =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/skn_infec" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/skn_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/skn_infec =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/dhrr" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/dhrr_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/dhrr =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/ictericia" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/ictericia_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/ictericia =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/bleeding" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/bleeding_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/bleeding =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/birth_stat" type="select1"/>
       <bind nodeset="/Facility/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/Facility/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;Facility-&quot;, /Facility/facility_info/id )" nodeset="/Facility/meta/instanceName" type="string"/>
@@ -651,30 +477,19 @@
           <value>0</value>
         </item>
         <item>
+          <label>Vem referida por um APE</label>
+          <value>1</value>
+        </item>
+        <item>
           <label>Vem referida da unidade sanitária de nível 1º</label>
-          <value>1</value>
+          <value>2</value>
         </item>
         <item>
           <label>Desconhecido</label>
           <value>99</value>
         </item>
       </select1>
-      <select1 ref="/Facility/visit_info/arrival_ape">
-        <label>F3.1.1.A mulher chegou a esta unidade sanitária referida por um APE</label>
-        <item>
-          <label>Não</label>
-          <value>0</value>
-        </item>
-        <item>
-          <label>Sim</label>
-          <value>1</value>
-        </item>
-        <item>
-          <label>Desconhecido</label>
-          <value>99</value>
-        </item>
-      </select1>
-      <select1 ref="/Facility/visit_info/tranferred">
+      <select1 ref="/Facility/visit_info/transferred">
         <label>F3.2.A mulher foi transferida duma outra unidade sanitária?</label>
         <item>
           <label>Não</label>
@@ -712,35 +527,35 @@
           <value>3</value>
         </item>
         <item>
-          <label>Dor de cabeça</label>
+          <label>Hipertensão</label>
           <value>4</value>
         </item>
         <item>
-          <label>Distúrbio visual</label>
+          <label>Dor de cabeça</label>
           <value>5</value>
         </item>
         <item>
-          <label>Dor no peito</label>
+          <label>Distúrbio visual</label>
           <value>6</value>
         </item>
         <item>
-          <label>Falta de ar</label>
+          <label>Dor no peito</label>
           <value>7</value>
         </item>
         <item>
-          <label>Dor abdominal</label>
+          <label>Falta de ar</label>
           <value>8</value>
         </item>
         <item>
-          <label>Sangramento vaginal</label>
+          <label>Dor abdominal</label>
           <value>9</value>
         </item>
         <item>
-          <label>Convulsões</label>
+          <label>Sangramento vaginal</label>
           <value>10</value>
         </item>
         <item>
-          <label>Eclampsia</label>
+          <label>Convulsões</label>
           <value>11</value>
         </item>
         <item>
@@ -761,13 +576,16 @@
         </item>
         <item>
           <label>Outro</label>
-          <value>16</value>
+          <value>90</value>
         </item>
         <item>
           <label>Desconhecido</label>
           <value>99</value>
         </item>
       </select>
+      <input ref="/Facility/visit_info/reason_spec">
+        <label>F3.5.1.Qual foi o motivo para procurar cuidados de saúde</label>
+      </input>
       <select1 ref="/Facility/visit_info/stat">
         <label>F3.6.Estado da mulher à chegada</label>
         <item>
@@ -875,16 +693,31 @@
           <label>F4.7.Tensão arterial materna (mmHg) Diastólica</label>
           <hint>Se desconhecido escreva NI</hint>
         </input>
+        <select1 ref="/Facility/arrive_alives/clinical_arrival/ta_medition">
+          <label>F4.8.Apó a chegada foi feita a medição da TA com valores &lt;110mmHg durante esta visita/internamento</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
         <input ref="/Facility/arrive_alives/clinical_arrival/maternal_bpm">
           <label>F4.8.Frequência cardíaca materna (batidas por minuto)</label>
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <input ref="/Facility/arrive_alives/clinical_arrival/maternal_rpm">
-          <label>F4.9.Frequência respiratória materna</label>
+          <label>F4.9.Frequência respiratória materna(respirações por minuto)</label>
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <input ref="/Facility/arrive_alives/clinical_arrival/maternal_ox_sat">
-          <label>F4.10.Saturação de oxigénio materna (%)</label>
+          <label>F4.10.Saturação de oxigénio materno (%)</label>
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <input ref="/Facility/arrive_alives/clinical_arrival/mat_temp_cel">
@@ -940,9 +773,6 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/headache_dur">
-          <label>Número de dias</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/symp_arrival/visual_disturbance">
           <label>F4.14.Distúrbio visual</label>
           <item>
@@ -958,9 +788,6 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/visual_disturbance_dur">
-          <label>Número de dias</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/symp_arrival/chest_pain">
           <label>F4.15.Dor no peito</label>
           <item>
@@ -976,9 +803,6 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/chest_pain_dur">
-          <label>Número de dias</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/symp_arrival/short_breath">
           <label>F4.16.Falta de ar</label>
           <item>
@@ -994,9 +818,6 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/short_breath_dur">
-          <label>Número de dias</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/symp_arrival/abd_pain">
           <label>F4.17.Dor abdominal</label>
           <item>
@@ -1012,9 +833,6 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/abd_pain_dur">
-          <label>Número de dias</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/symp_arrival/vag_bleeding">
           <label>F4.18.Sangramento vaginal</label>
           <item>
@@ -1030,53 +848,14 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/vag_bleeding_dur">
-          <label>Número de dias</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/symp_arrival/lesions">
-          <label>F4.19.Lesão referente à convulsões antes da chegada (mordedura de língua, bater com a cabeça)</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/lesions_dur">
-          <label>Número de dias</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/symp_arrival/transp_accident">
-          <label>F4.20.Acidente de transporte (a caminho da unidade sanitária)</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/symp_arrival/transp_accident_dur">
-          <label>Número de dias</label>
-        </input>
       </group>
       <group ref="/Facility/arrive_alives/maternal_interv">
         <label>IV. INTERVENÇÕES MATERNAS</label>
         <input ref="/Facility/arrive_alives/maternal_interv/procedures4">
           <label>Qual das seguintes intervenções/procedimentos foi realizado:</label>
         </input>
-        <select1 ref="/Facility/arrive_alives/maternal_interv/cpr4">
-          <label>F4.21.Ressuscitação cardiopulmonar</label>
+        <select1 ref="/Facility/arrive_alives/maternal_interv/mech_vent4">
+          <label>F4.19.Ventilação Mecânica</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1090,87 +869,66 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/cpr4_dur">
-          <label>Total de dias de tratamento</label>
+        <input ref="/Facility/arrive_alives/maternal_interv/mech_vent4_dur">
+          <label>Dias de tratamento</label>
         </input>
-        <select1 ref="/Facility/arrive_alives/maternal_interv/cpr4_loc">
-          <label>F4.22.Selecione o local onde recebeu ressuscitação cardiopulmonar</label>
+        <select1 ref="/Facility/arrive_alives/maternal_interv/dialysis4">
+          <label>F4.20.Diálise</label>
           <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
             <value>1</value>
           </item>
           <item>
-            <label>A caminho desta unidade sanitária</label>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Facility/arrive_alives/maternal_interv/dialysis4_dur">
+          <label>Dias de tratamento</label>
+        </input>
+        <select1 ref="/Facility/arrive_alives/maternal_interv/blood_trans4">
+          <label>F4.21.Transfusão de Sangue</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/arrive_alives/maternal_interv/blood_trans_type">
+          <label>F4.21.Transfusão de Sangue</label>
+          <item>
+            <label>Concentrado de Globos</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Plaquetas</label>
             <value>2</value>
           </item>
           <item>
-            <label>Nesta unidade sanitária</label>
+            <label>Plasma fresco congelado</label>
             <value>3</value>
           </item>
           <item>
-            <label>Desconhecido</label>
-            <value>99</value>
+            <label>Sangue total</label>
+            <value>4</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/procedures41">
-          <label>Qual das seguintes intervenções/procedimentos foi realizado nesta unidade sanitária:</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/maternal_interv/mech_vent">
-          <label>F4.23.Ventilação Mecânica</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/mech_vent_dur">
-          <label>Total de dias de tratamento</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/maternal_interv/dialysis">
-          <label>F4.24.Diálise</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/dialysis_dur">
-          <label>Total de dias de tratamento</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/maternal_interv/blood_trans">
-          <label>F4.25.Transfusão de sangue</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/blood_trans_dur">
-          <label>Total de dias de tratamento</label>
+        <input ref="/Facility/arrive_alives/maternal_interv/blood_trans4_dur">
+          <label>Número de dias</label>
         </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/uterine_comp">
-          <label>F4.26.Compressão uterina</label>
+          <label>F4.22.Compressão uterina</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1188,7 +946,7 @@
           <label>Total de dias de tratamento</label>
         </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/anti_shk_garm">
-          <label>F4.27.Compressas anti-choque</label>
+          <label>F4.23.Vestuário anti-choque</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1202,11 +960,8 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/anti_shk_garm_dur">
-          <label>Total de dias de tratamento</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/brace">
-          <label>F4.28.Sutura Brace (sutura para parar a hemorragia)</label>
+          <label>F4.24.Sutura Brace (sutura para parar a hemorragia)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1220,11 +975,8 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/brace_dur">
-          <label>Total de dias de tratamento</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/iial">
-          <label>F4.29.Ligadura da artéria ilíaca interna</label>
+          <label>F4.25.Sutura de artéria ilíaca interna</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1238,11 +990,8 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/iial_dur">
-          <label>Total de dias de tratamento</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/hyst">
-          <label>F4.30.Histerectomia</label>
+          <label>F4.26.Histerectomia</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1256,11 +1005,8 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/maternal_interv/hyst_dur">
-          <label>Total de dias de tratamento</label>
-        </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/other4">
-          <label>F4.31.Outro.</label>
+          <label>F4.27.Outro</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1281,10 +1027,10 @@
           <label>Total de dias de tratamento</label>
         </input>
       </group>
-      <group ref="/Facility/arrive_alives/maternal_complications5">
-        <label>V. COMPLICAÇÕES MATERNAS</label>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/mth_bleed4">
-          <label>F4.32.Sangramento da boca ou ouvidos</label>
+      <group ref="/Facility/arrive_alives/exams">
+        <label>V. EXAMES REALIZADOS A MULHER</label>
+        <select1 ref="/Facility/arrive_alives/exams/blood_exam">
+          <label>F4.28.Foi realizado nesta unidade sanitária algum exame de sangue?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1298,453 +1044,44 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/mth_bleed_loc">
-          <label>Local onde ocorreu?</label>
+        <select1 ref="/Facility/arrive_alives/exams/exam">
+          <label>F4.28.Qual dos seguintes exames foi realizado nesta unidade sanitária:</label>
           <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <label>Hematócrito/Hemoglobina</label>
             <value>1</value>
           </item>
           <item>
-            <label>A caminho desta unidade sanitária</label>
+            <label>Contagem de leucócitos</label>
             <value>2</value>
           </item>
           <item>
-            <label>Nesta unidade sanitária</label>
+            <label>Plaquetas</label>
             <value>3</value>
           </item>
           <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/hemm4">
-          <label>F4.33.Hemorragia pré-parto&gt;15 ml (uma colher de sopa)</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/hemm_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/hemm_after4">
-          <label>F4.34.Hemorragia pós-parto</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/hemm_after_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/fisticula4">
-          <label>F4.35.Fístula</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/fisticula_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/avc4">
-          <label>F4.36.AVC</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/avc_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/blind4">
-          <label>F4.37.Cegueira transitória</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/blind_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/eclampsia4">
-          <label>F4.38.Eclâmpsia</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/eclampsia_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/coma4">
-          <label>F4.39.Coma</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/coma_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/fever5">
-          <label>F4.40.Febre</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/fever5_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select ref="/Facility/arrive_alives/maternal_complications5/fever_symp">
-          <label>F4.41.Se tiver febre, por favor seleccione os sintomas associados.</label>
-          <item>
-            <label>Dor de cabeça e rigidez do pescoço</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Dores articulares</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Tosse e falta de ar</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Dor abdominal</label>
+            <label>Creatinina</label>
             <value>4</value>
           </item>
           <item>
-            <label>Dor ao urinar ou dor no flanco</label>
+            <label>Albumina Seria</label>
             <value>5</value>
           </item>
           <item>
-            <label>Corrimento vaginal com mau cheiro</label>
+            <label>AST/ALT</label>
             <value>6</value>
           </item>
-        </select>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/malaria4">
-          <label>F4.42.Malária</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/malaria_loc">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/malaria_test">
-          <label>F4.42.Foi feito o teste de malária? (TDR ou microscopia)</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/malaria_test_local">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/malaria_pos4">
-          <label>F4.42b.Se sim, o resultado do teste de malária foi positive?</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/maternal_complications5/malaria_pos_local">
-          <label>Local onde ocorreu?</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="/Facility/arrive_alives/exams">
-        <label>VI. EXAMES REALIZADOS A MULHER</label>
-        <input ref="/Facility/arrive_alives/exams/exams_realized">
-          <label>Qual dos seguintes exames foi realizado nesta unidade sanitária:</label>
+        <input ref="/Facility/arrive_alives/exams/exam_qtd">
+          <label>Número total de testes realizados/ resultado do teste</label>
         </input>
-        <select1 ref="/Facility/arrive_alives/exams/tas_after_arr">
-          <label>F4.43.TAs &lt;110 mmHg após a chegada e em qualquer momento durante esta visita/ admissão hospitalar</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/exams/tas_after_arr_res">
-          <label>Resultado do Exame</label>
-          <hint>Se desconhecido escreva NI</hint>
+        <input ref="/Facility/arrive_alives/exams/hematocrito">
+          <label>F4.28.1.Valor de Hematócrito</label>
+        </input>
+        <input ref="/Facility/arrive_alives/exams/hemoglobina">
+          <label>F4.28.1.Valor de Hemoglobina</label>
         </input>
         <select1 ref="/Facility/arrive_alives/exams/leuk_count_high">
-          <label>F4.44.Maior contagem de leucócitos registada nesta unidade (10*3/µl)</label>
+          <label>F4.29.Maior contagem de leucócitos registada nesta unidade (10*3/µl)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1763,7 +1100,7 @@
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <select1 ref="/Facility/arrive_alives/exams/leuk_count_low">
-          <label>F4.45.Menor contagem de leucócitos registada nesta unidade (10*3/µl)</label>
+          <label>F4.30.Menor contagem de leucócitos registada nesta unidade (10*3/µl)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1782,7 +1119,7 @@
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <select1 ref="/Facility/arrive_alives/exams/dipstick6">
-          <label>F4.46.Análise de urina Dipstick</label>
+          <label>F4.31.Análise de urina Dipstick</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1796,8 +1133,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/dipstick_res">
-          <label>Resultado do Exame</label>
+        <select1 ref="/Facility/arrive_alives/exams/dipstick_qtd">
+          <label>Número total de testes realizados</label>
           <item>
             <label>Normal</label>
             <value>1</value>
@@ -1812,7 +1149,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/exams/micros">
-          <label>F4.46.Análise de urina Microscopia da urina</label>
+          <label>F4.31.Análise de urina Microscopia da urina</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1826,8 +1163,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/micros_res">
-          <label>Resultado do Exame</label>
+        <select1 ref="/Facility/arrive_alives/exams/micros_qtd">
+          <label>Número total de testes realizados</label>
           <item>
             <label>Normal</label>
             <value>1</value>
@@ -1842,7 +1179,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/exams/preg_ecography">
-          <label>F4.47.Ecografia da gravidez</label>
+          <label>F4.32.Ecografia da gravidez</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1856,8 +1193,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/preg_ecography_res">
-          <label>Resultado do Exame</label>
+        <select1 ref="/Facility/arrive_alives/exams/preg_ecography_qtd">
+          <label>Número total de testes realizados</label>
           <item>
             <label>Normal</label>
             <value>1</value>
@@ -1872,7 +1209,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/exams/ctg">
-          <label>F4.48.CTG (frequência cardíaca fetal)</label>
+          <label>F4.33.CTG (frequência cardíaca fetal)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1886,8 +1223,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/ctg_res">
-          <label>Resultado do Exame</label>
+        <select1 ref="/Facility/arrive_alives/exams/ctg_qtd">
+          <label>Número total de testes realizados</label>
           <item>
             <label>Normal</label>
             <value>1</value>
@@ -1902,7 +1239,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/exams/other6">
-          <label>F4.49.Outro exame (especificar qual)</label>
+          <label>F4.34.Outro exame (especificar qual)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1919,8 +1256,8 @@
         <input ref="/Facility/arrive_alives/exams/other_spec">
           <label>Especifique</label>
         </input>
-        <select1 ref="/Facility/arrive_alives/exams/other_res">
-          <label>Resultado do Exame</label>
+        <select1 ref="/Facility/arrive_alives/exams/other_qtd">
+          <label>Número total de testes realizados</label>
           <item>
             <label>Normal</label>
             <value>1</value>
@@ -1936,9 +1273,9 @@
         </select1>
       </group>
       <group ref="/Facility/arrive_alives/medications7">
-        <label>VII. MEDICAÇÕES PARA A MULHER</label>
+        <label>VI. MEDICAÇÕES PARA A MULHER</label>
         <select1 ref="/Facility/arrive_alives/medications7/methildopa7">
-          <label>F4.50.Metildopa</label>
+          <label>F4.35.Metildopa</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1972,7 +1309,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/medications7/antihypertensive7">
-          <label>F4.51.Outro tratamento anti-hipertensivo que não seja metildopa</label>
+          <label>F4.36.Outro tratamento anti-hipertensivo que não seja metildopa</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2005,42 +1342,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/medications7/mgso47">
-          <label>F4.52.Sulfato de magnésio</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/medications7/mgso47_loc">
-          <label>Local onde recebeu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
         <select1 ref="/Facility/arrive_alives/medications7/antibiotic4">
-          <label>F4.53.Antibióticos</label>
+          <label>F4.37.Antibióticos</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2074,7 +1377,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/medications7/corticoides7">
-          <label>F4.54.Corticoides para maturação pulmonar fetal</label>
+          <label>F4.38.Corticoides para maturação pulmonar fetal</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2107,11 +1410,8 @@
             <value>99</value>
           </item>
         </select1>
-      </group>
-      <group ref="/Facility/arrive_alives/mgso4_effects">
-        <label>VIII. EFEITOS ADVERSOS RELACIONADOS COM O SULFATO DE MAGNÉSIO</label>
-        <select1 ref="/Facility/arrive_alives/mgso4_effects/mgso4_infec">
-          <label>F4.55.Infecção no local de injecção</label>
+        <select1 ref="/Facility/arrive_alives/medications7/mgso47">
+          <label>F4.39.Sulfato de magnésio</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2125,62 +1425,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/mgso4_effects/mgso4_haematoma">
-          <label>F4.56.Hematoma no local de injecção</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/mgso4_effects/other">
-          <label>F4.57.Outro efeito adverso</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/arrive_alives/mgso4_effects/other_spec">
-          <label>Especifique</label>
-        </input>
-      </group>
-      <group ref="/Facility/arrive_alives/labor_and_results">
-        <label>IX. PARTO E RESULTADOS PERINATAIS</label>
-        <input ref="/Facility/arrive_alives/labor_and_results/labor_info">
-          <label>INFORMAÇÕES SOBRE O PARTO</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/labor_and_results/deliv_prev9">
-          <label>F4.58.A mulher teve o parto antes de chegar a esta unidade sanitária?</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/labor_and_results/deliv_prev9_loc">
-          <label>F4.59.Se sim, por favor seleccione o local</label>
+        <select1 ref="/Facility/arrive_alives/medications7/mgso47_loc">
+          <label>Local onde recebeu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
             <value>1</value>
@@ -2198,585 +1444,71 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/labor_and_results/deliv_date">
-          <label>F4.60.Data do parto</label>
-        </input>
-        <select1 ref="/Facility/arrive_alives/labor_and_results/deliv_mode">
-          <label>F4.61.Tipo de parto [Nível de intervenção mais alto no caso de nascimentos múltiplos]</label>
+      </group>
+      <group ref="/Facility/arrive_alives/mgso4_effects">
+        <label>VII. EFEITOS ADVERSOS RELACIONADOS COM O SULFATO DE MAGNÉSIO</label>
+        <select1 ref="/Facility/arrive_alives/mgso4_effects/mgso4_infec">
+          <label>F4.40.Infecção no local de injecção</label>
           <item>
-            <label>Parto vaginal espontâneo</label>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
             <value>1</value>
-          </item>
-          <item>
-            <label>Parto Vaginal assistido</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Cesariana</label>
-            <value>3</value>
           </item>
           <item>
             <label>Desconhecido</label>
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/arrive_alives/labor_and_results/num_bby">
-          <label>F4.62.Número de bebés</label>
+        <select1 ref="/Facility/arrive_alives/mgso4_effects/mgso4_haematoma">
+          <label>F4.41.Hematoma no local de injecção</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/arrive_alives/mgso4_effects/other">
+          <label>F4.41.1.Outro efeito adverso</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <input ref="/Facility/arrive_alives/mgso4_effects/other_spec">
+          <label>Especifique</label>
         </input>
-        <group ref="/Facility/arrive_alives/labor_and_results/bby">
-          <label>Bebé Nº</label>
-          <repeat jr:count=" /Facility/arrive_alives/labor_and_results/bby_count " nodeset="/Facility/arrive_alives/labor_and_results/bby">
-            <input ref="/Facility/arrive_alives/labor_and_results/bby/weight">
-              <label>F4.63.Peso ao nascimento (gr) [No caso de nascimentos múltiplos, utilize uma caixa por bebé]</label>
-            </input>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/birth_stat">
-              <label>F4.64.Resultado da gravidez [No caso de nascimentos múltiplos, utilize uma caixa por bebé]</label>
-              <item>
-                <label>Vivo</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Morte neonatal precoce (0-7 dias)</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Morte neonatal tardia (8-28 dias)</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <input ref="/Facility/arrive_alives/labor_and_results/bby/clipid">
-              <label>F4.65.CLIP ID do bebé (se conhecido)</label>
-            </input>
-            <input ref="/Facility/arrive_alives/labor_and_results/bby/perinatal_results9">
-              <label>RESULTADOS PERINATAIS</label>
-            </input>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/lesion9">
-              <label>F4.66.Lesão ao nascimento</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/lesion_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/cog_abn9">
-              <label>F4.67.Anomalias congénitas</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/cog_abn_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select ref="/Facility/arrive_alives/labor_and_results/bby/anomaly">
-              <label>F4.68.Tipo de anomalia</label>
-              <item>
-                <label>Tamanho da cabeça muito pequena no momento do nascimento</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Tamanho da cabeça muito grande no momento do nascimento</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Defeito da face</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Massa defeituosa na parte de trás da cabeça ou na coluna vertebral</label>
-                <value>4</value>
-              </item>
-              <item>
-                <label>Anomalia de abdómen e tórax.</label>
-                <value>5</value>
-              </item>
-              <item>
-                <label>Anormalidade de membros superiores e membros inferiores</label>
-                <value>6</value>
-              </item>
-              <item>
-                <label>Outras</label>
-                <value>7</value>
-              </item>
-            </select>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/brthing_diff9">
-              <label>F4.69.Dificuldade respiratória</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/brthing_diff_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/fding_diff9">
-              <label>F4.70.Dificuldade em alimentar-se</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/fding_diff_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/leth9">
-              <label>F4.71.Letargia</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/leth_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/coma9">
-              <label>F4.72.Coma</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/coma_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/convultions9">
-              <label>F4.73.Convulsões</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/convultions_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/fever9">
-              <label>F4.74.Febre</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/fever_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/hyp9">
-              <label>F4.75.Hipotermia</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/hyp_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/umb_infec9">
-              <label>F4.76.Infecção do cordão umbilical</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/umb_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/skn_infec9">
-              <label>F4.77.Infecção da pele</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/skn_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/dhrr9">
-              <label>F4.78.Diarreia ou vómitos</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/dhrr_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/ictericia9">
-              <label>F4.79.Icterícia</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/ictericia_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/bleeding9">
-              <label>F4.80.Hemorragia</label>
-              <item>
-                <label>Não</label>
-                <value>0</value>
-              </item>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Facility/arrive_alives/labor_and_results/bby/bleeding_loc">
-              <label>Local onde ocorreu a condição</label>
-              <item>
-                <label>Na comunidade /Unidade sanitária de nível primário</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>A caminho desta unidade sanitária</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Nesta unidade sanitária</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Desconhecido</label>
-                <value>99</value>
-              </item>
-            </select1>
-          </repeat>
-        </group>
       </group>
       <group ref="/Facility/arrive_alives/hospital_info">
-        <label>X. INFORMAÇÃO DA ALTA HOSPITALAR</label>
+        <label>VIII. INFORMAÇÃO DA ALTA HOSPITALAR</label>
         <input ref="/Facility/arrive_alives/hospital_info/mummy">
           <label>MÃE</label>
         </input>
         <input ref="/Facility/arrive_alives/hospital_info/release_date">
-          <label>F4.81.Data da alta</label>
+          <label>F4.42.Data da alta</label>
         </input>
         <input ref="/Facility/arrive_alives/hospital_info/release_time">
-          <label>F4.82.Hora da alta</label>
+          <label>F4.43.Hora da alta</label>
         </input>
         <select1 ref="/Facility/arrive_alives/hospital_info/release_state">
-          <label>F4.83.Estado na alta</label>
+          <label>F4.44.Estado na alta</label>
           <item>
             <label>Viva</label>
             <value>1</value>
@@ -2787,7 +1519,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/hospital_info/dth_state">
-          <label>F4.84.Estado da mulher no momento da morte</label>
+          <label>F4.45.Estado da mulher no momento da morte</label>
           <item>
             <label>Grávida</label>
             <value>1</value>
@@ -2805,8 +1537,8 @@
             <value>4</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/hospital_info/cause_of_death">
-          <label>F4.85.Causa da morte</label>
+        <select1 ref="/Facility/arrive_alives/hospital_info/cause_of_dth">
+          <label>F4.46.Causa da morte</label>
           <item>
             <label>Distúrbio hipertensivo da gravidez/ Eclampsia</label>
             <value>1</value>
@@ -2820,12 +1552,8 @@
             <value>3</value>
           </item>
           <item>
-            <label>Sépsis</label>
+            <label>Sépsia</label>
             <value>4</value>
-          </item>
-          <item>
-            <label>Causa médica não relacionada com a gravidez</label>
-            <value>5</value>
           </item>
           <item>
             <label>Outro</label>
@@ -2837,7 +1565,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/hospital_info/dth_authopsy">
-          <label>F4.86.A causa da morte foi atribuída pela autópsia?</label>
+          <label>F4.47.A causa da morte foi atribuída pela autópsia?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2852,10 +1580,10 @@
           </item>
         </select1>
         <input ref="/Facility/arrive_alives/hospital_info/dth_date">
-          <label>F4.87.Data da morte</label>
+          <label>F4.48.Data da morte</label>
         </input>
         <select1 ref="/Facility/arrive_alives/hospital_info/release_destiny">
-          <label>F4.88.Destino pós alta</label>
+          <label>F4.49.Destino pós alta</label>
           <item>
             <label>Casa</label>
             <value>1</value>
@@ -2899,6 +1627,9 @@
         <input ref="/Facility/arrive_alives/hospital_info/son">
           <label>BEBÊ</label>
         </input>
+        <input ref="/Facility/arrive_alives/hospital_info/num_bby">
+          <label>Número de bebés</label>
+        </input>
         <group ref="/Facility/arrive_alives/hospital_info/babies">
           <label>Bebé Nº</label>
           <repeat jr:count=" /Facility/arrive_alives/hospital_info/babies_count " nodeset="/Facility/arrive_alives/hospital_info/babies">
@@ -2926,493 +1657,511 @@
       </group>
     </group>
     <group ref="/Facility/RESILIENCIA">
-      <label>SECÇÃO 5: PARA AS MULHERES FALECIDAS À CHEGADA NA UNIDADE SANITÁRIA</label>
-      <group ref="/Facility/RESILIENCIA/pregnancy_status">
-        <label>I. INFORMAÇÃO DA MULHER À CHEGADA</label>
-        <select1 ref="/Facility/RESILIENCIA/pregnancy_status/cause_of_death">
-          <label>F5.1.Causa da morte</label>
+      <label>SECÇÃO 5: MULHER FALECIDA À CHEGADA</label>
+      <select1 ref="/Facility/RESILIENCIA/cause_of_death">
+        <label>F5.1.Causa da morte</label>
+        <item>
+          <label>Distúrbio hipertensivo da gravidez/ Eclampsia</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Hemorragia pós parto</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Trabalho de parto obstruído</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Sépsia</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>90</value>
+        </item>
+        <item>
+          <label>Desconhecido</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <input ref="/Facility/RESILIENCIA/cause_of_death_spec">
+        <label>F5.1.Causa da morte</label>
+      </input>
+      <select1 ref="/Facility/RESILIENCIA/autopsy">
+        <label>F5.2.A causa da morte foi atribuída pela autópsia?</label>
+        <item>
+          <label>Não</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Desconhecido</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/Facility/RESILIENCIA/status_death">
+        <label>F5.3.Estado da gravidéz</label>
+        <item>
+          <label>Grávida</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Aborto</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Gravidez ectópica</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Pós-parto</label>
+          <value>4</value>
+        </item>
+      </select1>
+      <select1 ref="/Facility/RESILIENCIA/baby_stat">
+        <label>F5.4.Estado do bebé à chegada na unidade sanitária</label>
+        <item>
+          <label>Vivo</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nado morto</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Morte neonatal precoce (0-7 dias)</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Morte neonatal tardia (8-28 dias)</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Desconhecido</label>
+          <value>99</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/Facility/maternal_cond_interv">
+      <label>SECÇÃO 6: CONDIÇÃO MATERNA E INTERVENÇÕES</label>
+      <input ref="/Facility/maternal_cond_interv/procedures2">
+        <label>I. INTERVENÇÕES MATERNAS</label>
+      </input>
+      <select1 ref="/Facility/maternal_cond_interv/cpr">
+        <label>F6.1.Ressuscitação cardiopulmonar</label>
+        <item>
+          <label>Não</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Desconhecido</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <input ref="/Facility/maternal_cond_interv/cpr_dur">
+        <label>Total dos dias de tratamento</label>
+      </input>
+      <select1 ref="/Facility/maternal_cond_interv/cpr_loc">
+        <label>F6.2.Selecione o local onde recebeu ressuscitação cardiopulmonar</label>
+        <item>
+          <label>Na comunidade /Unidade sanitária de nível primário</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>A caminho desta unidade sanitária</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nesta unidade sanitária</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Desconhecido</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <group ref="/Facility/maternal_cond_interv/maternal_complications3">
+        <label>II. CONDIÇÃO MATERNA</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/mth_bleed">
+          <label>F6.3.Sangramento da boca ou ouvidos</label>
           <item>
-            <label>Distúrbio hipertensivo da gravidez/ Eclampsia</label>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
             <value>1</value>
           </item>
           <item>
-            <label>Hemorragia pós parto</label>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/mth_bleed_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
             <value>2</value>
           </item>
           <item>
-            <label>Trabalho de parto obstruído</label>
+            <label>Nesta unidade sanitária</label>
             <value>3</value>
           </item>
           <item>
-            <label>Sépsis</label>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hemm">
+          <label>F6.4.Hemorragia pré-parto&gt; 15 ml (uma colher de sopa)</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hemm_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hemm_after">
+          <label>F6.5.Hemorragia pós-parto</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hemm_after_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/fisticula">
+          <label>F6.6.Fístula</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/fisticula_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/avc">
+          <label>F6.7.AVC (Acidente Vascular Cerebral)</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/avc_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/blind">
+          <label>F6.8.Cegueira transitória</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/blind_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/eclampsia">
+          <label>F6.9.Eclampsia</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/eclampsia_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/lesion">
+          <label>F6.10. Lesão relacionada com a convulsão (mordedura de língua, bater com a cabeça)</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/lesion_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/coma3">
+          <label>F6.11.Coma</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/coma_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/fever3">
+          <label>F6.12.Febre</label>
+          <item>
+            <label>Não</label>
+            <value>0</value>
+          </item>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/fever3_loc">
+          <label>Local onde ocorreu</label>
+          <item>
+            <label>Na comunidade /Unidade sanitária de nível primário</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>A caminho desta unidade sanitária</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Nesta unidade sanitária</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Desconhecido</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select ref="/Facility/maternal_cond_interv/maternal_complications3/fever_symp">
+          <label>F6.13.Se teve febre, por favor seleccione os sintomas associados.</label>
+          <item>
+            <label>Dor de cabeça e rigidez do pescoço</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Tosse e falta de ar</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Dor abdominal</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Dor ao urinar ou dor no flanco</label>
             <value>4</value>
           </item>
           <item>
-            <label>Causa médica não relacionada com a gravidez</label>
+            <label>Corrimento vaginal com mau cheiro</label>
             <value>5</value>
           </item>
           <item>
             <label>Outro</label>
             <value>90</value>
           </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/pregnancy_status/autopsy">
-          <label>F5.2.A causa da morte foi atribuída pela autópsia?</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/pregnancy_status/status_death">
-          <label>F5.3.Estado da mulher</label>
-          <item>
-            <label>Grávida</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Aborto</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Gravidez ectópica</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Pós-parto</label>
-            <value>4</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/pregnancy_status/fetal_heart">
-          <label>F5.4.Presença de sons cardíacos fetais (foco fetal)</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/pregnancy_status/baby_stat">
-          <label>F5.5.Estado do bebé</label>
-          <item>
-            <label>Vivo</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Nado morto</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Morte neonatal precoce (0-7 dias)</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Morte neonatal tardia (8-28 dias)</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="/Facility/RESILIENCIA/maternal_interventions">
-        <label>II. INTERVENÇÕES MATERNAS</label>
-        <input ref="/Facility/RESILIENCIA/maternal_interventions/procedures2">
-          <label>Qual das seguintes intervenções/procedimentos foi realizado:</label>
-        </input>
-        <select1 ref="/Facility/RESILIENCIA/maternal_interventions/cpr">
-          <label>F5.6.Ressuscitação cardiopulmonar</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/RESILIENCIA/maternal_interventions/cpr_dur">
-          <label>Total dos dias de tratamento</label>
-        </input>
-        <select1 ref="/Facility/RESILIENCIA/maternal_interventions/cpr_loc">
-          <label>F5.7.Selecione o local onde recebeu ressuscitação cardiopulmonar</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="/Facility/RESILIENCIA/maternal_complications3">
-        <label>III. COMPLICAÇÕES MATERNAS</label>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/mth_bleed">
-          <label>F5.8.Sangramento da boca ou ouvidos</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/mth_bleed_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/hemm">
-          <label>F5.9.Hemorragia pré-parto&gt; 15 ml (uma colher de sopa)</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/hemm_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/hemm_after">
-          <label>F5.10.Hemorragia pós-parto</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/hemm_after_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/fisticula">
-          <label>F5.11.Fístula</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/fisticula_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/avc">
-          <label>F5.12.AVC</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/avc_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/blind">
-          <label>F5.13.Cegueira transitória</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/blind_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/eclampsia">
-          <label>F5.14.Eclampsia</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/eclampsia_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/coma3">
-          <label>F5.15.Coma</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/coma_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/fever3">
-          <label>F5.16.Febre</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/fever3_loc">
-          <label>Local onde ocorreu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select ref="/Facility/RESILIENCIA/maternal_complications3/fever_symp">
-          <label>F5.17.Se teve febre, por favor seleccione os sintomas associados.</label>
-          <item>
-            <label>Dor de cabeça e rigidez do pescoço</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Dores articulares</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Tosse e falta de ar</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Dor abdominal</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Dor ao urinar ou dor no flanco</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Corrimento vaginal com mau cheiro</label>
-            <value>6</value>
-          </item>
         </select>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/malaria">
-          <label>F5.18.Malária</label>
+        <input ref="/Facility/maternal_cond_interv/maternal_complications3/fever_symp_spec">
+          <label>Especifique</label>
+        </input>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/malaria">
+          <label>F6.13.1.Malária</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3426,7 +2175,7 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/malaria_loc">
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/malaria_loc">
           <label>Local onde ocorreu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3445,8 +2194,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/malaria_test3">
-          <label>F5.18a.Foi feito o teste de malária? (TDR ou microscopia)</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3">
+          <label>F6.13.2.Foi feito o teste de malária? (TDR ou microscopia)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3460,7 +2209,7 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/malaria_test3_local">
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3_local">
           <label>Local onde ocorreu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3479,8 +2228,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/malaria_pos">
-          <label>F5.18b.Se sim, o resultado do teste de malária foi positivo?</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/malaria_pos">
+          <label>F6.13.3.Se sim, o resultado do teste de malária foi positivo?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3494,7 +2243,7 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/maternal_complications3/malaria_pos_local">
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/malaria_pos_local">
           <label>Local onde ocorreu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3513,11 +2262,8 @@
             <value>99</value>
           </item>
         </select1>
-      </group>
-      <group ref="/Facility/RESILIENCIA/medications4">
-        <label>IV. MEDICAÇÕES QUE A MULHER RECEBEU</label>
-        <select1 ref="/Facility/RESILIENCIA/medications4/methildopa">
-          <label>F5.18.Metildopa</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv">
+          <label>F6.13.4 HIV</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3531,8 +2277,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/methildopa_loc">
-          <label>Local onde recebeu</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_loc">
+          <label>Local onde ocorreu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
             <value>1</value>
@@ -3550,8 +2296,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/antihypertensive">
-          <label>F5.19.Outro tratamento anti-hipertensivo que não seja metildopa</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_test">
+          <label>F6.13.5.Foi feito o teste de HIV? (rápido ou laboratório)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3565,8 +2311,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/antihypertensive_loc">
-          <label>Local onde recebeu</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_test_loc">
+          <label>Local onde ocorreu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
             <value>1</value>
@@ -3584,8 +2330,19 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/mgso4">
-          <label>F5.20.Sulfato de magnésio</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/was_positive">
+          <label>F6.13.6.Se sim, o resultado do teste de HIV foi positivo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Nao</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/has_threatment">
+          <label>F6.13.7.Se o resultado for positivo, está fazer algum tratamento?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3599,101 +2356,31 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/mgso4_loc">
-          <label>Local onde recebeu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/antibiotic">
-          <label>F5.21.Anbióticos</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
+        <input ref="/Facility/maternal_cond_interv/maternal_complications3/profilaxia">
+          <label>F6.13.8.Se sim indique o medicamento que está tomar (Profilaxia)</label>
+        </input>
+        <input ref="/Facility/maternal_cond_interv/maternal_complications3/tarv">
+          <label>F6.13.8.Se sim indique o medicamento que está tomar (Tratamento antiretroviral - TARV)</label>
+        </input>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/had_accident">
+          <label>F6.13.14.Acidente de transporte (a caminho da unidade sanitária)</label>
           <item>
             <label>Sim</label>
             <value>1</value>
           </item>
           <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/antibiotic_loc">
-          <label>Local onde recebeu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
+            <label>Nao</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/corticoides">
-          <label>F5.22.Corticoides para maturação pulmonar fetal</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/medications4/corticoides_loc">
-          <label>Local onde recebeu</label>
-          <item>
-            <label>Na comunidade /Unidade sanitária de nível primário</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>A caminho desta unidade sanitária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Nesta unidade sanitária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
           </item>
         </select1>
       </group>
-      <group ref="/Facility/RESILIENCIA/mgso4_adv_effects">
-        <label>V. EFEITOS ADVERSOS RELACIONADOS COM O SULFATO DE MAGNÉSIO</label>
-        <input ref="/Facility/RESILIENCIA/mgso4_adv_effects/mgso4Cond">
-          <label>Para as mulheres que receberam uma injecção de sulfato de magnésio</label>
+      <group ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome">
+        <label>VII. INFORMAÇÕES DO PARTO E RESULTADOS PERINATAIS</label>
+        <input ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/labour">
+          <label>PARTO</label>
         </input>
-        <select1 ref="/Facility/RESILIENCIA/mgso4_adv_effects/mgso4_infec">
-          <label>F5.23.Infecção no local de injecção</label>
+        <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev">
+          <label>F7.1.A mulher teve o parto antes do óbito nesta unidade sanitária?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -3707,59 +2394,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/RESILIENCIA/mgso4_adv_effects/mgso4_haematoma">
-          <label>F5.24.Hematoma no local de injecção</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/mgso4_adv_effects/other5">
-          <label>F5.25.Outro efeito adverso</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Facility/RESILIENCIA/mgso4_adv_effects/other_spec">
-          <label>Especificar</label>
-        </input>
-      </group>
-      <group ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome">
-        <label>VI. PARTO E RESULTADOS PERINATAIS</label>
-        <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_prev">
-          <label>F5.26.A mulher teve o parto antes do óbito nesta unidade sanitária?</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_loc">
-          <label>F5.27.Se sim, por favor selecione o local</label>
+        <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_loc">
+          <label>F7.2.Se sim, por favor selecione o local</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
             <value>1</value>
@@ -3777,11 +2413,11 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_date">
-          <label>F5.28.Data do parto</label>
+        <input ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_date">
+          <label>F7.3.Data do parto</label>
         </input>
-        <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/deliv_mode">
-          <label>F5.29.Tipo de parto [Nível de intervenção mais alto no caso de nascimentos múltiplos]</label>
+        <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_mode">
+          <label>F7.4.Tipo de parto [Nível de intervenção mais alto no caso de nascimentos múltiplos]</label>
           <item>
             <label>Parto vaginal espontâneo</label>
             <value>1</value>
@@ -3799,17 +2435,17 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/num_bby5">
-          <label>F5.30.Número de bebés</label>
+        <input ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/num_bby5">
+          <label>F7.5.Número de bebés</label>
         </input>
-        <group ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2">
+        <group ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2">
           <label>Bebé Nº</label>
-          <repeat jr:count=" /Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2_count " nodeset="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2">
-            <input ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/weight">
-              <label>F5.31.Peso ao nascimento (gr)[No caso de nascimentos múltiplos, utilize uma caixa por bebé]</label>
+          <repeat jr:count=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2_count " nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2">
+            <input ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/weight">
+              <label>F7.6.Peso ao nascimento (gr)[No caso de nascimentos múltiplos, utilize uma caixa por bebé]</label>
             </input>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/birth_res">
-              <label>F5.32.Resultado da gravidez</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/birth_res">
+              <label>F7.7.Resultado da gravidez</label>
               <item>
                 <label>Vivo</label>
                 <value>1</value>
@@ -3827,14 +2463,11 @@
                 <value>99</value>
               </item>
             </select1>
-            <input ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/clipid">
-              <label>F5.33.CLIP ID do bebé (se conhecido)</label>
-            </input>
-            <input ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/perinatal_results6">
+            <input ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/perinatal_results6">
               <label>RESULTADOS PERINATAIS</label>
             </input>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/lesion">
-              <label>F5.34.Lesão ao nascimento</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6">
+              <label>F7.8.Lesão a nascença</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -3848,7 +2481,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/lesion_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3867,8 +2500,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/cog_abn">
-              <label>F5.35.Anomalias congénitas</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn">
+              <label>F7.9.Anomalias congénitas</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -3882,7 +2515,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/cog_abn_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3901,8 +2534,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/anomaly6">
-              <label>F5.36.Tipo de anomalia</label>
+            <select ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly6">
+              <label>F7.10.Tipo de anomalia</label>
               <item>
                 <label>Tamanho da cabeça muito pequena no momento do nascimento</label>
                 <value>1</value>
@@ -3932,7 +2565,7 @@
                 <value>7</value>
               </item>
             </select>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/anomaly_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3951,8 +2584,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/brthing_diff">
-              <label>F5.37.Dificuldade respiratória</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff">
+              <label>F7.11.Dificuldade respiratória</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -3966,7 +2599,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/brthing_diff_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -3985,8 +2618,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fding_diff">
-              <label>F5.38.Dificuldade em alimentar-se</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fding_diff">
+              <label>F7.12.Dificuldade em alimentar-se</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4000,7 +2633,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fding_diff_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fding_diff_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4019,8 +2652,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/leth">
-              <label>F5.39.Letargia</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/leth">
+              <label>F7.13.Letargia</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4034,7 +2667,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/leth_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/leth_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4053,8 +2686,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/coma">
-              <label>F5.40.Coma</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/coma">
+              <label>F7.14.Coma</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4068,7 +2701,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/coma_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/coma_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4087,8 +2720,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/convultions">
-              <label>F5.41.Convulsões</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/convultions">
+              <label>F7.15.Convulsões</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4102,7 +2735,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/convultions_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/convultions_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4121,8 +2754,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fever">
-              <label>F5.42.Febre</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fever">
+              <label>F7.16.Febre</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4136,7 +2769,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/fever_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/fever_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4155,8 +2788,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/hyp">
-              <label>F5.43.Hipotermia</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/hyp">
+              <label>F7.17.Hipotermia</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4170,7 +2803,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/hyp_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/hyp_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4189,8 +2822,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/umb_infec">
-              <label>F5.44.Infecção do cordão umbilical</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/umb_infec">
+              <label>F7.18.Infecção do cordão umbilical</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4204,7 +2837,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/umb_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/umb_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4223,8 +2856,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/skn_infec">
-              <label>F5.45.Infecção da pele</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/skn_infec">
+              <label>F7.19.Infecção da pele</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4238,7 +2871,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/skn_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/skn_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4257,8 +2890,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/dhrr">
-              <label>F5.46.Diarreia ou vómitos</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/dhrr">
+              <label>F7.20.Diarreia ou vómitos</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4272,7 +2905,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/dhrr_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/dhrr_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4291,8 +2924,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/ictericia">
-              <label>F5.47.Icterícia</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/ictericia">
+              <label>F7.21.Icterícia</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4306,7 +2939,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/ictericia_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/ictericia_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4325,8 +2958,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/bleeding">
-              <label>F5.48.Hemorragia</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/bleeding">
+              <label>F7.22.Hemorragia</label>
               <item>
                 <label>Não</label>
                 <value>0</value>
@@ -4340,7 +2973,7 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/bleeding_loc">
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/bleeding_loc">
               <label>Local onde ocorreu</label>
               <item>
                 <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -4359,8 +2992,8 @@
                 <value>99</value>
               </item>
             </select1>
-            <select1 ref="/Facility/RESILIENCIA/deliv_perinatalss_outcome/babies2/birth_stat">
-              <label>F5.49.Se a criança nasceu viva: estado da criança na alta [No caso de nascimentos múltiplos utilize uma caixa por bebé]</label>
+            <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/birth_stat">
+              <label>F7.23.Se a criança nasceu viva: estado da criança na alta [No caso de nascimentos múltiplos utilize uma caixa por bebé]</label>
               <item>
                 <label>Vivo</label>
                 <value>1</value>

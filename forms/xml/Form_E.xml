@@ -153,40 +153,42 @@
               <succToGoMarket/>
               <succToBackToWork/>
             </fincapacity>
-            <perinatals>
-              <h_text jr:template="">
-                <pregResult/>
-                <isStillAlive/>
-                <deathFirstWeek/>
-                <deathAfterWeek/>
-                <bodyLesion/>
-                <geneticAnomalie/>
-                <anomalies/>
-                <suckNormally/>
-                <deixarDesuckNormally/>
-                <openMouth/>
-                <breatheDifficulty/>
-                <breatheAcelerated/>
-                <chestRetraction/>
-                <hadSnore/>
-                <hadSpasms/>
-                <hadFever/>
-                <hadCold/>
-                <wasLetargic/>
-                <becameUnconscious/>
-                <hadSalienceFontanela/>
-                <pusInCord/>
-                <hadRedcord/>
-                <hadBubbles/>
-                <hadUlcer/>
-                <areasRed/>
-                <areasBecomeBlack/>
-                <hadBleeding/>
-                <hadSoftStools/>
-                <vomitedAll/>
-                <hadYellowSkin/>
-                <hadYellowEyes/>
-              </h_text>
+            <babies/>
+            <perinatals_count/>
+            <perinatals jr:template="">
+              <pregResult/>
+              <bby_permId/>
+              <isStillAlive/>
+              <deathFirstWeek/>
+              <deathAfterWeek/>
+              <txt/>
+              <bodyLesion/>
+              <geneticAnomalie/>
+              <anomalies/>
+              <suckNormally/>
+              <deixarDesuckNormally/>
+              <openMouth/>
+              <breatheDifficulty/>
+              <breatheAcelerated/>
+              <chestRetraction/>
+              <hadSnore/>
+              <hadSpasms/>
+              <hadFever/>
+              <hadCold/>
+              <wasLetargic/>
+              <becameUnconscious/>
+              <hadSalienceFontanela/>
+              <pusInCord/>
+              <hadRedcord/>
+              <hadBubbles/>
+              <hadUlcer/>
+              <areasRed/>
+              <areasBecomeBlack/>
+              <hadBleeding/>
+              <hadSoftStools/>
+              <vomitedAll/>
+              <hadYellowSkin/>
+              <hadYellowEyes/>
             </perinatals>
             <costDetails>
               <takeHospital/>
@@ -347,7 +349,7 @@
       <bind nodeset="/Form_E/main/brthprep/hasPermitionsMedAssist" relevant=" /Form_E/main/brthprep/primaryDecisionToSeekcare !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/brthprep/secondaryDecisionToSeekcare" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/birthinfo" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =2)"/>
-      <bind calculate="date-time( /Form_E/main/women/dateOfDelivery )" nodeset="/Form_E/main/birthinfo/birthDate" required="true()" type="date"/>
+      <bind calculate="date-time( /Form_E/main/women/dateOfDelivery )" constraint=". &lt;= today()" nodeset="/Form_E/main/birthinfo/birthDate" required="true()" type="date"/>
       <bind nodeset="/Form_E/main/birthinfo/manyBabies" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/birthinfo/babyGender" relevant=" /Form_E/main/birthinfo/manyBabies !=99"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrMen" required="true()" type="int"/>
@@ -382,39 +384,43 @@
       <bind nodeset="/Form_E/main/fincapacity/succToWorkFild" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/fincapacity/succToGoMarket" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/fincapacity/succToBackToWork" required="true()" type="select1"/>
+      <bind calculate=" /Form_E/main/birthinfo/babyGender/nrMen + /Form_E/main/birthinfo/babyGender/nrWoman " nodeset="/Form_E/main/babies" type="string"/>
+      <bind calculate=" /Form_E/main/babies " nodeset="/Form_E/main/perinatals_count" readonly="true()" type="string"/>
       <bind nodeset="/Form_E/main/perinatals" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2)"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/pregResult" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/isStillAlive" relevant=" /Form_E/main/perinatals/h_text/pregResult =5" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/deathFirstWeek" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/isStillAlive =2" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/deathAfterWeek" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek =2" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/bodyLesion" relevant=" /Form_E/main/perinatals/h_text/pregResult =5 and ( /Form_E/main/perinatals/h_text/deathAfterWeek =1 or  /Form_E/main/perinatals/h_text/deathAfterWeek =2 or  /Form_E/main/perinatals/h_text/deathAfterWeek =99) or ( /Form_E/main/perinatals/h_text/isStillAlive =1 or  /Form_E/main/perinatals/h_text/isStillAlive =99) or ( /Form_E/main/perinatals/h_text/deathFirstWeek =99 and  /Form_E/main/perinatals/h_text/deathFirstWeek =1)" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/geneticAnomalie" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/anomalies" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/geneticAnomalie =1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/suckNormally" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/geneticAnomalie !=1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/deixarDesuckNormally" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/suckNormally =2 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/openMouth" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/suckNormally =2 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/breatheDifficulty" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/suckNormally !=2 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/breatheAcelerated" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/breatheDifficulty !=0 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/chestRetraction" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/costDetails/takeHospital =1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadSnore" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/costDetails/takeHospital !=1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadSpasms" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/breatheDifficulty =0 or  /Form_E/main/costDetails/seekCare =1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadFever" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadCold" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/wasLetargic" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/becameUnconscious" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/costDetails/seekCare !=1 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadSalienceFontanela" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/pusInCord" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadRedcord" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadBubbles" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadUlcer" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/areasRed" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/areasBecomeBlack" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadBleeding" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadSoftStools" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/vomitedAll" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadYellowSkin" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/h_text/hadYellowEyes" relevant=" /Form_E/main/perinatals/h_text/pregResult !=1 and  /Form_E/main/perinatals/h_text/pregResult !=2 and  /Form_E/main/perinatals/h_text/pregResult !=3 and  /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/costDetails" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
+      <bind nodeset="/Form_E/main/perinatals/pregResult" required="true()" type="select1"/>
+      <bind calculate="concat( /Form_E/main/women/permId ,&quot;-&quot;, if(position(..)&lt;10, concat(&quot;0&quot;,position(..)),position(..)))" nodeset="/Form_E/main/perinatals/bby_permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/perinatals/isStillAlive" relevant=" /Form_E/main/perinatals/pregResult =5" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/deathFirstWeek" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/isStillAlive =2" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/deathAfterWeek" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek =2" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/txt" readonly="true()" type="string"/>
+      <bind nodeset="/Form_E/main/perinatals/bodyLesion" relevant=" /Form_E/main/perinatals/pregResult =5 and ( /Form_E/main/perinatals/deathAfterWeek =1 or  /Form_E/main/perinatals/deathAfterWeek =2 or  /Form_E/main/perinatals/deathAfterWeek =99) or ( /Form_E/main/perinatals/isStillAlive =1 or  /Form_E/main/perinatals/isStillAlive =99) or ( /Form_E/main/perinatals/deathFirstWeek =99 and  /Form_E/main/perinatals/deathFirstWeek =1)" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/geneticAnomalie" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/anomalies" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/geneticAnomalie =1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select"/>
+      <bind nodeset="/Form_E/main/perinatals/suckNormally" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/geneticAnomalie !=1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/deixarDesuckNormally" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/suckNormally =2 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/openMouth" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/suckNormally =2 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/breatheDifficulty" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/suckNormally !=2 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/breatheAcelerated" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/breatheDifficulty !=0 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/chestRetraction" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/costDetails/takeHospital =1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadSnore" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/costDetails/takeHospital !=1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadSpasms" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/breatheDifficulty =0 or  /Form_E/main/costDetails/seekCare =1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadFever" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadCold" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/wasLetargic" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/becameUnconscious" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/costDetails/seekCare !=1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadSalienceFontanela" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/pusInCord" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadRedcord" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadBubbles" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadUlcer" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/areasRed" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/areasBecomeBlack" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadBleeding" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadSoftStools" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/vomitedAll" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadYellowSkin" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadYellowEyes" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/costDetails" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
       <bind nodeset="/Form_E/main/costDetails/takeHospital" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/costDetails/consultsWithDoctors" relevant=" /Form_E/main/costDetails/takeHospital =1" required="true()"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op1" required="true()" type="int"/>
@@ -438,7 +444,7 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op3" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op4" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op5" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/mresponses" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/h_text/pregResult !=4 and  /Form_E/main/perinatals/h_text/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
+      <bind nodeset="/Form_E/main/mresponses" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
       <bind nodeset="/Form_E/main/mresponses/text" readonly="true()" type="string"/>
       <bind nodeset="/Form_E/main/mresponses/hadRessurection" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/mresponses/ressurectionLocal" relevant=" /Form_E/main/mresponses/hadRessurection =1" required="true()" type="select1"/>
@@ -1981,505 +1987,507 @@
       </group>
       <group ref="/Form_E/main/perinatals">
         <label>SECÇÃO H: RESULTADOS PERI-NATAIS</label>
-        <group ref="/Form_E/main/perinatals/h_text">
-          <label>Esta secção deve ser completada para as mulheres que estão vivas e tiveram o parto de pelo menos um bebé desde que a casa foi visitada. Também devem ser recolhida a informação das mulheres que estavam grávidas ou tiveram o parto no momento da morte</label>
-          <repeat nodeset="/Form_E/main/perinatals/h_text">
-            <select1 ref="/Form_E/main/perinatals/h_text/pregResult">
-              <label>H1. Qual foi o resultado da gravidez?</label>
-              <item>
-                <label>Aborto Espontâneo</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Aborto por interrupção electiva da gravidez</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Gravidez Ectópica</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Nado morto</label>
-                <value>4</value>
-              </item>
-              <item>
-                <label>Nado vivo</label>
-                <value>5</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/isStillAlive">
-              <label>H2. O bebé ainda está vivo?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/deathFirstWeek">
-              <label>H3. O bebé faleceu dentro da primeira semana de vida?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/deathAfterWeek">
-              <label>H4. O bebé faleceu entre a primeira semana de vida e um mês (28 dias) de idade?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/bodyLesion">
-              <label>H5. Houve contusões ou sinais de lesão no corpo do bebé durante o nascimento?</label>
-              <hint>As perguntas a seguir (5-31) aplicam-se apenas a bebés com idade entre 0 e 28 dias. MARQUE SIM se qualquer um dos sintomas ou sinais estavam presentes desde o nascimento até 28 dias de idade. Se o bebé faleceu, o inquérito pode ser preenchido no momento da autópsia verbal e social perinatal.</hint>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/geneticAnomalie">
-              <label>H6. O bebé apresentou qualquer anomalia congénita no momento do parto?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select ref="/Form_E/main/perinatals/h_text/anomalies">
-              <label>H7. Quais eram as anomalias?</label>
-              <item>
-                <label>Tamanho da cabeça muito pequena no momento do nascimento</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Tamanho da cabeça muito grande no momento do nascimento</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Defeito da face</label>
-                <value>3</value>
-              </item>
-              <item>
-                <label>Massa defeituosa na parte de trás da cabeça ou na coluna vertebral</label>
-                <value>4</value>
-              </item>
-              <item>
-                <label>Anomalia de abdómen e tórax.</label>
-                <value>5</value>
-              </item>
-              <item>
-                <label>Anormalidade de membros superiores e membros inferiores</label>
-                <value>6</value>
-              </item>
-              <item>
-                <label>Outras anomalias</label>
-                <value>98</value>
-              </item>
-            </select>
-            <select1 ref="/Form_E/main/perinatals/h_text/suckNormally">
-              <label>H8.O bebé foi capaz de mamar normalmente durante o primeiro dia de vida?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/deixarDesuckNormally">
-              <label>H9.O bebé deixou de ser capaz de mamar normalmente?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/openMouth">
-              <label>H10.O bebé era capaz de abrir a boca no momento em que parou de mamar?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/breatheDifficulty">
-              <label>H11.O bebé teve dificuldade para respirar?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/breatheAcelerated">
-              <label>H12.O bebé teve respiração acelerada?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/chestRetraction">
-              <label>H13.O bebé teve retração intercostal (retração do peito)?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadSnore">
-              <label>H14.O bebé teve roncos?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadSpasms">
-              <label>H15.O bebé teve espasmos ou convulsões?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadFever">
-              <label>H16.O bebé teve febre?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadCold">
-              <label>H17.Quando tocava no bebe este estava frio?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/wasLetargic">
-              <label>H18.O bebe ficou letárgico / sonolento, após um período de actividade normal?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/becameUnconscious">
-              <label>H19.O bebé ficou sem se mexer ou inconsciente</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadSalienceFontanela">
-              <label>H20.O bebé teve saliência da fontanela (fontanela abaulada)?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/pusInCord">
-              <label>H21.O bebé teve pus no cordão umbilical?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadRedcord">
-              <label>H22.O bebé teve o cordão umbilical avermelhado?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadBubbles">
-              <label>H23.O bebé teve borbulhas com pus ou uma área grande com pus?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadUlcer">
-              <label>H24.O bebé teve úlcera (feridas) na pele?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/areasRed">
-              <label>H25.O bebé teve alguma (s) área (s) da pele com cor vermelha ou inchaço?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/areasBecomeBlack">
-              <label>H26.O bebé teve áreas da pele que se tornaram negras?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadBleeding">
-              <label>H27.O bebe teve algum sangramento?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadSoftStools">
-              <label>H28.O bebé teve fezes moles ou líquidas mais frequentes do que o habitual?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/vomitedAll">
-              <label>H29.O bebé vomitava tudo?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadYellowSkin">
-              <label>H30.O bebe teve pele amarela?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-            <select1 ref="/Form_E/main/perinatals/h_text/hadYellowEyes">
-              <label>H31.O bebe teve olhos amarelados?</label>
-              <item>
-                <label>Sim</label>
-                <value>1</value>
-              </item>
-              <item>
-                <label>Não</label>
-                <value>2</value>
-              </item>
-              <item>
-                <label>Não sabe</label>
-                <value>99</value>
-              </item>
-            </select1>
-          </repeat>
-        </group>
+        <repeat jr:count=" /Form_E/main/perinatals_count " nodeset="/Form_E/main/perinatals">
+          <select1 ref="/Form_E/main/perinatals/pregResult">
+            <label>H1. Qual foi o resultado da gravidez?</label>
+            <item>
+              <label>Aborto Espontâneo</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Aborto por interrupção electiva da gravidez</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Gravidez Ectópica</label>
+              <value>3</value>
+            </item>
+            <item>
+              <label>Nado morto</label>
+              <value>4</value>
+            </item>
+            <item>
+              <label>Nado vivo</label>
+              <value>5</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Form_E/main/perinatals/bby_permId">
+            <label>PermId da Crianca</label>
+          </input>
+          <select1 ref="/Form_E/main/perinatals/isStillAlive">
+            <label>H2. O bebé ainda está vivo?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/deathFirstWeek">
+            <label>H3. O bebé faleceu dentro da primeira semana de vida?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/deathAfterWeek">
+            <label>H4. O bebé faleceu entre a primeira semana de vida e um mês (28 dias) de idade?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Form_E/main/perinatals/txt">
+            <label>As perguntas a seguir (5-31) aplicam-se apenas a bebés com idade entre 0 e 28 dias. MARQUE SIM se qualquer um dos sintomas ou sinais estavam presentes desde o nascimento até 28 dias de idade. Se o bebé faleceu, o inquérito pode ser preenchido no momento da autópsia verbal e social perinatal.</label>
+          </input>
+          <select1 ref="/Form_E/main/perinatals/bodyLesion">
+            <label>H5. Houve contusões ou sinais de lesão no corpo do bebé durante o nascimento?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/geneticAnomalie">
+            <label>H6. O bebé apresentou qualquer anomalia congénita no momento do parto?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select ref="/Form_E/main/perinatals/anomalies">
+            <label>H7. Quais eram as anomalias?</label>
+            <item>
+              <label>Tamanho da cabeça muito pequena no momento do nascimento</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Tamanho da cabeça muito grande no momento do nascimento</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Defeito da face</label>
+              <value>3</value>
+            </item>
+            <item>
+              <label>Massa defeituosa na parte de trás da cabeça ou na coluna vertebral</label>
+              <value>4</value>
+            </item>
+            <item>
+              <label>Anomalia de abdómen e tórax.</label>
+              <value>5</value>
+            </item>
+            <item>
+              <label>Anormalidade de membros superiores e membros inferiores</label>
+              <value>6</value>
+            </item>
+            <item>
+              <label>Outras anomalias</label>
+              <value>98</value>
+            </item>
+          </select>
+          <select1 ref="/Form_E/main/perinatals/suckNormally">
+            <label>H8.O bebé foi capaz de mamar normalmente durante o primeiro dia de vida?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/deixarDesuckNormally">
+            <label>H9.O bebé deixou de ser capaz de mamar normalmente?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/openMouth">
+            <label>H10.O bebé era capaz de abrir a boca no momento em que parou de mamar?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/breatheDifficulty">
+            <label>H11.O bebé teve dificuldade para respirar?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/breatheAcelerated">
+            <label>H12.O bebé teve respiração acelerada?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/chestRetraction">
+            <label>H13.O bebé teve retração intercostal (retração do peito)?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadSnore">
+            <label>H14.O bebé teve roncos?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadSpasms">
+            <label>H15.O bebé teve espasmos ou convulsões?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadFever">
+            <label>H16.O bebé teve febre?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadCold">
+            <label>H17.Quando tocava no bebe este estava frio?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/wasLetargic">
+            <label>H18.O bebe ficou letárgico / sonolento, após um período de actividade normal?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/becameUnconscious">
+            <label>H19.O bebé ficou sem se mexer ou inconsciente</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadSalienceFontanela">
+            <label>H20.O bebé teve saliência da fontanela (fontanela abaulada)?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/pusInCord">
+            <label>H21.O bebé teve pus no cordão umbilical?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadRedcord">
+            <label>H22.O bebé teve o cordão umbilical avermelhado?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadBubbles">
+            <label>H23.O bebé teve borbulhas com pus ou uma área grande com pus?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadUlcer">
+            <label>H24.O bebé teve úlcera (feridas) na pele?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/areasRed">
+            <label>H25.O bebé teve alguma (s) área (s) da pele com cor vermelha ou inchaço?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/areasBecomeBlack">
+            <label>H26.O bebé teve áreas da pele que se tornaram negras?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadBleeding">
+            <label>H27.O bebe teve algum sangramento?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadSoftStools">
+            <label>H28.O bebé teve fezes moles ou líquidas mais frequentes do que o habitual?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/vomitedAll">
+            <label>H29.O bebé vomitava tudo?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadYellowSkin">
+            <label>H30.O bebe teve pele amarela?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <select1 ref="/Form_E/main/perinatals/hadYellowEyes">
+            <label>H31.O bebe teve olhos amarelados?</label>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>2</value>
+            </item>
+            <item>
+              <label>Não sabe</label>
+              <value>99</value>
+            </item>
+          </select1>
+        </repeat>
       </group>
       <group ref="/Form_E/main/costDetails">
         <label>SECÇÃO I: Custo de intervenções / internamentos / re-internamentos após o nascimento da criança desde a última vez que a casa foi visitada</label>

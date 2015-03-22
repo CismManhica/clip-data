@@ -46,7 +46,7 @@
       <bind nodeset="/Form_F/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_F/roundNumber" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/Form_F/houseno" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/Form_F/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Form_F/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_F/locationId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_F/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_F/visitDate" required="true()" type="date"/>

@@ -26,6 +26,7 @@
               <fullname/>
               <dob/>
               <permId/>
+              <pregnancyId/>
               <education/>
               <maritalStatus/>
               <unionType/>
@@ -134,7 +135,7 @@
       <bind nodeset="/Form_D/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/houseno" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/roundNumber" readonly="true()" required="true()" type="int"/>
-      <bind nodeset="/Form_D/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Form_D/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/locationId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind constraint=". &lt;= today() and (. &gt;= date('2014-09-09'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Form_D/visitDate" required="true()" type="date"/>
@@ -148,6 +149,7 @@
       <bind nodeset="/Form_D/main/pregwomen/fullname" readonly="true()" required="true()" type="string"/>
       <bind constraint="(int((today() - .) div 365.24) &gt;= 12) and (int((today() - .) div 365.24) &lt;= 49)" nodeset="/Form_D/main/pregwomen/dob" readonly="true()" required="true()" type="date"/>
       <bind nodeset="/Form_D/main/pregwomen/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/pregwomen/pregnancyId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/main/pregwomen/education" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/pregwomen/maritalStatus" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/pregwomen/unionType" relevant=" /Form_D/main/pregwomen/maritalStatus =2" required="true()" type="select1"/>
@@ -345,6 +347,9 @@
         </input>
         <input ref="/Form_D/main/pregwomen/permId">
           <label>B3. Perm_ID da Mulher</label>
+        </input>
+        <input ref="/Form_D/main/pregwomen/pregnancyId">
+          <label>Id da Gravidez</label>
         </input>
         <select1 ref="/Form_D/main/pregwomen/education">
           <label>B4. Nível de Educação da mulher?</label>

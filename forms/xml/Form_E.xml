@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Form E</h:title>
     <model>
@@ -32,6 +32,7 @@
             <relationWithIntervieweeSpec/>
             <women>
               <permId/>
+              <pregnancyId/>
               <fullname/>
               <isAlive/>
               <pregStatusNow/>
@@ -266,7 +267,7 @@
       <bind nodeset="/Form_E/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/roundNumber" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/Form_E/houseno" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/Form_E/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/locationId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind constraint=". &lt;= today() and (. &gt;= date('2014-06-05'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Form_E/visitDate" required="true()" type="date"/>
@@ -278,6 +279,7 @@
       <bind nodeset="/Form_E/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/relationWithIntervieweeSpec" relevant=" /Form_E/main/relationWithInterviewee =10" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/women/pregnancyId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/fullname" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/isAlive" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/women/pregStatusNow" relevant=" /Form_E/main/women/isAlive =1" required="true()" type="select1"/>
@@ -587,6 +589,9 @@
         <label>SECÇÃO B: INFORMAÇÃO DEMOGRÁFICA</label>
         <input ref="/Form_E/main/women/permId">
           <label>B1. Perm_ID da Mulher</label>
+        </input>
+        <input ref="/Form_E/main/women/pregnancyId">
+          <label>Id da Gravidez</label>
         </input>
         <input ref="/Form_E/main/women/fullname">
           <label>Nome da mulher</label>

@@ -39,6 +39,7 @@
               <husbandOcupation/>
               <hasParticipatedBefore/>
             </pregwomen>
+            <hasGivenBirth/>
             <gestagebr>
               <hasEstimatedDob/>
               <hasFichaPrenatal/>
@@ -161,6 +162,8 @@
       <bind nodeset="/Form_D/main/pregwomen/husbandWorksector" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/pregwomen/husbandOcupation" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/pregwomen/hasParticipatedBefore" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/hasGivenBirth" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind nodeset="/Form_D/main/gestagebr/hasEstimatedDob" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/hasFichaPrenatal" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/estimatedDob" relevant=" /Form_D/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
@@ -185,11 +188,13 @@
       <bind nodeset="/Form_D/main/gestagebr/hasSavedMoney" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/nearestHealthUnit" required="true()" type="select1"/>
       <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Introduza o periodo de tempo correcto no formato HH:mm, onde HH são horas e mm minutos, se não souber coloque 99." nodeset="/Form_D/main/gestagebr/nearestHealthUnitTime" required="true()" type="string"/>
+      <bind nodeset="/Form_D/main/eclampsia" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind nodeset="/Form_D/main/eclampsia/hasKnowlBleed" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAlta" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAltaDeath" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/eclampsia/hasKnowlConvulsoes" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/eclampsia/signalAlert" type="select"/>
+      <bind nodeset="/Form_D/main/mhistory" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind nodeset="/Form_D/main/mhistory/e_intro" readonly="true()" type="string"/>
       <bind nodeset="/Form_D/main/mhistory/hasTensaoAlta" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/mhistory/hasPillsTensaAlta" relevant=" /Form_D/main/mhistory/hasTensaoAlta =1" required="true()" type="select1"/>
@@ -212,6 +217,7 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/mealsPerDay" required="true()" type="int"/>
       <bind nodeset="/Form_D/main/mhistory/needsHelp" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/mhistory/hiredSomeone" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/ohistory/nrOfPregnancies" required="true()" type="int"/>
       <bind constraint=". &lt;=  /Form_D/main/ohistory/nrOfPregnancies " jr:constraintMsg="O valor dever ser menor ou igual ao número de gravidezes" nodeset="/Form_D/main/ohistory/nrOfMiscarriages" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
       <bind constraint=". &lt;= ( /Form_D/main/ohistory/nrOfPregnancies - /Form_D/main/ohistory/nrOfMiscarriages )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes e aborto espontâneo" nodeset="/Form_D/main/ohistory/nrOfInducedAbortions" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
@@ -833,6 +839,18 @@
           </item>
         </select1>
       </group>
+      <select1 ref="/Form_D/main/hasGivenBirth">
+        <label>Está mulher já deu parto?</label>
+        <hint>SE AO CHEGAR A CASA A MULHER JA TIVER DADO PARTO SEM TER UM REGISTO DE GRAVIDEZ RESPONDA SIM, E DEPOIS ABRA O FORM-E.</hint>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
       <group ref="/Form_D/main/gestagebr">
         <label>SECÇÃO C: AVALIAÇÃO DA IDADE GESTACIONAL E PREPARAÇÃO DO NASCIMENTO</label>
         <select1 ref="/Form_D/main/gestagebr/hasEstimatedDob">

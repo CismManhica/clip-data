@@ -12,7 +12,6 @@
             <facility/>
             <name/>
             <id/>
-            <pregnancyId/>
             <date/>
           </facility_info>
           <demogfafic_info>
@@ -178,10 +177,8 @@
               <malaria_pos_local/>
               <hiv/>
               <hiv_loc/>
-              <hiv_test/>
-              <hiv_test_loc/>
-              <was_positive/>
-              <has_threatment/>
+              <hiv_threatment/>
+              <hiv_threatment_loc/>
               <profilaxia/>
               <tarv/>
               <had_accident/>
@@ -245,7 +242,6 @@
       <bind nodeset="/Facility/facility_info/facility" required="true()" type="string"/>
       <bind nodeset="/Facility/facility_info/name" required="true()" type="string"/>
       <bind nodeset="/Facility/facility_info/id" required="true()" type="string"/>
-      <bind nodeset="/Facility/facility_info/pregnancyId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Facility/facility_info/date" required="true()" type="date"/>
       <bind nodeset="/Facility/demogfafic_info/name" required="true()" type="string"/>
       <bind nodeset="/Facility/demogfafic_info/addr" required="true()" type="string"/>
@@ -379,18 +375,16 @@
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/fever_symp_spec" relevant=" /Facility/maternal_cond_interv/maternal_complications3/fever_symp =90" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria" required="true()" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_test3_local" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria_test3 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_pos" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria_test3 =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/malaria_pos_local" relevant=" /Facility/maternal_cond_interv/maternal_complications3/malaria_pos =1" required="true()" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv =1" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_test" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_test_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_test =1" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/was_positive" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_test =1" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/has_threatment" relevant=" /Facility/maternal_cond_interv/maternal_complications3/was_positive =1" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/profilaxia" relevant=" /Facility/maternal_cond_interv/maternal_complications3/has_threatment =1" type="string"/>
-      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/tarv" relevant=" /Facility/maternal_cond_interv/maternal_complications3/has_threatment =1" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_threatment" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/hiv_threatment_loc" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_threatment =1" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/profilaxia" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_threatment =1" type="string"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/tarv" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_threatment =1" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/had_accident" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/labour" readonly="true()" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev" required="true()" type="select1"/>
@@ -450,9 +444,6 @@
       <input ref="/Facility/facility_info/id">
         <label>F1.3.Código da pessoa</label>
       </input>
-      <input ref="/Facility/facility_info/pregnancyId">
-        <label>Id da Gravidez</label>
-      </input>
       <input ref="/Facility/facility_info/date">
         <label>F1.4.Data do preenchimento do formulário</label>
       </input>
@@ -478,16 +469,12 @@
       <select1 ref="/Facility/visit_info/arrival">
         <label>F3.1.A mulher chegou a esta unidade sanitária vinda de casa ou referida de unidade sanitária de nível primário</label>
         <item>
-          <label>Vem de casa</label>
+          <label>Não</label>
           <value>0</value>
         </item>
         <item>
-          <label>Vem referida por um APE</label>
+          <label>Sim</label>
           <value>1</value>
-        </item>
-        <item>
-          <label>Vem referida da unidade sanitária de nível 1º</label>
-          <value>2</value>
         </item>
         <item>
           <label>Desconhecido</label>
@@ -2301,8 +2288,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_test">
-          <label>F6.13.5.Foi feito o teste de HIV? (rápido ou laboratório)</label>
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_threatment">
+          <label>F6.13.5.Esta fazer algum tratamento?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2316,7 +2303,7 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_test_loc">
+        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/hiv_threatment_loc">
           <label>Local onde ocorreu</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
@@ -2335,37 +2322,11 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/was_positive">
-          <label>F6.13.6.Se sim, o resultado do teste de HIV foi positivo?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Nao</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/has_threatment">
-          <label>F6.13.7.Se o resultado for positivo, está fazer algum tratamento?</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
         <input ref="/Facility/maternal_cond_interv/maternal_complications3/profilaxia">
-          <label>F6.13.8.Se sim indique o medicamento que está tomar (Profilaxia)</label>
+          <label>F6.13.6.Se sim indique o medicamento que está tomar (Profilaxia)</label>
         </input>
         <input ref="/Facility/maternal_cond_interv/maternal_complications3/tarv">
-          <label>F6.13.8.Se sim indique o medicamento que está tomar (Tratamento antiretroviral - TARV)</label>
+          <label>F6.13.6.Se sim indique o medicamento que está tomar (Tratamento antiretroviral - TARV)</label>
         </input>
         <select1 ref="/Facility/maternal_cond_interv/maternal_complications3/had_accident">
           <label>F6.13.14.Acidente de transporte (a caminho da unidade sanitária)</label>

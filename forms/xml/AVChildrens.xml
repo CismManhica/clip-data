@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>AV Children</h:title>
     <model>
@@ -406,7 +406,7 @@
       <label>A3. Data de Entrevista</label>
     </input>
     <select1 ref="/AVChildrens/consent">
-      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <label>A4. Os parentes da crianças consentiram em responder o inquerito?</label>
       <item>
         <label>Sim</label>
         <value>1</value>
@@ -436,9 +436,9 @@
         </item>
       </select1>
       <select1 ref="/AVChildrens/main/education">
-        <label>A8. Nível de Educação dpo respondente?</label>
+        <label>A8. Nível de Educação do respondente?</label>
         <item>
-          <label>Alnalfabeto</label>
+          <label>Analfabeto</label>
           <value>1</value>
         </item>
         <item>
@@ -557,9 +557,8 @@
         </input>
         <select1 ref="/AVChildrens/main/dthDetails/dthLocation">
           <label>B2. Onde é que a morte ocorreu?</label>
-          <hint>Se nado morto, digite '0'</hint>
           <item>
-            <label>Hospital</label>
+            <label>Hospital ou Centros de Saude com Internamento</label>
             <value>1</value>
           </item>
           <item>
@@ -602,7 +601,7 @@
       <group ref="/AVChildrens/main/historyContext">
         <label>SECCÃO C: CONTEXTO HISTÓRICO DE CONDIÇÕES MÉDICAS PREVIAMENTE CONHECIDAS</label>
         <input ref="/AVChildrens/main/historyContext/txt">
-          <label>Eu gostaria de lhe fazer algumas perguntas sobre o contexto e as condições médicas previamente conhecidas que a falecida tinha; lesões e acidentes que a falecida sofreu; e sinais e sintomas que a falecida tinha/mostravam quando ela estava doente. Algumas dessas perguntas podem não estar directamente relacionadas com a morte dela. Por favor, tenha paciência comigo e responda a todas as perguntas. Elas vão nos ajudar a ter uma visão clara de todos os sintomas possíveis que a falecida tinha.</label>
+          <label>Eu gostaria de lhe fazer algumas perguntas sobre o contexto e as condições médicas previamente conhecidas que o bebe; lesões e acidentes que a falecida sofreu; e sinais e sintomas que a crianca tinha mostravam quando ela estava doente. Algumas dessas perguntas podem não estar directamente relacionadas com a morte dela. Por favor, tenha paciência comigo e responda a todas as perguntas. Elas vão nos ajudar a ter uma visão clara de todos os sintomas possíveis que a falecida tinha.</label>
         </input>
         <select1 ref="/AVChildrens/main/historyContext/hadTb">
           <label>C1.Foi diagnosticado/a tuberculose?</label>
@@ -905,7 +904,7 @@
           </item>
         </select1>
         <input ref="/AVChildrens/main/historyContext/sickPeriod">
-          <label>C21.Por quanto tempo ele/a esteve doente antes de falecer? (dias)</label>
+          <label>C21.Por quanto tempo ele/a esteve doente antes de falecer?</label>
           <hint>Dias:Horas:Minutos</hint>
         </input>
         <select1 ref="/AVChildrens/main/historyContext/diedSuddenly">
@@ -1064,6 +1063,10 @@
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>

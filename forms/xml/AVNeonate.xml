@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>AV Neonato</h:title>
     <model>
@@ -187,7 +187,7 @@
       <bind nodeset="/AVNeonate/individualId" relevant="1!=1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/locationId" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/fieldWorkerId" required="true()" type="string"/>
-      <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/consent" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main" relevant=" /AVNeonate/consent  = 1"/>
       <bind nodeset="/AVNeonate/main/intervieweeName" required="true()" type="string"/>
@@ -205,7 +205,7 @@
       <bind nodeset="/AVNeonate/main/dthCircunstacies" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/dthDetails" relevant=" /AVNeonate/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
-      <bind nodeset="/AVNeonate/main/dthDetails/dthAge" required="true()" type="int"/>
+      <bind constraint=".&lt;=28" nodeset="/AVNeonate/main/dthDetails/dthAge" required="true()" type="int"/>
       <bind nodeset="/AVNeonate/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/dthDetails/gender" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/pregnancyHistory" relevant=" /AVNeonate/main/intervieweeInHouse =1"/>
@@ -397,9 +397,9 @@
         </item>
       </select1>
       <select1 ref="/AVNeonate/main/education">
-        <label>A8. Nível de Educação dpo respondente?</label>
+        <label>A8. Nível de Educação do respondente?</label>
         <item>
-          <label>Alnalfabeto</label>
+          <label>Analfabeto</label>
           <value>1</value>
         </item>
         <item>
@@ -446,44 +446,24 @@
       <select1 ref="/AVNeonate/main/relationWithInterviewee">
         <label>A9.Relação de parentesco do respondente com a falecida?</label>
         <item>
-          <label>Marido</label>
+          <label>Pai</label>
           <value>1</value>
         </item>
         <item>
-          <label>Pai</label>
+          <label>Mãe</label>
           <value>2</value>
         </item>
         <item>
-          <label>Mãe</label>
+          <label>Irmã/o</label>
           <value>3</value>
         </item>
         <item>
-          <label>Sogro/a</label>
+          <label>Tio/a</label>
           <value>4</value>
         </item>
         <item>
-          <label>Irmã/o</label>
-          <value>5</value>
-        </item>
-        <item>
-          <label>Cunhado/a</label>
-          <value>6</value>
-        </item>
-        <item>
-          <label>Tio/a</label>
-          <value>7</value>
-        </item>
-        <item>
           <label>Avô</label>
-          <value>8</value>
-        </item>
-        <item>
-          <label>Filho/a</label>
-          <value>9</value>
-        </item>
-        <item>
-          <label>Genro/Nora</label>
-          <value>10</value>
+          <value>5</value>
         </item>
         <item>
           <label>Outro</label>
@@ -527,7 +507,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         <select1 ref="/AVNeonate/main/dthDetails/dthLocation">
           <label>B3. Onde é que a morte ocorreu?</label>
           <item>
-            <label>Hospital</label>
+            <label>Hospital ou Centros de Saude com Internamento</label>
             <value>1</value>
           </item>
           <item>
@@ -570,7 +550,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
       <group ref="/AVNeonate/main/pregnancyHistory">
         <label>SECCÃO C: HISTÓRIA DA GRAVIDEZ</label>
         <input ref="/AVNeonate/main/pregnancyHistory/txt">
-          <label>Eu gostaria de lhe fazer algumas perguntas sobre a mãe e os sintomas que o/a falecido/a tinha/mostrava no nascimento e pouco tempo após. Algumas dessas perguntas podem não parecem estar directamente relacionadas com a morte do bebê/Por favor, seja paciente e responda as perguntas. Elas vão nos ajudar a obter todos os possíveis sintomas que o bebê tinha.</label>
+          <label>Eu gostaria de lhe fazer algumas perguntas sobre a crianca e os sintomas que o bebê tinha/mostrava no nascimento e pouco tempo após. Algumas dessas perguntas podem não parecem estar directamente relacionadas com a morte do bebê/Por favor, seja paciente e responda as perguntas. Elas vão nos ajudar a obter todos os possíveis sintomas que o bebê tinha.</label>
         </input>
         <select1 ref="/AVNeonate/main/pregnancyHistory/pregBefore">
           <label>C1.Quantos partos, incluindo nados-mortos, a mãe do bebê teve antes de ter este bebê?</label>
@@ -2456,7 +2436,8 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <input ref="/AVNeonate/main/socialAutopsy/distancy">
-          <label>I11.Qual é a distância de casa (ponto de partida) para a unidade final?</label>
+          <label>I11.Qual é a distância, em Km, de casa (ponto de partida) para a unidade final?</label>
+          <hint>Distância em Kilometros</hint>
         </input>
         <select ref="/AVNeonate/main/socialAutopsy/vehicle">
           <label>I12.Qual método de transporte foi utilizado para levar o bebê para lá?</label>

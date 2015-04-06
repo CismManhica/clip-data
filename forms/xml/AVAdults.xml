@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>AV Adults</h:title>
     <model>
@@ -91,7 +91,6 @@
               <machines/>
               <animarOrObject/>
               <committedSuicide/>
-              <txt/>
             </lesoesHistory>
             <symptoms>
               <swellingBreast/>
@@ -243,7 +242,7 @@
       <bind nodeset="/AVAdults/main/intervieweeInHouse" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/education" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/relationWithInterviewee" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/relationWithIntervieweeSpec" relevant=" /AVAdults/main/relationWithInterviewee =11" required="true()" type="string"/>
+      <bind nodeset="/AVAdults/main/relationWithIntervieweeSpec" relevant=" /AVAdults/main/relationWithInterviewee =12" required="true()" type="string"/>
       <bind nodeset="/AVAdults/main/motherName" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVAdults/main/motherPermId" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVAdults/main/motherId" readonly="true()" relevant=" /AVAdults/main/intervieweeInHouse =1" type="string"/>
@@ -311,45 +310,44 @@
       <bind nodeset="/AVAdults/main/lesoesHistory/machines" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/lesoesHistory/animarOrObject" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/lesoesHistory/committedSuicide" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/lesoesHistory/txt" readonly="true()" type="string"/>
       <bind nodeset="/AVAdults/main/symptoms" relevant=" /AVAdults/main/dthDetails/gender =2 and  /AVAdults/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVAdults/main/symptoms/swellingBreast" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/symptoms/hadVaginalBleeding" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/pregnancySymptoms" relevant=" /AVAdults/main/dthDetails/gender =2 and  /AVAdults/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVAdults/main/pregnancySymptoms/death6WeeksAfter" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/wasPregnant" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/death6Weeks" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/death24hLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/deathInLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/wasBreastfeeding" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/was1stPregnancy" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/hmanyBirths" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/hadCesarian" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/deathAfterMultiplePreg" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/highTension" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/hadVaginalDischarge" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/suffedConvultions" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/suffedTurveVision" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/gaveBirthLive" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleeding" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleeding6Months" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleeding3Months" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleedingLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleedingAfterLabor" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/placenta" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/misplacedBaby" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/longLabor" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/triedTerminatePregnancy" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/pregnancyAbortion" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/birthHospital" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/birthHome" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/birthOther" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/professionalAssistance" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/surgeryRemoveUterus" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/hadNoemalLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/assistedDelivery" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/cesarianLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVAdults/main/pregnancySymptoms/bornMonthMore" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/wasPregnant" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/death6Weeks" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/death24hLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/deathInLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/wasBreastfeeding" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/was1stPregnancy" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/hmanyBirths" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/hadCesarian" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/deathAfterMultiplePreg" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/highTension" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/hadVaginalDischarge" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/suffedConvultions" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/suffedTurveVision" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/gaveBirthLive" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleeding" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleeding6Months" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleeding3Months" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleedingLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/vaginalBleedingAfterLabor" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/placenta" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/misplacedBaby" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/longLabor" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/triedTerminatePregnancy" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/pregnancyAbortion" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/birthHospital" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/birthHome" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/birthOther" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/professionalAssistance" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/surgeryRemoveUterus" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/hadNoemalLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/assistedDelivery" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/cesarianLabour" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVAdults/main/pregnancySymptoms/bornMonthMore" relevant=" /AVAdults/main/pregnancySymptoms/death6WeeksAfter !=1" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/lastSymptoms" relevant=" /AVAdults/main/dthDetails/gender =1 and  /AVAdults/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVAdults/main/lastSymptoms/hadFever" required="true()" type="select1"/>
       <bind nodeset="/AVAdults/main/lastSymptoms/hadFeverPeriod" relevant=" /AVAdults/main/lastSymptoms/hadFever =1" required="true()" type="select1"/>
@@ -493,9 +491,9 @@
         </item>
       </select1>
       <select1 ref="/AVAdults/main/education">
-        <label>A8. Nível de Educação dpo respondente?</label>
+        <label>A8. Nível de Educação do respondente?</label>
         <item>
-          <label>Alnalfabeto</label>
+          <label>Analfabeto</label>
           <value>1</value>
         </item>
         <item>
@@ -546,44 +544,48 @@
           <value>1</value>
         </item>
         <item>
-          <label>Pai</label>
+          <label>Esposa</label>
           <value>2</value>
         </item>
         <item>
-          <label>Mãe</label>
+          <label>Pai</label>
           <value>3</value>
         </item>
         <item>
-          <label>Sogro/a</label>
+          <label>Mãe</label>
           <value>4</value>
         </item>
         <item>
-          <label>Irmã/o</label>
+          <label>Sogro/a</label>
           <value>5</value>
         </item>
         <item>
-          <label>Cunhado/a</label>
+          <label>Irmã/o</label>
           <value>6</value>
         </item>
         <item>
-          <label>Tio/a</label>
+          <label>Cunhado/a</label>
           <value>7</value>
         </item>
         <item>
-          <label>Avô</label>
+          <label>Tio/a</label>
           <value>8</value>
         </item>
         <item>
-          <label>Filho/a</label>
+          <label>Avô</label>
           <value>9</value>
         </item>
         <item>
-          <label>Genro/Nora</label>
+          <label>Filho/a</label>
           <value>10</value>
         </item>
         <item>
-          <label>Outro</label>
+          <label>Genro/Nora</label>
           <value>11</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>12</value>
         </item>
       </select1>
       <input ref="/AVAdults/main/relationWithIntervieweeSpec">
@@ -614,9 +616,8 @@
         </input>
         <select1 ref="/AVAdults/main/dthDetails/dthLocation">
           <label>B2. Onde é que a morte ocorreu?</label>
-          <hint>Se nado morto, digite '0'</hint>
           <item>
-            <label>Hospital</label>
+            <label>Hospital ou Centros de Saude com Internamento</label>
             <value>1</value>
           </item>
           <item>
@@ -962,7 +963,7 @@
           </item>
         </select1>
         <input ref="/AVAdults/main/historyContext/sickPeriod">
-          <label>C21.Por quanto tempo ele/a esteve doente antes de falecer? (dias)</label>
+          <label>C21.Por quanto tempo ele/a esteve doente antes de falecer?</label>
           <hint>Dias:Horas:Minutos</hint>
         </input>
         <select1 ref="/AVAdults/main/historyContext/diedSuddenly">
@@ -1121,6 +1122,10 @@
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1583,9 +1588,6 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/AVAdults/main/lesoesHistory/txt">
-          <label>VERIFIQUE A PERGUNTA B3 PARA IDADE DA MORTE: Se for Feminino Sessao E e F. Se for Masculino Sessao G</label>
-        </input>
       </group>
       <group ref="/AVAdults/main/symptoms">
         <label>SECCÃO E: SINTOMAS E SINAIS ASSOCIADOS COM DOENÇAS DAS MULHERES</label>

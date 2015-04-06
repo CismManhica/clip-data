@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>AV Materna</h:title>
     <model>
@@ -263,7 +263,7 @@
       <bind nodeset="/AVMaternal/main/deceasedData" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/deceasedData/permId" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/deceasedData/name" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/deceasedData/dob" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/dob" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/dthDetails" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
@@ -523,9 +523,9 @@
         </item>
       </select1>
       <select1 ref="/AVMaternal/main/education">
-        <label>A8. Nível de Educação dpo respondente?</label>
+        <label>A8. Nível de Educação do respondente?</label>
         <item>
-          <label>Alnalfabeto</label>
+          <label>Analfabeto</label>
           <value>1</value>
         </item>
         <item>
@@ -631,7 +631,7 @@
           <label>A12. Data de nascimento da falecida</label>
         </input>
         <input ref="/AVMaternal/main/deceasedData/dthCircunstacies">
-          <label>A13. Pode dizer-me sobre a doença ou circunstância que levou a morte do neonato?
+          <label>A13. Pode dizer-me sobre a doença ou circunstância que levou a morte da mulher?
 Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</label>
         </input>
       </group>
@@ -1043,6 +1043,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1056,6 +1060,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1073,6 +1081,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1086,6 +1098,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1103,6 +1119,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1116,6 +1136,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1133,6 +1157,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1146,6 +1174,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1163,6 +1195,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1176,6 +1212,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1193,6 +1233,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1206,6 +1250,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1223,6 +1271,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1236,6 +1288,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1253,6 +1309,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1266,6 +1326,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1283,6 +1347,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1296,6 +1364,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1313,6 +1385,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1326,6 +1402,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1343,6 +1423,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1356,6 +1440,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1373,6 +1461,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1386,6 +1478,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1403,6 +1499,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1416,6 +1516,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1433,6 +1537,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1446,6 +1554,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1463,6 +1575,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1476,6 +1592,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1493,6 +1613,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
+            <label>Não aplicável</label>
+            <value>3</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1506,6 +1630,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não aplicável</label>
+            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -3523,7 +3651,8 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select>
         <input ref="/AVMaternal/main/socialAutopsy/distancy">
-          <label>J11.Qual é a distância de casa (ponto de partida) para a unidade final?</label>
+          <label>J11.Qual é a distância, em Km, de casa (ponto de partida) para a unidade final?</label>
+          <hint>Distancia em Kilometros</hint>
         </input>
         <select ref="/AVMaternal/main/socialAutopsy/vehicle">
           <label>J12.Qual método de transporte foi utilizado para levar o bebê para lá?</label>

@@ -3,14 +3,6 @@
   <h:head>
     <h:title>Form E</h:title>
     <model>
-      <itext>
-        <translation default="true()" lang="default">
-          <text id="/Form_E/main/seekcare/seekCareOnPHC:label">
-            <value form="image">jr://images/2</value>
-            <value>C3. A senhora procurou cuidados de saúde no Centro de Saúde Primário, por qualquer razão que não seja de rotina de cuidados pré-natais?</value>
-          </text>
-        </translation>
-      </itext>
       <instance>
         <Form_E id="Form_E">
           <deviceid/>
@@ -32,7 +24,6 @@
             <relationWithIntervieweeSpec/>
             <women>
               <permId/>
-              <pregnancyId/>
               <fullname/>
               <isAlive/>
               <pregStatusNow/>
@@ -190,36 +181,36 @@
               <vomitedAll/>
               <hadYellowSkin/>
               <hadYellowEyes/>
+              <costDetails>
+                <takeHospital/>
+                <consultsWithDoctors>
+                  <op1/>
+                  <op2/>
+                  <op3/>
+                  <op4/>
+                  <op5/>
+                  <op6/>
+                </consultsWithDoctors>
+                <seekCare/>
+                <healthUnitType/>
+                <howManyhealthUnit/>
+                <nightsInHospital>
+                  <op1/>
+                  <op2/>
+                </nightsInHospital>
+                <helthUnit/>
+                <helthUnitTime/>
+                <extConsults/>
+                <laborHours/>
+                <eachExamsQuantity>
+                  <op1/>
+                  <op2/>
+                  <op3/>
+                  <op4/>
+                  <op5/>
+                </eachExamsQuantity>
+              </costDetails>
             </perinatals>
-            <costDetails>
-              <takeHospital/>
-              <consultsWithDoctors>
-                <op1/>
-                <op2/>
-                <op3/>
-                <op4/>
-                <op5/>
-                <op6/>
-              </consultsWithDoctors>
-              <seekCare/>
-              <healthUnitType/>
-              <howManyhealthUnit/>
-              <nightsInHospital>
-                <op1/>
-                <op2/>
-              </nightsInHospital>
-              <helthUnit/>
-              <helthUnitTime/>
-              <extConsults/>
-              <laborHours/>
-              <eachExamsQuantity>
-                <op1/>
-                <op2/>
-                <op3/>
-                <op4/>
-                <op5/>
-              </eachExamsQuantity>
-            </costDetails>
             <mresponses>
               <text/>
               <hadRessurection/>
@@ -267,7 +258,7 @@
       <bind nodeset="/Form_E/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/roundNumber" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/Form_E/houseno" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/Form_E/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
       <bind nodeset="/Form_E/locationId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind constraint=". &lt;= today() and (. &gt;= date('2014-06-05'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Form_E/visitDate" required="true()" type="date"/>
@@ -279,7 +270,6 @@
       <bind nodeset="/Form_E/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/relationWithIntervieweeSpec" relevant=" /Form_E/main/relationWithInterviewee =10" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/permId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/Form_E/main/women/pregnancyId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/fullname" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/isAlive" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/women/pregStatusNow" relevant=" /Form_E/main/women/isAlive =1" required="true()" type="select1"/>
@@ -403,13 +393,13 @@
       <bind nodeset="/Form_E/main/perinatals/openMouth" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/suckNormally =2 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/breatheDifficulty" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/suckNormally !=2 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/breatheAcelerated" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/breatheDifficulty !=0 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/chestRetraction" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/costDetails/takeHospital =1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/hadSnore" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/costDetails/takeHospital !=1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/hadSpasms" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/breatheDifficulty =0 or  /Form_E/main/costDetails/seekCare =1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/chestRetraction" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadSnore" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/hadSpasms" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/breatheDifficulty =0 or  /Form_E/main/perinatals/costDetails/seekCare =1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/hadFever" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/hadCold" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/wasLetargic" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/becameUnconscious" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/costDetails/seekCare !=1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/becameUnconscious" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/costDetails/seekCare !=1 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/hadSalienceFontanela" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/pusInCord" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/hadRedcord" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
@@ -422,30 +412,30 @@
       <bind nodeset="/Form_E/main/perinatals/vomitedAll" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/hadYellowSkin" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/perinatals/hadYellowEyes" relevant=" /Form_E/main/perinatals/pregResult !=1 and  /Form_E/main/perinatals/pregResult !=2 and  /Form_E/main/perinatals/pregResult !=3 and  /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/costDetails" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
-      <bind nodeset="/Form_E/main/costDetails/takeHospital" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/costDetails/consultsWithDoctors" relevant=" /Form_E/main/costDetails/takeHospital =1" required="true()"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op1" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op2" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op3" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op4" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op5" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/consultsWithDoctors/op6" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/costDetails/seekCare" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/costDetails/healthUnitType" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="select1"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/howManyhealthUnit" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/costDetails/nightsInHospital" relevant=" /Form_E/main/costDetails/seekCare =1"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/nightsInHospital/op1" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/nightsInHospital/op2" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/costDetails/helthUnit" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="select1"/>
-      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/costDetails/helthUnitTime" relevant=" /Form_E/main/costDetails/seekCare =1" required="true()" type="string"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/extConsults" required="true()" type="int"/>
-      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/costDetails/laborHours" required="true()" type="string"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op1" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op2" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op3" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op4" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/costDetails/eachExamsQuantity/op5" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/takeHospital" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors" relevant=" /Form_E/main/perinatals/costDetails/takeHospital =1" required="true()"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op5" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op6" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/seekCare" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/healthUnitType" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/howManyhealthUnit" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital/op1" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital/op2" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/helthUnit" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/perinatals/costDetails/helthUnitTime" relevant=" /Form_E/main/perinatals/costDetails/seekCare =1" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/extConsults" required="true()" type="int"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/Form_E/main/perinatals/costDetails/laborHours" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op3" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op4" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op5" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/mresponses" relevant=" /Form_E/main/women/loadSection !=2 and ( /Form_E/main/perinatals/pregResult !=4 and  /Form_E/main/perinatals/deathFirstWeek !=1 and ( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =1 or  /Form_E/main/women/pregStatusAtDeath =2))"/>
       <bind nodeset="/Form_E/main/mresponses/text" readonly="true()" type="string"/>
       <bind nodeset="/Form_E/main/mresponses/hadRessurection" required="true()" type="select1"/>
@@ -590,9 +580,6 @@
         <input ref="/Form_E/main/women/permId">
           <label>B1. Perm_ID da Mulher</label>
         </input>
-        <input ref="/Form_E/main/women/pregnancyId">
-          <label>Id da Gravidez</label>
-        </input>
         <input ref="/Form_E/main/women/fullname">
           <label>Nome da mulher</label>
         </input>
@@ -700,7 +687,7 @@
           </input>
         </group>
         <select1 ref="/Form_E/main/seekcare/seekCareOnPHC">
-          <label ref="jr:itext('/Form_E/main/seekcare/seekCareOnPHC:label')"/>
+          <label>C3. A senhora procurou cuidados de saúde no Centro de Saúde Primário, por qualquer razão que não seja de rotina de cuidados pré-natais?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -2492,133 +2479,133 @@
               <value>99</value>
             </item>
           </select1>
+          <group ref="/Form_E/main/perinatals/costDetails">
+            <label>SECÇÃO I: Custo de intervenções / internamentos / re-internamentos após o nascimento da criança desde a última vez que a casa foi visitada</label>
+            <select1 ref="/Form_E/main/perinatals/costDetails/takeHospital">
+              <label>I1. A Senhora (mãe) levou o recém-nascido a unidade sanitária por causa de alguma doença ou complicação de saúde?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <group ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors">
+              <label>I2. Quantas consultas externas é que o recém-nascido teve na comunidade (casa, unidade de nível primário), de acordo com cada um dos seguintes provedores de cuidados?</label>
+              <input ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op1">
+                <label>1. Médico geral</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op2">
+                <label>2. Enfermeira/parteira</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op3">
+                <label>3. Parteira tradicional</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op4">
+                <label>4. Praticante de medicina tradicional</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op5">
+                <label>5. Agente Polivalente Elementar (APE)</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op6">
+                <label>6. Outro</label>
+              </input>
+            </group>
+            <select1 ref="/Form_E/main/perinatals/costDetails/seekCare">
+              <label>I3. A mãe procurou atendimento em alguma unidade sanitária de nível superior para tratar alguma doença do recém-nascido?</label>
+              <item>
+                <label>Sim</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Não</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <select1 ref="/Form_E/main/perinatals/costDetails/healthUnitType">
+              <label>I3.1. Em que unidade sanitária de nível superior a mãe levou a criança?</label>
+              <item>
+                <label>Sector público</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Hospital / Clínica privada</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <input ref="/Form_E/main/perinatals/costDetails/howManyhealthUnit">
+              <label>I4. Quantas unidades sanitárias de nível superior foram visitadas por doenças do recém-nascido.</label>
+            </input>
+            <group ref="/Form_E/main/perinatals/costDetails/nightsInHospital">
+              <label>I5. Quantas noites o recém-nascido passou (dormiu) no hospital.</label>
+              <input ref="/Form_E/main/perinatals/costDetails/nightsInHospital/op1">
+                <label>5.1. Quantas noites o recém-nascido passou (dormiu) na unidade de cuidados intensivos para neonatos</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/nightsInHospital/op2">
+                <label>5.2. Quantas noites o recém-nascido passou (dormiu) no Berçário / Enfermaria geral</label>
+              </input>
+            </group>
+            <select1 ref="/Form_E/main/perinatals/costDetails/helthUnit">
+              <label>I6. Qual foi o tipo de unidade sanitária de nível superior que visitou mais recentemente?</label>
+              <item>
+                <label>Sector público</label>
+                <value>1</value>
+              </item>
+              <item>
+                <label>Hospital / Clínica privada</label>
+                <value>2</value>
+              </item>
+              <item>
+                <label>Não sabe</label>
+                <value>99</value>
+              </item>
+            </select1>
+            <input ref="/Form_E/main/perinatals/costDetails/helthUnitTime">
+              <label>I7. Quanto tempo no total levou para chegar a unidade Sanitária de nível superior? (independentemente do meio de transporte usado)</label>
+              <hint>Horas:Minutos</hint>
+            </input>
+            <input ref="/Form_E/main/perinatals/costDetails/extConsults">
+              <label>I8.Quantas consultas externas ou visitas a unidades de sanitárias de nível superior necessitou de transporte?</label>
+              <hint>(99 se não sabe)</hint>
+            </input>
+            <input ref="/Form_E/main/perinatals/costDetails/laborHours">
+              <label>I9. Quantas horas de trabalho no total um familiar ou amigo da mulher perdeu a fim de acompanhar o recém-nascido para a visita a unidade sanitária para qualquer um dos itens a seguir?</label>
+              <hint>Horas:Minutos</hint>
+            </input>
+            <group ref="/Form_E/main/perinatals/costDetails/eachExamsQuantity">
+              <label>I10. Por favor, especifique o número de vezes que cada um dos exames e serviços listados foi realizado em qualquer consulta externa na unidade sanitária (Coloque 0, se não foram realizados nenhuns testes, Coloque 99 se não sabe).</label>
+              <input ref="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op1">
+                <label>1. Consultas com especialistas</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op2">
+                <label>2. Imagem Fetal (ultra-som / raio-x)</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op3">
+                <label>3. Exames de sangue</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op4">
+                <label>4. Fototerapia</label>
+              </input>
+              <input ref="/Form_E/main/perinatals/costDetails/eachExamsQuantity/op5">
+                <label>5. Refeição para mãe e para a criança</label>
+              </input>
+            </group>
+          </group>
         </repeat>
-      </group>
-      <group ref="/Form_E/main/costDetails">
-        <label>SECÇÃO I: Custo de intervenções / internamentos / re-internamentos após o nascimento da criança desde a última vez que a casa foi visitada</label>
-        <select1 ref="/Form_E/main/costDetails/takeHospital">
-          <label>I1. A Senhora (mãe) levou o recém-nascido a unidade sanitária por causa de alguma doença ou complicação de saúde?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <group ref="/Form_E/main/costDetails/consultsWithDoctors">
-          <label>I2. Quantas consultas externas é que o recém-nascido teve na comunidade (casa, unidade de nível primário), de acordo com cada um dos seguintes provedores de cuidados?</label>
-          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op1">
-            <label>1. Médico geral</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op2">
-            <label>2. Enfermeira/parteira</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op3">
-            <label>3. Parteira tradicional</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op4">
-            <label>4. Praticante de medicina tradicional</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op5">
-            <label>5. Agente Polivalente Elementar (APE)</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/consultsWithDoctors/op6">
-            <label>6. Outro</label>
-          </input>
-        </group>
-        <select1 ref="/Form_E/main/costDetails/seekCare">
-          <label>I3. A mãe procurou atendimento em alguma unidade sanitária de nível superior para tratar alguma doença do recém-nascido?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_E/main/costDetails/healthUnitType">
-          <label>I3.1. Em que unidade sanitária de nível superior a mãe levou a criança?</label>
-          <item>
-            <label>Sector público</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Hospital / Clínica privada</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Form_E/main/costDetails/howManyhealthUnit">
-          <label>I4. Quantas unidades sanitárias de nível superior foram visitadas por doenças do recém-nascido.</label>
-        </input>
-        <group ref="/Form_E/main/costDetails/nightsInHospital">
-          <label>I5. Quantas noites o recém-nascido passou (dormiu) no hospital.</label>
-          <input ref="/Form_E/main/costDetails/nightsInHospital/op1">
-            <label>5.1. Quantas noites o recém-nascido passou (dormiu) na unidade de cuidados intensivos para neonatos</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/nightsInHospital/op2">
-            <label>5.2. Quantas noites o recém-nascido passou (dormiu) no Berçário / Enfermaria geral</label>
-          </input>
-        </group>
-        <select1 ref="/Form_E/main/costDetails/helthUnit">
-          <label>I6. Qual foi o tipo de unidade sanitária de nível superior que visitou mais recentemente?</label>
-          <item>
-            <label>Sector público</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Hospital / Clínica privada</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Form_E/main/costDetails/helthUnitTime">
-          <label>I7. Quanto tempo no total levou para chegar a unidade Sanitária de nível superior? (independentemente do meio de transporte usado)</label>
-          <hint>Horas:Minutos</hint>
-        </input>
-        <input ref="/Form_E/main/costDetails/extConsults">
-          <label>I8.Quantas consultas externas ou visitas a unidades de sanitárias de nível superior necessitou de transporte?</label>
-          <hint>(99 se não sabe)</hint>
-        </input>
-        <input ref="/Form_E/main/costDetails/laborHours">
-          <label>I9. Quantas horas de trabalho no total um familiar ou amigo da mulher perdeu a fim de acompanhar o recém-nascido para a visita a unidade sanitária para qualquer um dos itens a seguir?</label>
-          <hint>Horas:Minutos</hint>
-        </input>
-        <group ref="/Form_E/main/costDetails/eachExamsQuantity">
-          <label>I10. Por favor, especifique o número de vezes que cada um dos exames e serviços listados foi realizado em qualquer consulta externa na unidade sanitária (Coloque 0, se não foram realizados nenhuns testes, Coloque 99 se não sabe).</label>
-          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op1">
-            <label>1. Consultas com especialistas</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op2">
-            <label>2. Imagem Fetal (ultra-som / raio-x)</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op3">
-            <label>3. Exames de sangue</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op4">
-            <label>4. Fototerapia</label>
-          </input>
-          <input ref="/Form_E/main/costDetails/eachExamsQuantity/op5">
-            <label>5. Refeição para mãe e para a criança</label>
-          </input>
-        </group>
       </group>
       <group ref="/Form_E/main/mresponses">
         <label>SECÇÃO J: CONDIÇÕES E INTERVENÇÕES MATERNA. (Esta secção deve ser preenchida para as mulheres que estão vivas e tiveram o parto de pelo menos um bebé desde que a casa foi visitada pela última vez)</label>

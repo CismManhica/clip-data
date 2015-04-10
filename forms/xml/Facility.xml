@@ -686,7 +686,7 @@
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <select1 ref="/Facility/arrive_alives/clinical_arrival/ta_medition">
-          <label>F4.8.Apó a chegada foi feita a medição da TA com valores &lt;110mmHg durante esta visita/internamento</label>
+          <label>F4.8.Após a chegada foi feita a medição da TA com valores &lt;110mmHg durante esta visita/internamento</label>
           <item>
             <label>Não</label>
             <value>0</value>

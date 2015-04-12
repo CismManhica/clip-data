@@ -24,6 +24,7 @@
             <relationWithIntervieweeSpec/>
             <women>
               <permId/>
+              <pregnancyId/>
               <fullname/>
               <isAlive/>
               <pregStatusNow/>
@@ -270,6 +271,7 @@
       <bind nodeset="/Form_E/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/relationWithIntervieweeSpec" relevant=" /Form_E/main/relationWithInterviewee =10" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/women/pregnancyId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/fullname" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/women/isAlive" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/women/pregStatusNow" relevant=" /Form_E/main/women/isAlive =1" required="true()" type="select1"/>
@@ -579,6 +581,9 @@
         <label>SECÇÃO B: INFORMAÇÃO DEMOGRÁFICA</label>
         <input ref="/Form_E/main/women/permId">
           <label>B1. Perm_ID da Mulher</label>
+        </input>
+        <input ref="/Form_E/main/women/pregnancyId">
+          <label>Id da Gravidez</label>
         </input>
         <input ref="/Form_E/main/women/fullname">
           <label>Nome da mulher</label>

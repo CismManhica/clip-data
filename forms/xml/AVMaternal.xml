@@ -100,6 +100,7 @@
             <lesoesHistory>
               <death6WeeksAfter/>
               <wasPregnant/>
+              <death6wks/>
               <death6Weeks/>
               <death24hLabour/>
               <deathInLabour/>
@@ -275,7 +276,7 @@
       <bind nodeset="/AVMaternal/main/historyContext/hadTb" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHIV" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadPosetiveMalaria" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/historyContext/hadNegativeMalaria" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadNegativeMalaria" relevant=" /AVMaternal/main/historyContext/hadPosetiveMalaria !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadMeasles" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHighTension" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHeartDesease" required="true()" type="select1"/>
@@ -296,47 +297,48 @@
       <bind nodeset="/AVMaternal/main/historyContext/diedSuddenly" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/hadAccident" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/carCrash" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/footCrash" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashIn" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashInHeavy" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/motorcycleCrash" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/knewAboutAccident" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/counterpartReached" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasPedestrian" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasObject" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasCar" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasAutoCar" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasMotorcycle" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasBicycle" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasOther" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/injuredFalling" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/drowning" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/burns" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/bite" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/dog" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/snake" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/insect" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/forceOfNature" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/intoxication" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/knife" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/machines" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/footCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashIn" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashInHeavy" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/motorcycleCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knewAboutAccident" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/counterpartReached" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasPedestrian" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasObject" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasCar" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasAutoCar" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasMotorcycle" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasBicycle" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasOther" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredFalling" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/drowning" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/burns" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/bite" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/dog" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/snake" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/insect" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/forceOfNature" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intoxication" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knife" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/machines" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/symptoms/swellingBreast" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms/hadVaginalBleeding" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6WeeksAfter" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/wasPregnant" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/death6wks" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/wasPregnant !=1" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6Weeks" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/death24hLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/deathInLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/wasBreastfeeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/death24hLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/deathInLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/wasBreastfeeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/was1stPregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hmanyBirths" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hadCesarian" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -347,9 +349,9 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/suffedTurveVision" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/gaveBirthLive" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding6Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding3Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding6Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding3Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingAfterLabor" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/placenta" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/misplacedBaby" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -357,8 +359,8 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/triedTerminatePregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/pregnancyAbortion" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/birthHospital" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/birthHome" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthHome" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHospital !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHospital !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/professionalAssistance" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/surgeryRemoveUterus" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hadNoemalLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -386,7 +388,7 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/diarrheaPeriod" relevant=" /AVMaternal/main/lastSymptoms/diarrhea =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/bloodFezes" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/vomit" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/vomitCoffee" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/vomitCoffee" relevant=" /AVMaternal/main/lastSymptoms/vomit =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalIssue" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssue" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssuePeriod" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
@@ -417,7 +419,7 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/herpesZoster" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/bleedMouth" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/weightLoss" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/wasSlim" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/wasSlim" relevant=" /AVMaternal/main/lastSymptoms/weightLoss =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/mouthSores" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/unableOpenMouth" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/swellingFace" required="true()" type="select1"/>
@@ -437,14 +439,14 @@
       <bind nodeset="/AVMaternal/main/treatments" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/treatments/vacinated" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/hadtreatments" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/reidratation" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/fuidosIntravenosos" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/bloodTransfusion" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/tuboNariz" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/antiBioticos" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/operation" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/operation1Mth" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/dischargedSick" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/reidratation" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/fuidosIntravenosos" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/bloodTransfusion" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/tuboNariz" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/antiBioticos" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/operation" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/operation1Mth" relevant=" /AVMaternal/main/treatments/hadtreatments =1 and  /AVMaternal/main/treatments/operation =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/dischargedSick" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/drankAlcohol" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/drankAlcoholPeriod" relevant=" /AVMaternal/main/riskFactors/drankAlcohol =1" required="true()" type="select1"/>
@@ -631,7 +633,7 @@
           <label>A12. Data de nascimento da falecida</label>
         </input>
         <input ref="/AVMaternal/main/deceasedData/dthCircunstacies">
-          <label>A13. Pode dizer-me sobre a doença ou circunstância que levou a morte da mulher?
+          <label>A13. Pode dizer-me sobre a doença ou circunstância que levou a morte dela?
 Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</label>
         </input>
       </group>
@@ -1043,10 +1045,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1060,10 +1058,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1081,10 +1075,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1098,10 +1088,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1119,10 +1105,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1136,10 +1118,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1157,10 +1135,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1174,10 +1148,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1195,10 +1165,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1212,10 +1178,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1233,10 +1195,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1250,10 +1208,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1271,10 +1225,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1288,10 +1238,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1309,10 +1255,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1326,10 +1268,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1347,10 +1285,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1364,10 +1298,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1385,10 +1315,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1402,10 +1328,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1423,10 +1345,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1440,10 +1358,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1461,10 +1375,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1478,10 +1388,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1499,10 +1405,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1516,10 +1418,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1537,10 +1435,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1554,10 +1448,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1575,10 +1465,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1592,10 +1478,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1613,10 +1495,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>2</value>
           </item>
           <item>
-            <label>Não aplicável</label>
-            <value>3</value>
-          </item>
-          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
@@ -1630,10 +1508,6 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Não</label>
             <value>2</value>
-          </item>
-          <item>
-            <label>Não aplicável</label>
-            <value>3</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -1693,6 +1567,21 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         </select1>
         <select1 ref="/AVMaternal/main/lesoesHistory/wasPregnant">
           <label>F2.Ela estava grávida no momento da morte?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/lesoesHistory/death6wks">
+          <label>F3.Ela faleceu dentro de 6 semanas depois de dar a luz?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -3503,6 +3392,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         </select1>
         <input ref="/AVMaternal/main/socialAutopsy/timeDecision">
           <label>J4.Quanto tempo após a doença começar, ele/a decidiu fazer isso?</label>
+          <hint>Dias:Horas:Minutos - Use 99 se não sabe</hint>
         </input>
         <select ref="/AVMaternal/main/socialAutopsy/problemsToHospital">
           <label>J5.Será que eles tinham algum problema que impedia de procurar cuidados de saúde formais naquele momento? OU Será que eles teiveram que superar alguns problemas, a fim de procurar cuidados de saúde formais naquele momento?</label>
@@ -3615,6 +3505,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         </select1>
         <input ref="/AVMaternal/main/socialAutopsy/timePassed">
           <label>J8.Quanto tempo após a doença fatal começar, decidiram buscar esse cuidado?</label>
+          <hint>Dias:Horas:Minutos - Use 99 se não sabe</hint>
         </input>
         <input ref="/AVMaternal/main/socialAutopsy/cost">
           <label>J9.Qual foi o custo de transporte?</label>

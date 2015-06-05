@@ -770,7 +770,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVNeonate/main/childStatus/badFomation">
-          <label>D5.O bebê teve alguma mal formação perceptível?</label>
+          <label>D5.O bebê teve alguma mal formação visível?</label>
           <item>
             <label>Sim</label>
             <value>1</value>

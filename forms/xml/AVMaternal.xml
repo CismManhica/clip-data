@@ -340,9 +340,9 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/deathInLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/wasBreastfeeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/was1stPregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/hmanyBirths" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/hadCesarian" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/deathAfterMultiplePreg" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hmanyBirths" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hadCesarian" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/deathAfterMultiplePreg" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/highTension" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hadVaginalDischarge" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/suffedConvultions" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -415,8 +415,8 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/ulceraOther" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/skinRash" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/skinRashPeriod" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/erupcaoSarampo" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/herpesZoster" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/erupcaoSarampo" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/herpesZoster" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/bleedMouth" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/weightLoss" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/wasSlim" relevant=" /AVMaternal/main/lastSymptoms/weightLoss =1" required="true()" type="select1"/>
@@ -3360,7 +3360,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/socialAutopsy/actionComander">
-          <label>J3.Quem decidiu que esta foi a ação a ser tomada?</label>
+          <label>J3.Quem decidiu que esta fosse a ação a ser tomada?</label>
           <item>
             <label>A mãe</label>
             <value>1</value>

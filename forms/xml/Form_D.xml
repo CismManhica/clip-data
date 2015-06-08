@@ -187,7 +187,7 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/gestagebr/transportCost" relevant=" /Form_D/main/gestagebr/hasTranspCosts =1" required="true()" type="decimal"/>
       <bind nodeset="/Form_D/main/gestagebr/hasSavedMoney" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/nearestHealthUnit" required="true()" type="select1"/>
-      <bind constraint="regex(., '^([0-9][0-9]):([0-5][0-9])$') or .='99'" jr:constraintMsg="Introduza o periodo de tempo correcto no formato HH:mm, onde HH são horas e mm minutos, se não souber coloque 99." nodeset="/Form_D/main/gestagebr/nearestHealthUnitTime" required="true()" type="string"/>
+      <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" jr:constraintMsg="Introduza o periodo de tempo correcto no formato HH:mm, onde HH são horas e mm minutos, se não souber coloque 99." nodeset="/Form_D/main/gestagebr/nearestHealthUnitTime" required="true()" type="string"/>
       <bind nodeset="/Form_D/main/eclampsia" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind nodeset="/Form_D/main/eclampsia/hasKnowlBleed" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAlta" required="true()" type="select1"/>

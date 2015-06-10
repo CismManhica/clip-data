@@ -3034,7 +3034,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/lastSymptoms/wasPale">
-          <label>G66.Ela estava pálido/a (emagrecendo/ falta de sangue) ou teve as palmas das mãos, os olhos ou os leitos ungueais pálidos?</label>
+          <label>G66.Ela estava pálida (emagrecendo/ falta de sangue) ou teve as palmas das mãos, os olhos ou os leitos ungueais pálidos?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -3097,7 +3097,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/treatments/hadtreatments">
-          <label>H2.Ele/ela recebia qualquer tratamento para a doença que levou à morte?</label>
+          <label>H2.Ela recebia qualquer tratamento para a doença que levou à morte?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -3360,30 +3360,50 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/socialAutopsy/actionComander">
-          <label>J3.Quem decidiu que esta fosse a ação a ser tomada?</label>
+          <label>J3.Quem decidiu por esta acção que foi tomada?</label>
           <item>
-            <label>A mãe</label>
+            <label>Ela própria</label>
             <value>1</value>
           </item>
           <item>
-            <label>O pai</label>
+            <label>Marido /companheiro</label>
             <value>2</value>
           </item>
           <item>
-            <label>Avó materna</label>
+            <label>Ela própria e o marido/parceiro juntos</label>
             <value>3</value>
           </item>
           <item>
-            <label>Avó paterna</label>
+            <label>A mãe da própria mulher</label>
             <value>4</value>
           </item>
           <item>
-            <label>Outro homem</label>
+            <label>O/a avo</label>
             <value>5</value>
           </item>
           <item>
-            <label>Outra mulher</label>
+            <label>O sogro/a</label>
             <value>6</value>
+          </item>
+          <item>
+            <label>Outro membro da família da própria mulher</label>
+            <value>7</value>
+          </item>
+          <item>
+            <label>Outro membro da família do marido/parceiro</label>
+            <value>8</value>
+          </item>
+          <item>
+            <label>Parteira tradicional/trabalhador de saúde</label>
+            <value>9</value>
+          </item>
+          <item>
+            <label>Amigo / vizinho</label>
+            <value>10</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>11</value>
           </item>
           <item>
             <label>Não sabe</label>
@@ -3391,61 +3411,61 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <input ref="/AVMaternal/main/socialAutopsy/timeDecision">
-          <label>J4.Quanto tempo após a doença começar, ele/a decidiu fazer isso?</label>
+          <label>J4.Quanto tempo após a doença começar, ela decidiu fazer isso?</label>
           <hint>Dias:Horas:Minutos - Use 99 se não sabe</hint>
         </input>
         <select ref="/AVMaternal/main/socialAutopsy/problemsToHospital">
           <label>J5.Será que eles tinham algum problema que impedia de procurar cuidados de saúde formais naquele momento? OU Será que eles teiveram que superar alguns problemas, a fim de procurar cuidados de saúde formais naquele momento?</label>
           <item>
-            <label>1. Não acharam que o bebê estava doente o suficiente para precisar de cuidados de saúde</label>
+            <label>Não acharam que o bebê estava doente o suficiente para precisar de cuidados de saúde</label>
             <value>1</value>
           </item>
           <item>
-            <label>2. Não havia ninguém disponível para acompanhar o bebê</label>
+            <label>Não havia ninguém disponível para acompanhar o bebê</label>
             <value>2</value>
           </item>
           <item>
-            <label>3. A mãe teve que atender a tarefas domésticas</label>
+            <label>A mãe teve que atender a tarefas domésticas</label>
             <value>3</value>
           </item>
           <item>
-            <label>4. Transporte não disponível</label>
+            <label>Transporte não disponível</label>
             <value>4</value>
           </item>
           <item>
-            <label>5. Não conseguiam pagar o transporte</label>
+            <label>Não conseguiam pagar o transporte</label>
             <value>5</value>
           </item>
           <item>
-            <label>6. Não conseguiam pagar o provedor/unidade de cuidados</label>
+            <label>Não conseguiam pagar o provedor/unidade de cuidados</label>
             <value>6</value>
           </item>
           <item>
-            <label>7. Outros custos</label>
+            <label>Outros custos</label>
             <value>7</value>
           </item>
           <item>
-            <label>8. Não satisfeitos com cuidados de saúde disponíveis</label>
+            <label>Não satisfeitos com cuidados de saúde disponíveis</label>
             <value>8</value>
           </item>
           <item>
-            <label>9. Problema(s)  do bebê exigem cuidados tradicionais</label>
+            <label>Problema(s)  do bebê exigem cuidados tradicionais</label>
             <value>9</value>
           </item>
           <item>
-            <label>10. Pensaram que o bebê estava doente demais para viajar</label>
+            <label>Pensaram que o bebê estava doente demais para viajar</label>
             <value>10</value>
           </item>
           <item>
-            <label>11. Pensaram que o bebê iria morrer, de qualquer forma</label>
+            <label>Pensaram que o bebê iria morrer, de qualquer forma</label>
             <value>11</value>
           </item>
           <item>
-            <label>12. Era tarde da noite</label>
+            <label>Era tarde da noite</label>
             <value>12</value>
           </item>
           <item>
-            <label>13. Não houve problema de procura de cuidados</label>
+            <label>Não houve problema de procura de cuidados</label>
             <value>13</value>
           </item>
           <item>
@@ -3473,7 +3493,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/socialAutopsy/hadDecided">
-          <label>J7.Quem decidiu que o bebê precisava de procurar cuidados de saúde?</label>
+          <label>J7.Quem decidiu que o ela precisava de procurar cuidados de saúde?</label>
           <item>
             <label>A mãe</label>
             <value>1</value>
@@ -3546,7 +3566,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <hint>Distancia em Kilometros</hint>
         </input>
         <select ref="/AVMaternal/main/socialAutopsy/vehicle">
-          <label>J12.Qual método de transporte foi utilizado para levar o bebê para lá?</label>
+          <label>J12.Qual método de transporte foi utilizado para levá-la para lá?</label>
           <item>
             <label>Caminharam</label>
             <value>1</value>

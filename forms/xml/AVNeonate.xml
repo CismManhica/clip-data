@@ -182,16 +182,16 @@
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/AVNeonate/deviceid" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/AVNeonate/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/AVNeonate/end" type="dateTime"/>
-      <bind nodeset="/AVNeonate/houseno" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/roundNumber" required="true()" type="int"/>
-      <bind nodeset="/AVNeonate/individualId" relevant="1!=1" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/locationId" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/fieldWorkerId" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/houseno" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/AVNeonate/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/consent" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main" relevant=" /AVNeonate/consent  = 1"/>
       <bind nodeset="/AVNeonate/main/intervieweeName" required="true()" type="string"/>
-      <bind constraint="int((today() - .) div 365.24) &gt; 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/AVNeonate/main/intervieweeDob" required="true()" type="date"/>
+      <bind constraint="int((today() - .) div 365.24) &gt;=18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/AVNeonate/main/intervieweeDob" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/main/intervieweeInHouse" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/education" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/relationWithInterviewee" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="select1"/>
@@ -233,7 +233,7 @@
       <bind nodeset="/AVNeonate/main/childStatus/breatheAfterLabor" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/breatheAssistence" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/birthCry" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/childStatus/birthDead" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/childStatus/birthDead" relevant=" /AVNeonate/main/childStatus/birthCry =2" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/decompositionSignals" relevant=" /AVNeonate/main/childStatus/birthDead =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory" relevant=" /AVNeonate/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/birthHospital" required="true()" type="select1"/>
@@ -282,7 +282,7 @@
       <bind nodeset="/AVNeonate/main/neoillHistory/sick2dth" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/suddenlyDead" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/breastfeed24h" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/breastfeed3d" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/breastfeed3d" relevant=" /AVNeonate/main/neoillHistory/breastfeed24h =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/convultionsg" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/convultions1d" relevant=" /AVNeonate/main/neoillHistory/convultionsg =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/convultions2d" relevant=" /AVNeonate/main/neoillHistory/convultionsg =1" required="true()" type="select1"/>
@@ -322,7 +322,7 @@
       <bind nodeset="/AVNeonate/main/treatments/tuboNariz" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/antiBioticos" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/operation" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/treatments/operation1Mth" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/treatments/operation1Mth" relevant=" /AVNeonate/main/treatments/hadtreatments =1 and  /AVNeonate/main/treatments/operation =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/dischargedSick" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/socialAutopsy" relevant=" /AVNeonate/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVNeonate/main/socialAutopsy/locationChild" required="true()" type="select1"/>
@@ -2053,7 +2053,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
       <group ref="/AVNeonate/main/treatments">
         <label>SECCÃO H: TRATAMENTO E USO DOS SERVIÇOS DE SAÚDE PARA A ÚLTIMA DOENÇA</label>
         <select1 ref="/AVNeonate/main/treatments/vacinated">
-          <label>H1.Ele/a estava adequadamente vacinado?</label>
+          <label>H1.Ele/a estava adequadamente vacinado/a?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -2296,7 +2296,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <hint>Dias:Horas:Minutos - Use 99 se não sabe</hint>
         </input>
         <select ref="/AVNeonate/main/socialAutopsy/problemsToHospital">
-          <label>I5.Será que eles tinham algum problema que impedia de procurar cuidados de saúde formais naquele momento? OU Será que eles tiveram que superar alguns problemas, a fim de procurar cuidados de saúde formais naquele momento?</label>
+          <label>I5.Será que eles tinham algum problema que impedia de procurar cuidados de saúde formais naquele momento? OU Será que eles tiveram que superar algu0ns problemas, a fim de procurar cuidados de saúde formais naquele momento?</label>
           <item>
             <label>1. Não acharam que o bebê estava doente o suficiente para precisar de cuidados de saúde</label>
             <value>1</value>

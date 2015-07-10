@@ -10,6 +10,7 @@
           <end/>
           <houseno/>
           <roundNumber/>
+          <inFieldDeath/>
           <individualId/>
           <locationId/>
           <fieldWorkerId/>
@@ -249,8 +250,9 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/AVMaternal/end" type="dateTime"/>
       <bind nodeset="/AVMaternal/houseno" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/roundNumber" readonly="true()" required="true()" type="int"/>
-      <bind nodeset="/AVMaternal/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/inFieldDeath" type="select1"/>
+      <bind nodeset="/AVMaternal/individualId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/locationId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/fieldWorkerId" required="true()" type="string"/>
       <bind constraint=". &lt;= today()" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/consent" required="true()" type="select1"/>
@@ -479,6 +481,17 @@
       <label>Número da ronda</label>
       <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
     </input>
+    <select1 ref="/AVMaternal/inFieldDeath">
+      <label>A morte foi encontrada no campo?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
     <input ref="/AVMaternal/individualId">
       <label>A0. ID do Individuo</label>
       <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
@@ -3449,15 +3462,15 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         <select ref="/AVMaternal/main/socialAutopsy/problemsToHospital">
           <label>J5.Será que eles tinham algum problema que impedia de procurar cuidados de saúde formais naquele momento? OU Será que eles teiveram que superar alguns problemas, a fim de procurar cuidados de saúde formais naquele momento?</label>
           <item>
-            <label>Não acharam que o bebê estava doente o suficiente para precisar de cuidados de saúde</label>
+            <label>Não acharam que ela estava doente o suficiente para precisar de cuidados de saúde</label>
             <value>1</value>
           </item>
           <item>
-            <label>Não havia ninguém disponível para acompanhar o bebê</label>
+            <label>Não havia ninguém disponível para acompanhá-la</label>
             <value>2</value>
           </item>
           <item>
-            <label>A mãe teve que atender a tarefas domésticas</label>
+            <label>Ela tinha que atender as tarefas domésticas</label>
             <value>3</value>
           </item>
           <item>
@@ -3477,19 +3490,19 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <value>7</value>
           </item>
           <item>
-            <label>Não satisfeitos com cuidados de saúde disponíveis</label>
+            <label>Não satisfeitos com os cuidados de saúde disponíveis</label>
             <value>8</value>
           </item>
           <item>
-            <label>Problema(s)  do bebê exigem cuidados tradicionais</label>
+            <label>O(s) problema(s) dela exigem cuidados tradicionais</label>
             <value>9</value>
           </item>
           <item>
-            <label>Pensaram que o bebê estava doente demais para viajar</label>
+            <label>Pensaram que ela estava doente demais para viajar</label>
             <value>10</value>
           </item>
           <item>
-            <label>Pensaram que o bebê iria morrer, de qualquer forma</label>
+            <label>Pensaram que ela iria morrer,de qualquer forma</label>
             <value>11</value>
           </item>
           <item>
@@ -3527,19 +3540,19 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         <select1 ref="/AVMaternal/main/socialAutopsy/hadDecided">
           <label>J7.Quem decidiu que o ela precisava de procurar cuidados de saúde?</label>
           <item>
-            <label>A mãe</label>
+            <label>A mulher ela mesma</label>
             <value>1</value>
           </item>
           <item>
-            <label>O pai</label>
+            <label>O Marido dela</label>
             <value>2</value>
           </item>
           <item>
-            <label>Avó materna</label>
+            <label>A mãe dela</label>
             <value>3</value>
           </item>
           <item>
-            <label>Avó paterna</label>
+            <label>A sogra dela</label>
             <value>4</value>
           </item>
           <item>

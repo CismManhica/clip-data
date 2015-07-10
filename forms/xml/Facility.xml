@@ -77,8 +77,20 @@
             </maternal_interv>
             <exams>
               <blood_exam/>
-              <exam/>
-              <exam_qtd/>
+              <exam>
+                <exam1/>
+                <exam1_qtd/>
+                <exam2/>
+                <exam2_qtd/>
+                <exam3/>
+                <exam3_qtd/>
+                <exam4/>
+                <exam4_qtd/>
+                <exam5/>
+                <exam5_qtd/>
+                <exam6/>
+                <exam6_qtd/>
+              </exam>
               <hematocrito/>
               <hemoglobina/>
               <leuk_count_high/>
@@ -182,6 +194,7 @@
               <profilaxia/>
               <tarv/>
               <had_accident/>
+              <accident_local/>
             </maternal_complications3>
             <deliv_perinatalss_outcome>
               <labour/>
@@ -246,11 +259,12 @@
       <bind nodeset="/Facility/demogfafic_info/name" required="true()" type="string"/>
       <bind nodeset="/Facility/demogfafic_info/addr" required="true()" type="string"/>
       <bind nodeset="/Facility/demogfafic_info/phone" required="true()" type="int"/>
-      <bind nodeset="/Facility/demogfafic_info/clip_id" required="true()" type="string"/>
+      <bind constraint="(regex(., '^((0[1-9])|(1[0-2]))-[0-9]{4}-[0-9]{3}-([0-9]{2})-((0[1-9])|(1[0-2]))$'))" jr:constraintMsg="Preencha com o formato XX-XXXX-XXX-XX-XX
+. Se a mulher não tem número do estudo CLIP, escreva NA" nodeset="/Facility/demogfafic_info/clip_id" required="true()" type="string"/>
       <bind nodeset="/Facility/visit_info/arrival" required="true()" type="select1"/>
-      <bind nodeset="/Facility/visit_info/transferred" required="true()" type="select1"/>
-      <bind nodeset="/Facility/visit_info/date_arrived" relevant=" /Facility/visit_info/transferred =1" required="true()" type="date"/>
-      <bind nodeset="/Facility/visit_info/time_arrived" relevant=" /Facility/visit_info/transferred =1" required="true()" type="time"/>
+      <bind nodeset="/Facility/visit_info/transferred" relevant=" /Facility/visit_info/arrival =0" required="true()" type="select1"/>
+      <bind nodeset="/Facility/visit_info/date_arrived" required="true()" type="date"/>
+      <bind nodeset="/Facility/visit_info/time_arrived" required="true()" type="time"/>
       <bind nodeset="/Facility/visit_info/reason" required="true()" type="select"/>
       <bind nodeset="/Facility/visit_info/reason_spec" relevant=" /Facility/visit_info/reason =90" type="string"/>
       <bind nodeset="/Facility/visit_info/stat" required="true()" type="select1"/>
@@ -260,9 +274,9 @@
       <bind nodeset="/Facility/arrive_alives/admission_info/time_admit" relevant=" /Facility/arrive_alives/admission_info/admit =1" required="true()" type="time"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/preg_stat" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/fetal_sounds" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =1" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/clinical_arrival/baby_stat" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =2" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/clinical_arrival/systolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3 or  /Facility/arrive_alives/clinical_arrival/preg_stat =4" required="true()" type="string"/>
-      <bind nodeset="/Facility/arrive_alives/clinical_arrival/diastolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3 or  /Facility/arrive_alives/clinical_arrival/preg_stat =4" required="true()" type="string"/>
+      <bind nodeset="/Facility/arrive_alives/clinical_arrival/baby_stat" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =2 or  /Facility/arrive_alives/clinical_arrival/preg_stat =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/clinical_arrival/systolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3 or  /Facility/arrive_alives/clinical_arrival/preg_stat =4 or  /Facility/arrive_alives/clinical_arrival/preg_stat =1 or  /Facility/arrive_alives/clinical_arrival/preg_stat =2" required="true()" type="string"/>
+      <bind nodeset="/Facility/arrive_alives/clinical_arrival/diastolic_bp" relevant=" /Facility/arrive_alives/clinical_arrival/preg_stat =3 or  /Facility/arrive_alives/clinical_arrival/preg_stat =4 or  /Facility/arrive_alives/clinical_arrival/preg_stat =1 or  /Facility/arrive_alives/clinical_arrival/preg_stat =2" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/ta_medition" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/maternal_bpm" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/clinical_arrival/maternal_rpm" required="true()" type="string"/>
@@ -293,22 +307,33 @@
       <bind nodeset="/Facility/arrive_alives/maternal_interv/otherspec" relevant=" /Facility/arrive_alives/maternal_interv/other4 =1" required="true()" type="string"/>
       <bind constraint=".&gt;0" nodeset="/Facility/arrive_alives/maternal_interv/other_dur" relevant=" /Facility/arrive_alives/maternal_interv/other4 =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/blood_exam" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/exam" relevant=" /Facility/arrive_alives/exams/blood_exam =1" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/exam_qtd" relevant=" /Facility/arrive_alives/exams/blood_exam =1" required="true()" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/exams/hematocrito" relevant=" /Facility/arrive_alives/exams/exam =1" type="int"/>
-      <bind nodeset="/Facility/arrive_alives/exams/hemoglobina" relevant=" /Facility/arrive_alives/exams/exam =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam" relevant=" /Facility/arrive_alives/exams/blood_exam =1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam1" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam1_qtd" relevant=" /Facility/arrive_alives/exams/exam/exam1 =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam2" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam2_qtd" relevant=" /Facility/arrive_alives/exams/exam/exam2 =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam3" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam3_qtd" relevant=" /Facility/arrive_alives/exams/exam/exam3 =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam4" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam4_qtd" relevant=" /Facility/arrive_alives/exams/exam/exam4 =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam5" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam5_qtd" relevant=" /Facility/arrive_alives/exams/exam/exam5 =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam6" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/exam/exam6_qtd" relevant=" /Facility/arrive_alives/exams/exam/exam6 =1" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/hematocrito" type="int"/>
+      <bind nodeset="/Facility/arrive_alives/exams/hemoglobina" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_high" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_high_res" relevant=" /Facility/arrive_alives/exams/leuk_count_high =1" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_low" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/leuk_count_low_res" relevant=" /Facility/arrive_alives/exams/leuk_count_low =1" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/exams/dipstick6" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/dipstick_qtd" relevant=" /Facility/arrive_alives/exams/dipstick6 =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/dipstick_qtd" relevant=" /Facility/arrive_alives/exams/dipstick6 =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/micros" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/micros_qtd" relevant=" /Facility/arrive_alives/exams/micros =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/micros_qtd" relevant=" /Facility/arrive_alives/exams/micros =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/preg_ecography" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/preg_ecography_qtd" relevant=" /Facility/arrive_alives/exams/preg_ecography =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/preg_ecography_qtd" relevant=" /Facility/arrive_alives/exams/preg_ecography =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/ctg" required="true()" type="select1"/>
-      <bind nodeset="/Facility/arrive_alives/exams/ctg_qtd" relevant=" /Facility/arrive_alives/exams/ctg =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/arrive_alives/exams/ctg_qtd" relevant=" /Facility/arrive_alives/exams/ctg =1" required="true()" type="int"/>
       <bind nodeset="/Facility/arrive_alives/exams/other6" required="true()" type="select1"/>
       <bind nodeset="/Facility/arrive_alives/exams/other_spec" relevant=" /Facility/arrive_alives/exams/other6 =1" required="true()" type="string"/>
       <bind nodeset="/Facility/arrive_alives/exams/other_qtd" relevant=" /Facility/arrive_alives/exams/other6 =1" required="true()" type="select1"/>
@@ -386,9 +411,10 @@
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/profilaxia" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_threatment =1" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/tarv" relevant=" /Facility/maternal_cond_interv/maternal_complications3/hiv_threatment =1" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/had_accident" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/maternal_complications3/accident_local" relevant=" /Facility/maternal_cond_interv/maternal_complications3/had_accident =1" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/labour" readonly="true()" type="string"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev" required="true()" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev =1" required="true()" type="select1"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev =2" required="true()" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_date" required="true()" type="date"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_mode" required="true()" type="select1"/>
       <bind constraint=".&gt;0" jr:constraintMsg="Indique o número de bebés" nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/num_bby5" required="true()" type="int"/>
@@ -400,7 +426,7 @@
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/lesion6 =1" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn =1" type="select1"/>
-      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly6" type="select"/>
+      <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly6" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/cog_abn =1" type="select"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/anomaly6 =1" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff" type="select1"/>
       <bind nodeset="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff_loc" relevant=" /Facility/maternal_cond_interv/deliv_perinatalss_outcome/babies2/brthing_diff =1" type="select1"/>
@@ -442,10 +468,10 @@
         <label>F1.2.Nome da pessoa que preenche o formulário</label>
       </input>
       <input ref="/Facility/facility_info/id">
-        <label>F1.3.Código da pessoa</label>
+        <label>F1.2.1.Código da pessoa</label>
       </input>
       <input ref="/Facility/facility_info/date">
-        <label>F1.4.Data do preenchimento do formulário</label>
+        <label>F1.3.Data do preenchimento do formulário</label>
       </input>
     </group>
     <group ref="/Facility/demogfafic_info">
@@ -461,7 +487,8 @@
       </input>
       <input ref="/Facility/demogfafic_info/clip_id">
         <label>F2.4.Número de Identificação do estudo CLIP</label>
-        <hint>Se a mulher não tem número do estudo CLIP, escreva NA</hint>
+        <hint>Preencha com o formato XX-XXXX-XXX-XX-XX
+. Se a mulher não tem número do estudo CLIP, escreva NA</hint>
       </input>
     </group>
     <group ref="/Facility/visit_info">
@@ -595,7 +622,7 @@
       <group ref="/Facility/arrive_alives/admission_info">
         <label>I. INFORMAÇÃO DA ADMISSÃO</label>
         <select1 ref="/Facility/arrive_alives/admission_info/admit">
-          <label>F4.1.A mulher foi admitida nesta unidade sanitária?</label>
+          <label>F4.1.1.A mulher foi admitida nesta unidade sanitária?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -610,18 +637,18 @@
           </item>
         </select1>
         <input ref="/Facility/arrive_alives/admission_info/date_admit">
-          <label>F4.2.Data de admissão</label>
+          <label>F4.1Data de admissão</label>
           <hint>Se desconhecido selecione (01-01-2000)</hint>
         </input>
         <input ref="/Facility/arrive_alives/admission_info/time_admit">
-          <label>F4.3.Hora de admissão</label>
+          <label>F4.2.Hora de admissão</label>
           <hint>Se a hora for desconhecida, use 00:00</hint>
         </input>
       </group>
       <group ref="/Facility/arrive_alives/clinical_arrival">
         <label>II. ESTADO CLÍNICO DA MULHER À CHEGADA</label>
         <select1 ref="/Facility/arrive_alives/clinical_arrival/preg_stat">
-          <label>F4.4.Estado da mulher</label>
+          <label>F4.3.Estado da mulher</label>
           <item>
             <label>Grávida</label>
             <value>1</value>
@@ -640,7 +667,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/clinical_arrival/fetal_sounds">
-          <label>F4.5.Presença de sons cardíacos fetais (foco fetal)</label>
+          <label>F4.4.Presença de sons cardíacos fetais (foco fetal)</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -655,7 +682,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/arrive_alives/clinical_arrival/baby_stat">
-          <label>F4.6.Estado do bebé</label>
+          <label>F4.5.Estado do bebé</label>
           <item>
             <label>Vivo</label>
             <value>1</value>
@@ -678,15 +705,15 @@
           </item>
         </select1>
         <input ref="/Facility/arrive_alives/clinical_arrival/systolic_bp">
-          <label>F4.7.Tensão arterial materna (mmHg) Sistólica</label>
+          <label>F4.6.Tensão arterial materna (mmHg) Sistólica</label>
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <input ref="/Facility/arrive_alives/clinical_arrival/diastolic_bp">
-          <label>F4.7.Tensão arterial materna (mmHg) Diastólica</label>
+          <label>F4.6.Tensão arterial materna (mmHg) Diastólica</label>
           <hint>Se desconhecido escreva NI</hint>
         </input>
         <select1 ref="/Facility/arrive_alives/clinical_arrival/ta_medition">
-          <label>F4.8.Após a chegada foi feita a medição da TA com valores &lt;110mmHg durante esta visita/internamento</label>
+          <label>F4.7.Após a chegada foi feita a medição da TA com valores &lt;110mmHg durante esta visita/internamento</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -1022,50 +1049,127 @@
       <group ref="/Facility/arrive_alives/exams">
         <label>V. EXAMES REALIZADOS A MULHER</label>
         <select1 ref="/Facility/arrive_alives/exams/blood_exam">
-          <label>F4.28.Foi realizado nesta unidade sanitária algum exame de sangue?</label>
-          <item>
-            <label>Não</label>
-            <value>0</value>
-          </item>
+          <label>Foi realizado nesta unidade sanitária algum exame de sangue?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
           </item>
           <item>
-            <label>Desconhecido</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Facility/arrive_alives/exams/exam">
-          <label>F4.28.Qual dos seguintes exames foi realizado nesta unidade sanitária:</label>
-          <item>
-            <label>Hematócrito/Hemoglobina</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Contagem de leucócitos</label>
+            <label>Nao</label>
             <value>2</value>
           </item>
-          <item>
-            <label>Plaquetas</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Creatinina</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Albumina Seria</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>AST/ALT</label>
-            <value>6</value>
-          </item>
         </select1>
-        <input ref="/Facility/arrive_alives/exams/exam_qtd">
-          <label>Número total de testes realizados/ resultado do teste</label>
-        </input>
+        <group ref="/Facility/arrive_alives/exams/exam">
+          <label>F4.28.Qual dos seguintes exames foi realizado nesta unidade sanitária:</label>
+          <select1 ref="/Facility/arrive_alives/exams/exam/exam1">
+            <label>Hematócrito/Hemoglobina</label>
+            <item>
+              <label>Não</label>
+              <value>0</value>
+            </item>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Desconhecido</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Facility/arrive_alives/exams/exam/exam1_qtd">
+            <label>Número total de testes realizados/ resultado do teste</label>
+          </input>
+          <select1 ref="/Facility/arrive_alives/exams/exam/exam2">
+            <label>Contagem de leucócitos</label>
+            <item>
+              <label>Não</label>
+              <value>0</value>
+            </item>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Desconhecido</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Facility/arrive_alives/exams/exam/exam2_qtd">
+            <label>Número total de testes realizados/ resultado do teste</label>
+          </input>
+          <select1 ref="/Facility/arrive_alives/exams/exam/exam3">
+            <label>Plaquetas</label>
+            <item>
+              <label>Não</label>
+              <value>0</value>
+            </item>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Desconhecido</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Facility/arrive_alives/exams/exam/exam3_qtd">
+            <label>Número total de testes realizados/ resultado do teste</label>
+          </input>
+          <select1 ref="/Facility/arrive_alives/exams/exam/exam4">
+            <label>Creatinina</label>
+            <item>
+              <label>Não</label>
+              <value>0</value>
+            </item>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Desconhecido</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Facility/arrive_alives/exams/exam/exam4_qtd">
+            <label>Número total de testes realizados/ resultado do teste</label>
+          </input>
+          <select1 ref="/Facility/arrive_alives/exams/exam/exam5">
+            <label>Albumina Seria</label>
+            <item>
+              <label>Não</label>
+              <value>0</value>
+            </item>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Desconhecido</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Facility/arrive_alives/exams/exam/exam5_qtd">
+            <label>Número total de testes realizados/ resultado do teste</label>
+          </input>
+          <select1 ref="/Facility/arrive_alives/exams/exam/exam6">
+            <label>AST/ALT</label>
+            <item>
+              <label>Não</label>
+              <value>0</value>
+            </item>
+            <item>
+              <label>Sim</label>
+              <value>1</value>
+            </item>
+            <item>
+              <label>Desconhecido</label>
+              <value>99</value>
+            </item>
+          </select1>
+          <input ref="/Facility/arrive_alives/exams/exam/exam6_qtd">
+            <label>Número total de testes realizados/ resultado do teste</label>
+          </input>
+        </group>
         <input ref="/Facility/arrive_alives/exams/hematocrito">
           <label>F4.28.1.Valor de Hematócrito</label>
         </input>
@@ -1125,21 +1229,9 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/dipstick_qtd">
+        <input ref="/Facility/arrive_alives/exams/dipstick_qtd">
           <label>Número total de testes realizados</label>
-          <item>
-            <label>Normal</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Anormal</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Desconhece</label>
-            <value>99</value>
-          </item>
-        </select1>
+        </input>
         <select1 ref="/Facility/arrive_alives/exams/micros">
           <label>F4.31.Análise de urina Microscopia da urina</label>
           <item>
@@ -1155,21 +1247,9 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/micros_qtd">
+        <input ref="/Facility/arrive_alives/exams/micros_qtd">
           <label>Número total de testes realizados</label>
-          <item>
-            <label>Normal</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Anormal</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Desconhece</label>
-            <value>99</value>
-          </item>
-        </select1>
+        </input>
         <select1 ref="/Facility/arrive_alives/exams/preg_ecography">
           <label>F4.32.Ecografia da gravidez</label>
           <item>
@@ -1185,21 +1265,9 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/preg_ecography_qtd">
+        <input ref="/Facility/arrive_alives/exams/preg_ecography_qtd">
           <label>Número total de testes realizados</label>
-          <item>
-            <label>Normal</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Anormal</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Desconhece</label>
-            <value>99</value>
-          </item>
-        </select1>
+        </input>
         <select1 ref="/Facility/arrive_alives/exams/ctg">
           <label>F4.33.CTG (frequência cardíaca fetal)</label>
           <item>
@@ -1215,21 +1283,9 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Facility/arrive_alives/exams/ctg_qtd">
+        <input ref="/Facility/arrive_alives/exams/ctg_qtd">
           <label>Número total de testes realizados</label>
-          <item>
-            <label>Normal</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Anormal</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Desconhece</label>
-            <value>99</value>
-          </item>
-        </select1>
+        </input>
         <select1 ref="/Facility/arrive_alives/exams/other6">
           <label>F4.34.Outro exame (especificar qual)</label>
           <item>
@@ -2339,6 +2395,9 @@
             <value>2</value>
           </item>
         </select1>
+        <input ref="/Facility/maternal_cond_interv/maternal_complications3/accident_local">
+          <label>Local onde ocorreu</label>
+        </input>
       </group>
       <group ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome">
         <label>VII. INFORMAÇÕES DO PARTO E RESULTADOS PERINATAIS</label>
@@ -2346,7 +2405,7 @@
           <label>PARTO</label>
         </input>
         <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_prev">
-          <label>F7.1.A mulher teve o parto antes do óbito nesta unidade sanitária?</label>
+          <label>F7.1.A mulher teve o parto antes da alta nesta unidade sanitária?</label>
           <item>
             <label>Não</label>
             <value>0</value>
@@ -2361,7 +2420,7 @@
           </item>
         </select1>
         <select1 ref="/Facility/maternal_cond_interv/deliv_perinatalss_outcome/deliv_loc">
-          <label>F7.2.Se sim, por favor selecione o local</label>
+          <label>F7.2.Por favor selecione o local</label>
           <item>
             <label>Na comunidade /Unidade sanitária de nível primário</label>
             <value>1</value>

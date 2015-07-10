@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
     <h:title>AV Materna</h:title>
     <model>
@@ -267,7 +267,7 @@
       <bind nodeset="/AVMaternal/main/deceasedData/permId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/deceasedData/name" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dob" required="true()" type="date"/>
-      <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
       <bind nodeset="/AVMaternal/main/dthDetails" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>

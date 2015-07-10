@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms" >
   <h:head>
     <h:title>AV Neonato</h:title>
     <model>
@@ -204,7 +204,7 @@
       <bind nodeset="/AVNeonate/main/name" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/permId" readonly="true()" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/dob" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="date"/>
-      <bind nodeset="/AVNeonate/main/dthCircunstacies" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/main/dthCircunstacies" relevant=" /AVNeonate/main/intervieweeInHouse =1" required="true()" type="string" odk:length="1000"/>
       <bind nodeset="/AVNeonate/main/dthDetails" relevant=" /AVNeonate/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind constraint=".&lt;=28" nodeset="/AVNeonate/main/dthDetails/dthAge" required="true()" type="int"/>

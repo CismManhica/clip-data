@@ -8,6 +8,7 @@
           <deviceid/>
           <start/>
           <end/>
+          <inFieldDeath/>
           <houseno/>
           <roundNumber/>
           <individualId/>
@@ -182,10 +183,11 @@
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/AVNeonate/deviceid" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/AVNeonate/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/AVNeonate/end" type="dateTime"/>
-      <bind nodeset="/AVNeonate/houseno" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/roundNumber" readonly="true()" required="true()" type="int"/>
-      <bind nodeset="/AVNeonate/individualId" readonly="true()" relevant="1!=1" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/inFieldDeath" type="select1"/>
+      <bind nodeset="/AVNeonate/houseno" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/roundNumber" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="int"/>
+      <bind nodeset="/AVNeonate/individualId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/locationId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/consent" required="true()" type="select1"/>
@@ -343,6 +345,17 @@
     </model>
   </h:head>
   <h:body>
+    <select1 ref="/AVNeonate/inFieldDeath">
+      <label>A morte foi encontrada no campo?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
     <input ref="/AVNeonate/houseno">
       <label>Número da casa</label>
       <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>

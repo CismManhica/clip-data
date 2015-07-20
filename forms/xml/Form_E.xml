@@ -350,10 +350,10 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrWoman" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/birthinfo/birthSamePlace" relevant=" /Form_E/main/birthinfo/manyBabies =99" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/birthinfo/expectedBirthplace" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/laborParticipator" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/laborParticipator" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="select"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisits" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="int"/>
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/birthinfo/timeToReachLabPlace" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="string"/>
-      <bind nodeset="/Form_E/main/birthinfo/laborParticipatorInhome" relevant=" /Form_E/main/birthinfo/expectedBirthplace =1 or  /Form_E/main/birthinfo/expectedBirthplace =2 or  /Form_E/main/birthinfo/expectedBirthplace =99" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/laborParticipatorInhome" relevant=" /Form_E/main/birthinfo/expectedBirthplace =1 or  /Form_E/main/birthinfo/expectedBirthplace =2 or  /Form_E/main/birthinfo/expectedBirthplace =99" required="true()" type="select"/>
       <bind constraint="regex(., '^([0-9][0-9]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/birthinfo/totalHourInLabor" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/birthinfo/childBirthType" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/birthinfo/haveMeasureTensArt" required="true()" type="select1"/>
@@ -1487,8 +1487,8 @@
             <value>99</value>
           </item>
         </select1>
-        <select1 ref="/Form_E/main/birthinfo/laborParticipator">
-          <label>F6. Quem atendeu a Senhora durante o trabalho de parto e/ou parto na unidade sanitária?</label>
+        <select ref="/Form_E/main/birthinfo/laborParticipator">
+          <label>F6. Quem atendeu a Senhora durante o trabalho de parto e/ou na unidade sanitária?</label>
           <item>
             <label>Ela própria</label>
             <value>1</value>
@@ -1526,10 +1526,14 @@
             <value>90</value>
           </item>
           <item>
+            <label>Não Aplicavel (Parto não ocorreu numa unidade sanitaria)</label>
+            <value>98</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
-        </select1>
+        </select>
         <input ref="/Form_E/main/birthinfo/howManyVisits">
           <label>F7. Quantas visitas à unidade sanitária para o trabalho de parto e/ou parto necessitaram de transporte (incluindo a visita inicial)?</label>
         </input>
@@ -1537,7 +1541,7 @@
           <label>F8. Qual foi o tempo total necessário para chegar aos locais onde o trabalho de parto e/ou parto ocorreu (incluindo o tempo de transporte entre as unidades sanitárias)?</label>
           <hint>Horas:Minutos (99 se não sabe)</hint>
         </input>
-        <select1 ref="/Form_E/main/birthinfo/laborParticipatorInhome">
+        <select ref="/Form_E/main/birthinfo/laborParticipatorInhome">
           <label>F9. Se o trabalho de parto e/ou parto ocorreu em casa, quem atendeu a Senhora? (Seleccione todas pessoas que participaram)</label>
           <item>
             <label>Própria mulher</label>
@@ -1572,10 +1576,14 @@
             <value>90</value>
           </item>
           <item>
+            <label>Não Aplicavel (Parto não ocorreu em casa)</label>
+            <value>98</value>
+          </item>
+          <item>
             <label>Não sabe</label>
             <value>99</value>
           </item>
-        </select1>
+        </select>
         <input ref="/Form_E/main/birthinfo/totalHourInLabor">
           <label>F10. Indica o número total de horas de trabalho que os membros assalariados da família perderam para estar presentes durante o trabalho de parto e no parto? (Insira 0 se não há horas perdidas.)</label>
           <hint>Horas:Minutos (99 se não sabe)</hint>

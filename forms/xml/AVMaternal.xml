@@ -14,7 +14,12 @@
           <individualId/>
           <locationId/>
           <fieldWorkerId/>
+          <permId/>
+          <name/>
           <visitDate/>
+          <completedAutopsy/>
+          <cause/>
+          <causeSpec/>
           <consent/>
           <main>
             <intervieweeName/>
@@ -24,8 +29,6 @@
             <relationWithInterviewee/>
             <relationWithIntervieweeSpec/>
             <deceasedData>
-              <permId/>
-              <name/>
               <dob/>
               <dthCircunstacies/>
             </deceasedData>
@@ -254,26 +257,26 @@
       <bind nodeset="/AVMaternal/individualId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/locationId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/permId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/name" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind constraint=". &lt;= today()" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
-      <bind nodeset="/AVMaternal/consent" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main" relevant=" /AVMaternal/consent  = 1"/>
+      <bind nodeset="/AVMaternal/completedAutopsy" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/cause" relevant=" /AVMaternal/completedAutopsy =2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/causeSpec" relevant=" /AVMaternal/cause =5" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/consent" relevant=" /AVMaternal/completedAutopsy =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main" relevant=" /AVMaternal/consent  = 1 and  /AVMaternal/completedAutopsy =1"/>
       <bind nodeset="/AVMaternal/main/intervieweeName" required="true()" type="string"/>
       <bind constraint="int((today() - .) div 365.24) &gt;=18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/AVMaternal/main/intervieweeDob" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/intervieweeInHouse" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/education" relevant=" /AVMaternal/main/intervieweeInHouse =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/relationWithInterviewee" relevant=" /AVMaternal/main/intervieweeInHouse =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/education" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithIntervieweeSpec" relevant=" /AVMaternal/main/relationWithInterviewee =11" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/deceasedData" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
-      <bind nodeset="/AVMaternal/main/deceasedData/permId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/deceasedData/name" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dob" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
-      <bind nodeset="/AVMaternal/main/dthDetails" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/wasMarried" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthBefore42d" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/historyContext" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/historyContext/txt" readonly="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadTb" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHIV" required="true()" type="select1"/>
@@ -297,7 +300,6 @@
       <bind nodeset="/AVMaternal/main/historyContext/dthDrySeason" relevant=" /AVMaternal/main/historyContext/dthRainySeason =2" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/sickPeriod" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/diedSuddenly" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/hadAccident" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/carCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/footCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
@@ -330,10 +332,8 @@
       <bind nodeset="/AVMaternal/main/lesionHistory/machines" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/symptoms" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/symptoms/swellingBreast" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms/hadVaginalBleeding" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6WeeksAfter" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/wasPregnant" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6wks" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/wasPregnant !=1" type="select1"/>
@@ -369,7 +369,6 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/assistedDelivery" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/cesarianLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/bornMonthMore" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/hadFever" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/hadFeverPeriod" relevant=" /AVMaternal/main/lastSymptoms/hadFever =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/nightSweats" relevant=" /AVMaternal/main/lastSymptoms/hadFever =1" required="true()" type="select1"/>
@@ -438,7 +437,6 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/wasPale" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/encovedEyes" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/drinkMoreWater" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/treatments/vacinated" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/hadtreatments" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/reidratation" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
@@ -449,12 +447,10 @@
       <bind nodeset="/AVMaternal/main/treatments/operation" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/operation1Mth" relevant=" /AVMaternal/main/treatments/hadtreatments =1 and  /AVMaternal/main/treatments/operation =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/dischargedSick" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/riskFactors" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/drankAlcohol" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/drankAlcoholPeriod" relevant=" /AVMaternal/main/riskFactors/drankAlcohol =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/smokedTobacco" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/tobaccoQuantity" relevant=" /AVMaternal/main/riskFactors/smokedTobacco =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy" relevant=" /AVMaternal/main/intervieweeInHouse =1"/>
       <bind nodeset="/AVMaternal/main/socialAutopsy/locationChild" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/socialAutopsy/action" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/socialAutopsy/actionComander" required="true()" type="select1"/>
@@ -469,7 +465,7 @@
       <bind nodeset="/AVMaternal/main/socialAutopsy/vehicle" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
       <bind nodeset="/AVMaternal/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVMaternal/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;AVMaternal-&quot;, /AVMaternal/main/deceasedData/permId )" nodeset="/AVMaternal/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;AVMaternal-&quot;, /AVMaternal/permId )" nodeset="/AVMaternal/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -504,8 +500,51 @@
       <label>A2. Código do Inquiridor</label>
       <hint>Este campo esta acessivel somente para testes, sera colocado automaticamente pelo OpenHDS</hint>
     </input>
+    <input ref="/AVMaternal/permId">
+      <label>A3. Perm_ID da falecida</label>
+    </input>
+    <input ref="/AVMaternal/name">
+      <label>A4. Nome da falecida</label>
+    </input>
     <input ref="/AVMaternal/visitDate">
-      <label>A3. Data de Entrevista</label>
+      <label>A5. Data de Entrevista</label>
+    </input>
+    <select1 ref="/AVMaternal/completedAutopsy">
+      <label>Será possivel fazer a autopsia?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/AVMaternal/cause">
+      <label>Se não for possível fazer a autopsia, indica a causa</label>
+      <item>
+        <label>Recusa</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Sem informante</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Casa destruida/abandonada</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Morte registada por erro</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>5</value>
+      </item>
+    </select1>
+    <input ref="/AVMaternal/causeSpec">
+      <label>Especifique a causa</label>
     </input>
     <select1 ref="/AVMaternal/consent">
       <label>A4. O/a respondente consentiu em responder o inquérito?</label>
@@ -636,12 +675,6 @@
       </input>
       <group ref="/AVMaternal/main/deceasedData">
         <label>SECCÃO A: INICIO DOS DADOS DA FALECIDA</label>
-        <input ref="/AVMaternal/main/deceasedData/permId">
-          <label>A10. Perm_ID da falecida</label>
-        </input>
-        <input ref="/AVMaternal/main/deceasedData/name">
-          <label>A11. Nome da falecida</label>
-        </input>
         <input ref="/AVMaternal/main/deceasedData/dob">
           <label>A12. Data de nascimento da falecida</label>
         </input>

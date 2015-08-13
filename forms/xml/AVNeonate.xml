@@ -17,6 +17,9 @@
           <motherName/>
           <motherPermId/>
           <motherId/>
+          <name/>
+          <permId/>
+          <dob/>
           <visitDate/>
           <completedAutopsy/>
           <cause/>
@@ -29,9 +32,6 @@
             <education/>
             <relationWithInterviewee/>
             <relationWithIntervieweeSpec/>
-            <name/>
-            <permId/>
-            <dob/>
             <dthCircunstacies/>
             <dthDetails>
               <dthDate/>
@@ -195,6 +195,9 @@
       <bind nodeset="/AVNeonate/motherName" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/motherPermId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/motherId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/name" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/permId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/dob" required="true()" type="date"/>
       <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/completedAutopsy" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/cause" relevant=" /AVNeonate/completedAutopsy =2" required="true()" type="select1"/>
@@ -207,9 +210,6 @@
       <bind nodeset="/AVNeonate/main/education" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/relationWithIntervieweeSpec" relevant=" /AVNeonate/main/relationWithInterviewee =11" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/main/name" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/main/permId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/main/dob" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/main/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
       <bind nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind constraint=".&lt;=28" nodeset="/AVNeonate/main/dthDetails/dthAge" required="true()" type="int"/>
@@ -339,7 +339,7 @@
       <bind nodeset="/AVNeonate/main/socialAutopsy/vehicle" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
       <bind nodeset="/AVNeonate/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVNeonate/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;AVNeonate-&quot;, /AVNeonate/main/permId )" nodeset="/AVNeonate/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;AVNeonate-&quot;, /AVNeonate/permId )" nodeset="/AVNeonate/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -383,11 +383,20 @@
     <input ref="/AVNeonate/motherId">
       <label>A3.2. Id da mãe da criança</label>
     </input>
+    <input ref="/AVNeonate/name">
+      <label>A4. Nome do(a) falecido(a)</label>
+    </input>
+    <input ref="/AVNeonate/permId">
+      <label>A5.Perm ID do(a) Felecido(a)</label>
+    </input>
+    <input ref="/AVNeonate/dob">
+      <label>A6. Data de nascimento do(a) falecido(a)</label>
+    </input>
     <input ref="/AVNeonate/visitDate">
-      <label>A3. Data de Entrevista</label>
+      <label>A7. Data de Entrevista</label>
     </input>
     <select1 ref="/AVNeonate/completedAutopsy">
-      <label>Será possivel fazer a autopsia?</label>
+      <label>A8. Será possivel fazer a autopsia?</label>
       <item>
         <label>Sim</label>
         <value>1</value>
@@ -398,7 +407,7 @@
       </item>
     </select1>
     <select1 ref="/AVNeonate/cause">
-      <label>Se não for possível fazer a autopsia, indica a causa</label>
+      <label>A9. Se não for possível fazer a autopsia, indica a causa</label>
       <item>
         <label>Recusa</label>
         <value>1</value>
@@ -421,10 +430,10 @@
       </item>
     </select1>
     <input ref="/AVNeonate/causeSpec">
-      <label>Especifique a causa</label>
+      <label>A10. Especifique a causa</label>
     </input>
     <select1 ref="/AVNeonate/consent">
-      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <label>A11. O/a respondente consentiu em responder o inquérito?</label>
       <item>
         <label>Sim</label>
         <value>1</value>
@@ -437,13 +446,13 @@
     <group ref="/AVNeonate/main">
       <label>CLIP</label>
       <input ref="/AVNeonate/main/intervieweeName">
-        <label>A5. Nome do/a respondente</label>
+        <label>A12. Nome do/a respondente</label>
       </input>
       <input appearance="no-calendar" ref="/AVNeonate/main/intervieweeDob">
-        <label>A6. Data de nascimento do/a respondente</label>
+        <label>A13. Data de nascimento do/a respondente</label>
       </input>
       <select1 ref="/AVNeonate/main/intervieweeInHouse">
-        <label>A7. O/a respondente vive neste Agregado?</label>
+        <label>A14. O/a respondente vive neste Agregado?</label>
         <item>
           <label>Sim</label>
           <value>1</value>
@@ -454,7 +463,7 @@
         </item>
       </select1>
       <select1 ref="/AVNeonate/main/education">
-        <label>A8. Nível de Educação do respondente?</label>
+        <label>A15. Nível de Educação do respondente?</label>
         <item>
           <label>Analfabeto</label>
           <value>1</value>
@@ -501,7 +510,7 @@
         </item>
       </select1>
       <select1 ref="/AVNeonate/main/relationWithInterviewee">
-        <label>A9.Relação de parentesco do respondente com o(a) falecido(a)?</label>
+        <label>A16.Relação de parentesco do respondente com o(a) falecido(a)?</label>
         <item>
           <label>Pai</label>
           <value>1</value>
@@ -528,19 +537,10 @@
         </item>
       </select1>
       <input ref="/AVNeonate/main/relationWithIntervieweeSpec">
-        <label>A9.1. Especifique a relação de parentesco do/a respondente com a felecida</label>
-      </input>
-      <input ref="/AVNeonate/main/name">
-        <label>A12. Nome do(a) falecido(a)</label>
-      </input>
-      <input ref="/AVNeonate/main/permId">
-        <label>A12.1.Perm ID do(a) Felecido(a)</label>
-      </input>
-      <input ref="/AVNeonate/main/dob">
-        <label>A13. Data de nascimento do(a) falecido(a)</label>
+        <label>A16.1. Especifique a relação de parentesco do/a respondente com a felecida</label>
       </input>
       <input ref="/AVNeonate/main/dthCircunstacies">
-        <label>A14. Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)/neonato?
+        <label>A17. Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)/neonato?
 Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</label>
       </input>
       <group ref="/AVNeonate/main/dthDetails">

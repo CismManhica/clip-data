@@ -16,6 +16,7 @@
           <fieldWorkerId/>
           <permId/>
           <name/>
+          <dob/>
           <visitDate/>
           <completedAutopsy/>
           <cause/>
@@ -29,7 +30,6 @@
             <relationWithInterviewee/>
             <relationWithIntervieweeSpec/>
             <deceasedData>
-              <dob/>
               <dthCircunstacies/>
             </deceasedData>
             <dthDetails>
@@ -259,6 +259,7 @@
       <bind nodeset="/AVMaternal/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/permId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/name" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/dob" required="true()" type="date"/>
       <bind constraint=". &lt;= today()" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/completedAutopsy" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/cause" relevant=" /AVMaternal/completedAutopsy =2" required="true()" type="select1"/>
@@ -271,7 +272,6 @@
       <bind nodeset="/AVMaternal/main/education" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithIntervieweeSpec" relevant=" /AVMaternal/main/relationWithInterviewee =11" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/deceasedData/dob" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
@@ -506,11 +506,14 @@
     <input ref="/AVMaternal/name">
       <label>A4. Nome da falecida</label>
     </input>
+    <input ref="/AVMaternal/dob">
+      <label>A5. Data de nascimento da falecida</label>
+    </input>
     <input ref="/AVMaternal/visitDate">
-      <label>A5. Data de Entrevista</label>
+      <label>A6. Data de Entrevista</label>
     </input>
     <select1 ref="/AVMaternal/completedAutopsy">
-      <label>Será possivel fazer a autopsia?</label>
+      <label>A7. Será possivel fazer a autopsia?</label>
       <item>
         <label>Sim</label>
         <value>1</value>
@@ -521,7 +524,7 @@
       </item>
     </select1>
     <select1 ref="/AVMaternal/cause">
-      <label>Se não for possível fazer a autopsia, indica a causa</label>
+      <label>A8. Se não for possível fazer a autopsia, indica a causa</label>
       <item>
         <label>Recusa</label>
         <value>1</value>
@@ -544,10 +547,10 @@
       </item>
     </select1>
     <input ref="/AVMaternal/causeSpec">
-      <label>Especifique a causa</label>
+      <label>A9. Especifique a causa</label>
     </input>
     <select1 ref="/AVMaternal/consent">
-      <label>A4. O/a respondente consentiu em responder o inquérito?</label>
+      <label>A10. O/a respondente consentiu em responder o inquérito?</label>
       <item>
         <label>Sim</label>
         <value>1</value>
@@ -560,13 +563,13 @@
     <group ref="/AVMaternal/main">
       <label>CLIP</label>
       <input ref="/AVMaternal/main/intervieweeName">
-        <label>A5. Nome do/a respondente</label>
+        <label>A11. Nome do/a respondente</label>
       </input>
       <input appearance="no-calendar" ref="/AVMaternal/main/intervieweeDob">
-        <label>A6. Data de nascimento do/a respondente</label>
+        <label>A12. Data de nascimento do/a respondente</label>
       </input>
       <select1 ref="/AVMaternal/main/intervieweeInHouse">
-        <label>A7. O/a respondente vive neste Agregado?</label>
+        <label>A13. O/a respondente vive neste Agregado?</label>
         <item>
           <label>Sim</label>
           <value>1</value>
@@ -577,7 +580,7 @@
         </item>
       </select1>
       <select1 ref="/AVMaternal/main/education">
-        <label>A8. Nível de Educação do respondente?</label>
+        <label>A14. Nível de Educação do respondente?</label>
         <item>
           <label>Analfabeto</label>
           <value>1</value>
@@ -624,7 +627,7 @@
         </item>
       </select1>
       <select1 ref="/AVMaternal/main/relationWithInterviewee">
-        <label>A9.Relação de parentesco do respondente com a falecida?</label>
+        <label>A15.Relação de parentesco do respondente com a falecida?</label>
         <item>
           <label>Marido</label>
           <value>1</value>
@@ -671,15 +674,12 @@
         </item>
       </select1>
       <input ref="/AVMaternal/main/relationWithIntervieweeSpec">
-        <label>A9.1. Especifique a relação de parentesco do/a respondente com a felecida</label>
+        <label>A15.1. Especifique a relação de parentesco do/a respondente com a felecida</label>
       </input>
       <group ref="/AVMaternal/main/deceasedData">
         <label>SECCÃO A: INICIO DOS DADOS DA FALECIDA</label>
-        <input ref="/AVMaternal/main/deceasedData/dob">
-          <label>A12. Data de nascimento da falecida</label>
-        </input>
         <input ref="/AVMaternal/main/deceasedData/dthCircunstacies">
-          <label>A13. Pode dizer-me sobre a doença ou circunstância que levou a morte dela?
+          <label>A16. Pode dizer-me sobre a doença ou circunstância que levou a morte dela?
 Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</label>
         </input>
       </group>

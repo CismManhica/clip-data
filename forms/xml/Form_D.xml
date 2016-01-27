@@ -49,30 +49,7 @@
               <lastPeriodDate/>
               <isPlaningBirthHere/>
               <expBirthLocalityAddress/>
-              <hasBirthPlace/>
-              <expBirthPlace/>
-              <hasLaborParticipator/>
-              <whoGivesPermission1/>
-              <hasPermissionToSeekCare/>
-              <hasEmergPermToSeekCare/>
-              <whoGivesPermission2/>
-              <needCompany/>
-              <isEmployed/>
-              <hasTransportPlan/>
-              <transport/>
-              <hasTranspCosts/>
-              <transportCost/>
-              <hasSavedMoney/>
-              <nearestHealthUnit/>
-              <nearestHealthUnitTime/>
             </gestagebr>
-            <eclampsia>
-              <hasKnowlBleed/>
-              <hasKnowlTensAlta/>
-              <hasKnowlTensAltaDeath/>
-              <hasKnowlConvulsoes/>
-              <signalAlert/>
-            </eclampsia>
             <mhistory>
               <e_intro/>
               <hasTensaoAlta/>
@@ -167,33 +144,11 @@
       <bind nodeset="/Form_D/main/gestagebr/hasEstimatedDob" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/hasFichaPrenatal" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/estimatedDob" relevant=" /Form_D/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
-      <bind nodeset="/Form_D/main/gestagebr/howPregDeterminated" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/howPregDeterminated" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/knowsLastPeriodDate" required="true()" type="select1"/>
       <bind constraint=". &lt;= today()" nodeset="/Form_D/main/gestagebr/lastPeriodDate" relevant=" /Form_D/main/gestagebr/knowsLastPeriodDate =1" required="true()" type="date"/>
-      <bind nodeset="/Form_D/main/gestagebr/isPlaningBirthHere" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/expBirthLocalityAddress" relevant=" /Form_D/main/gestagebr/isPlaningBirthHere =2" required="true()" type="string"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasBirthPlace" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/expBirthPlace" relevant=" /Form_D/main/gestagebr/hasBirthPlace =1" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasLaborParticipator" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/whoGivesPermission1" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasPermissionToSeekCare" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasEmergPermToSeekCare" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/whoGivesPermission2" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/needCompany" relevant=" /Form_D/main/gestagebr/whoGivesPermission1 !=1 and  /Form_D/main/gestagebr/whoGivesPermission1 !=99" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/isEmployed" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasTransportPlan" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/transport" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasTranspCosts" required="true()" type="select1"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/gestagebr/transportCost" relevant=" /Form_D/main/gestagebr/hasTranspCosts =1" required="true()" type="decimal"/>
-      <bind nodeset="/Form_D/main/gestagebr/hasSavedMoney" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/nearestHealthUnit" required="true()" type="select1"/>
-      <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" jr:constraintMsg="Introduza o periodo de tempo correcto no formato HH:mm, onde HH são horas e mm minutos, se não souber coloque 99." nodeset="/Form_D/main/gestagebr/nearestHealthUnitTime" required="true()" type="string"/>
-      <bind nodeset="/Form_D/main/eclampsia" relevant=" /Form_D/main/hasGivenBirth =2"/>
-      <bind nodeset="/Form_D/main/eclampsia/hasKnowlBleed" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAlta" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/eclampsia/hasKnowlTensAltaDeath" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/eclampsia/hasKnowlConvulsoes" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/eclampsia/signalAlert" type="select"/>
+      <bind nodeset="/Form_D/main/gestagebr/isPlaningBirthHere" type="select1"/>
+      <bind nodeset="/Form_D/main/gestagebr/expBirthLocalityAddress" relevant=" /Form_D/main/gestagebr/isPlaningBirthHere =2" type="string"/>
       <bind nodeset="/Form_D/main/mhistory" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind nodeset="/Form_D/main/mhistory/e_intro" readonly="true()" type="string"/>
       <bind nodeset="/Form_D/main/mhistory/hasTensaoAlta" required="true()" type="select1"/>
@@ -300,7 +255,7 @@
       <select1 ref="/Form_D/main/relationWithInterviewee">
         <label>A8. Qual é a relação de parentesco da mulher em relação ao respondente?</label>
         <item>
-          <label>Própria mulher em idade reprodutiva</label>
+          <label>Própria</label>
           <value>1</value>
         </item>
         <item>
@@ -334,6 +289,18 @@
         <item>
           <label>Sobrinha</label>
           <value>9</value>
+        </item>
+        <item>
+          <label>Cunhada</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Sogra</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Nora</label>
+          <value>13</value>
         </item>
         <item>
           <label>Outro</label>
@@ -487,6 +454,18 @@
           <item>
             <label>Não sabe</label>
             <value>11</value>
+          </item>
+          <item>
+            <label>Nora</label>
+            <value>12</value>
+          </item>
+          <item>
+            <label>Sogra</label>
+            <value>13</value>
+          </item>
+          <item>
+            <label>Cunhada</label>
+            <value>14</value>
           </item>
         </select1>
         <select1 ref="/Form_D/main/pregwomen/religion">
@@ -840,14 +819,14 @@
         </select1>
       </group>
       <select1 ref="/Form_D/main/hasGivenBirth">
-        <label>Está mulher já deu parto?</label>
+        <label>B14. A mulher encontra-se actualmente grávida?</label>
         <hint>SE AO CHEGAR A CASA A MULHER JA TIVER DADO PARTO SEM TER UM REGISTO DE GRAVIDEZ RESPONDA SIM, E DEPOIS ABRA O FORM-E.</hint>
         <item>
-          <label>Sim</label>
+          <label>Não</label>
           <value>1</value>
         </item>
         <item>
-          <label>Não</label>
+          <label>Sim</label>
           <value>2</value>
         </item>
       </select1>
@@ -929,455 +908,8 @@
           </item>
         </select1>
         <input ref="/Form_D/main/gestagebr/expBirthLocalityAddress">
-          <label>C7. Por favor indica o nome da localidade e o endereço do local onde pretende ter o parto?</label>
+          <label>C7. Por favor indica o nome da localidade e o endereço do local onde pretende ter o parto</label>
         </input>
-        <select1 ref="/Form_D/main/gestagebr/hasBirthPlace">
-          <label>C8. A mulher já escolheu ou planeou onde vai querer ter o parto?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/expBirthPlace">
-          <label>C9. Indique onde vai querer ter o parto?</label>
-          <item>
-            <label>Nesta Casa</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Numa outra casa (familiares/amigos/fornecedor informal)</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Unidade sanitária de nível primário Público</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Unidade Sanitária de nível superior pública</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Hospital Privado / Clínica</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Outras instituições privadas</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>Outro</label>
-            <value>90</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/hasLaborParticipator">
-          <label>C10. A mulher tem planos de ter um parto assistido por alguém qualificado? (parteira, médico ou obstetra)</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/whoGivesPermission1">
-          <label>C11. Quem toma a decisão final pela mulher caso pretenda obter cuidados para controle médico ou problemas médicos de emergência durante a gravidez, no parto ou no pós parto?</label>
-          <item>
-            <label>Ela própria</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Marido /companheiro</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Ela própria e o marido/parceiro juntos</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>A mãe da Mulher</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>O pai da Mulher</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>A sogra</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>O sogro</label>
-            <value>7</value>
-          </item>
-          <item>
-            <label>Outro membro da família da própria mulher</label>
-            <value>8</value>
-          </item>
-          <item>
-            <label>Outro membro da família do marido/parceiro</label>
-            <value>9</value>
-          </item>
-          <item>
-            <label>Amigo / vizinho</label>
-            <value>10</value>
-          </item>
-          <item>
-            <label>Outro</label>
-            <value>11</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/hasPermissionToSeekCare">
-          <label>C12. A pessoa que toma decisões dá-lhe ou tem lhe dado a permissão de fazer visitas regulares de cuidados pré-natais durante esta gravidez?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/hasEmergPermToSeekCare">
-          <label>C13. A pessoa que toma decisões dá ou deu a permissão de procurar cuidados médicos no caso de uma emergência durante esta gravidez, parto ou após o parto?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/whoGivesPermission2">
-          <label>C14. Se a mulher tem um problema urgente ou de emergência durante a gravidez e a pessoa que toma decisões não estiver disponível, quem vai tomar a decisão para que a senhora procure cuidados médicos?</label>
-          <item>
-            <label>Ninguém</label>
-            <value>0</value>
-          </item>
-          <item>
-            <label>Ela própria</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Esposo/Parceiro</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Ela própria e esposo / parceiro juntos</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>A Mãe da mulher</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>O Pai da mulher</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>A Sogra</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>O Sogro</label>
-            <value>7</value>
-          </item>
-          <item>
-            <label>Outro membro da família da mulher</label>
-            <value>8</value>
-          </item>
-          <item>
-            <label>Outro membro da família do esposo</label>
-            <value>9</value>
-          </item>
-          <item>
-            <label>Parteira tradicional/ Trabalhador da saúde</label>
-            <value>10</value>
-          </item>
-          <item>
-            <label>Amigo/Vizinho</label>
-            <value>11</value>
-          </item>
-          <item>
-            <label>Outro</label>
-            <value>12</value>
-          </item>
-          <item>
-            <label>Não Sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/needCompany">
-          <label>C15. É necessário que a pessoa que toma as decisões pela mulher a acompanhe quando vai a procura de cuidados de saúde?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/isEmployed">
-          <label>C16. A principal pessoa que toma as decisões é assalariada?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/hasTransportPlan">
-          <label>C17. A mulher tem um plano de transporte (transporte organizado) para a procura de cuidados de saúde tanto para complicações na gravidez como para o parto?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/transport">
-          <label>C18. Se a mulher tivesse que procurar atendimento para problemas relacionados com a gravidez e o parto, como iria se deslocar?</label>
-          <item>
-            <label>A pé</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Txova</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Bicicleta</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Motorizada</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Veiculo automóvel</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Carroça</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>Transporte público (Chapa/Txopela/Machibombo)</label>
-            <value>7</value>
-          </item>
-          <item>
-            <label>Outro</label>
-            <value>90</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/hasTranspCosts">
-          <label>C19. O transporte iria lhe custar algum dinheiro? (incluir todos custos possíveis)</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <input ref="/Form_D/main/gestagebr/transportCost">
-          <label>C20. Quanto dinheiro custaria em média o transporte? (incluindo todos os custos possíveis)</label>
-        </input>
-        <select1 ref="/Form_D/main/gestagebr/hasSavedMoney">
-          <label>C21. A mulher tem algum dinheiro guardado que pode usar em caso de qualquer emergência que ocorra durante a gravidez?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/gestagebr/nearestHealthUnit">
-          <label>C22. Se a senhora tiver uma emergência obstretica, qual é a unidade sanitária mais próxima que iria recorrer?</label>
-          <item>
-            <label>Unidade Sanitária primária</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Unidade Sanitária secundária</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Unidade Sanitária terciária</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Unidade Sanitária quaternária</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Clínica privada</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Hospital privado</label>
-            <value>6</value>
-          </item>
-        </select1>
-        <input ref="/Form_D/main/gestagebr/nearestHealthUnitTime">
-          <label>C22.1. Quanto tempo levaria (em horas e minutos) para chegar a unidade sanitária mais próxima?</label>
-          <hint>Horas:Minutos</hint>
-        </input>
-      </group>
-      <group ref="/Form_D/main/eclampsia">
-        <label>SECÇÃO D: CONHECIMENTO DE PRE-ECLAMPSIA</label>
-        <select1 ref="/Form_D/main/eclampsia/hasKnowlBleed">
-          <label>D1. A mulher sabe que as mulheres podem ter sangramento anormal após o parto?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/eclampsia/hasKnowlTensAlta">
-          <label>D2. A mulher sabe que as mulheres podem ter tensão alta durante a gravidez?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/eclampsia/hasKnowlTensAltaDeath">
-          <label>D3. A mulher sabe que a tensão alta pode causar a morte em mulheres grávidas?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/Form_D/main/eclampsia/hasKnowlConvulsoes">
-          <label>D4. A mulher sabe que as mulheres podem ter convulsões durante a gravidez?</label>
-          <item>
-            <label>Sim</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Não</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select ref="/Form_D/main/eclampsia/signalAlert">
-          <label>D5. Seleccionar todas as opções de sintomas que a mulher for a mencionar e se caso ela não mencione nenhuma escolhe a opção Não Sabe</label>
-          <item>
-            <label>Dor de cabeça</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Perturbação Visual</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Dor no peito</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Falta de ar</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Náuseas e vómitos</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Dor abdominal</label>
-            <value>6</value>
-          </item>
-          <item>
-            <label>Sangramento vaginal</label>
-            <value>7</value>
-          </item>
-          <item>
-            <label>Perda de consciência</label>
-            <value>8</value>
-          </item>
-          <item>
-            <label>Acidente vascular cerebral (trombose, paralisia/ fraqueza num lado do corpo, durante 2 dias ou mais, ou cegueira causado por tensão alta).</label>
-            <value>9</value>
-          </item>
-          <item>
-            <label>Convulsões</label>
-            <value>10</value>
-          </item>
-          <item>
-            <label>Não sabe</label>
-            <value>99</value>
-          </item>
-        </select>
       </group>
       <group ref="/Form_D/main/mhistory">
         <label>SECÇÃO E: HISTÓRIA CLÍNICA</label>
@@ -1729,11 +1261,11 @@
             <value>2</value>
           </item>
           <item>
-            <label>Unidade sanitária de nível primário Pública</label>
+            <label>Unidade Sanitária de Nível Primário Pública</label>
             <value>3</value>
           </item>
           <item>
-            <label>Unidade Sanitária de nível superior pública</label>
+            <label>Unidade Sanitária de Nível Superior Pública</label>
             <value>4</value>
           </item>
           <item>

@@ -944,7 +944,7 @@
           </item>
         </select1>
         <input ref="/Facility/arrive_alives/maternal_interv/blood_trans4_dur">
-          <label>Número de dias</label>
+          <label>Número de litros (unidates)</label>
         </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/uterine_comp">
           <label>F4.22.Compressão uterina</label>

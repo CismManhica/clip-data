@@ -374,7 +374,7 @@
       <bind nodeset="/Form_E/main/birthinfo/babyGender" relevant=" /Form_E/main/birthinfo/manyBabies !=99"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrMen" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrWoman" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/birthinfo/birthSamePlace" relevant=" /Form_E/main/birthinfo/manyBabies =99" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/birthSamePlace" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/birthinfo/expectedBirthplace" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/birthinfo/laborParticipator" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="select"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisits" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="int"/>
@@ -450,11 +450,11 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op5" required="true()" type="int"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/consultsWithDoctors/op6" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/perinatals/costDetails/seekCare" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/perinatals/costDetails/healthUnitType" type="select1"/>
+      <bind nodeset="/Form_E/main/perinatals/costDetails/healthUnitType" relevant="1!=1" type="select1"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/howManyhealthUnit" relevant="indexed-repeat( /Form_E/main/perinatals/costDetails/seekCare , /Form_E/main/perinatals , position(..)) =1" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital" relevant="indexed-repeat( /Form_E/main/perinatals/costDetails/seekCare , /Form_E/main/perinatals , position(..)) =1"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital/op1" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital/op2" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital/op1" relevant="indexed-repeat( /Form_E/main/perinatals/costDetails/seekCare , /Form_E/main/perinatals , position(..)) =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/nightsInHospital/op2" relevant="indexed-repeat( /Form_E/main/perinatals/costDetails/seekCare , /Form_E/main/perinatals , position(..)) =1" required="true()" type="int"/>
       <bind nodeset="/Form_E/main/perinatals/costDetails/helthUnit" relevant="indexed-repeat( /Form_E/main/perinatals/costDetails/seekCare , /Form_E/main/perinatals , position(..)) =1" required="true()" type="select1"/>
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/perinatals/costDetails/helthUnitTime" relevant="indexed-repeat( /Form_E/main/perinatals/costDetails/seekCare , /Form_E/main/perinatals , position(..)) =1" required="true()" type="string"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/perinatals/costDetails/extConsults" required="true()" type="int"/>

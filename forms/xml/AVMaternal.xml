@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>AV Materna</h:title>
     <model>
@@ -272,7 +272,7 @@
       <bind nodeset="/AVMaternal/main/education" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithIntervieweeSpec" relevant=" /AVMaternal/main/relationWithInterviewee =11" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
+      <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/wasMarried" required="true()" type="select1"/>
@@ -315,23 +315,23 @@
       <bind nodeset="/AVMaternal/main/lesionHistory/wasMotorcycle" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/wasBicycle" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/wasOther" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/injuredFalling" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/drowning" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/burns" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/bite" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/dog" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/snake" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/insect" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/forceOfNature" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/intoxication" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/knife" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/machines" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2 and  /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/injuredAcident !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredFalling" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/drowning" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/burns" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/bite" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/dog" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/snake" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/insect" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/forceOfNature" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intoxication" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knife" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/machines" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms/swellingBreast" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms/hadVaginalBleeding" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6WeeksAfter" required="true()" type="select1"/>
@@ -1085,7 +1085,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
       <group ref="/AVMaternal/main/lesionHistory">
         <label>SECCÃO D: HISTÓRIA DE LESÕES / ACIDENTES</label>
         <select1 ref="/AVMaternal/main/lesionHistory/hadAccident">
-          <label>D1.Ela sofreu de alguma lesão ou acidente que levou à sua morte?</label>
+          <label>D1.Ela sofreu de alguma lesão ou acidente rodoviário que levou à sua morte?</label>
           <item>
             <label>Sim</label>
             <value>1</value>

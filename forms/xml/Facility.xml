@@ -18,6 +18,7 @@
             <name/>
             <addr/>
             <phone/>
+            <belongsToCLIP/>
             <clip_id/>
           </demogfafic_info>
           <visit_info>
@@ -259,8 +260,9 @@
       <bind nodeset="/Facility/demogfafic_info/name" required="true()" type="string"/>
       <bind nodeset="/Facility/demogfafic_info/addr" required="true()" type="string"/>
       <bind nodeset="/Facility/demogfafic_info/phone" required="true()" type="int"/>
+      <bind nodeset="/Facility/demogfafic_info/belongsToCLIP" type="select1"/>
       <bind constraint="(regex(., '^((0[1-9])|(1[0-2]))-[0-9]{4}-[0-9]{3}-([0-9]{2})-((0[1-9])|(1[0-2]))$'))" jr:constraintMsg="Preencha com o formato XX-XXXX-XXX-XX-XX
-. Se a mulher não tem número do estudo CLIP, escreva NA" nodeset="/Facility/demogfafic_info/clip_id" required="true()" type="string"/>
+. Se a mulher não tem número do estudo CLIP, escreva NA" nodeset="/Facility/demogfafic_info/clip_id" relevant=" /Facility/demogfafic_info/belongsToCLIP =1" required="true()" type="string"/>
       <bind nodeset="/Facility/visit_info/arrival" required="true()" type="select1"/>
       <bind nodeset="/Facility/visit_info/transferred" relevant=" /Facility/visit_info/arrival =0" required="true()" type="select1"/>
       <bind nodeset="/Facility/visit_info/date_arrived" required="true()" type="date"/>
@@ -485,6 +487,21 @@
       <input ref="/Facility/demogfafic_info/phone">
         <label>F2.3.Número de telefone</label>
       </input>
+      <select1 ref="/Facility/demogfafic_info/belongsToCLIP">
+        <label>F2.3.1. A Senhora pertence ao estudo CLIP?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Nao</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Nao sabe</label>
+          <value>3</value>
+        </item>
+      </select1>
       <input ref="/Facility/demogfafic_info/clip_id">
         <label>F2.4.Número de Identificação do estudo CLIP</label>
         <hint>Preencha com o formato XX-XXXX-XXX-XX-XX
@@ -944,7 +961,7 @@
           </item>
         </select1>
         <input ref="/Facility/arrive_alives/maternal_interv/blood_trans4_dur">
-          <label>Número de litros (unidates)</label>
+          <label>Número de litros (unidades)</label>
         </input>
         <select1 ref="/Facility/arrive_alives/maternal_interv/uterine_comp">
           <label>F4.22.Compressão uterina</label>

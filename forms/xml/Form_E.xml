@@ -361,7 +361,6 @@
       <bind nodeset="/Form_E/main/brthprep/transport" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/brthprep/transportCost" required="true()" type="select1"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/brthprep/transportCostVal" relevant=" /Form_E/main/brthprep/transportCost  = 1" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/brthprep/time_to_hf" readonly="true()"/>
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/brthprep/time_to_hf/hf_1" type="string"/>
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/brthprep/time_to_hf/hf_2" type="string"/>
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/brthprep/time_to_hf/hf_3" type="string"/>
@@ -696,7 +695,8 @@
         </input>
       </group>
       <group ref="/Form_E/main/seekcare">
-        <label>SECÇÃO C: CUIDADOS EM BUSCA DE COMPORTAMENTO <output value=" /Form_E/main/women/loadSection "/> and DAYS <output value=" /Form_E/main/women/daysAfterBirth "/></label><select1 ref="/Form_E/main/seekcare/searchdPreNatalCare">
+        <label>SECÇÃO C: CUIDADOS EM BUSCA DE COMPORTAMENTO</label>
+        <select1 ref="/Form_E/main/seekcare/searchdPreNatalCare">
           <label>C1. A senhora procurou qualquer cuidado pré-natal para a gravidez a um médico qualificado, enfermeira, parteira ou médico tradicional?</label>
           <item>
             <label>Sim</label>

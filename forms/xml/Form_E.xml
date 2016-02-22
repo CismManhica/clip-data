@@ -2773,7 +2773,7 @@
         </repeat>
       </group>
       <group ref="/Form_E/main/mresponses">
-        <label>SECÇÃO J: CONDIÇÕES E INTERVENÇÕES MATERNA. (Esta secção deve ser preenchida para as mulheres que estão vivas e tiveram o parto de pelo menos um bebé desde que a casa foi visitada pela última vez)</label>
+        <label>SECÇÃO J: CONDIÇÕES E INTERVENÇÕES MATERNA (Esta secção deve ser preenchida para as mulheres que estão vivas e tiveram o parto de pelo menos um bebé desde que a casa foi visitada pela última vez)</label>
         <input ref="/Form_E/main/mresponses/text">
           <label>DURANTE A GRAVIDEZ MAIS RECENTE:</label>
         </input>

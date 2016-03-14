@@ -45,6 +45,7 @@
               <hasFichaPrenatal/>
               <estimatedDob/>
               <howPregDeterminated/>
+              <gestageAge/>
               <knowsLastPeriodDate/>
               <lastPeriodDate/>
               <isPlaningBirthHere/>
@@ -116,12 +117,12 @@
       <bind nodeset="/Form_D/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/locationId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D/fieldWorkerId" readonly="true()" required="true()" type="string"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2014-09-09'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (05-06-2014) e menor ou igual a data de hoje" nodeset="/Form_D/visitDate" required="true()" type="date"/>
-      <bind constraint=".=1" jr:constraintMsg="O consentimento não foi assinado, saia do formulario sem salvar." nodeset="/Form_D/consent" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2016-01-01'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (01-01-2016) e menor ou igual a data de hoje" nodeset="/Form_D/visitDate" required="true()" type="date"/>
+      <bind jr:constraintMsg="O consentimento não foi assinado, saia do formulario sem salvar." nodeset="/Form_D/consent" required="true()" type="select1"/>
       <bind nodeset="/Form_D/intervieweeName" required="true()" type="string"/>
       <bind constraint="int((today() - .) div 365.24) &gt; 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/Form_D/intervieweeDob" required="true()" type="date"/>
-      <bind constraint=".=1" jr:constraintMsg="O respondente não vive neste agregado, não será possivel continuar com o formulário, saia do formulario sem salvar." nodeset="/Form_D/intervieweeInHouse" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main" relevant=" /Form_D/intervieweeInHouse =1"/>
+      <bind jr:constraintMsg="O respondente não vive neste agregado, não será possivel continuar com o formulário, saia do formulario sem salvar." nodeset="/Form_D/intervieweeInHouse" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main" relevant=" /Form_D/intervieweeInHouse =1 and  /Form_D/consent =1"/>
       <bind nodeset="/Form_D/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/relationWithIntervieweeSpec" relevant=" /Form_D/main/relationWithInterviewee =10" required="true()" type="string"/>
       <bind nodeset="/Form_D/main/pregwomen/fullname" readonly="true()" required="true()" type="string"/>
@@ -143,8 +144,9 @@
       <bind nodeset="/Form_D/main/gestagebr" relevant=" /Form_D/main/hasGivenBirth =2"/>
       <bind nodeset="/Form_D/main/gestagebr/hasEstimatedDob" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/gestagebr/hasFichaPrenatal" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/gestagebr/estimatedDob" relevant=" /Form_D/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
+      <bind constraint="(int((today() - .) div 30.44) &lt; 1) and (int((today() - .) div 30.44) &gt; -9)" nodeset="/Form_D/main/gestagebr/estimatedDob" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="date"/>
       <bind nodeset="/Form_D/main/gestagebr/howPregDeterminated" relevant=" /Form_D/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;0) and (. &lt;= 9)" nodeset="/Form_D/main/gestagebr/gestageAge" required="true()" type="int"/>
       <bind nodeset="/Form_D/main/gestagebr/knowsLastPeriodDate" required="true()" type="select1"/>
       <bind constraint=". &lt;= today()" nodeset="/Form_D/main/gestagebr/lastPeriodDate" relevant=" /Form_D/main/gestagebr/knowsLastPeriodDate =1" required="true()" type="date"/>
       <bind nodeset="/Form_D/main/gestagebr/isPlaningBirthHere" type="select1"/>
@@ -153,14 +155,14 @@
       <bind nodeset="/Form_D/main/mhistory/e_intro" readonly="true()" type="string"/>
       <bind nodeset="/Form_D/main/mhistory/hasTensaoAlta" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/mhistory/hasPillsTensaAlta" relevant=" /Form_D/main/mhistory/hasTensaoAlta =1" required="true()" type="select1"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" nodeset="/Form_D/main/mhistory/hwmanyPills" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;0) or (. = -99)" nodeset="/Form_D/main/mhistory/hwmanyPills" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="int"/>
       <bind nodeset="/Form_D/main/mhistory/e3" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1"/>
       <bind nodeset="/Form_D/main/mhistory/e3/pillsName1" required="true()" type="string"/>
       <bind nodeset="/Form_D/main/mhistory/e3/pillsName2" required="true()" type="string"/>
       <bind nodeset="/Form_D/main/mhistory/e3/pillsName3" required="true()" type="string"/>
       <bind constraint=". &lt;= today()" nodeset="/Form_D/main/mhistory/e3/medicationStartDate" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="date"/>
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/pillsTotalCost" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="decimal"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/pillsTimeMedication" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a um (01) ou (-99) se não sabe" nodeset="/Form_D/main/mhistory/pillsTimeMedication" relevant=" /Form_D/main/mhistory/hasPillsTensaAlta =1" required="true()" type="int"/>
       <bind nodeset="/Form_D/main/mhistory/hasConvulsoes" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/mhistory/hasDiabetes" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/mhistory/hasMalaria" required="true()" type="select1"/>
@@ -173,7 +175,7 @@
       <bind nodeset="/Form_D/main/mhistory/needsHelp" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/mhistory/hiredSomeone" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/ohistory" relevant=" /Form_D/main/hasGivenBirth =2"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/ohistory/nrOfPregnancies" required="true()" type="int"/>
+      <bind constraint="(. &gt;0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a um (1) ou (-99) se não sabe" nodeset="/Form_D/main/ohistory/nrOfPregnancies" required="true()" type="int"/>
       <bind constraint=". &lt;=  /Form_D/main/ohistory/nrOfPregnancies " jr:constraintMsg="O valor dever ser menor ou igual ao número de gravidezes" nodeset="/Form_D/main/ohistory/nrOfMiscarriages" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
       <bind constraint=". &lt;= ( /Form_D/main/ohistory/nrOfPregnancies - /Form_D/main/ohistory/nrOfMiscarriages )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes e aborto espontâneo" nodeset="/Form_D/main/ohistory/nrOfInducedAbortions" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
       <bind constraint=". &lt;= ( /Form_D/main/ohistory/nrOfPregnancies - /Form_D/main/ohistory/nrOfMiscarriages - /Form_D/main/ohistory/nrOfInducedAbortions )" jr:constraintMsg="O valor dever ser menor ou igual à diferença entre número de gravidezes, aborto espontâneo e aborto induzido" nodeset="/Form_D/main/ohistory/nrOfStiilborn" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="int"/>
@@ -820,7 +822,7 @@
       </group>
       <select1 ref="/Form_D/main/hasGivenBirth">
         <label>B14. A mulher encontra-se actualmente grávida?</label>
-        <hint>SE AO CHEGAR A CASA A MULHER JA TIVER DADO PARTO SEM TER UM REGISTO DE GRAVIDEZ RESPONDA SIM, E DEPOIS ABRA O FORM-E.</hint>
+        <hint>SE AO CHEGAR A CASA A MULHER JA TIVER DADO PARTO SEM TER UM REGISTO DE GRAVIDEZ RESPONDA NÃO, E DEPOIS ABRA O FORM-E.</hint>
         <item>
           <label>Não</label>
           <value>1</value>
@@ -856,7 +858,7 @@
         </select1>
         <input ref="/Form_D/main/gestagebr/estimatedDob">
           <label>C2. Data estimada do parto</label>
-          <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
+          <hint>SE NÃO SABE A DATA EXACTA COLOQUE A DATA APROXIMADA</hint>
         </input>
         <select1 ref="/Form_D/main/gestagebr/howPregDeterminated">
           <label>C3. Como é que a gravidez foi determinada?</label>
@@ -877,6 +879,10 @@
             <value>99</value>
           </item>
         </select1>
+        <input ref="/Form_D/main/gestagebr/gestageAge">
+          <label>C3.1. Número aproximado de meses da gravidez</label>
+          <hint>SE NÃO SABE O NUMERO EXACTO COLOQUE APROXIMADA</hint>
+        </input>
         <select1 ref="/Form_D/main/gestagebr/knowsLastPeriodDate">
           <label>C4. Conhece a data em que iniciou a sua última menstruação?</label>
           <item>
@@ -890,7 +896,7 @@
         </select1>
         <input ref="/Form_D/main/gestagebr/lastPeriodDate">
           <label>C5. Data do início da última menstruação</label>
-          <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
+          <hint>SE NÃO SABE A DATA EXACTA COLOQUE A DATA APROXIMADA</hint>
         </input>
         <select1 ref="/Form_D/main/gestagebr/isPlaningBirthHere">
           <label>C6. A mulher tem plano de ter o parto nesta localidade?</label>
@@ -961,7 +967,7 @@
             <label>3. Nome do medicamento</label>
           </input>
           <input ref="/Form_D/main/mhistory/e3/medicationStartDate">
-            <label>E3.1. Desde quando a mulher está a tomar estes medicamentos</label>
+            <label>E3.2. Desde quando a mulher está a tomar estes medicamentos</label>
             <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
           </input>
         </group>

@@ -956,7 +956,7 @@
           <label>E3. Quantos medicamentos a senhora esta a tomar para tensão alta?</label>
         </input>
         <group ref="/Form_D/main/mhistory/e3">
-          <label>E3.1.Listar os nomes dos medicamentos, que a mulher está a tomar para a tensão alta (três no máximo)</label>
+          <label>E3.1.Por favor, indique os nomes de pelo menos três medicamentos que a senhora tomou para a tensão alta antes desta gravidez</label>
           <input ref="/Form_D/main/mhistory/e3/pillsName1">
             <label>1. Nome do medicamento</label>
           </input>
@@ -972,7 +972,7 @@
           </input>
         </group>
         <input ref="/Form_D/main/mhistory/pillsTotalCost">
-          <label>E4. Quanto a mulher gastou por cada um dos medicamentos listados acima na última aquisição?</label>
+          <label>E4. Quanto a mulher gastou por cada um dos medicamentos listados acima na última aquisição (compra/receita)?</label>
         </input>
         <input ref="/Form_D/main/mhistory/pillsTimeMedication">
           <label>E4.1. Por quanto tempo tomou os medicamentos de tensão alta desta última aquisição? (Número de Dias)</label>

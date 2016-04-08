@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
     <h:title>AV Materna</h:title>
     <model>
@@ -37,6 +37,7 @@
               <dthLocation/>
               <wasMarried/>
               <dthBefore42d/>
+              <dthBefore42days/>
             </dthDetails>
             <historyContext>
               <txt/>
@@ -277,6 +278,7 @@
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/wasMarried" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthBefore42d" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/dthDetails/dthBefore42days" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/txt" readonly="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadTb" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHIV" required="true()" type="select1"/>
@@ -731,7 +733,22 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/dthDetails/dthBefore42d">
-          <label>B4. Esta mulher morreu com mais de 42 dias, mas menos de um ano depois de estar grávida ou ter dado parto?</label>
+          <label>B4. Esta mulher morreu grávida ou entre a data do parto até um ano depois de ter dado parto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
+          </item>
+        </select1>
+        <select1 ref="/AVMaternal/main/dthDetails/dthBefore42days">
+          <label>B4.1. Esta mulher morreu grávida ou entre a data do parto até 42 dias depois do parto</label>
           <item>
             <label>Sim</label>
             <value>1</value>

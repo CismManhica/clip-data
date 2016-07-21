@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
     <h:title>AV Neonato</h:title>
     <model>
@@ -18,7 +18,6 @@
           <motherPermId/>
           <motherId/>
           <name/>
-          <clipId/>
           <permId/>
           <dob/>
           <visitDate/>
@@ -197,10 +196,9 @@
       <bind nodeset="/AVNeonate/motherPermId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/motherId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/name" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/clipId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/permId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-04'))" nodeset="/AVNeonate/dob" required="true()" type="date"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2016-05-01'))" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
+      <bind nodeset="/AVNeonate/dob" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/completedAutopsy" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/cause" relevant=" /AVNeonate/completedAutopsy =2" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/causeSpec" relevant=" /AVNeonate/cause =5" required="true()" type="string"/>
@@ -213,7 +211,7 @@
       <bind nodeset="/AVNeonate/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/relationWithIntervieweeSpec" relevant=" /AVNeonate/main/relationWithInterviewee =11" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-04'))" nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
+      <bind nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind constraint=".&lt;=28" nodeset="/AVNeonate/main/dthDetails/dthAge" required="true()" type="int"/>
       <bind nodeset="/AVNeonate/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/dthDetails/gender" required="true()" type="select1"/>
@@ -240,7 +238,7 @@
       <bind nodeset="/AVNeonate/main/childStatus/breatheAfterLabor" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/breatheAssistence" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/birthCry" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/childStatus/birthDead" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/childStatus/birthDead" relevant=" /AVNeonate/main/childStatus/birthCry =2" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/decompositionSignals" relevant=" /AVNeonate/main/childStatus/birthDead =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/birthHospital" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/bithHome" relevant=" /AVNeonate/main/laborHistory/birthHospital !=1" required="true()" type="select1"/>
@@ -248,41 +246,39 @@
       <bind nodeset="/AVNeonate/main/laborHistory/motherAssistence" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/birthAfterBag24h" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/normalBirth" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/laborHistory/birthTweezers" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/laborHistory/birthTweezers" relevant=" /AVNeonate/main/laborHistory/normalBirth !=1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/caesarianBirth" relevant=" /AVNeonate/main/laborHistory/normalBirth !=1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/laborHistory/insideVag" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory" relevant=" /AVNeonate/main/childStatus/birthDead !=1"/>
+      <bind nodeset="/AVNeonate/main/laborHistory/insideVag" relevant=" /AVNeonate/main/laborHistory/normalBirth !=1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/lesoesHistory/hadAccident" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/lesoesHistory/carCrash" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/footCrash" relevant=" /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/carCrashIn" relevant=" /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/carCrashInHeavy" relevant=" /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/motorcycleCrash" relevant=" /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/knewAboutAccident" relevant=" /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasPedestrian" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasObject" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasCar" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasAutoCar" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasMotorcycle" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasBicycle" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/wasOther" relevant=" /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/footCrash" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/carCrashIn" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/carCrashInHeavy" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/motorcycleCrash" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/carCrash =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/knewAboutAccident" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasPedestrian" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasObject" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasCar" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasAutoCar" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasMotorcycle" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasBicycle" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/wasOther" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/knewAboutAccident =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/lesoesHistory/injuredAcident" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/injuredFalling" relevant=" /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/drowning" relevant=" /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/burns" relevant=" /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/bite" relevant=" /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/dog" relevant=" /AVNeonate/main/lesoesHistory/bite =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/snake" relevant=" /AVNeonate/main/lesoesHistory/bite =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/insect" relevant=" /AVNeonate/main/lesoesHistory/bite =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/forceOfNature" relevant=" /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/intoxication" relevant=" /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/aggression" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/intentionally" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/firearm" relevant=" /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/knife" relevant=" /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/machines" relevant=" /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/lesoesHistory/animarOrObject" relevant=" /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory" relevant=" /AVNeonate/main/childStatus/birthDead !=1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/injuredFalling" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/drowning" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/burns" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/bite" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/dog" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/bite =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/snake" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/bite =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/insect" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/bite =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/forceOfNature" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/intoxication" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/aggression" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/intentionally" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/firearm" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/knife" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/machines" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/lesoesHistory/animarOrObject" relevant=" /AVNeonate/main/lesoesHistory/hadAccident =1 and  /AVNeonate/main/lesoesHistory/injuredAcident =1 and  /AVNeonate/main/lesoesHistory/intentionally =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/rainySeason" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/drySeason" relevant=" /AVNeonate/main/neoillHistory/rainySeason !=1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/sick2dth" required="true()" type="select1"/>
@@ -294,9 +290,9 @@
       <bind nodeset="/AVNeonate/main/neoillHistory/convultions2d" relevant=" /AVNeonate/main/neoillHistory/convultionsg =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/rigidBody" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/salience" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/cavity" relevant=" /AVNeonate/main/neoillHistory/salience !=1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/noResponse24h" relevant=" /AVNeonate/main/neoillHistory/cavity =1 or  /AVNeonate/main/neoillHistory/salience =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/noResponse" relevant=" /AVNeonate/main/neoillHistory/cavity =1 or  /AVNeonate/main/neoillHistory/salience =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/cavity" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/noResponse24h" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/noResponse" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/hadFever" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/wasCold" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/cough" required="true()" type="select1"/>
@@ -310,16 +306,15 @@
       <bind nodeset="/AVNeonate/main/neoillHistory/bloodFezes" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/vomit" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/vomitCoffee" relevant=" /AVNeonate/main/neoillHistory/vomit =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/abdomenProtuberante" relevant=" /AVNeonate/main/neoillHistory/vomit =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/abdomenProtuberante" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/redOrSecretion" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/skinProblem" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/ulceraExcep" relevant=" /AVNeonate/main/neoillHistory/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/ulceraOther" relevant=" /AVNeonate/main/neoillHistory/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/erupcaoCutanea" relevant=" /AVNeonate/main/neoillHistory/skinProblem =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/erupcaoSarampo" relevant=" /AVNeonate/main/neoillHistory/erupcaoCutanea =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/erupcaoSarampo" relevant=" /AVNeonate/main/neoillHistory/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/yelowPalms" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/hadTTY" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/treatments" relevant=" /AVNeonate/main/childStatus/birthDead !=1"/>
       <bind nodeset="/AVNeonate/main/treatments/vacinated" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/hadtreatments" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/reidratation" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
@@ -328,20 +323,20 @@
       <bind nodeset="/AVNeonate/main/treatments/tuboNariz" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/antiBioticos" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/operation" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/treatments/operation1Mth" relevant=" /AVNeonate/main/treatments/operation =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/treatments/operation1Mth" relevant=" /AVNeonate/main/treatments/hadtreatments =1 and  /AVNeonate/main/treatments/operation =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/treatments/dischargedSick" relevant=" /AVNeonate/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/socialAutopsy/locationChild" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/action" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/actionComander" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2" required="true()" type="select1"/>
-      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVNeonate/main/socialAutopsy/timeDecision" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/problemsToHospital" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2" required="true()" type="select"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/healthCare" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/action !=3" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/hadDecided" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/healthCare =1 and  /AVNeonate/main/socialAutopsy/action !=3" required="true()" type="select1"/>
-      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVNeonate/main/socialAutopsy/timePassed" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/healthCare =1 and  /AVNeonate/main/socialAutopsy/action !=3" required="true()" type="string"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/cost" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/gainMoney" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
-      <bind constraint="(. &gt;0) or (. = -99)" nodeset="/AVNeonate/main/socialAutopsy/distancy" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
-      <bind nodeset="/AVNeonate/main/socialAutopsy/vehicle" relevant=" /AVNeonate/main/socialAutopsy/locationChild !=2 and  /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/action" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/actionComander" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVNeonate/main/socialAutopsy/timeDecision" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/problemsToHospital" required="true()" type="select"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/healthCare" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/hadDecided" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVNeonate/main/socialAutopsy/timePassed" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="string"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/cost" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/gainMoney" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/distancy" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
+      <bind nodeset="/AVNeonate/main/socialAutopsy/vehicle" relevant=" /AVNeonate/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
       <bind nodeset="/AVNeonate/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVNeonate/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;AVNeonate-&quot;, /AVNeonate/permId )" nodeset="/AVNeonate/meta/instanceName" type="string"/>
@@ -391,13 +386,8 @@
     <input ref="/AVNeonate/name">
       <label>A4. Nome do(a) falecido(a)</label>
     </input>
-    <input ref="/AVNeonate/clipId">
-      <label>A5.CLIP ID do(a) Felecido(a)</label>
-      <hint>xx-xxxx-xxx-xx-xx</hint>
-    </input>
     <input ref="/AVNeonate/permId">
       <label>A5.Perm ID do(a) Felecido(a)</label>
-      <hint>xx-xxxx-xxx-xx-xx-xx</hint>
     </input>
     <input ref="/AVNeonate/dob">
       <label>A6. Data de nascimento do(a) falecido(a)</label>
@@ -2469,7 +2459,7 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
         <input ref="/AVNeonate/main/socialAutopsy/cost">
           <label>I9.Qual foi o custo de transporte?</label>
         </input>
-        <select ref="/AVNeonate/main/socialAutopsy/gainMoney">
+        <select1 ref="/AVNeonate/main/socialAutopsy/gainMoney">
           <label>I10.Como eles arranjaram esse dinheiro?</label>
           <item>
             <label>Tinham fundos disponíveis</label>
@@ -2499,10 +2489,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
             <label>Não sabe</label>
             <value>99</value>
           </item>
-        </select>
+        </select1>
         <input ref="/AVNeonate/main/socialAutopsy/distancy">
           <label>I11.Qual é a distância, em Km, de casa (ponto de partida) para a unidade final?</label>
-          <hint>Distancia em Kilometros ou -99 se nao sabe</hint>
+          <hint>Distância em Kilometros</hint>
         </input>
         <select ref="/AVNeonate/main/socialAutopsy/vehicle">
           <label>I12.Qual método de transporte foi utilizado para levar o bebê para lá?</label>

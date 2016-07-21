@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
     <h:title>AV Materna</h:title>
     <model>
@@ -15,7 +15,6 @@
           <locationId/>
           <fieldWorkerId/>
           <permId/>
-          <clipId/>
           <name/>
           <dob/>
           <visitDate/>
@@ -260,10 +259,9 @@
       <bind nodeset="/AVMaternal/locationId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/permId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/clipId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/name" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
-      <bind constraint="(int((today() - .) div 365.24) &gt;= 12) and (int((today() - .) div 365.24) &lt;= 51)" nodeset="/AVMaternal/dob" required="true()" type="date"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2016-05-01'))" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
+      <bind nodeset="/AVMaternal/dob" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/completedAutopsy" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/cause" relevant=" /AVMaternal/completedAutopsy =2" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/causeSpec" relevant=" /AVMaternal/cause =5" required="true()" type="string"/>
@@ -276,7 +274,7 @@
       <bind nodeset="/AVMaternal/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithIntervieweeSpec" relevant=" /AVMaternal/main/relationWithInterviewee =11" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-04'))" nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
+      <bind nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/wasMarried" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthBefore42d" required="true()" type="select1"/>
@@ -301,54 +299,54 @@
       <bind nodeset="/AVMaternal/main/historyContext/hadKidneyDisease" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadLiverDisease" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/dthRainySeason" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/historyContext/dthDrySeason" relevant=" /AVMaternal/main/historyContext/dthRainySeason !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/dthDrySeason" relevant=" /AVMaternal/main/historyContext/dthRainySeason =2" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/sickPeriod" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/diedSuddenly" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/hadAccident" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/carCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/footCrash" relevant=" /AVMaternal/main/lesionHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashIn" relevant=" /AVMaternal/main/lesionHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashInHeavy" relevant=" /AVMaternal/main/lesionHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/motorcycleCrash" relevant=" /AVMaternal/main/lesionHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/knewAboutAccident" relevant=" /AVMaternal/main/lesionHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/counterpartReached" relevant=" /AVMaternal/main/lesionHistory/carCrash =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasPedestrian" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasObject" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasCar" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasAutoCar" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasMotorcycle" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasBicycle" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/wasOther" relevant=" /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/footCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashIn" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/carCrashInHeavy" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/motorcycleCrash" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knewAboutAccident" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/counterpartReached" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasPedestrian" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasObject" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasCar" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasAutoCar" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasMotorcycle" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasBicycle" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/wasOther" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1 and  /AVMaternal/main/lesionHistory/counterpartReached =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/injuredAcident" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/injuredFalling" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/drowning" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/burns" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/bite" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/dog" relevant=" /AVMaternal/main/lesionHistory/bite =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/snake" relevant=" /AVMaternal/main/lesionHistory/bite =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/insect" relevant=" /AVMaternal/main/lesionHistory/bite =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/dog" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/snake" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/insect" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/forceOfNature" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/intoxication" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" relevant=" /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/knife" relevant=" /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/machines" relevant=" /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" relevant=" /AVMaternal/main/lesionHistory/intentionally =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" relevant=" /AVMaternal/main/lesionHistory/hadAccident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/aggression" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/intentionally" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/firearm" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/knife" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/machines" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/animarOrObject" relevant=" /AVMaternal/main/lesionHistory/injuredAcident =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesionHistory/committedSuicide" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms/swellingBreast" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/symptoms/hadVaginalBleeding" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6WeeksAfter" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/wasPregnant" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6wks" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/wasPregnant !=1" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/death6Weeks" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/death24hLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6wks !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/deathInLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/wasPregnant =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/wasBreastfeeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6wks !=2" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/death24hLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/deathInLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/wasBreastfeeding" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/death6Weeks !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/was1stPregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/hmanyBirths" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy =2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/hadCesarian" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy =2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/deathAfterMultiplePreg" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hmanyBirths" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/hadCesarian" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/deathAfterMultiplePreg" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/was1stPregnancy !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/highTension" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hadVaginalDischarge" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/suffedConvultions" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -358,7 +356,7 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding6Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleeding3Months" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingAfterLabor" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/vaginalBleeding =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/vaginalBleedingAfterLabor" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/placenta" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/misplacedBaby" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/longLabor" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -366,7 +364,7 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/pregnancyAbortion" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/birthHospital" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/birthHome" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHospital !=1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHome !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHospital !=1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/professionalAssistance" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/surgeryRemoveUterus" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hadNoemalLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -382,8 +380,8 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/coughBlood" relevant=" /AVMaternal/main/lastSymptoms/cough =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/breathProblems" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/kwickBreath" relevant=" /AVMaternal/main/lastSymptoms/breathProblems =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/kwickBreathPeriod" relevant=" /AVMaternal/main/lastSymptoms/kwickBreath =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/missAir" relevant=" /AVMaternal/main/lastSymptoms/breathProblems =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/kwickBreathPeriod" relevant=" /AVMaternal/main/lastSymptoms/breathProblems =1 and  /AVMaternal/main/lastSymptoms/kwickBreath =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/missAir" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/missAirPeriod" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/unableCarryActivity" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/missAirSleeping" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
@@ -396,10 +394,10 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/vomitCoffee" relevant=" /AVMaternal/main/lastSymptoms/vomit =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalIssue" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssue" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssuePeriod" relevant=" /AVMaternal/main/lastSymptoms/abdominalSeriousIssue =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/abdomenProtuberant" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalSeriousIssuePeriod" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/abdomenProtuberant" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdomenProtuberantPeriod" relevant=" /AVMaternal/main/lastSymptoms/abdomenProtuberant =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/noduleAbdomen" relevant=" /AVMaternal/main/lastSymptoms/abdominalIssue =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/noduleAbdomen" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/noduleAbdomenPeriod" relevant=" /AVMaternal/main/lastSymptoms/noduleAbdomen =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/severeHeadache" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/painNeck" required="true()" type="select1"/>
@@ -419,9 +417,9 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/ulceraExcep" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/ulceraOther" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/skinRash" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/skinRashPeriod" relevant=" /AVMaternal/main/lastSymptoms/skinRash  = 1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/erupcaoSarampo" relevant=" /AVMaternal/main/lastSymptoms/skinRash  = 1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/herpesZoster" relevant=" /AVMaternal/main/lastSymptoms/skinRash  = 1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/skinRashPeriod" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1 and  /AVMaternal/main/lastSymptoms/skinRash  = 1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/erupcaoSarampo" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/herpesZoster" relevant=" /AVMaternal/main/lastSymptoms/skinProblem =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/bleedMouth" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/weightLoss" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/wasSlim" relevant=" /AVMaternal/main/lastSymptoms/weightLoss =1" required="true()" type="select1"/>
@@ -449,24 +447,24 @@
       <bind nodeset="/AVMaternal/main/treatments/tuboNariz" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/antiBioticos" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/operation" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/treatments/operation1Mth" relevant=" /AVMaternal/main/treatments/operation =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/treatments/operation1Mth" relevant=" /AVMaternal/main/treatments/hadtreatments =1 and  /AVMaternal/main/treatments/operation =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/treatments/dischargedSick" relevant=" /AVMaternal/main/treatments/hadtreatments =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/drankAlcohol" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/drankAlcoholPeriod" relevant=" /AVMaternal/main/riskFactors/drankAlcohol =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/smokedTobacco" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/riskFactors/tobaccoQuantity" relevant=" /AVMaternal/main/riskFactors/smokedTobacco =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/socialAutopsy/locationChild" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/action" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/actionComander" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2" required="true()" type="select1"/>
-      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVMaternal/main/socialAutopsy/timeDecision" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/problemsToHospital" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2" required="true()" type="select"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/healthCare" relevant=" /AVMaternal/main/socialAutopsy/action !=3" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/hadDecided" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1 and  /AVMaternal/main/socialAutopsy/action !=3" required="true()" type="select1"/>
-      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVMaternal/main/socialAutopsy/timePassed" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1 and  /AVMaternal/main/socialAutopsy/action !=3" required="true()" type="string"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/cost" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2 and ( /AVMaternal/main/socialAutopsy/action =3 or  /AVMaternal/main/socialAutopsy/healthCare =1)" required="true()" type="int"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/gainMoney" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2 and ( /AVMaternal/main/socialAutopsy/action =3 or  /AVMaternal/main/socialAutopsy/healthCare =1)" required="true()" type="select"/>
-      <bind constraint="(. &gt;0) or (. = -99)" nodeset="/AVMaternal/main/socialAutopsy/distancy" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2 and ( /AVMaternal/main/socialAutopsy/action =3 or  /AVMaternal/main/socialAutopsy/healthCare =1)" required="true()" type="int"/>
-      <bind nodeset="/AVMaternal/main/socialAutopsy/vehicle" relevant=" /AVMaternal/main/socialAutopsy/locationChild !=2 and ( /AVMaternal/main/socialAutopsy/action =3 or  /AVMaternal/main/socialAutopsy/healthCare =1)" required="true()" type="select"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/action" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/actionComander" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" jr:constraintMsg="Use o formato: Dias:Horas:Minutos" nodeset="/AVMaternal/main/socialAutopsy/timeDecision" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/problemsToHospital" required="true()" type="select"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/healthCare" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/hadDecided" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="select1"/>
+      <bind constraint="regex(., '^([0-9]|([0-9][0-9])):([0-9]|([0-9][0-9])):([0-9]|([0-5][0-9]))$') or .='99'" nodeset="/AVMaternal/main/socialAutopsy/timePassed" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="string"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/cost" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/gainMoney" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1 and  /AVMaternal/main/socialAutopsy/cost &gt;0" required="true()" type="select"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/distancy" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="int"/>
+      <bind nodeset="/AVMaternal/main/socialAutopsy/vehicle" relevant=" /AVMaternal/main/socialAutopsy/healthCare =1" required="true()" type="select"/>
       <bind nodeset="/AVMaternal/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/AVMaternal/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;AVMaternal-&quot;, /AVMaternal/permId )" nodeset="/AVMaternal/meta/instanceName" type="string"/>
@@ -506,9 +504,6 @@
     </input>
     <input ref="/AVMaternal/permId">
       <label>A3. Perm_ID da falecida</label>
-    </input>
-    <input ref="/AVMaternal/clipId">
-      <label>A3.1. CLIP ID da falecida</label>
     </input>
     <input ref="/AVMaternal/name">
       <label>A4. Nome da falecida</label>
@@ -686,7 +681,8 @@
       <group ref="/AVMaternal/main/deceasedData">
         <label>SECCÃO A: INICIO DOS DADOS DA FALECIDA</label>
         <input ref="/AVMaternal/main/deceasedData/dthCircunstacies">
-          <label>A16. Pode dizer-me sobre a doença ou circunstância que levou a morte dela?</label>
+          <label>A16. Pode dizer-me sobre a doença ou circunstância que levou a morte dela?
+Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</label>
         </input>
       </group>
       <group ref="/AVMaternal/main/dthDetails">
@@ -1075,11 +1071,11 @@
         <select1 ref="/AVMaternal/main/historyContext/sickPeriod">
           <label>C21.Por quanto tempo ela esteve doente antes de falecer?</label>
           <item>
-            <label>Menos de 3 semanas</label>
+            <label>Menos de 2 semanas</label>
             <value>1</value>
           </item>
           <item>
-            <label>3 ou mais semanas</label>
+            <label>2 ou mais semanas</label>
             <value>2</value>
           </item>
           <item>
@@ -1451,7 +1447,7 @@
           </item>
         </select1>
         <select1 ref="/AVMaternal/main/lesionHistory/forceOfNature">
-          <label>D24.+ + Ela foi ferida por alguma força da natureza? Exemplo: (relâmpagos, terramoto, vento, cheias, etc.).</label>
+          <label>D24.+ + + Ela foi ferida por alguma força da natureza? Exemplo: (relâmpagos, terramoto, vento, cheias, etc.).</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -1622,7 +1618,7 @@
       <group ref="/AVMaternal/main/lesoesHistory">
         <label>SECCÃO F: HISTÓRIA DE LESÕES / ACIDENTES</label>
         <select1 ref="/AVMaternal/main/lesoesHistory/death6WeeksAfter">
-          <label>F1.A senhora estava gravida no momento da morte ou faleceu dentro de 6 semanas depois de dar parto?</label>
+          <label>F1.A senhora estava gravida ou faleceu dentro de 6 semanas depois de dar parto?</label>
           <item>
             <label>Sim</label>
             <value>1</value>
@@ -2208,11 +2204,11 @@
         <select1 ref="/AVMaternal/main/lastSymptoms/coughPeriod">
           <label>G5.+ Por quanto tempo ela teve tosse?</label>
           <item>
-            <label>Menos de 3 semanas</label>
+            <label>Menos de 2 semanas</label>
             <value>1</value>
           </item>
           <item>
-            <label>3 ou mais semanas</label>
+            <label>2 ou mais semanas</label>
             <value>2</value>
           </item>
           <item>
@@ -2610,11 +2606,11 @@
         <select1 ref="/AVMaternal/main/lastSymptoms/painNeckPeriod">
           <label>G31.+ Por quanto tempo ele/ela teve um torcicolo ou dor no pescoço?</label>
           <item>
-            <label>Menos de 1 semana</label>
+            <label>Menos de 2 semanas</label>
             <value>1</value>
           </item>
           <item>
-            <label>1 ou mais semanas</label>
+            <label>2 ou mais semanas</label>
             <value>2</value>
           </item>
           <item>
@@ -2640,11 +2636,11 @@
         <select1 ref="/AVMaternal/main/lastSymptoms/hadMentalDisorderPeriod">
           <label>G33.+ Por quanto tempo ele/ela teve perturbação mental?</label>
           <item>
-            <label>Menos de 3 meses</label>
+            <label>Menos de 2 semanas</label>
             <value>1</value>
           </item>
           <item>
-            <label>3 ou mais meses</label>
+            <label>2 ou mais semanas</label>
             <value>2</value>
           </item>
           <item>
@@ -2850,11 +2846,11 @@
         <select1 ref="/AVMaternal/main/lastSymptoms/skinRashPeriod">
           <label>G47.+ + Por quanto tempo ela teve borbulhas na pele?</label>
           <item>
-            <label>Menos de 1 semana</label>
+            <label>Menos de 2 semanas</label>
             <value>1</value>
           </item>
           <item>
-            <label>1 ou mais semanas</label>
+            <label>2 ou mais semanas</label>
             <value>2</value>
           </item>
           <item>
@@ -3662,7 +3658,7 @@
         </select>
         <input ref="/AVMaternal/main/socialAutopsy/distancy">
           <label>J11.Qual é a distância, em Km, de casa (ponto de partida) para a unidade final?</label>
-          <hint>Distancia em Kilometros ou -99 se nao sabe</hint>
+          <hint>Distancia em Kilometros</hint>
         </input>
         <select ref="/AVMaternal/main/socialAutopsy/vehicle">
           <label>J12.Qual método de transporte foi utilizado para levá-la para lá?</label>

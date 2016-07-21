@@ -654,7 +654,7 @@
           </item>
         </select1>
         <input ref="/Facility/arrive_alives/admission_info/date_admit">
-          <label>F4.1Data de admissão</label>
+          <label>F4.1.Data de admissão</label>
           <hint>Se desconhecido selecione (01-01-2000)</hint>
         </input>
         <input ref="/Facility/arrive_alives/admission_info/time_admit">

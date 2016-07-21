@@ -29,6 +29,7 @@
               <isAlive/>
               <pregStatusNow/>
               <wasPregnant/>
+              <dthDate/>
               <pregStatusAtDeath/>
               <nrVisitBeforeDelivery/>
               <nrVisitAfterDelivery/>
@@ -120,6 +121,9 @@
               </time_to_hf>
             </brthprep>
             <birthinfo>
+              <hadAbortion/>
+              <abortionType/>
+              <abortionDate/>
               <birthDate/>
               <manyBabies/>
               <babyGender>
@@ -290,6 +294,7 @@
       <bind nodeset="/Form_E/main/women/isAlive" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/women/pregStatusNow" relevant=" /Form_E/main/women/isAlive =1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/women/wasPregnant" relevant=" /Form_E/main/women/isAlive =2" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-24'))" nodeset="/Form_E/main/women/dthDate" relevant=" /Form_E/main/women/isAlive =2" required="true()" type="date"/>
       <bind nodeset="/Form_E/main/women/pregStatusAtDeath" relevant=" /Form_E/main/women/wasPregnant =1" required="true()" type="select1"/>
       <bind constraint=". &gt; 0" jr:constraintMsg="Introduza numeros maiores que zero" nodeset="/Form_E/main/women/nrVisitBeforeDelivery" relevant="1!=1" type="int"/>
       <bind constraint=". &gt; 0" jr:constraintMsg="Introduza numeros maiores que zero" nodeset="/Form_E/main/women/nrVisitAfterDelivery" relevant=" /Form_E/main/women/pregStatusNow =2" required="true()" type="int"/>
@@ -368,33 +373,36 @@
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/brthprep/time_to_hf/pvtClinic" type="string"/>
       <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/brthprep/time_to_hf/pvtHospital" type="string"/>
       <bind nodeset="/Form_E/main/birthinfo" relevant="( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/pregStatusAtDeath =2) and  /Form_E/main/women/wasPregnant !=2"/>
-      <bind calculate="date-time( /Form_E/main/women/dateOfDelivery )" constraint=". &lt;= today()" jr:constraintMsg="A data deve ser igual a preenchida na secção B" nodeset="/Form_E/main/birthinfo/birthDate" required="true()" type="date"/>
-      <bind nodeset="/Form_E/main/birthinfo/manyBabies" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/babyGender" relevant=" /Form_E/main/birthinfo/manyBabies !=99"/>
-      <bind constraint="((. &gt;=0) and (. &lt;=10)) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrMen" required="true()" type="int"/>
-      <bind constraint="((. &gt;=0) and (. &lt;=10)) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrWoman" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/birthinfo/birthSamePlace" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/expectedBirthplace" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/laborParticipator" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="select"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisits" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="int"/>
-      <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/birthinfo/timeToReachLabPlace" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99" required="true()" type="string"/>
-      <bind nodeset="/Form_E/main/birthinfo/laborParticipatorInhome" required="true()" type="select"/>
-      <bind constraint="regex(., '^([0-9][0-9]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/birthinfo/totalHourInLabor" required="true()" type="string"/>
-      <bind nodeset="/Form_E/main/birthinfo/childBirthType" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/haveMeasureTensArt" required="true()" type="select1"/>
-      <bind constraint="(. &gt;0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a um (1) ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisitsTensArt" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/birthinfo/hadInformed" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/areMedicating" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/listofPills" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1"/>
-      <bind nodeset="/Form_E/main/birthinfo/listofPills/op1" required="true()" type="string"/>
-      <bind nodeset="/Form_E/main/birthinfo/listofPills/op2" required="true()" type="string"/>
-      <bind nodeset="/Form_E/main/birthinfo/listofPills/op3" required="true()" type="string"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howMuchSpent" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howLongTakenPills" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="int"/>
-      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyTimesCares" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1" required="true()" type="int"/>
-      <bind nodeset="/Form_E/main/birthinfo/occupation" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1" type="select1"/>
-      <bind nodeset="/Form_E/main/birthinfo/hadvisitedtradMedic" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1" type="select1"/>
-      <bind nodeset="/Form_E/main/fincapacity" relevant="( /Form_E/main/women/pregStatusAtDeath =2 or  /Form_E/main/women/pregStatusNow =2) and  /Form_E/main/women/wasPregnant !=2"/>
+      <bind nodeset="/Form_E/main/birthinfo/hadAbortion" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/abortionType" relevant=" /Form_E/main/birthinfo/hadAbortion  = 1" type="select1"/>
+      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-24'))" nodeset="/Form_E/main/birthinfo/abortionDate" relevant=" /Form_E/main/birthinfo/hadAbortion  = 1" type="date"/>
+      <bind calculate="date-time( /Form_E/main/women/dateOfDelivery )" constraint=". &lt;= today()" jr:constraintMsg="A data deve ser igual a preenchida na secção B" nodeset="/Form_E/main/birthinfo/birthDate" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="date"/>
+      <bind nodeset="/Form_E/main/birthinfo/manyBabies" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/babyGender" relevant=" /Form_E/main/birthinfo/manyBabies !=99 and  /Form_E/main/birthinfo/hadAbortion  != 1"/>
+      <bind constraint="((. &gt;=0) and (. &lt;=10)) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrMen" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind constraint="((. &gt;=0) and (. &lt;=10)) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/babyGender/nrWoman" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/birthinfo/birthSamePlace" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/expectedBirthplace" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/laborParticipator" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisits" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind constraint="regex(., '^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/birthinfo/timeToReachLabPlace" relevant=" /Form_E/main/birthinfo/expectedBirthplace !=1 and  /Form_E/main/birthinfo/expectedBirthplace !=2 and  /Form_E/main/birthinfo/expectedBirthplace !=99 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/laborParticipatorInhome" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select"/>
+      <bind constraint="regex(., '^([0-9][0-9]):([0-5][0-9])$') or .='99'" nodeset="/Form_E/main/birthinfo/totalHourInLabor" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/childBirthType" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/haveMeasureTensArt" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a um (1) ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyVisitsTensArt" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/birthinfo/hadInformed" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/areMedicating" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadAbortion  != 1"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills/op1" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills/op2" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="string"/>
+      <bind nodeset="/Form_E/main/birthinfo/listofPills/op3" relevant=" /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="string"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howMuchSpent" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howLongTakenPills" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/areMedicating =1 and  /Form_E/main/birthinfo/hadInformed =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_E/main/birthinfo/howManyTimesCares" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" required="true()" type="int"/>
+      <bind nodeset="/Form_E/main/birthinfo/occupation" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" type="select1"/>
+      <bind nodeset="/Form_E/main/birthinfo/hadvisitedtradMedic" relevant=" /Form_E/main/birthinfo/haveMeasureTensArt =1 and  /Form_E/main/birthinfo/hadInformed =1 and  /Form_E/main/birthinfo/hadAbortion  != 1" type="select1"/>
+      <bind nodeset="/Form_E/main/fincapacity" relevant="( /Form_E/main/women/pregStatusAtDeath =2 or  /Form_E/main/women/pregStatusNow =2) and  /Form_E/main/women/wasPregnant !=2 and  /Form_E/main/birthinfo/hadAbortion  != 1"/>
       <bind nodeset="/Form_E/main/fincapacity/succToCareNewBorn" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/fincapacity/succToWash" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/fincapacity/succToPrepFood" required="true()" type="select1"/>
@@ -405,7 +413,7 @@
       <bind nodeset="/Form_E/main/fincapacity/succToBackToWork" required="true()" type="select1"/>
       <bind calculate=" /Form_E/main/birthinfo/babyGender/nrMen + /Form_E/main/birthinfo/babyGender/nrWoman " nodeset="/Form_E/main/babies" type="string"/>
       <bind calculate=" /Form_E/main/babies " nodeset="/Form_E/main/perinatals_count" readonly="true()" type="string"/>
-      <bind nodeset="/Form_E/main/perinatals" relevant="( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/isAlive =2) and  /Form_E/main/women/wasPregnant !=2"/>
+      <bind nodeset="/Form_E/main/perinatals" relevant="( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/isAlive =2) and  /Form_E/main/women/wasPregnant !=2 and  /Form_E/main/birthinfo/hadAbortion  != 1"/>
       <bind nodeset="/Form_E/main/perinatals/pregResult" required="true()" type="select1"/>
       <bind calculate="concat( /Form_E/main/women/permId ,&quot;-&quot;, if(position(..)&lt;10, concat(&quot;0&quot;,position(..)),position(..)))" nodeset="/Form_E/main/perinatals/bby_permId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_E/main/perinatals/isStillAlive" relevant="indexed-repeat( /Form_E/main/perinatals/pregResult , /Form_E/main/perinatals , position(..)) = 5" required="true()" type="select1"/>
@@ -659,6 +667,10 @@
             <value>2</value>
           </item>
         </select1>
+        <input ref="/Form_E/main/women/dthDate">
+          <label>B4.1. Data de Morte</label>
+          <hint>SE NÃO SABE A DATA EXACTA COLOQUE A DATA APROXIMADA</hint>
+        </input>
         <select1 ref="/Form_E/main/women/pregStatusAtDeath">
           <label>B5. Estado da gravidez no momento da morte</label>
           <item>
@@ -1554,6 +1566,36 @@
       </group>
       <group ref="/Form_E/main/birthinfo">
         <label>SECÇÃO F: INFORMAÇÃO SOBRE O PARTO</label>
+        <select1 ref="/Form_E/main/birthinfo/hadAbortion">
+          <label>F0. A gravidez resultou num aborto?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/Form_E/main/birthinfo/abortionType">
+          <label>F0.1.Que tipo de Aborto foi?</label>
+          <item>
+            <label>Aborto Espontâneo</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Aborto por interrupção electiva da gravidez</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Gravidez Ectópica</label>
+            <value>3</value>
+          </item>
+        </select1>
+        <input ref="/Form_E/main/birthinfo/abortionDate">
+          <label>F0.2.Data em que ocorreu o aborto ou gravidez ectopica</label>
+          <hint>SE NÃO SABE A DATA EXACTA COLOQUE A DATA APROXIMADA</hint>
+        </input>
         <input ref="/Form_E/main/birthinfo/birthDate">
           <label>F1. Data do parto</label>
         </input>
@@ -1814,11 +1856,11 @@
           </input>
         </group>
         <input ref="/Form_E/main/birthinfo/howMuchSpent">
-          <label>F17. Quanto a Senhora gastou por cada um dos medicamentos listados acima na última aquisição?</label>
+          <label>F17. Quanto a Senhora gastou no total na compra dos medicamentos listados acima na última aquisição (compra/receita)?</label>
           <hint>Digite -99 se não sabe</hint>
         </input>
         <input ref="/Form_E/main/birthinfo/howLongTakenPills">
-          <label>F17.1. Quanto tempo (dias) tomou cada medicamento de tensão alta desta última aquisição?</label>
+          <label>F17.1. Quanto tempo (dias) tomou cada medicamento de tensão alta desta última aquisição (compra/receita)?</label>
           <hint>Digite -99 se não sabe</hint>
         </input>
         <input ref="/Form_E/main/birthinfo/howManyTimesCares">

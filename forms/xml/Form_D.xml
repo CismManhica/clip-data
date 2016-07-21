@@ -120,7 +120,7 @@
       <bind constraint=". &lt;= today() and (. &gt;= date('2016-01-01'))" jr:constraintMsg="A Data da entrevista tem que ser maior que (01-01-2016) e menor ou igual a data de hoje" nodeset="/Form_D/visitDate" required="true()" type="date"/>
       <bind jr:constraintMsg="O consentimento não foi assinado, saia do formulario sem salvar." nodeset="/Form_D/consent" required="true()" type="select1"/>
       <bind nodeset="/Form_D/intervieweeName" required="true()" type="string"/>
-      <bind constraint="int((today() - .) div 365.24) &gt; 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/Form_D/intervieweeDob" required="true()" type="date"/>
+      <bind constraint="int((today() - .) div 365.24) &gt;= 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/Form_D/intervieweeDob" required="true()" type="date"/>
       <bind jr:constraintMsg="O respondente não vive neste agregado, não será possivel continuar com o formulário, saia do formulario sem salvar." nodeset="/Form_D/intervieweeInHouse" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main" relevant=" /Form_D/intervieweeInHouse =1 and  /Form_D/consent =1"/>
       <bind nodeset="/Form_D/main/relationWithInterviewee" required="true()" type="select1"/>
@@ -192,7 +192,7 @@
       <bind constraint="(. &gt;=0) or (. = -99)" jr:constraintMsg="O valor dever ser maior ou igual a zero ou (-99) se não sabe" nodeset="/Form_D/main/ohistory/numberOfPrenatalCare" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1 and  /Form_D/main/ohistory/searchedCare =1" required="true()" type="int"/>
       <bind nodeset="/Form_D/main/ohistory/lastBirthPlace" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/ohistory/laborParticipator" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
-      <bind nodeset="/Form_D/main/ohistory/hasMalaria" relevant=" /Form_D/main/ohistory/nrOfPregnancies !=1" required="true()" type="select1"/>
+      <bind nodeset="/Form_D/main/ohistory/hasMalaria" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/ohistory/hasAntitetano" required="true()" type="select1"/>
       <bind nodeset="/Form_D/main/ohistory/hasUsedContraceptives" required="true()" type="select1"/>
       <bind constraint=". &lt;= today()" nodeset="/Form_D/main/ohistory/contraceptStartDate" relevant=" /Form_D/main/ohistory/hasUsedContraceptives =1" required="true()" type="date"/>
@@ -972,7 +972,7 @@
           </input>
         </group>
         <input ref="/Form_D/main/mhistory/pillsTotalCost">
-          <label>E4. Quanto a mulher gastou por cada um dos medicamentos listados acima na última aquisição (compra/receita)?</label>
+          <label>E4. Quanto a mulher gastou no total na compra dos medicamentos listados acima na última aquisição (compra/receita)?</label>
         </input>
         <input ref="/Form_D/main/mhistory/pillsTimeMedication">
           <label>E4.1. Por quanto tempo tomou os medicamentos de tensão alta desta última aquisição? (Número de Dias)</label>

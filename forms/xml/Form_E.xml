@@ -491,7 +491,7 @@
       <bind nodeset="/Form_E/main/mresponses/hadAbdomenPain" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/mresponses/hadPainfulUrination" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/mresponses/hadDischarge" relevant=" /Form_E/main/mresponses/hadFeverm =1" required="true()" type="select1"/>
-      <bind nodeset="/Form_E/main/medicinefect" relevant="( /Form_E/main/women/pregStatusNow =2 or  /Form_E/main/women/isAlive =2) and  /Form_E/main/women/wasPregnant !=2"/>
+      <bind nodeset="/Form_E/main/medicinefect" relevant=" /Form_E/main/women/pregStatusNow =2 or ( /Form_E/main/women/isAlive =2 and  /Form_E/main/women/wasPregnant !=2)"/>
       <bind nodeset="/Form_E/main/medicinefect/hadMgso4" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/medicinefect/mgso4Administration" relevant=" /Form_E/main/medicinefect/hadMgso4 =1" required="true()" type="select1"/>
       <bind nodeset="/Form_E/main/medicinefect/mgso4AdministrationLocal" relevant="( /Form_E/main/medicinefect/mgso4Administration =1 or  /Form_E/main/medicinefect/mgso4Administration =3)" required="true()" type="select1"/>

@@ -1743,8 +1743,8 @@
           <hint>Horas:Minutos (99 se não sabe)</hint>
         </input>
         <select1 ref="/Form_E/main/birthinfo/childBirthType">
-          <label>F11. Que tipo de parto a Senhora teve? Seleccione nao sabe se teve aborto</label>
-          <hint>Seleccione Nao Sabe se ocorreu aborto</hint>
+          <label>F11. Que tipo de parto a Senhora teve? Seleccione Não aplicavel se teve aborto.</label>
+          <hint>Seleccione Não aplicavel se ocorreu aborto</hint>
           <item>
             <label>Parto vaginal normal</label>
             <value>1</value>
@@ -1763,7 +1763,7 @@
           </item>
           <item>
             <label>Não aplicavel</label>
-            <value>88</value>
+            <value>98</value>
           </item>
         </select1>
         <select1 ref="/Form_E/main/birthinfo/haveMeasureTensArt">

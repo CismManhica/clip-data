@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:odk="http://www.opendatakit.org/xforms">
   <h:head>
     <h:title>AV Neonato</h:title>
     <model>
@@ -230,7 +230,7 @@
       <bind nodeset="/AVNeonate/main/pregnancyHistory/stopMoving" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/anormalSize" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/smaller25Less" relevant=" /AVNeonate/main/childStatus/anormalSize =1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/childStatus/higher45more" relevant=" /AVNeonate/main/childStatus/anormalSize =1 and  /AVNeonate/main/childStatus/smaller25Less !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/childStatus/higher45more" relevant=" /AVNeonate/main/childStatus/anormalSize =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/rolledMore" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/badFomation" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/backSwelling" relevant=" /AVNeonate/main/childStatus/badFomation !=2" required="true()" type="select1"/>
@@ -243,13 +243,13 @@
       <bind nodeset="/AVNeonate/main/childStatus/birthDead" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/childStatus/decompositionSignals" relevant=" /AVNeonate/main/childStatus/birthDead =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/birthHospital" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/laborHistory/bithHome" relevant=" /AVNeonate/main/laborHistory/birthHospital !=1" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/laborHistory/birthAnywhere" relevant=" /AVNeonate/main/laborHistory/bithHome !=1 and  /AVNeonate/main/laborHistory/birthHospital !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/laborHistory/bithHome" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/laborHistory/birthAnywhere" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/motherAssistence" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/birthAfterBag24h" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/normalBirth" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/birthTweezers" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/laborHistory/caesarianBirth" relevant=" /AVNeonate/main/laborHistory/normalBirth !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/laborHistory/caesarianBirth" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/laborHistory/insideVag" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/lesoesHistory" relevant=" /AVNeonate/main/childStatus/birthDead !=1"/>
       <bind nodeset="/AVNeonate/main/lesoesHistory/hadAccident" required="true()" type="select1"/>
@@ -307,7 +307,7 @@
       <bind nodeset="/AVNeonate/main/neoillHistory/thoraxWalls" relevant=" /AVNeonate/main/neoillHistory/breathProblems =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/breathNoise" relevant=" /AVNeonate/main/neoillHistory/breathProblems =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/diarrhea" required="true()" type="select1"/>
-      <bind nodeset="/AVNeonate/main/neoillHistory/bloodFezes" required="true()" type="select1"/>
+      <bind nodeset="/AVNeonate/main/neoillHistory/bloodFezes" relevant=" /AVNeonate/main/neoillHistory/diarrhea =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/vomit" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/vomitCoffee" relevant=" /AVNeonate/main/neoillHistory/vomit =1" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/neoillHistory/abdomenProtuberante" relevant=" /AVNeonate/main/neoillHistory/vomit =1" required="true()" type="select1"/>
@@ -1610,6 +1610,10 @@ Pode dizer-me sobre a doença ou circunstância que levou a morte dele(a)?</labe
           <item>
             <label>Três (3) semanas ou mais</label>
             <value>2</value>
+          </item>
+          <item>
+            <label>Não sabe</label>
+            <value>99</value>
           </item>
         </select1>
         <select1 ref="/AVNeonate/main/neoillHistory/suddenlyDead">

@@ -285,7 +285,7 @@
       <bind nodeset="/AVMaternal/main/historyContext/hadTb" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHIV" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadPosetiveMalaria" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/historyContext/hadNegativeMalaria" relevant=" /AVMaternal/main/historyContext/hadPosetiveMalaria !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/hadNegativeMalaria" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadMeasles" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHighTension" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadHeartDesease" required="true()" type="select1"/>
@@ -301,7 +301,7 @@
       <bind nodeset="/AVMaternal/main/historyContext/hadKidneyDisease" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/hadLiverDisease" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/dthRainySeason" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/historyContext/dthDrySeason" relevant=" /AVMaternal/main/historyContext/dthRainySeason !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/historyContext/dthDrySeason" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/sickPeriod" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/historyContext/diedSuddenly" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesionHistory/hadAccident" required="true()" type="select1"/>
@@ -365,8 +365,8 @@
       <bind nodeset="/AVMaternal/main/lesoesHistory/triedTerminatePregnancy" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/pregnancyAbortion" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/birthHospital" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/birthHome" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHospital !=1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1 and  /AVMaternal/main/lesoesHistory/birthHome !=1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthHome" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lesoesHistory/birthOther" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/professionalAssistance" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/surgeryRemoveUterus" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lesoesHistory/hadNoemalLabour" relevant=" /AVMaternal/main/lesoesHistory/death6WeeksAfter =1" required="true()" type="select1"/>
@@ -387,11 +387,11 @@
       <bind nodeset="/AVMaternal/main/lastSymptoms/missAirPeriod" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/unableCarryActivity" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/missAirSleeping" relevant=" /AVMaternal/main/lastSymptoms/missAir =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/breathNoise" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/breathNoise" relevant=" /AVMaternal/main/lastSymptoms/breathProblems =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/chestPain" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/diarrhea" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/diarrheaPeriod" relevant=" /AVMaternal/main/lastSymptoms/diarrhea =1" required="true()" type="select1"/>
-      <bind nodeset="/AVMaternal/main/lastSymptoms/bloodFezes" required="true()" type="select1"/>
+      <bind nodeset="/AVMaternal/main/lastSymptoms/bloodFezes" relevant=" /AVMaternal/main/lastSymptoms/diarrhea =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/vomit" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/vomitCoffee" relevant=" /AVMaternal/main/lastSymptoms/vomit =1" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/lastSymptoms/abdominalIssue" required="true()" type="select1"/>

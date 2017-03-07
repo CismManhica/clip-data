@@ -19,6 +19,7 @@
           <intervieweeName/>
           <intervieweeDob/>
           <intervieweeInHouse/>
+          <deliveryDate/>
           <main>
             <relationWithInterviewee/>
             <relationWithIntervieweeSpec/>
@@ -111,9 +112,9 @@
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Form_D_RC/deviceid" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Form_D_RC/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Form_D_RC/end" type="dateTime"/>
-      <bind nodeset="/Form_D_RC/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/Form_D_RC/visitId" readonly="true()" relevant="1=0" required="true()" type="string"/>
       <bind nodeset="/Form_D_RC/houseno" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/Form_D_RC/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/Form_D_RC/roundNumber" readonly="true()" relevant="1=0" required="true()" type="int"/>
       <bind nodeset="/Form_D_RC/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D_RC/locationId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/Form_D_RC/fieldWorkerId" readonly="true()" required="true()" type="string"/>
@@ -122,6 +123,7 @@
       <bind nodeset="/Form_D_RC/intervieweeName" required="true()" type="string"/>
       <bind constraint="int((today() - .) div 365.24) &gt;= 18" jr:constraintMsg="Os respondentes devem ser maiores de 18 (dezoito) anos" nodeset="/Form_D_RC/intervieweeDob" required="true()" type="date"/>
       <bind jr:constraintMsg="O respondente não vive neste agregado, não será possivel continuar com o formulário, saia do formulario sem salvar." nodeset="/Form_D_RC/intervieweeInHouse" required="true()" type="select1"/>
+      <bind nodeset="/Form_D_RC/deliveryDate" readonly="true()" type="date"/>
       <bind nodeset="/Form_D_RC/main" relevant=" /Form_D_RC/intervieweeInHouse =1 and  /Form_D_RC/consent =1"/>
       <bind nodeset="/Form_D_RC/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/Form_D_RC/main/relationWithIntervieweeSpec" relevant=" /Form_D_RC/main/relationWithInterviewee =10" required="true()" type="string"/>
@@ -141,16 +143,15 @@
       <bind nodeset="/Form_D_RC/main/pregwomen/husbandOcupation" relevant="1=0" required="true()" type="select1"/>
       <bind nodeset="/Form_D_RC/main/pregwomen/hasParticipatedBefore" relevant="1=0" required="true()" type="select1"/>
       <bind nodeset="/Form_D_RC/main/hasGivenBirth" readonly="true()" required="true()" type="select1"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr" relevant=" /Form_D_RC/main/hasGivenBirth =2 and 1=0"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr/hasEstimatedDob" required="true()" type="select1"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr/hasFichaPrenatal" relevant=" /Form_D_RC/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
-      <bind constraint="(int((today() - .) div 30.44) &lt; 1) and (int((today() - .) div 30.44) &gt; -9)" nodeset="/Form_D_RC/main/gestagebr/estimatedDob" relevant=" /Form_D_RC/main/gestagebr/hasEstimatedDob =1" required="true()" type="date"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr/howPregDeterminated" relevant=" /Form_D_RC/main/gestagebr/hasEstimatedDob =1" required="true()" type="select1"/>
-      <bind constraint="(. &gt;0) and (. &lt;= 9)" nodeset="/Form_D_RC/main/gestagebr/gestageAge" required="true()" type="int"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr/knowsLastPeriodDate" required="true()" type="select1"/>
-      <bind constraint=". &lt;= today()" nodeset="/Form_D_RC/main/gestagebr/lastPeriodDate" relevant=" /Form_D_RC/main/gestagebr/knowsLastPeriodDate =1" required="true()" type="date"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr/isPlaningBirthHere" type="select1"/>
-      <bind nodeset="/Form_D_RC/main/gestagebr/expBirthLocalityAddress" relevant=" /Form_D_RC/main/gestagebr/isPlaningBirthHere =2" type="string"/>
+      <bind nodeset="/Form_D_RC/main/gestagebr/hasEstimatedDob" relevant="1=0" required="true()" type="select1"/>
+      <bind nodeset="/Form_D_RC/main/gestagebr/hasFichaPrenatal" required="true()" type="select1"/>
+      <bind constraint="(. &gt;= date('2015-02-04')) and (. &lt;= today())" nodeset="/Form_D_RC/main/gestagebr/estimatedDob" relevant=" /Form_D_RC/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
+      <bind nodeset="/Form_D_RC/main/gestagebr/howPregDeterminated" relevant=" /Form_D_RC/main/gestagebr/hasFichaPrenatal =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;0) and (. &lt;= 9)" nodeset="/Form_D_RC/main/gestagebr/gestageAge" relevant="1=0" required="true()" type="int"/>
+      <bind nodeset="/Form_D_RC/main/gestagebr/knowsLastPeriodDate" relevant="1=0" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today()" nodeset="/Form_D_RC/main/gestagebr/lastPeriodDate" relevant=" /Form_D_RC/main/gestagebr/knowsLastPeriodDate =1 and 1=0" required="true()" type="date"/>
+      <bind nodeset="/Form_D_RC/main/gestagebr/isPlaningBirthHere" relevant="1=0" type="select1"/>
+      <bind nodeset="/Form_D_RC/main/gestagebr/expBirthLocalityAddress" relevant=" /Form_D_RC/main/gestagebr/isPlaningBirthHere =2 and 1=0" type="string"/>
       <bind nodeset="/Form_D_RC/main/mhistory" relevant=" /Form_D_RC/main/hasGivenBirth =1"/>
       <bind nodeset="/Form_D_RC/main/mhistory/e_intro" readonly="true()" type="string"/>
       <bind nodeset="/Form_D_RC/main/mhistory/hasTensaoAlta" required="true()" type="select1"/>
@@ -221,7 +222,7 @@
     <input ref="/Form_D_RC/fieldWorkerId">
       <label>A2. Código do Inquiridor</label>
     </input>
-    <input ref="/Form_D_RC/visitDate">
+    <input appearance="no-calendar" ref="/Form_D_RC/visitDate">
       <label>A3. Data de Entrevista</label>
     </input>
     <select1 ref="/Form_D_RC/consent">
@@ -252,9 +253,12 @@
         <value>2</value>
       </item>
     </select1>
+    <input appearance="no-calendar" ref="/Form_D_RC/deliveryDate">
+      <label>Data do parto</label>
+      <hint>Preste atenção nesta data de parto, para as perguntas a seguir deve-se ter em conta que trata-se duma gravidez passada cujo o parto foi nesta data abaixo.</hint>
+    </input>
     <group ref="/Form_D_RC/main">
-      <label>CLIP</label>
-      <select1 ref="/Form_D_RC/main/relationWithInterviewee">
+      <label>CLIP: Data de Parto - <output value=" /Form_D_RC/deliveryDate "/></label><select1 ref="/Form_D_RC/main/relationWithInterviewee">
         <label>A8. Qual é a relação de parentesco da mulher em relação ao respondente?</label>
         <item>
           <label>Própria</label>
@@ -317,7 +321,7 @@
         <input ref="/Form_D_RC/main/pregwomen/fullname">
           <label>B1. Nome da mulher</label>
         </input>
-        <input ref="/Form_D_RC/main/pregwomen/dob">
+        <input appearance="no-calendar" ref="/Form_D_RC/main/pregwomen/dob">
           <label>B2. Data de nascimento da Mulher</label>
         </input>
         <input ref="/Form_D_RC/main/pregwomen/permId">
@@ -822,7 +826,6 @@
       </group>
       <select1 ref="/Form_D_RC/main/hasGivenBirth">
         <label>B14. A mulher encontra-se actualmente grávida?</label>
-        <hint>SE AO CHEGAR A CASA A MULHER JA TIVER DADO PARTO SEM TER UM REGISTO DE GRAVIDEZ RESPONDA NÃO, E DEPOIS ABRA O FORM-E.</hint>
         <item>
           <label>Não</label>
           <value>1</value>
@@ -856,7 +859,7 @@
             <value>2</value>
           </item>
         </select1>
-        <input ref="/Form_D_RC/main/gestagebr/estimatedDob">
+        <input appearance="no-calendar" ref="/Form_D_RC/main/gestagebr/estimatedDob">
           <label>C2. Data estimada do parto</label>
           <hint>SE NÃO SABE A DATA EXACTA COLOQUE A DATA APROXIMADA</hint>
         </input>
@@ -894,7 +897,7 @@
             <value>2</value>
           </item>
         </select1>
-        <input ref="/Form_D_RC/main/gestagebr/lastPeriodDate">
+        <input appearance="no-calendar" ref="/Form_D_RC/main/gestagebr/lastPeriodDate">
           <label>C5. Data do início da última menstruação</label>
           <hint>SE NÃO SABE A DATA EXACTA COLOQUE A DATA APROXIMADA</hint>
         </input>
@@ -966,7 +969,7 @@
           <input ref="/Form_D_RC/main/mhistory/e3/pillsName3">
             <label>3. Nome do medicamento</label>
           </input>
-          <input ref="/Form_D_RC/main/mhistory/e3/medicationStartDate">
+          <input appearance="no-calendar" ref="/Form_D_RC/main/mhistory/e3/medicationStartDate">
             <label>E3.2. Desde quando a mulher está a tomar estes medicamentos</label>
             <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
           </input>
@@ -1379,7 +1382,7 @@
             <value>99</value>
           </item>
         </select1>
-        <input ref="/Form_D_RC/main/ohistory/contraceptStartDate">
+        <input appearance="no-calendar" ref="/Form_D_RC/main/ohistory/contraceptStartDate">
           <label>F19.1. Quando começou a usar?</label>
           <hint>SE NÃO SABE A DATA COLOQUE (2013-01-01)</hint>
         </input>

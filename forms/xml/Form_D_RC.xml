@@ -145,7 +145,7 @@
       <bind nodeset="/Form_D_RC/main/hasGivenBirth" readonly="true()" required="true()" type="select1"/>
       <bind nodeset="/Form_D_RC/main/gestagebr/hasEstimatedDob" relevant="1=0" required="true()" type="select1"/>
       <bind nodeset="/Form_D_RC/main/gestagebr/hasFichaPrenatal" required="true()" type="select1"/>
-      <bind constraint="(. &gt;= date('2015-02-04')) and (. &lt;= today())" nodeset="/Form_D_RC/main/gestagebr/estimatedDob" relevant=" /Form_D_RC/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
+      <bind constraint="(. &gt;= date('2014-01-01')) and (. &lt;= today())" nodeset="/Form_D_RC/main/gestagebr/estimatedDob" relevant=" /Form_D_RC/main/gestagebr/hasFichaPrenatal =1" required="true()" type="date"/>
       <bind nodeset="/Form_D_RC/main/gestagebr/howPregDeterminated" relevant=" /Form_D_RC/main/gestagebr/hasFichaPrenatal =1" required="true()" type="select1"/>
       <bind constraint="(. &gt;0) and (. &lt;= 9)" nodeset="/Form_D_RC/main/gestagebr/gestageAge" relevant="1=0" required="true()" type="int"/>
       <bind nodeset="/Form_D_RC/main/gestagebr/knowsLastPeriodDate" relevant="1=0" required="true()" type="select1"/>

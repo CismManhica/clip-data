@@ -199,8 +199,8 @@
       <bind nodeset="/AVNeonate/name" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/clipId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/permId" readonly=" /AVNeonate/inFieldDeath =2" required="true()" type="string"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-04'))" nodeset="/AVNeonate/dob" required="true()" type="date"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2016-05-01'))" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/AVNeonate/dob" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A Data da entrevista tem que ser menor ou igual a data de hoje" nodeset="/AVNeonate/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVNeonate/completedAutopsy" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/cause" relevant=" /AVNeonate/completedAutopsy =2" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/causeSpec" relevant=" /AVNeonate/cause =5" required="true()" type="string"/>
@@ -213,7 +213,7 @@
       <bind nodeset="/AVNeonate/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/relationWithIntervieweeSpec" relevant=" /AVNeonate/main/relationWithInterviewee =11" required="true()" type="string"/>
       <bind nodeset="/AVNeonate/main/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-04'))" nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/AVNeonate/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind constraint=".&lt;=28" nodeset="/AVNeonate/main/dthDetails/dthAge" required="true()" type="int"/>
       <bind nodeset="/AVNeonate/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVNeonate/main/dthDetails/gender" required="true()" type="select1"/>

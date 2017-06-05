@@ -262,8 +262,8 @@
       <bind nodeset="/AVMaternal/permId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/clipId" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/name" readonly=" /AVMaternal/inFieldDeath =2" required="true()" type="string"/>
-      <bind constraint="(int((today() - .) div 365.24) &gt;= 12) and (int((today() - .) div 365.24) &lt;= 51)" nodeset="/AVMaternal/dob" required="true()" type="date"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2016-05-01'))" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
+      <bind constraint="(int((today() - .) div 365.24) &gt;= 12) and (int((today() - .) div 365.24) &lt;= 51)" jr:constraintMsg="A idade deve estar compreendida de 12 à 50 anos" nodeset="/AVMaternal/dob" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/AVMaternal/visitDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/completedAutopsy" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/cause" relevant=" /AVMaternal/completedAutopsy =2" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/causeSpec" relevant=" /AVMaternal/cause =5" required="true()" type="string"/>
@@ -276,7 +276,7 @@
       <bind nodeset="/AVMaternal/main/relationWithInterviewee" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/relationWithIntervieweeSpec" relevant=" /AVMaternal/main/relationWithInterviewee =11" required="true()" type="string"/>
       <bind nodeset="/AVMaternal/main/deceasedData/dthCircunstacies" required="true()" type="string" odk:length="1000"/>
-      <bind constraint=". &lt;= today() and (. &gt;= date('2015-02-04'))" nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/AVMaternal/main/dthDetails/dthDate" required="true()" type="date"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthLocation" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/wasMarried" required="true()" type="select1"/>
       <bind nodeset="/AVMaternal/main/dthDetails/dthBefore42d" required="true()" type="select1"/>

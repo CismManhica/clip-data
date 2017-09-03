@@ -1,0 +1,1279 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>CLIP HWET Formulário para Enfermeiras</h:title>
+    <model>
+      <instance>
+        <clip_hwet_nurse id="clip_hwet_nurse">
+          <deviceid/>
+          <start/>
+          <end/>
+          <sa>
+            <name/>
+            <gender/>
+            <age/>
+            <maritalStatus/>
+            <childs/>
+            <ocupation/>
+            <education/>
+            <nurseYears/>
+            <local/>
+            <cluster/>
+            <isIntervention/>
+            <note_interv/>
+            <smartphone>
+              <hasPhone/>
+              <usedDevices/>
+              <experience/>
+              <usedFeatures/>
+            </smartphone>
+          </sa>
+          <sb>
+            <quest_01/>
+            <quest_02/>
+            <quest_03/>
+            <quest_04/>
+            <quest_05/>
+            <quest_06/>
+            <quest_07/>
+            <quest_08/>
+            <quest_09/>
+            <quest_10/>
+            <quest_11/>
+            <quest_12/>
+            <quest_13/>
+            <quest_14/>
+            <quest_15/>
+            <quest_16/>
+            <quest_17/>
+            <quest_18/>
+            <quest_19/>
+            <quest_20/>
+            <quest_21/>
+            <quest_22/>
+            <quest_23/>
+          </sb>
+          <sc>
+            <quest_01/>
+            <quest_02/>
+            <quest_02_1/>
+            <quest_03/>
+            <quest_04/>
+            <quest_05/>
+            <quest_06/>
+            <quest_07/>
+            <quest_08/>
+            <quest_08_1/>
+            <quest_9/>
+          </sc>
+          <processed/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </clip_hwet_nurse>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/clip_hwet_nurse/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/clip_hwet_nurse/start" required="true()" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/clip_hwet_nurse/end" required="true()" type="dateTime"/>
+      <bind nodeset="/clip_hwet_nurse/sa/name" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sa/gender" required="true()" type="select1"/>
+      <bind constraint=". &gt;=18" jr:constraintMsg="A idade deve ser maior ou igual a 18 anos" nodeset="/clip_hwet_nurse/sa/age" required="true()" type="int"/>
+      <bind nodeset="/clip_hwet_nurse/sa/maritalStatus" required="true()" type="select1"/>
+      <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/childs" required="true()" type="int"/>
+      <bind nodeset="/clip_hwet_nurse/sa/ocupation" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sa/education" required="true()" type="select1"/>
+      <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/nurseYears" required="true()" type="int"/>
+      <bind nodeset="/clip_hwet_nurse/sa/local" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sa/cluster" required="true()" type="select1"/>
+      <bind calculate="if(( /clip_hwet_nurse/sa/cluster =2 or  /clip_hwet_nurse/sa/cluster =3 or  /clip_hwet_nurse/sa/cluster =5 or  /clip_hwet_nurse/sa/cluster =6 or  /clip_hwet_nurse/sa/cluster =7 or  /clip_hwet_nurse/sa/cluster =12),1,2)" nodeset="/clip_hwet_nurse/sa/isIntervention" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sa/note_interv" readonly="true()" relevant=" /clip_hwet_nurse/sa/isIntervention =1" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sa/smartphone/hasPhone" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sa/smartphone/usedDevices" required="true()" type="select"/>
+      <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/smartphone/experience" relevant=" /clip_hwet_nurse/sa/smartphone/hasPhone =1" required="true()" type="int"/>
+      <bind nodeset="/clip_hwet_nurse/sa/smartphone/usedFeatures" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_01" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_02" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_03" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_04" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_05" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_06" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_07" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_08" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_09" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_10" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_11" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_12" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_13" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_14" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_15" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_16" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_17" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_18" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_19" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_20" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_21" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_22" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sb/quest_23" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sc" relevant=" /clip_hwet_nurse/sa/isIntervention =1"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_01" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_02" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_02_1" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_03" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_04" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_05" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_06" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_07" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_08" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_08_1" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_9" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/processed" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/clip_hwet_nurse/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;CLIP_HWET_ENF-&quot;, /clip_hwet_nurse/sa/name )" nodeset="/clip_hwet_nurse/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/clip_hwet_nurse/sa">
+      <label>Secção A: INFORMAÇÃO DEMOGRÁFICA: Dados do participante</label>
+      <input ref="/clip_hwet_nurse/sa/name">
+        <label>1. Nome do participante</label>
+      </input>
+      <select1 ref="/clip_hwet_nurse/sa/gender">
+        <label>2. Sexo</label>
+        <item>
+          <label>Masculino</label>
+          <value>M</value>
+        </item>
+        <item>
+          <label>Feminino</label>
+          <value>F</value>
+        </item>
+      </select1>
+      <input ref="/clip_hwet_nurse/sa/age">
+        <label>3. Idade</label>
+      </input>
+      <select1 ref="/clip_hwet_nurse/sa/maritalStatus">
+        <label>4. Estado Civil</label>
+        <item>
+          <label>Solteira</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Casada/União de facto</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Divorciada</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Separada</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Viúva</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Outra</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <input ref="/clip_hwet_nurse/sa/childs">
+        <label>5. Nº de filhos</label>
+      </input>
+      <select1 ref="/clip_hwet_nurse/sa/ocupation">
+        <label>6. Ocupação</label>
+        <item>
+          <label>Desempregado/a</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Empregado/a doméstico/a</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Agricultura</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Trabalho manual não qualificado</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Trabalho manual qualificado</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Comércio e serviços</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Religioso/a</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Profissional/técnica/gestora</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Estudante</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não aplicável</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sa/education">
+        <label>7. Nível de escolaridade</label>
+        <item>
+          <label>Alnalfabeto</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>5ª Classe</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>7ª Classe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>10ª Classe/ou Equivalente</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>12ª Classe/ou Equivalente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Bacharel</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Licenciatura</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Pós-Graduação</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Não aplicável</label>
+          <value>11</value>
+        </item>
+      </select1>
+      <input ref="/clip_hwet_nurse/sa/nurseYears">
+        <label>8. Anos de experiência como Enfermeira</label>
+      </input>
+      <input ref="/clip_hwet_nurse/sa/local">
+        <label>9. Local</label>
+      </input>
+      <select1 ref="/clip_hwet_nurse/sa/cluster">
+        <label>9.1. Cluster?</label>
+        <item>
+          <label>Cluster 01 - Maluana &amp; Maciana</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Cluster 02 - Calanga &amp; Ilha Josina</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Cluster 03 - 3 de Fevereiro</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Cluster 04 - Magude</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Cluster 05 - Messano</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Cluster 06 - Chaimite</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Cluster 07 - Chissano</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Cluster 08 - Mazivila</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Cluster 09 - Chicumbane</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Cluster 10 - Xilembene</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Cluster 11 - Chongoene</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Cluster 12 - Malehice</label>
+          <value>12</value>
+        </item>
+      </select1>
+      <input ref="/clip_hwet_nurse/sa/note_interv">
+        <label>9.2. Este participante pertence a área de intervenção no cluster <output value=" /clip_hwet_nurse/sa/cluster "/></label></input>
+      <group ref="/clip_hwet_nurse/sa/smartphone">
+        <label>Experiência no uso de celular smartphone / tablet</label>
+        <select1 ref="/clip_hwet_nurse/sa/smartphone/hasPhone">
+          <label>10. Você possui um smartphone</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select ref="/clip_hwet_nurse/sa/smartphone/usedDevices">
+          <label>11. Antes do início do estudo que dispositivos já tinha usado:</label>
+          <item>
+            <label>Computador</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Tablet</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Smartphone</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Laptop</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Desktop</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Celular que não é smartphone</label>
+            <value>6</value>
+          </item>
+          <item>
+            <label>Nenhum</label>
+            <value>88</value>
+          </item>
+        </select>
+        <input ref="/clip_hwet_nurse/sa/smartphone/experience">
+          <label>12. Anos de experiência com um celular smartphone (antes do início do estudo)?</label>
+        </input>
+        <select ref="/clip_hwet_nurse/sa/smartphone/usedFeatures">
+          <label>13. Que opções do telefone você usa regularmente</label>
+          <item>
+            <label>Chamadas de voz</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Mensagem de texto/SMS</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Jogos</label>
+            <value>3</value>
+          </item>
+          <item>
+            <label>Aplicações</label>
+            <value>4</value>
+          </item>
+          <item>
+            <label>Calendário</label>
+            <value>5</value>
+          </item>
+          <item>
+            <label>Email</label>
+            <value>6</value>
+          </item>
+        </select>
+      </group>
+    </group>
+    <group ref="/clip_hwet_nurse/sb">
+      <label>Secção B: CONFIANÇA E HABILIDADE</label>
+      <select1 ref="/clip_hwet_nurse/sb/quest_01">
+        <label>1. Eu sinto me seguro em cuidar de mulheres grávidas</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_02">
+        <label>2. Posso fornecer com confiança conhecimentos básicos sobre gravidez para as mulheres grávidas que eu cuido</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_03">
+        <label>3. Eu posso reconhecer com confiança as complicações relacionadas à gravidez</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_04">
+        <label>4. Eu posso reconhecer com confiança os sinais/ sintomas de perigo relacionadas à pré-eclampsia</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_05">
+        <label>5. Eu posso reconhecer com confiança os sinais / sintomas de perigo relacionados à eclampsia</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_06">
+        <label>6. Estou certo/a de que posso reconhecer sinais e sintomas de trabalho de parto</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_07">
+        <label>7. Estou confiante de que posso medir com precisão a pressão arterial</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_08">
+        <label>8. O treinamento que recebi da equipe CLIP forneceu as habilidades que eu precisava para cuidar de mulheres grávidas no estudo</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_09">
+        <label>9. Eu pude contar com o apoio da supervisão para resolver problemas encontrados na identificação de mulheres grávidas</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_10">
+        <label>10. As mulheres da minha comunidade procuram meus conselhos sobre gravidez e saúde materna</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_11">
+        <label>11. Sinto-me à vontade para acompanhar uma mulher grávida que precisa de cuidados médicos ao hospital</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_12">
+        <label>12. O médico do hospital respeitam meu julgamento quando eu identifico que uma mulher grávida precisa dos meus cuidados</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_13">
+        <label>13. Se uma mulher precisa de cuidados clínicos, a sua família leva a sério os meus conselhos</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_14">
+        <label>14. As famílias confiam nos cuidados de saúde que eu presto as mulheres grávidas na minha comunidade</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_15">
+        <label>15. Eu sou bom em aconselhar e convencer as mulheres que precisam de cuidados</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_16">
+        <label>16. As mulheres na minha comunidade confiam nas minhas capacidades</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_17">
+        <label>17. Os médicos da minha unidade sanitária consideram importante o meu papel como enfermeira</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_18">
+        <label>18. Eu sinto-me confortável em trabalhar com os APEs da minha comunidade</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_19">
+        <label>19. Eu confio na assistência prestada pelos APEs da minha comunidade</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_20">
+        <label>20. A actividade do APE da minha comunidade ajuda as mulheres a irem cedo a CPN</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_21">
+        <label>21. A actividade do APE da minha comunidade ajuda a aumentar os partos institucionalizados</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_22">
+        <label>22. A actividade do APE ajuda-me a melhorar a identificação e referência de mulheres com emergências obstétricas</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+      <select1 ref="/clip_hwet_nurse/sb/quest_23">
+        <label>23. A actividade do APE da minha comunidade ajuda a referir mulheres grávidas com mais rapidez</label>
+        <item>
+          <label>Discorda fortemente</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não concorda</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não concorda e nem discorda</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Concorda</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Concorda fortemente</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/clip_hwet_nurse/sc">
+      <label>Secção C: (Esta secção é aplicável somente para profissionais de saúde da área de intervenção)</label>
+      <select ref="/clip_hwet_nurse/sc/quest_01">
+        <label>1. De toda a intervenção CLIP com o que você estava mais confiante:</label>
+        <item>
+          <label>Envolvimento comunitário</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Medição da tensão arterial</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Medição da proteinúria</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Tratamento e encaminhamento</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Esquema de transporte</label>
+          <value>5</value>
+        </item>
+      </select>
+      <select1 ref="/clip_hwet_nurse/sc/quest_02">
+        <label>2. Você ajudou algum APE na administração da injeção?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <input ref="/clip_hwet_nurse/sc/quest_02_1">
+        <label>2.1. Porquê?</label>
+      </input>
+      <select1 ref="/clip_hwet_nurse/sc/quest_03">
+        <label>3. Você recebeu comentários da unidade sanitária em relação as mulheres que você encaminhou?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <input ref="/clip_hwet_nurse/sc/quest_04">
+        <label>4. Como isso mudou seu comportamento?</label>
+      </input>
+      <select ref="/clip_hwet_nurse/sc/quest_05">
+        <label>5. De todos tópicos de mobilização, com quais se sentia mais confortáveis?</label>
+        <item>
+          <label>Sintomas de alerta e sinais de uma gravidez com complicações, em particular a pré-eclâmpsia &amp; eclâmpsia</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Autorizações para as mulheres procurarem cuidados médicos</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Identificação de assistentes de parto qualificados</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Identificação de uma unidade sanitária para dar parto.</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Fundos de transporte e tratamento</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Mecanismos de feedback acerca dos resultados adversos e &quot;grandes poupanças&quot;</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Protocolo do CLIP (resumo)</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>As visitas CLIP e a ferramenta CLIP para o tratamento e o transporte (devem ser breves)</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Busca de soluções para as barreiras identificadas no estudo de viabilidade CLIP</label>
+          <value>9</value>
+        </item>
+      </select>
+      <select ref="/clip_hwet_nurse/sc/quest_06">
+        <label>6. Com quais delas tinha mais correspondência da audiência?</label>
+        <item>
+          <label>Sintomas de alerta e sinais de uma gravidez com complicações, em particular a pré-eclâmpsia &amp; eclâmpsia</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Autorizações para as mulheres procurarem cuidados médicos</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Identificação de assistentes de parto qualificados</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Identificação de uma unidade sanitária para dar parto.</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Fundos de transporte e tratamento</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Mecanismos de feedback acerca dos resultados adversos e &quot;grandes poupanças&quot;</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Protocolo do CLIP (resumo)</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>As visitas CLIP e a ferramenta CLIP para o tratamento e o transporte (devem ser breves)</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Busca de soluções para as barreiras identificadas no estudo de viabilidade CLIP</label>
+          <value>9</value>
+        </item>
+      </select>
+      <select1 ref="/clip_hwet_nurse/sc/quest_07">
+        <label>7. O álbum seriado ajudou a transmitir os sinais de perigo na gravidez?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select ref="/clip_hwet_nurse/sc/quest_08">
+        <label>8. No álbum seriado que imagens foram mais fáceis ou difíceis de interpretar?</label>
+        <item>
+          <label>Dor de cabeça</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Distúrbio visual</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Náusea</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Vomito</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Dor abdominal</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Dor torácica</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Dificuldade respiratória</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Coagulação intravascular disseminada/ descolamento da placenta e edema pulmonar</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sangramento vaginal</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Insuficiência renal aguda</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Inconsciência</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Convulsão</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Trombose</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Abertura da ficha</label>
+          <value>14</value>
+        </item>
+        <item>
+          <label>Medição da altura uterina</label>
+          <value>15</value>
+        </item>
+        <item>
+          <label>Medição da tensão arterial</label>
+          <value>16</value>
+        </item>
+        <item>
+          <label>Medição da proteinuria</label>
+          <value>17</value>
+        </item>
+        <item>
+          <label>Medição da oximetria do pulso</label>
+          <value>18</value>
+        </item>
+        <item>
+          <label>Toma de medicação</label>
+          <value>19</value>
+        </item>
+        <item>
+          <label>Aplicação da injeção</label>
+          <value>20</value>
+        </item>
+        <item>
+          <label>Transferência para o hospital</label>
+          <value>21</value>
+        </item>
+      </select>
+      <input ref="/clip_hwet_nurse/sc/quest_08_1">
+        <label>8.1. Porquê?</label>
+      </input>
+      <input ref="/clip_hwet_nurse/sc/quest_9">
+        <label>9. Existe mais alguma coisa que você gostaria de adicionar em relação a sua experiência no CLIP?</label>
+      </input>
+    </group>
+    <input ref="/clip_hwet_nurse/processed">
+      <label>Processed</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

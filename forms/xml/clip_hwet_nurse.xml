@@ -15,6 +15,7 @@
             <maritalStatus/>
             <childs/>
             <ocupation/>
+            <ocupation_other/>
             <education/>
             <nurseYears/>
             <local/>
@@ -59,12 +60,16 @@
             <quest_02_1/>
             <quest_03/>
             <quest_04/>
-            <quest_05/>
-            <quest_06/>
+            <quest_05_0/>
+            <quest_05_1/>
+            <quest_06_0/>
+            <quest_06_1/>
             <quest_07/>
             <quest_08/>
             <quest_08_1/>
-            <quest_9/>
+            <quest_09/>
+            <quest_09_1/>
+            <quest_10/>
           </sc>
           <processed/>
           <meta>
@@ -82,6 +87,7 @@
       <bind nodeset="/clip_hwet_nurse/sa/maritalStatus" required="true()" type="select1"/>
       <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/childs" required="true()" type="int"/>
       <bind nodeset="/clip_hwet_nurse/sa/ocupation" required="true()" type="select1"/>
+      <bind nodeset="/clip_hwet_nurse/sa/ocupation_other" relevant=" /clip_hwet_nurse/sa/ocupation =98" required="true()" type="string"/>
       <bind nodeset="/clip_hwet_nurse/sa/education" required="true()" type="select1"/>
       <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/nurseYears" required="true()" type="int"/>
       <bind nodeset="/clip_hwet_nurse/sa/local" required="true()" type="string"/>
@@ -90,7 +96,7 @@
       <bind nodeset="/clip_hwet_nurse/sa/note_interv" readonly="true()" relevant=" /clip_hwet_nurse/sa/isIntervention =1" type="string"/>
       <bind nodeset="/clip_hwet_nurse/sa/smartphone/hasPhone" required="true()" type="select1"/>
       <bind nodeset="/clip_hwet_nurse/sa/smartphone/usedDevices" required="true()" type="select"/>
-      <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/smartphone/experience" relevant=" /clip_hwet_nurse/sa/smartphone/hasPhone =1" required="true()" type="int"/>
+      <bind constraint=".&gt;=0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/clip_hwet_nurse/sa/smartphone/experience" required="true()" type="int"/>
       <bind nodeset="/clip_hwet_nurse/sa/smartphone/usedFeatures" required="true()" type="select"/>
       <bind nodeset="/clip_hwet_nurse/sb/quest_01" required="true()" type="select1"/>
       <bind nodeset="/clip_hwet_nurse/sb/quest_02" required="true()" type="select1"/>
@@ -121,13 +127,17 @@
       <bind nodeset="/clip_hwet_nurse/sc/quest_02_1" required="true()" type="string"/>
       <bind nodeset="/clip_hwet_nurse/sc/quest_03" required="true()" type="select1"/>
       <bind nodeset="/clip_hwet_nurse/sc/quest_04" required="true()" type="string"/>
-      <bind nodeset="/clip_hwet_nurse/sc/quest_05" required="true()" type="select"/>
-      <bind nodeset="/clip_hwet_nurse/sc/quest_06" required="true()" type="select"/>
+      <bind constraint="not(selected(.,'99')) or (selected(.,'99') and not(selected(.,'1') or selected(.,'2') or selected(.,'3') or selected(.,'4') or selected(.,'5') or selected(.,'6') or selected(.,'7') or selected(.,'8') or selected(.,'9') ))" jr:constraintMsg="Resposta incorrecta: Se selecionar a opção &quot;Nenhum&quot;, não deve selecionar as outras opções!" nodeset="/clip_hwet_nurse/sc/quest_05_0" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_05_1" relevant="selected( /clip_hwet_nurse/sc/quest_05_0 ,'99')" required="true()" type="string"/>
+      <bind constraint="not(selected(.,'99')) or (selected(.,'99') and not(selected(.,'1') or selected(.,'2') or selected(.,'3') or selected(.,'4') or selected(.,'5') or selected(.,'6') or selected(.,'7') or selected(.,'8') or selected(.,'9') ))" jr:constraintMsg="Resposta incorrecta: Se selecionar a opção &quot;Nenhum&quot;, não deve selecionar as outras opções!" nodeset="/clip_hwet_nurse/sc/quest_06_0" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_06_1" relevant="selected( /clip_hwet_nurse/sc/quest_06_0 ,'99')" required="true()" type="string"/>
       <bind nodeset="/clip_hwet_nurse/sc/quest_07" required="true()" type="select1"/>
       <bind nodeset="/clip_hwet_nurse/sc/quest_08" required="true()" type="select"/>
       <bind nodeset="/clip_hwet_nurse/sc/quest_08_1" required="true()" type="string"/>
-      <bind nodeset="/clip_hwet_nurse/sc/quest_9" required="true()" type="string"/>
-      <bind nodeset="/clip_hwet_nurse/processed" type="int"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_09" required="true()" type="select"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_09_1" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/sc/quest_10" required="true()" type="string"/>
+      <bind nodeset="/clip_hwet_nurse/processed" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/clip_hwet_nurse/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;CLIP_HWET_ENF-&quot;, /clip_hwet_nurse/sa/name )" nodeset="/clip_hwet_nurse/meta/instanceName" type="string"/>
     </model>
@@ -228,7 +238,14 @@
           <label>Não aplicável</label>
           <value>11</value>
         </item>
+        <item>
+          <label>Outra profissão</label>
+          <value>98</value>
+        </item>
       </select1>
+      <input ref="/clip_hwet_nurse/sa/ocupation_other">
+        <label>6.1. Especifique a ocupação?</label>
+      </input>
       <select1 ref="/clip_hwet_nurse/sa/education">
         <label>7. Nível de escolaridade</label>
         <item>
@@ -280,7 +297,7 @@
         <label>8. Anos de experiência como Enfermeira</label>
       </input>
       <input ref="/clip_hwet_nurse/sa/local">
-        <label>9. Local</label>
+        <label>9. Local (Bairro)</label>
       </input>
       <select1 ref="/clip_hwet_nurse/sa/cluster">
         <label>9.1. Cluster?</label>
@@ -1088,7 +1105,7 @@
       <input ref="/clip_hwet_nurse/sc/quest_04">
         <label>4. Como isso mudou seu comportamento?</label>
       </input>
-      <select ref="/clip_hwet_nurse/sc/quest_05">
+      <select ref="/clip_hwet_nurse/sc/quest_05_0">
         <label>5. De todos tópicos de mobilização, com quais se sentia mais confortáveis?</label>
         <item>
           <label>Sintomas de alerta e sinais de uma gravidez com complicações, em particular a pré-eclâmpsia &amp; eclâmpsia</label>
@@ -1126,8 +1143,15 @@
           <label>Busca de soluções para as barreiras identificadas no estudo de viabilidade CLIP</label>
           <value>9</value>
         </item>
+        <item>
+          <label>Nenhum</label>
+          <value>99</value>
+        </item>
       </select>
-      <select ref="/clip_hwet_nurse/sc/quest_06">
+      <input ref="/clip_hwet_nurse/sc/quest_05_1">
+        <label>5.1. Porquê, não se sentiu confortável com os topicos?</label>
+      </input>
+      <select ref="/clip_hwet_nurse/sc/quest_06_0">
         <label>6. Com quais delas tinha mais correspondência da audiência?</label>
         <item>
           <label>Sintomas de alerta e sinais de uma gravidez com complicações, em particular a pré-eclâmpsia &amp; eclâmpsia</label>
@@ -1165,7 +1189,14 @@
           <label>Busca de soluções para as barreiras identificadas no estudo de viabilidade CLIP</label>
           <value>9</value>
         </item>
+        <item>
+          <label>Nenhum</label>
+          <value>99</value>
+        </item>
       </select>
+      <input ref="/clip_hwet_nurse/sc/quest_06_1">
+        <label>6.1. Porquê, não teve correspondência da audiência?</label>
+      </input>
       <select1 ref="/clip_hwet_nurse/sc/quest_07">
         <label>7. O álbum seriado ajudou a transmitir os sinais de perigo na gravidez?</label>
         <item>
@@ -1178,7 +1209,7 @@
         </item>
       </select1>
       <select ref="/clip_hwet_nurse/sc/quest_08">
-        <label>8. No álbum seriado que imagens foram mais fáceis ou difíceis de interpretar?</label>
+        <label>8. No álbum seriado que imagens foram mais fáceis de interpretar?</label>
         <item>
           <label>Dor de cabeça</label>
           <value>1</value>
@@ -1267,8 +1298,98 @@
       <input ref="/clip_hwet_nurse/sc/quest_08_1">
         <label>8.1. Porquê?</label>
       </input>
-      <input ref="/clip_hwet_nurse/sc/quest_9">
-        <label>9. Existe mais alguma coisa que você gostaria de adicionar em relação a sua experiência no CLIP?</label>
+      <select ref="/clip_hwet_nurse/sc/quest_09">
+        <label>9. No álbum seriado que imagens foram mais difíceis de interpretar?</label>
+        <item>
+          <label>Dor de cabeça</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Distúrbio visual</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Náusea</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Vomito</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Dor abdominal</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Dor torácica</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Dificuldade respiratória</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>Coagulação intravascular disseminada/ descolamento da placenta e edema pulmonar</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>Sangramento vaginal</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>Insuficiência renal aguda</label>
+          <value>10</value>
+        </item>
+        <item>
+          <label>Inconsciência</label>
+          <value>11</value>
+        </item>
+        <item>
+          <label>Convulsão</label>
+          <value>12</value>
+        </item>
+        <item>
+          <label>Trombose</label>
+          <value>13</value>
+        </item>
+        <item>
+          <label>Abertura da ficha</label>
+          <value>14</value>
+        </item>
+        <item>
+          <label>Medição da altura uterina</label>
+          <value>15</value>
+        </item>
+        <item>
+          <label>Medição da tensão arterial</label>
+          <value>16</value>
+        </item>
+        <item>
+          <label>Medição da proteinuria</label>
+          <value>17</value>
+        </item>
+        <item>
+          <label>Medição da oximetria do pulso</label>
+          <value>18</value>
+        </item>
+        <item>
+          <label>Toma de medicação</label>
+          <value>19</value>
+        </item>
+        <item>
+          <label>Aplicação da injeção</label>
+          <value>20</value>
+        </item>
+        <item>
+          <label>Transferência para o hospital</label>
+          <value>21</value>
+        </item>
+      </select>
+      <input ref="/clip_hwet_nurse/sc/quest_09_1">
+        <label>9.1. Porquê?</label>
+      </input>
+      <input ref="/clip_hwet_nurse/sc/quest_10">
+        <label>10. Existe mais alguma coisa que você gostaria de adicionar em relação a sua experiência no CLIP?</label>
       </input>
     </group>
     <input ref="/clip_hwet_nurse/processed">
